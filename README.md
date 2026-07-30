@@ -1,5 +1,5 @@
 # WNBA 2026 Finals Prediction
-
+Link: https://wnba-predictions-4oai-eotji3xav-chepkemboiedel-sudos-projects.vercel.app/
 Estimates, with defensible probabilities, which two teams meet in the 2026 WNBA Finals —
 by simulating the league's **actual** 8-team, 3-round playoff bracket (best-of-3 →
 best-of-5 → best-of-7, no conference brackets, no reseeding) from a validated per-game
