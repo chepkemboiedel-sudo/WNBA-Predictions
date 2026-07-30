@@ -1,0 +1,221 @@
+game_id,date,season,is_playoff,home_team,home_abbr,away_team,away_abbr,home_score,away_score,home_win
+401104913,2019-05-24,2019,False,Atlanta Dream,ATL,Dallas Wings,DAL,76,72,1
+401104914,2019-05-25,2019,False,New York Liberty,NY,Indiana Fever,IND,80,81,0
+401104915,2019-05-25,2019,False,Seattle Storm,SEA,Phoenix Mercury,PHX,77,68,1
+401104916,2019-05-25,2019,False,Connecticut Sun,CON,Washington Mystics,WSH,84,69,1
+401104917,2019-05-26,2019,False,Minnesota Lynx,MIN,Chicago Sky,CHI,89,71,1
+401104918,2019-05-27,2019,False,Las Vegas Aces,LV,Los Angeles Sparks,LA,83,70,1
+401104919,2019-05-28,2019,False,Connecticut Sun,CON,Indiana Fever,IND,88,77,1
+401104920,2019-05-30,2019,False,Minnesota Lynx,MIN,Seattle Storm,SEA,72,61,1
+401104921,2019-05-31,2019,False,Atlanta Dream,ATL,Seattle Storm,SEA,66,82,0
+401104925,2019-06-01,2019,False,Washington Mystics,WSH,Atlanta Dream,ATL,96,75,1
+401104924,2019-06-01,2019,False,Indiana Fever,IND,New York Liberty,NY,92,77,1
+401104923,2019-06-01,2019,False,Los Angeles Sparks,LA,Connecticut Sun,CON,77,70,1
+401104922,2019-06-01,2019,False,Phoenix Mercury,PHX,Las Vegas Aces,LV,86,84,1
+401104926,2019-06-02,2019,False,Chicago Sky,CHI,Seattle Storm,SEA,83,79,1
+401104927,2019-06-02,2019,False,Dallas Wings,DAL,Minnesota Lynx,MIN,67,70,0
+401104928,2019-06-02,2019,False,Las Vegas Aces,LV,Connecticut Sun,CON,74,80,0
+401104929,2019-06-04,2019,False,New York Liberty,NY,Los Angeles Sparks,LA,73,78,0
+401104931,2019-06-05,2019,False,Washington Mystics,WSH,Chicago Sky,CHI,103,85,1
+401104930,2019-06-05,2019,False,Seattle Storm,SEA,Minnesota Lynx,MIN,84,77,1
+401104933,2019-06-06,2019,False,Connecticut Sun,CON,Los Angeles Sparks,LA,89,77,1
+401104932,2019-06-06,2019,False,Atlanta Dream,ATL,Las Vegas Aces,LV,69,92,0
+401104935,2019-06-07,2019,False,Indiana Fever,IND,Dallas Wings,DAL,79,64,1
+401104936,2019-06-07,2019,False,New York Liberty,NY,Washington Mystics,WSH,85,94,0
+401104934,2019-06-07,2019,False,Minnesota Lynx,MIN,Phoenix Mercury,PHX,58,56,1
+401104937,2019-06-08,2019,False,Minnesota Lynx,MIN,Los Angeles Sparks,LA,85,89,0
+401104941,2019-06-09,2019,False,Indiana Fever,IND,Phoenix Mercury,PHX,87,94,0
+401104942,2019-06-09,2019,False,Chicago Sky,CHI,Seattle Storm,SEA,78,71,1
+401104939,2019-06-09,2019,False,New York Liberty,NY,Las Vegas Aces,LV,88,78,1
+401104938,2019-06-09,2019,False,Atlanta Dream,ATL,Connecticut Sun,CON,59,65,0
+401104940,2019-06-09,2019,False,Washington Mystics,WSH,Dallas Wings,DAL,86,62,1
+401104944,2019-06-11,2019,False,Indiana Fever,IND,Seattle Storm,SEA,82,84,0
+401104943,2019-06-11,2019,False,Connecticut Sun,CON,Washington Mystics,WSH,83,75,1
+401104945,2019-06-12,2019,False,Chicago Sky,CHI,Phoenix Mercury,PHX,82,75,1
+401104946,2019-06-12,2019,False,New York Liberty,NY,Minnesota Lynx,MIN,75,69,1
+401104947,2019-06-14,2019,False,Dallas Wings,DAL,Indiana Fever,IND,72,76,0
+401104948,2019-06-14,2019,False,Washington Mystics,WSH,Seattle Storm,SEA,71,74,0
+401104950,2019-06-15,2019,False,Phoenix Mercury,PHX,Los Angeles Sparks,LA,68,85,0
+401104949,2019-06-15,2019,False,Minnesota Lynx,MIN,Connecticut Sun,CON,81,85,0
+401104952,2019-06-15,2019,False,Indiana Fever,IND,Chicago Sky,CHI,64,70,0
+401104951,2019-06-15,2019,False,Las Vegas Aces,LV,New York Liberty,NY,100,65,1
+401104953,2019-06-16,2019,False,Dallas Wings,DAL,Atlanta Dream,ATL,71,61,1
+401104956,2019-06-16,2019,False,Minnesota Lynx,MIN,Las Vegas Aces,LV,75,80,0
+401104955,2019-06-16,2019,False,Connecticut Sun,CON,Seattle Storm,SEA,81,67,1
+401104954,2019-06-16,2019,False,Los Angeles Sparks,LA,New York Liberty,NY,92,98,0
+401104957,2019-06-19,2019,False,Los Angeles Sparks,LA,Washington Mystics,WSH,52,81,0
+401104958,2019-06-19,2019,False,Atlanta Dream,ATL,Indiana Fever,IND,88,78,1
+401104959,2019-06-19,2019,False,New York Liberty,NY,Chicago Sky,CHI,83,91,0
+401104960,2019-06-21,2019,False,Dallas Wings,DAL,Phoenix Mercury,PHX,69,54,1
+401104961,2019-06-21,2019,False,Las Vegas Aces,LV,Washington Mystics,WSH,72,95,0
+401104962,2019-06-21,2019,False,Connecticut Sun,CON,Atlanta Dream,ATL,86,76,1
+401104963,2019-06-22,2019,False,Chicago Sky,CHI,Indiana Fever,IND,69,76,0
+401104964,2019-06-22,2019,False,Seattle Storm,SEA,Los Angeles Sparks,LA,84,62,1
+401104968,2019-06-23,2019,False,Chicago Sky,CHI,Connecticut Sun,CON,93,75,1
+401104970,2019-06-23,2019,False,Seattle Storm,SEA,Indiana Fever,IND,65,61,1
+401104969,2019-06-23,2019,False,Phoenix Mercury,PHX,Los Angeles Sparks,LA,82,72,1
+401104967,2019-06-23,2019,False,Atlanta Dream,ATL,Washington Mystics,WSH,73,89,0
+401104966,2019-06-23,2019,False,Las Vegas Aces,LV,Dallas Wings,DAL,86,68,1
+401104965,2019-06-23,2019,False,Minnesota Lynx,MIN,New York Liberty,NY,92,83,1
+401104971,2019-06-25,2019,False,Indiana Fever,IND,Minnesota Lynx,MIN,74,78,0
+401104973,2019-06-26,2019,False,Chicago Sky,CHI,Washington Mystics,WSH,74,81,0
+401104972,2019-06-26,2019,False,Las Vegas Aces,LV,Seattle Storm,SEA,60,56,1
+401104974,2019-06-27,2019,False,Dallas Wings,DAL,Connecticut Sun,CON,74,73,1
+401104975,2019-06-28,2019,False,Los Angeles Sparks,LA,Las Vegas Aces,LV,86,74,1
+401104976,2019-06-28,2019,False,New York Liberty,NY,Dallas Wings,DAL,69,68,1
+401104977,2019-06-29,2019,False,Phoenix Mercury,PHX,Indiana Fever,IND,91,69,1
+401104978,2019-06-29,2019,False,Seattle Storm,SEA,Chicago Sky,CHI,79,76,1
+401104979,2019-06-29,2019,False,Washington Mystics,WSH,Connecticut Sun,CON,102,59,1
+401104984,2019-06-30,2019,False,Seattle Storm,SEA,Phoenix Mercury,PHX,67,69,0
+401104983,2019-06-30,2019,False,Los Angeles Sparks,LA,Chicago Sky,CHI,94,69,1
+401104981,2019-06-30,2019,False,Atlanta Dream,ATL,New York Liberty,NY,58,74,0
+401104980,2019-06-30,2019,False,Las Vegas Aces,LV,Indiana Fever,IND,102,97,1
+401104982,2019-06-30,2019,False,Dallas Wings,DAL,Minnesota Lynx,MIN,89,86,1
+401104985,2019-07-02,2019,False,Las Vegas Aces,LV,Chicago Sky,CHI,90,82,1
+401104986,2019-07-03,2019,False,Minnesota Lynx,MIN,Atlanta Dream,ATL,85,68,1
+401104987,2019-07-03,2019,False,Seattle Storm,SEA,New York Liberty,NY,83,84,0
+401104992,2019-07-06,2019,False,Connecticut Sun,CON,Minnesota Lynx,MIN,71,74,0
+401104988,2019-07-06,2019,False,Dallas Wings,DAL,Indiana Fever,IND,56,76,0
+401104989,2019-07-06,2019,False,Phoenix Mercury,PHX,New York Liberty,NY,76,80,0
+401104990,2019-07-06,2019,False,Seattle Storm,SEA,Atlanta Dream,ATL,66,77,0
+401104995,2019-07-07,2019,False,Chicago Sky,CHI,Dallas Wings,DAL,78,66,1
+401104996,2019-07-07,2019,False,Phoenix Mercury,PHX,Atlanta Dream,ATL,65,63,1
+401104993,2019-07-07,2019,False,New York Liberty,NY,Las Vegas Aces,LV,58,90,0
+401104994,2019-07-07,2019,False,Los Angeles Sparks,LA,Washington Mystics,WSH,98,81,1
+401104997,2019-07-09,2019,False,Dallas Wings,DAL,Los Angeles Sparks,LA,74,62,1
+401104998,2019-07-10,2019,False,Atlanta Dream,ATL,Connecticut Sun,CON,78,75,1
+401104999,2019-07-10,2019,False,Washington Mystics,WSH,Phoenix Mercury,PHX,68,91,0
+401105000,2019-07-10,2019,False,Indiana Fever,IND,Las Vegas Aces,LV,71,74,0
+401105001,2019-07-11,2019,False,Chicago Sky,CHI,Minnesota Lynx,MIN,72,73,0
+401105002,2019-07-12,2019,False,Indiana Fever,IND,Los Angeles Sparks,LA,84,90,0
+401105003,2019-07-12,2019,False,Atlanta Dream,ATL,Minnesota Lynx,MIN,60,53,1
+401105004,2019-07-13,2019,False,Connecticut Sun,CON,Phoenix Mercury,PHX,79,64,1
+401105005,2019-07-13,2019,False,Chicago Sky,CHI,New York Liberty,NY,99,83,1
+401105006,2019-07-13,2019,False,Seattle Storm,SEA,Dallas Wings,DAL,95,81,1
+401105007,2019-07-13,2019,False,Washington Mystics,WSH,Las Vegas Aces,LV,81,85,0
+401105012,2019-07-14,2019,False,Seattle Storm,SEA,New York Liberty,NY,78,69,1
+401105011,2019-07-14,2019,False,Minnesota Lynx,MIN,Phoenix Mercury,PHX,75,62,1
+401105008,2019-07-14,2019,False,Atlanta Dream,ATL,Los Angeles Sparks,LA,71,76,0
+401105009,2019-07-14,2019,False,Indiana Fever,IND,Connecticut Sun,CON,63,76,0
+401105010,2019-07-14,2019,False,Dallas Wings,DAL,Chicago Sky,CHI,79,89,0
+401105013,2019-07-17,2019,False,Chicago Sky,CHI,Atlanta Dream,ATL,77,76,1
+401105014,2019-07-17,2019,False,Phoenix Mercury,PHX,Dallas Wings,DAL,69,64,1
+401105015,2019-07-18,2019,False,Minnesota Lynx,MIN,Seattle Storm,SEA,79,90,0
+401105016,2019-07-18,2019,False,Los Angeles Sparks,LA,Dallas Wings,DAL,69,64,1
+401105017,2019-07-19,2019,False,Indiana Fever,IND,Washington Mystics,WSH,88,95,0
+401105018,2019-07-19,2019,False,Connecticut Sun,CON,Atlanta Dream,ATL,98,69,1
+401105019,2019-07-20,2019,False,Seattle Storm,SEA,Las Vegas Aces,LV,69,66,1
+401105020,2019-07-20,2019,False,New York Liberty,NY,Los Angeles Sparks,LA,83,78,1
+401105024,2019-07-21,2019,False,Las Vegas Aces,LV,Minnesota Lynx,MIN,79,74,1
+401105023,2019-07-21,2019,False,Chicago Sky,CHI,Indiana Fever,IND,78,70,1
+401105022,2019-07-21,2019,False,Washington Mystics,WSH,Atlanta Dream,ATL,93,65,1
+401105021,2019-07-21,2019,False,Dallas Wings,DAL,Phoenix Mercury,PHX,66,70,0
+401105025,2019-07-23,2019,False,Atlanta Dream,ATL,Los Angeles Sparks,LA,66,78,0
+401105026,2019-07-24,2019,False,Las Vegas Aces,LV,Seattle Storm,SEA,79,62,1
+401105027,2019-07-24,2019,False,Phoenix Mercury,PHX,Indiana Fever,IND,95,77,1
+401105028,2019-07-24,2019,False,Connecticut Sun,CON,New York Liberty,NY,70,63,1
+401105029,2019-07-24,2019,False,Minnesota Lynx,MIN,Washington Mystics,WSH,71,79,0
+401105030,2019-07-30,2019,False,Connecticut Sun,CON,Chicago Sky,CHI,100,94,1
+401105031,2019-07-30,2019,False,Washington Mystics,WSH,Phoenix Mercury,PHX,99,93,1
+401105032,2019-07-31,2019,False,Las Vegas Aces,LV,Dallas Wings,DAL,86,54,1
+401105033,2019-07-31,2019,False,Indiana Fever,IND,Atlanta Dream,ATL,61,59,1
+401105034,2019-08-01,2019,False,Connecticut Sun,CON,Phoenix Mercury,PHX,68,62,1
+401105036,2019-08-02,2019,False,Los Angeles Sparks,LA,Las Vegas Aces,LV,76,68,1
+401105035,2019-08-02,2019,False,Dallas Wings,DAL,New York Liberty,NY,87,64,1
+401105037,2019-08-03,2019,False,Seattle Storm,SEA,Washington Mystics,WSH,79,99,0
+401105038,2019-08-03,2019,False,Atlanta Dream,ATL,Chicago Sky,CHI,75,87,0
+401105039,2019-08-03,2019,False,Indiana Fever,IND,Minnesota Lynx,MIN,86,75,1
+401105040,2019-08-04,2019,False,Dallas Wings,DAL,Las Vegas Aces,LV,70,75,0
+401105041,2019-08-04,2019,False,New York Liberty,NY,Connecticut Sun,CON,79,94,0
+401105042,2019-08-04,2019,False,Los Angeles Sparks,LA,Seattle Storm,SEA,83,75,1
+401105043,2019-08-04,2019,False,Phoenix Mercury,PHX,Washington Mystics,WSH,103,82,1
+401105044,2019-08-06,2019,False,Atlanta Dream,ATL,Minnesota Lynx,MIN,69,85,0
+401156333,2019-08-06,2019,False,Las Vegas Aces,LV,Washington Mystics,WSH,70,99,0
+401105045,2019-08-08,2019,False,Chicago Sky,CHI,New York Liberty,NY,101,92,1
+401105046,2019-08-08,2019,False,Washington Mystics,WSH,Indiana Fever,IND,91,78,1
+401105048,2019-08-09,2019,False,Seattle Storm,SEA,Dallas Wings,DAL,69,57,1
+401105047,2019-08-09,2019,False,Los Angeles Sparks,LA,Phoenix Mercury,PHX,84,74,1
+401105051,2019-08-10,2019,False,Indiana Fever,IND,Atlanta Dream,ATL,87,82,1
+401105049,2019-08-10,2019,False,Minnesota Lynx,MIN,Connecticut Sun,CON,89,57,1
+401105050,2019-08-10,2019,False,Las Vegas Aces,LV,Chicago Sky,CHI,84,87,0
+401105052,2019-08-11,2019,False,Phoenix Mercury,PHX,Dallas Wings,DAL,77,80,0
+401105053,2019-08-11,2019,False,New York Liberty,NY,Seattle Storm,SEA,69,84,0
+401105054,2019-08-11,2019,False,Washington Mystics,WSH,Minnesota Lynx,MIN,101,78,1
+401105055,2019-08-11,2019,False,Los Angeles Sparks,LA,Chicago Sky,CHI,84,81,1
+401105056,2019-08-11,2019,False,Las Vegas Aces,LV,Connecticut Sun,CON,89,81,1
+401105057,2019-08-13,2019,False,New York Liberty,NY,Minnesota Lynx,MIN,73,89,0
+401105058,2019-08-14,2019,False,Las Vegas Aces,LV,Atlanta Dream,ATL,94,90,1
+401105059,2019-08-15,2019,False,Washington Mystics,WSH,Seattle Storm,SEA,88,59,1
+401105060,2019-08-15,2019,False,Dallas Wings,DAL,Los Angeles Sparks,LA,84,78,1
+401105061,2019-08-15,2019,False,Phoenix Mercury,PHX,Connecticut Sun,CON,71,78,0
+401105062,2019-08-16,2019,False,Connecticut Sun,CON,Seattle Storm,SEA,79,78,1
+401105064,2019-08-17,2019,False,Dallas Wings,DAL,New York Liberty,NY,83,77,1
+401105066,2019-08-17,2019,False,Phoenix Mercury,PHX,Atlanta Dream,ATL,77,68,1
+401105063,2019-08-17,2019,False,Chicago Sky,CHI,Los Angeles Sparks,LA,91,81,1
+401105065,2019-08-17,2019,False,Minnesota Lynx,MIN,Washington Mystics,WSH,79,86,0
+401105067,2019-08-18,2019,False,Connecticut Sun,CON,Dallas Wings,DAL,78,68,1
+401105068,2019-08-18,2019,False,Washington Mystics,WSH,Indiana Fever,IND,107,68,1
+401105069,2019-08-18,2019,False,Chicago Sky,CHI,Las Vegas Aces,LV,85,100,0
+401105070,2019-08-18,2019,False,Phoenix Mercury,PHX,New York Liberty,NY,78,72,1
+401105071,2019-08-18,2019,False,Seattle Storm,SEA,Minnesota Lynx,MIN,82,74,1
+401105072,2019-08-20,2019,False,Atlanta Dream,ATL,Chicago Sky,CHI,83,87,0
+401105073,2019-08-20,2019,False,Indiana Fever,IND,New York Liberty,NY,76,82,0
+401105074,2019-08-21,2019,False,Las Vegas Aces,LV,Phoenix Mercury,PHX,84,79,1
+401105075,2019-08-21,2019,False,Los Angeles Sparks,LA,Minnesota Lynx,MIN,81,71,1
+401105079,2019-08-23,2019,False,New York Liberty,NY,Atlanta Dream,ATL,87,90,0
+401105077,2019-08-23,2019,False,Los Angeles Sparks,LA,Indiana Fever,IND,98,65,1
+401105076,2019-08-23,2019,False,Minnesota Lynx,MIN,Dallas Wings,DAL,86,70,1
+401105078,2019-08-23,2019,False,Connecticut Sun,CON,Las Vegas Aces,LV,89,85,1
+401105080,2019-08-24,2019,False,Chicago Sky,CHI,Washington Mystics,WSH,85,78,1
+401105081,2019-08-25,2019,False,Washington Mystics,WSH,New York Liberty,NY,101,72,1
+401105082,2019-08-25,2019,False,Dallas Wings,DAL,Atlanta Dream,ATL,73,77,0
+401105083,2019-08-25,2019,False,Los Angeles Sparks,LA,Connecticut Sun,CON,84,72,1
+401105084,2019-08-25,2019,False,Phoenix Mercury,PHX,Chicago Sky,CHI,86,94,0
+401105085,2019-08-25,2019,False,Minnesota Lynx,MIN,Las Vegas Aces,LV,98,77,1
+401105086,2019-08-25,2019,False,Seattle Storm,SEA,Indiana Fever,IND,54,63,0
+401105087,2019-08-27,2019,False,Indiana Fever,IND,Las Vegas Aces,LV,86,71,1
+401105088,2019-08-27,2019,False,New York Liberty,NY,Phoenix Mercury,PHX,82,95,0
+401105089,2019-08-27,2019,False,Washington Mystics,WSH,Los Angeles Sparks,LA,95,66,1
+401105091,2019-08-28,2019,False,Seattle Storm,SEA,Connecticut Sun,CON,70,89,0
+401105090,2019-08-28,2019,False,Minnesota Lynx,MIN,Chicago Sky,CHI,93,85,1
+401105092,2019-08-29,2019,False,Indiana Fever,IND,Los Angeles Sparks,LA,83,87,0
+401105094,2019-08-29,2019,False,Atlanta Dream,ATL,Phoenix Mercury,PHX,58,65,0
+401105093,2019-08-30,2019,False,Chicago Sky,CHI,Dallas Wings,DAL,83,88,0
+401105095,2019-08-30,2019,False,New York Liberty,NY,Connecticut Sun,CON,84,94,0
+401105096,2019-09-01,2019,False,Dallas Wings,DAL,Washington Mystics,WSH,85,91,0
+401105097,2019-09-01,2019,False,Las Vegas Aces,LV,Los Angeles Sparks,LA,92,86,1
+401105098,2019-09-01,2019,False,Chicago Sky,CHI,Phoenix Mercury,PHX,105,78,1
+401105099,2019-09-01,2019,False,Minnesota Lynx,MIN,Indiana Fever,IND,81,73,1
+401105100,2019-09-01,2019,False,Seattle Storm,SEA,Atlanta Dream,ATL,92,75,1
+401105101,2019-09-03,2019,False,New York Liberty,NY,Washington Mystics,WSH,77,93,0
+401105104,2019-09-04,2019,False,Connecticut Sun,CON,Dallas Wings,DAL,102,72,1
+401105103,2019-09-04,2019,False,Los Angeles Sparks,LA,Atlanta Dream,ATL,70,60,1
+401105102,2019-09-04,2019,False,Phoenix Mercury,PHX,Seattle Storm,SEA,70,82,0
+401105105,2019-09-05,2019,False,Atlanta Dream,ATL,Las Vegas Aces,LV,78,74,1
+401105106,2019-09-06,2019,False,Los Angeles Sparks,LA,Seattle Storm,SEA,102,68,1
+401105107,2019-09-06,2019,False,Washington Mystics,WSH,Dallas Wings,DAL,86,73,1
+401105109,2019-09-06,2019,False,New York Liberty,NY,Indiana Fever,IND,81,86,0
+401105108,2019-09-06,2019,False,Connecticut Sun,CON,Chicago Sky,CHI,104,109,0
+401105110,2019-09-07,2019,False,Phoenix Mercury,PHX,Minnesota Lynx,MIN,69,83,0
+401105115,2019-09-08,2019,False,Phoenix Mercury,PHX,Las Vegas Aces,LV,89,98,0
+401105114,2019-09-08,2019,False,Dallas Wings,DAL,Seattle Storm,SEA,64,78,0
+401105116,2019-09-08,2019,False,Los Angeles Sparks,LA,Minnesota Lynx,MIN,77,68,1
+401105112,2019-09-08,2019,False,Indiana Fever,IND,Connecticut Sun,CON,104,76,1
+401105111,2019-09-08,2019,False,Atlanta Dream,ATL,New York Liberty,NY,63,71,0
+401105113,2019-09-08,2019,False,Washington Mystics,WSH,Chicago Sky,CHI,100,86,1
+401165793,2019-09-12,2019,True,Chicago Sky,CHI,Phoenix Mercury,PHX,105,76,1
+401165794,2019-09-12,2019,True,Seattle Storm,SEA,Minnesota Lynx,MIN,84,74,1
+401165795,2019-09-15,2019,True,Los Angeles Sparks,LA,Seattle Storm,SEA,92,69,1
+401165796,2019-09-15,2019,True,Las Vegas Aces,LV,Chicago Sky,CHI,93,92,1
+401165802,2019-09-17,2019,True,Connecticut Sun,CON,Los Angeles Sparks,LA,84,75,1
+401165797,2019-09-18,2019,True,Washington Mystics,WSH,Las Vegas Aces,LV,97,95,1
+401165803,2019-09-19,2019,True,Connecticut Sun,CON,Los Angeles Sparks,LA,94,68,1
+401165798,2019-09-20,2019,True,Washington Mystics,WSH,Las Vegas Aces,LV,103,91,1
+401165887,2019-09-22,2019,True,Las Vegas Aces,LV,Washington Mystics,WSH,92,75,1
+401165892,2019-09-22,2019,True,Los Angeles Sparks,LA,Connecticut Sun,CON,56,78,0
+401165888,2019-09-25,2019,True,Las Vegas Aces,LV,Washington Mystics,WSH,90,94,0
+401165807,2019-09-29,2019,True,Washington Mystics,WSH,Connecticut Sun,CON,95,86,1
+401165808,2019-10-02,2019,True,Washington Mystics,WSH,Connecticut Sun,CON,87,99,0
+401165809,2019-10-06,2019,True,Connecticut Sun,CON,Washington Mystics,WSH,81,94,0
+401165810,2019-10-09,2019,True,Connecticut Sun,CON,Washington Mystics,WSH,90,86,1
+401165811,2019-10-11,2019,True,Washington Mystics,WSH,Connecticut Sun,CON,89,78,1

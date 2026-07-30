@@ -1,0 +1,220 @@
+game_id,date,season,is_playoff,home_team,home_abbr,away_team,away_abbr,home_score,away_score,home_win
+400927392,2017-05-13,2017,False,New York Liberty,NY,San Antonio Stars,SA,73,64,1
+400927393,2017-05-13,2017,False,Los Angeles Sparks,LA,Seattle Storm,SEA,78,68,1
+400927394,2017-05-13,2017,False,Connecticut Sun,CON,Atlanta Dream,ATL,74,81,0
+400927395,2017-05-14,2017,False,Washington Mystics,WSH,San Antonio Stars,SA,89,74,1
+400927396,2017-05-14,2017,False,Phoenix Mercury,PHX,Dallas Wings,DAL,58,68,0
+400927397,2017-05-14,2017,False,Seattle Storm,SEA,Indiana Fever,IND,87,82,1
+400927398,2017-05-14,2017,False,Minnesota Lynx,MIN,Chicago Sky,CHI,70,61,1
+400927399,2017-05-18,2017,False,Phoenix Mercury,PHX,Indiana Fever,IND,85,62,1
+400927400,2017-05-18,2017,False,New York Liberty,NY,Minnesota Lynx,MIN,71,90,0
+400927403,2017-05-20,2017,False,Los Angeles Sparks,LA,Washington Mystics,WSH,99,89,1
+400927401,2017-05-20,2017,False,San Antonio Stars,SA,Phoenix Mercury,PHX,72,78,0
+400927402,2017-05-20,2017,False,Chicago Sky,CHI,Atlanta Dream,ATL,83,91,0
+400927404,2017-05-20,2017,False,Indiana Fever,IND,Connecticut Sun,CON,81,79,1
+400927406,2017-05-21,2017,False,Atlanta Dream,ATL,Chicago Sky,CHI,71,75,0
+400927405,2017-05-21,2017,False,Dallas Wings,DAL,Minnesota Lynx,MIN,87,89,0
+400927407,2017-05-21,2017,False,Seattle Storm,SEA,Washington Mystics,WSH,81,71,1
+400927408,2017-05-24,2017,False,Minnesota Lynx,MIN,Connecticut Sun,CON,80,78,1
+400927409,2017-05-24,2017,False,Phoenix Mercury,PHX,New York Liberty,NY,67,69,0
+400927410,2017-05-24,2017,False,Chicago Sky,CHI,Washington Mystics,WSH,67,82,0
+400927411,2017-05-24,2017,False,Indiana Fever,IND,Los Angeles Sparks,LA,93,90,1
+400927412,2017-05-25,2017,False,San Antonio Stars,SA,Dallas Wings,DAL,82,94,0
+400927413,2017-05-26,2017,False,Connecticut Sun,CON,Minnesota Lynx,MIN,68,82,0
+400927414,2017-05-26,2017,False,Washington Mystics,WSH,Chicago Sky,CHI,88,79,1
+400927416,2017-05-27,2017,False,Atlanta Dream,ATL,Los Angeles Sparks,LA,75,73,1
+400927415,2017-05-27,2017,False,Seattle Storm,SEA,New York Liberty,NY,87,81,1
+400927417,2017-05-28,2017,False,Phoenix Mercury,PHX,Dallas Wings,DAL,107,65,1
+400927419,2017-05-28,2017,False,Seattle Storm,SEA,Indiana Fever,IND,94,70,1
+400927418,2017-05-28,2017,False,Chicago Sky,CHI,Connecticut Sun,CON,79,97,0
+400927420,2017-05-28,2017,False,Minnesota Lynx,MIN,San Antonio Stars,SA,80,66,1
+400927421,2017-05-30,2017,False,New York Liberty,NY,Los Angeles Sparks,LA,75,90,0
+400927423,2017-05-31,2017,False,Washington Mystics,WSH,Connecticut Sun,CON,78,76,1
+400927424,2017-05-31,2017,False,Atlanta Dream,ATL,San Antonio Stars,SA,77,70,1
+400927422,2017-05-31,2017,False,Dallas Wings,DAL,Indiana Fever,IND,89,62,1
+400927426,2017-06-02,2017,False,New York Liberty,NY,Dallas Wings,DAL,93,89,1
+400927425,2017-06-02,2017,False,Chicago Sky,CHI,Phoenix Mercury,PHX,91,99,0
+400927427,2017-06-03,2017,False,Indiana Fever,IND,Dallas Wings,DAL,91,85,1
+400927428,2017-06-04,2017,False,San Antonio Stars,SA,Connecticut Sun,CON,77,85,0
+400927429,2017-06-04,2017,False,Seattle Storm,SEA,Minnesota Lynx,MIN,77,100,0
+400927430,2017-06-04,2017,False,New York Liberty,NY,Phoenix Mercury,PHX,88,72,1
+400927431,2017-06-04,2017,False,Washington Mystics,WSH,Atlanta Dream,ATL,78,72,1
+400927435,2017-06-07,2017,False,New York Liberty,NY,Atlanta Dream,ATL,76,61,1
+400927436,2017-06-07,2017,False,Indiana Fever,IND,Phoenix Mercury,PHX,90,98,0
+400927432,2017-06-07,2017,False,Dallas Wings,DAL,Washington Mystics,WSH,89,101,0
+400927433,2017-06-07,2017,False,San Antonio Stars,SA,Seattle Storm,SEA,76,85,0
+400927434,2017-06-07,2017,False,Los Angeles Sparks,LA,Chicago Sky,CHI,79,70,1
+400927438,2017-06-09,2017,False,Indiana Fever,IND,Seattle Storm,SEA,83,80,1
+400927437,2017-06-09,2017,False,Washington Mystics,WSH,Minnesota Lynx,MIN,73,98,0
+400927439,2017-06-10,2017,False,Dallas Wings,DAL,Los Angeles Sparks,LA,96,90,1
+400927440,2017-06-10,2017,False,Connecticut Sun,CON,Atlanta Dream,ATL,104,71,1
+400927441,2017-06-11,2017,False,San Antonio Stars,SA,Chicago Sky,CHI,81,85,0
+400927442,2017-06-11,2017,False,Phoenix Mercury,PHX,Los Angeles Sparks,LA,87,89,0
+400927443,2017-06-11,2017,False,New York Liberty,NY,Seattle Storm,SEA,94,86,1
+400927444,2017-06-11,2017,False,Washington Mystics,WSH,Indiana Fever,IND,88,70,1
+400927445,2017-06-11,2017,False,Dallas Wings,DAL,Minnesota Lynx,MIN,74,91,0
+400927447,2017-06-14,2017,False,Los Angeles Sparks,LA,Dallas Wings,DAL,97,87,1
+400927446,2017-06-14,2017,False,Seattle Storm,SEA,Atlanta Dream,ATL,86,91,0
+400927448,2017-06-14,2017,False,Connecticut Sun,CON,New York Liberty,NY,96,76,1
+400927449,2017-06-15,2017,False,Indiana Fever,IND,Atlanta Dream,ATL,85,74,1
+400927450,2017-06-16,2017,False,Los Angeles Sparks,LA,San Antonio Stars,SA,80,75,1
+400927452,2017-06-17,2017,False,Phoenix Mercury,PHX,Chicago Sky,CHI,86,78,1
+400927451,2017-06-17,2017,False,Dallas Wings,DAL,New York Liberty,NY,93,102,0
+400927454,2017-06-18,2017,False,Washington Mystics,WSH,Dallas Wings,DAL,83,87,0
+400927455,2017-06-18,2017,False,Los Angeles Sparks,LA,Phoenix Mercury,PHX,90,59,1
+400927456,2017-06-18,2017,False,Chicago Sky,CHI,Indiana Fever,IND,79,91,0
+400927457,2017-06-18,2017,False,Seattle Storm,SEA,San Antonio Stars,SA,75,57,1
+400927453,2017-06-18,2017,False,Minnesota Lynx,MIN,Connecticut Sun,CON,93,98,0
+400927458,2017-06-21,2017,False,Dallas Wings,DAL,San Antonio Stars,SA,81,78,1
+400927459,2017-06-23,2017,False,New York Liberty,NY,Connecticut Sun,CON,89,94,0
+400927460,2017-06-23,2017,False,Atlanta Dream,ATL,Chicago Sky,CHI,78,82,0
+400927464,2017-06-24,2017,False,Indiana Fever,IND,Los Angeles Sparks,LA,73,84,0
+400927463,2017-06-24,2017,False,Seattle Storm,SEA,Phoenix Mercury,PHX,82,85,0
+400927462,2017-06-24,2017,False,San Antonio Stars,SA,Dallas Wings,DAL,69,81,0
+400927461,2017-06-24,2017,False,Minnesota Lynx,MIN,Washington Mystics,WSH,93,76,1
+400927465,2017-06-25,2017,False,Dallas Wings,DAL,Connecticut Sun,CON,96,82,1
+400927466,2017-06-25,2017,False,Chicago Sky,CHI,Washington Mystics,WSH,63,97,0
+400927467,2017-06-25,2017,False,Minnesota Lynx,MIN,San Antonio Stars,SA,87,78,1
+400927468,2017-06-27,2017,False,Washington Mystics,WSH,Seattle Storm,SEA,100,70,1
+400927469,2017-06-27,2017,False,Connecticut Sun,CON,Los Angeles Sparks,LA,79,87,0
+400927470,2017-06-28,2017,False,Chicago Sky,CHI,Indiana Fever,IND,75,82,0
+400927471,2017-06-29,2017,False,Washington Mystics,WSH,New York Liberty,NY,67,54,1
+400927472,2017-06-30,2017,False,Connecticut Sun,CON,Seattle Storm,SEA,96,89,1
+400927473,2017-06-30,2017,False,Atlanta Dream,ATL,Los Angeles Sparks,LA,76,85,0
+400927475,2017-07-01,2017,False,Phoenix Mercury,PHX,Minnesota Lynx,MIN,83,91,0
+400927476,2017-07-01,2017,False,Indiana Fever,IND,Connecticut Sun,CON,85,91,0
+400927474,2017-07-01,2017,False,San Antonio Stars,SA,Chicago Sky,CHI,89,82,1
+400927477,2017-07-02,2017,False,Dallas Wings,DAL,Seattle Storm,SEA,69,89,0
+400927478,2017-07-02,2017,False,Los Angeles Sparks,LA,Washington Mystics,WSH,76,69,1
+400927479,2017-07-02,2017,False,Atlanta Dream,ATL,New York Liberty,NY,81,72,1
+400927480,2017-07-06,2017,False,Dallas Wings,DAL,Atlanta Dream,ATL,94,84,1
+400927481,2017-07-06,2017,False,San Antonio Stars,SA,Connecticut Sun,CON,56,89,0
+400927482,2017-07-06,2017,False,Phoenix Mercury,PHX,Washington Mystics,WSH,88,80,1
+400927483,2017-07-07,2017,False,Minnesota Lynx,MIN,Los Angeles Sparks,LA,88,77,1
+400927484,2017-07-07,2017,False,Seattle Storm,SEA,New York Liberty,NY,70,79,0
+400927485,2017-07-07,2017,False,Atlanta Dream,ATL,Indiana Fever,IND,89,68,1
+400927487,2017-07-08,2017,False,Connecticut Sun,CON,Washington Mystics,WSH,96,92,1
+400927486,2017-07-08,2017,False,San Antonio Stars,SA,Phoenix Mercury,PHX,77,92,0
+400927489,2017-07-09,2017,False,Seattle Storm,SEA,Los Angeles Sparks,LA,81,69,1
+400927488,2017-07-09,2017,False,Chicago Sky,CHI,Minnesota Lynx,MIN,100,76,1
+400927491,2017-07-09,2017,False,Phoenix Mercury,PHX,New York Liberty,NY,81,69,1
+400927490,2017-07-09,2017,False,Atlanta Dream,ATL,Dallas Wings,DAL,98,78,1
+400927492,2017-07-12,2017,False,Indiana Fever,IND,San Antonio Stars,SA,72,79,0
+400927493,2017-07-12,2017,False,Chicago Sky,CHI,Dallas Wings,DAL,90,84,1
+400927494,2017-07-12,2017,False,Seattle Storm,SEA,Connecticut Sun,CON,79,83,0
+400927495,2017-07-13,2017,False,Phoenix Mercury,PHX,Atlanta Dream,ATL,89,84,1
+400927496,2017-07-14,2017,False,Los Angeles Sparks,LA,Connecticut Sun,CON,87,77,1
+400927497,2017-07-14,2017,False,Indiana Fever,IND,Washington Mystics,WSH,58,72,0
+400927498,2017-07-14,2017,False,New York Liberty,NY,Chicago Sky,CHI,68,78,0
+400927499,2017-07-15,2017,False,Phoenix Mercury,PHX,Minnesota Lynx,MIN,71,88,0
+400927501,2017-07-16,2017,False,Connecticut Sun,CON,San Antonio Stars,SA,89,75,1
+400927504,2017-07-16,2017,False,Minnesota Lynx,MIN,Phoenix Mercury,PHX,81,66,1
+400927502,2017-07-16,2017,False,New York Liberty,NY,Washington Mystics,WSH,85,55,1
+400927500,2017-07-16,2017,False,Seattle Storm,SEA,Atlanta Dream,ATL,90,84,1
+400927503,2017-07-16,2017,False,Dallas Wings,DAL,Chicago Sky,CHI,112,106,1
+400927506,2017-07-18,2017,False,Atlanta Dream,ATL,San Antonio Stars,SA,88,75,1
+400927505,2017-07-18,2017,False,Los Angeles Sparks,LA,Indiana Fever,IND,80,62,1
+400927507,2017-07-19,2017,False,Seattle Storm,SEA,Chicago Sky,CHI,83,94,0
+400927508,2017-07-19,2017,False,New York Liberty,NY,Connecticut Sun,CON,96,80,1
+400927510,2017-07-19,2017,False,Minnesota Lynx,MIN,Dallas Wings,DAL,100,74,1
+400927509,2017-07-19,2017,False,Washington Mystics,WSH,Atlanta Dream,ATL,100,96,1
+400927511,2017-07-19,2017,False,Phoenix Mercury,PHX,Indiana Fever,IND,77,84,0
+400927512,2017-07-20,2017,False,Los Angeles Sparks,LA,Chicago Sky,CHI,80,82,0
+400927513,2017-07-21,2017,False,San Antonio Stars,SA,Indiana Fever,IND,85,61,1
+400927516,2017-07-25,2017,False,Atlanta Dream,ATL,Phoenix Mercury,PHX,99,91,1
+400927515,2017-07-25,2017,False,Connecticut Sun,CON,Chicago Sky,CHI,93,72,1
+400927514,2017-07-25,2017,False,San Antonio Stars,SA,Washington Mystics,WSH,76,85,0
+400927519,2017-07-26,2017,False,Los Angeles Sparks,LA,Seattle Storm,SEA,68,60,1
+400927518,2017-07-26,2017,False,Dallas Wings,DAL,Indiana Fever,IND,84,82,1
+400927517,2017-07-26,2017,False,Minnesota Lynx,MIN,New York Liberty,NY,76,75,1
+400927522,2017-07-28,2017,False,Atlanta Dream,ATL,Minnesota Lynx,MIN,80,90,0
+400927521,2017-07-28,2017,False,Indiana Fever,IND,New York Liberty,NY,84,85,0
+400927524,2017-07-29,2017,False,Chicago Sky,CHI,Phoenix Mercury,PHX,80,86,0
+400927523,2017-07-29,2017,False,San Antonio Stars,SA,Los Angeles Sparks,LA,73,85,0
+400927525,2017-07-29,2017,False,Seattle Storm,SEA,Dallas Wings,DAL,109,93,1
+400927526,2017-07-30,2017,False,Connecticut Sun,CON,Indiana Fever,IND,89,73,1
+400927527,2017-07-30,2017,False,Atlanta Dream,ATL,Washington Mystics,WSH,70,77,0
+400927528,2017-07-30,2017,False,Los Angeles Sparks,LA,Dallas Wings,DAL,95,74,1
+400927529,2017-07-30,2017,False,Phoenix Mercury,PHX,San Antonio Stars,SA,81,64,1
+400927530,2017-07-30,2017,False,Chicago Sky,CHI,New York Liberty,NY,82,86,0
+400927531,2017-07-30,2017,False,Minnesota Lynx,MIN,Seattle Storm,SEA,93,82,1
+400927532,2017-08-02,2017,False,San Antonio Stars,SA,New York Liberty,NY,93,81,1
+400927535,2017-08-04,2017,False,Indiana Fever,IND,Chicago Sky,CHI,70,81,0
+400927533,2017-08-04,2017,False,Minnesota Lynx,MIN,Atlanta Dream,ATL,69,54,1
+400927534,2017-08-04,2017,False,Connecticut Sun,CON,Phoenix Mercury,PHX,93,92,1
+400927538,2017-08-05,2017,False,Los Angeles Sparks,LA,New York Liberty,NY,87,74,1
+400927536,2017-08-05,2017,False,Dallas Wings,DAL,Seattle Storm,SEA,93,80,1
+400927537,2017-08-05,2017,False,San Antonio Stars,SA,Washington Mystics,WSH,76,74,1
+400927539,2017-08-06,2017,False,Chicago Sky,CHI,Atlanta Dream,ATL,91,86,1
+400927540,2017-08-06,2017,False,San Antonio Stars,SA,Seattle Storm,SEA,87,80,1
+400927541,2017-08-06,2017,False,Washington Mystics,WSH,Phoenix Mercury,PHX,85,80,1
+400927542,2017-08-06,2017,False,Dallas Wings,DAL,Los Angeles Sparks,LA,85,79,1
+400927543,2017-08-06,2017,False,Indiana Fever,IND,Minnesota Lynx,MIN,84,82,1
+400927544,2017-08-08,2017,False,New York Liberty,NY,Indiana Fever,IND,81,76,1
+400927545,2017-08-08,2017,False,Connecticut Sun,CON,Seattle Storm,SEA,84,71,1
+400927546,2017-08-08,2017,False,Atlanta Dream,ATL,Minnesota Lynx,MIN,72,81,0
+400927548,2017-08-11,2017,False,Dallas Wings,DAL,Phoenix Mercury,PHX,100,101,0
+400927549,2017-08-11,2017,False,Atlanta Dream,ATL,New York Liberty,NY,77,83,0
+400927547,2017-08-11,2017,False,Chicago Sky,CHI,San Antonio Stars,SA,94,74,1
+400927552,2017-08-12,2017,False,Washington Mystics,WSH,Indiana Fever,IND,100,80,1
+400927550,2017-08-12,2017,False,Minnesota Lynx,MIN,Los Angeles Sparks,LA,64,70,0
+400927551,2017-08-12,2017,False,Connecticut Sun,CON,Dallas Wings,DAL,96,88,1
+400927553,2017-08-13,2017,False,San Antonio Stars,SA,Atlanta Dream,ATL,84,68,1
+400927554,2017-08-13,2017,False,Phoenix Mercury,PHX,Seattle Storm,SEA,89,98,0
+400927555,2017-08-13,2017,False,New York Liberty,NY,Los Angeles Sparks,LA,83,69,1
+400927556,2017-08-15,2017,False,Atlanta Dream,ATL,Connecticut Sun,CON,75,96,0
+400927557,2017-08-16,2017,False,Washington Mystics,WSH,Los Angeles Sparks,LA,62,95,0
+400927558,2017-08-17,2017,False,Seattle Storm,SEA,Minnesota Lynx,MIN,62,61,1
+400927560,2017-08-18,2017,False,Washington Mystics,WSH,Phoenix Mercury,PHX,79,89,0
+400927559,2017-08-18,2017,False,Connecticut Sun,CON,New York Liberty,NY,70,82,0
+400927563,2017-08-19,2017,False,Seattle Storm,SEA,San Antonio Stars,SA,79,78,1
+400927561,2017-08-19,2017,False,Minnesota Lynx,MIN,Indiana Fever,IND,111,52,1
+400927562,2017-08-19,2017,False,Chicago Sky,CHI,Los Angeles Sparks,LA,106,115,0
+400927565,2017-08-20,2017,False,Connecticut Sun,CON,Phoenix Mercury,PHX,94,66,1
+400927567,2017-08-20,2017,False,Indiana Fever,IND,Washington Mystics,WSH,82,87,0
+400927566,2017-08-20,2017,False,New York Liberty,NY,Minnesota Lynx,MIN,70,61,1
+400927564,2017-08-20,2017,False,Dallas Wings,DAL,Atlanta Dream,ATL,90,86,1
+400927568,2017-08-20,2017,False,Chicago Sky,CHI,Seattle Storm,SEA,66,103,0
+400927569,2017-08-23,2017,False,Minnesota Lynx,MIN,Phoenix Mercury,PHX,105,69,1
+400927570,2017-08-23,2017,False,Los Angeles Sparks,LA,San Antonio Stars,SA,75,55,1
+400927571,2017-08-23,2017,False,Connecticut Sun,CON,Dallas Wings,DAL,93,87,1
+400927572,2017-08-23,2017,False,Atlanta Dream,ATL,Seattle Storm,SEA,89,83,1
+400927573,2017-08-23,2017,False,Indiana Fever,IND,New York Liberty,NY,50,71,0
+400927577,2017-08-25,2017,False,San Antonio Stars,SA,Minnesota Lynx,MIN,70,89,0
+400927576,2017-08-25,2017,False,New York Liberty,NY,Washington Mystics,WSH,74,66,1
+400927574,2017-08-25,2017,False,Phoenix Mercury,PHX,Los Angeles Sparks,LA,67,82,0
+400927575,2017-08-25,2017,False,Connecticut Sun,CON,Chicago Sky,CHI,83,96,0
+400927578,2017-08-26,2017,False,Atlanta Dream,ATL,Indiana Fever,IND,79,74,1
+400927579,2017-08-26,2017,False,Washington Mystics,WSH,Dallas Wings,DAL,78,83,0
+400927580,2017-08-27,2017,False,New York Liberty,NY,Chicago Sky,CHI,92,62,1
+400927581,2017-08-27,2017,False,Los Angeles Sparks,LA,Minnesota Lynx,MIN,78,67,1
+400927582,2017-08-28,2017,False,Seattle Storm,SEA,Phoenix Mercury,PHX,71,75,0
+400973288,2017-08-29,2017,False,Washington Mystics,WSH,Connecticut Sun,CON,76,86,0
+400927583,2017-08-30,2017,False,Indiana Fever,IND,Minnesota Lynx,MIN,69,80,0
+400927584,2017-08-31,2017,False,Chicago Sky,CHI,Dallas Wings,DAL,96,99,0
+400927585,2017-09-01,2017,False,Washington Mystics,WSH,Seattle Storm,SEA,110,106,1
+400927586,2017-09-01,2017,False,New York Liberty,NY,San Antonio Stars,SA,81,69,1
+400927590,2017-09-02,2017,False,Indiana Fever,IND,San Antonio Stars,SA,71,75,0
+400927589,2017-09-02,2017,False,Los Angeles Sparks,LA,Atlanta Dream,ATL,81,56,1
+400927587,2017-09-02,2017,False,Minnesota Lynx,MIN,Chicago Sky,CHI,110,87,1
+400927588,2017-09-02,2017,False,Phoenix Mercury,PHX,Connecticut Sun,CON,86,66,1
+400927591,2017-09-03,2017,False,Dallas Wings,DAL,New York Liberty,NY,81,82,0
+400927592,2017-09-03,2017,False,Los Angeles Sparks,LA,Connecticut Sun,CON,81,70,1
+400927593,2017-09-03,2017,False,Phoenix Mercury,PHX,Atlanta Dream,ATL,84,70,1
+400927595,2017-09-03,2017,False,Minnesota Lynx,MIN,Washington Mystics,WSH,86,72,1
+400927594,2017-09-03,2017,False,Chicago Sky,CHI,Seattle Storm,SEA,80,85,0
+400981090,2017-09-07,2017,True,Washington Mystics,WSH,Dallas Wings,DAL,86,76,1
+400981091,2017-09-07,2017,True,Phoenix Mercury,PHX,Seattle Storm,SEA,79,69,1
+400981093,2017-09-10,2017,True,New York Liberty,NY,Washington Mystics,WSH,68,82,0
+400981092,2017-09-10,2017,True,Connecticut Sun,CON,Phoenix Mercury,PHX,83,88,0
+400981099,2017-09-13,2017,True,Los Angeles Sparks,LA,Phoenix Mercury,PHX,79,66,1
+400981094,2017-09-13,2017,True,Minnesota Lynx,MIN,Washington Mystics,WSH,101,81,1
+400981095,2017-09-15,2017,True,Minnesota Lynx,MIN,Washington Mystics,WSH,93,83,1
+400981100,2017-09-15,2017,True,Los Angeles Sparks,LA,Phoenix Mercury,PHX,86,72,1
+400981096,2017-09-17,2017,True,Washington Mystics,WSH,Minnesota Lynx,MIN,70,81,0
+400981101,2017-09-17,2017,True,Phoenix Mercury,PHX,Los Angeles Sparks,LA,87,89,0
+400981428,2017-09-24,2017,True,Minnesota Lynx,MIN,Los Angeles Sparks,LA,84,85,0
+400981429,2017-09-27,2017,True,Minnesota Lynx,MIN,Los Angeles Sparks,LA,70,68,1
+400981430,2017-09-30,2017,True,Los Angeles Sparks,LA,Minnesota Lynx,MIN,75,64,1
+400981431,2017-10-02,2017,True,Los Angeles Sparks,LA,Minnesota Lynx,MIN,69,80,0
+400981432,2017-10-05,2017,True,Minnesota Lynx,MIN,Los Angeles Sparks,LA,85,76,1

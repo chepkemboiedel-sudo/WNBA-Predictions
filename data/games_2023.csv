@@ -1,0 +1,261 @@
+game_id,date,season,is_playoff,home_team,home_abbr,away_team,away_abbr,home_score,away_score,home_win
+401507130,2023-05-19,2023,False,Indiana Fever,IND,Connecticut Sun,CON,61,70,0
+401507131,2023-05-19,2023,False,Washington Mystics,WSH,New York Liberty,NY,80,64,1
+401507132,2023-05-20,2023,False,Minnesota Lynx,MIN,Chicago Sky,CHI,66,77,0
+401507133,2023-05-20,2023,False,Los Angeles Sparks,LA,Phoenix Mercury,PHX,94,71,1
+401507135,2023-05-20,2023,False,Dallas Wings,DAL,Atlanta Dream,ATL,85,78,1
+401507134,2023-05-20,2023,False,Seattle Storm,SEA,Las Vegas Aces,LV,64,105,0
+401507138,2023-05-21,2023,False,Phoenix Mercury,PHX,Chicago Sky,CHI,69,75,0
+401507137,2023-05-21,2023,False,New York Liberty,NY,Indiana Fever,IND,90,73,1
+401507136,2023-05-21,2023,False,Connecticut Sun,CON,Washington Mystics,WSH,80,74,1
+401507139,2023-05-23,2023,False,Washington Mystics,WSH,Connecticut Sun,CON,81,88,0
+401507140,2023-05-24,2023,False,Minnesota Lynx,MIN,Atlanta Dream,ATL,77,83,0
+401507141,2023-05-26,2023,False,Los Angeles Sparks,LA,Las Vegas Aces,LV,85,94,0
+401507142,2023-05-26,2023,False,Phoenix Mercury,PHX,Minnesota Lynx,MIN,90,81,1
+401507143,2023-05-27,2023,False,Chicago Sky,CHI,Washington Mystics,WSH,69,71,0
+401507144,2023-05-27,2023,False,Seattle Storm,SEA,Dallas Wings,DAL,91,95,0
+401507145,2023-05-27,2023,False,New York Liberty,NY,Connecticut Sun,CON,81,65,1
+401507146,2023-05-28,2023,False,Las Vegas Aces,LV,Los Angeles Sparks,LA,93,65,1
+401507147,2023-05-28,2023,False,Atlanta Dream,ATL,Indiana Fever,IND,87,90,0
+401507148,2023-05-28,2023,False,Chicago Sky,CHI,Dallas Wings,DAL,94,88,1
+401507149,2023-05-29,2023,False,Las Vegas Aces,LV,Minnesota Lynx,MIN,94,73,1
+401507150,2023-05-30,2023,False,Atlanta Dream,ATL,Chicago Sky,CHI,83,65,1
+401507151,2023-05-30,2023,False,Connecticut Sun,CON,Indiana Fever,IND,81,78,1
+401507152,2023-05-31,2023,False,Dallas Wings,DAL,Minnesota Lynx,MIN,94,89,1
+401507153,2023-05-31,2023,False,Seattle Storm,SEA,New York Liberty,NY,78,86,0
+401507154,2023-06-02,2023,False,Minnesota Lynx,MIN,Connecticut Sun,CON,84,89,0
+401507157,2023-06-02,2023,False,Chicago Sky,CHI,New York Liberty,NY,76,77,0
+401507155,2023-06-02,2023,False,Washington Mystics,WSH,Dallas Wings,DAL,75,74,1
+401507159,2023-06-03,2023,False,Washington Mystics,WSH,Minnesota Lynx,MIN,78,80,0
+401507156,2023-06-03,2023,False,Atlanta Dream,ATL,Las Vegas Aces,LV,87,92,0
+401507158,2023-06-03,2023,False,Phoenix Mercury,PHX,Los Angeles Sparks,LA,93,99,0
+401507162,2023-06-04,2023,False,New York Liberty,NY,Chicago Sky,CHI,82,86,0
+401507163,2023-06-04,2023,False,Indiana Fever,IND,Las Vegas Aces,LV,80,84,0
+401507160,2023-06-04,2023,False,Los Angeles Sparks,LA,Seattle Storm,SEA,92,85,1
+401507161,2023-06-04,2023,False,Connecticut Sun,CON,Dallas Wings,DAL,80,74,1
+401507164,2023-06-06,2023,False,Connecticut Sun,CON,Las Vegas Aces,LV,84,90,0
+401507165,2023-06-07,2023,False,Chicago Sky,CHI,Indiana Fever,IND,108,103,1
+401507166,2023-06-07,2023,False,Seattle Storm,SEA,Los Angeles Sparks,LA,66,63,1
+401507168,2023-06-08,2023,False,Dallas Wings,DAL,Phoenix Mercury,PHX,84,79,1
+401507169,2023-06-08,2023,False,Connecticut Sun,CON,Las Vegas Aces,LV,94,77,1
+401507170,2023-06-09,2023,False,Atlanta Dream,ATL,New York Liberty,NY,83,106,0
+401507171,2023-06-10,2023,False,Dallas Wings,DAL,Phoenix Mercury,PHX,90,77,1
+401507172,2023-06-10,2023,False,Minnesota Lynx,MIN,Indiana Fever,IND,69,71,0
+401507173,2023-06-10,2023,False,Los Angeles Sparks,LA,Chicago Sky,CHI,77,62,1
+401507174,2023-06-10,2023,False,Seattle Storm,SEA,Washington Mystics,WSH,66,73,0
+401507178,2023-06-11,2023,False,Indiana Fever,IND,Phoenix Mercury,PHX,82,85,0
+401507177,2023-06-11,2023,False,Atlanta Dream,ATL,Connecticut Sun,CON,77,89,0
+401507180,2023-06-11,2023,False,Minnesota Lynx,MIN,Los Angeles Sparks,LA,91,86,1
+401507176,2023-06-11,2023,False,Las Vegas Aces,LV,Chicago Sky,CHI,93,80,1
+401507175,2023-06-11,2023,False,New York Liberty,NY,Dallas Wings,DAL,102,93,1
+401507179,2023-06-11,2023,False,Seattle Storm,SEA,Washington Mystics,WSH,65,71,0
+401507181,2023-06-13,2023,False,Indiana Fever,IND,Washington Mystics,WSH,87,66,1
+401507182,2023-06-14,2023,False,New York Liberty,NY,Atlanta Dream,ATL,79,86,0
+401507183,2023-06-14,2023,False,Phoenix Mercury,PHX,Seattle Storm,SEA,69,83,0
+401507184,2023-06-14,2023,False,Dallas Wings,DAL,Los Angeles Sparks,LA,61,79,0
+401507185,2023-06-15,2023,False,Connecticut Sun,CON,Atlanta Dream,ATL,88,92,0
+401507187,2023-06-16,2023,False,Las Vegas Aces,LV,Seattle Storm,SEA,96,63,1
+401507186,2023-06-16,2023,False,Chicago Sky,CHI,Indiana Fever,IND,90,92,0
+401507190,2023-06-17,2023,False,Dallas Wings,DAL,Seattle Storm,SEA,103,109,0
+401507188,2023-06-17,2023,False,Washington Mystics,WSH,Phoenix Mercury,PHX,88,69,1
+401507189,2023-06-17,2023,False,Los Angeles Sparks,LA,Minnesota Lynx,MIN,72,77,0
+401507191,2023-06-18,2023,False,New York Liberty,NY,Phoenix Mercury,PHX,89,71,1
+401507192,2023-06-18,2023,False,Washington Mystics,WSH,Chicago Sky,CHI,77,69,1
+401507193,2023-06-18,2023,False,Indiana Fever,IND,Atlanta Dream,ATL,94,100,0
+401507194,2023-06-18,2023,False,Los Angeles Sparks,LA,Connecticut Sun,CON,74,83,0
+401507195,2023-06-19,2023,False,Las Vegas Aces,LV,Minnesota Lynx,MIN,93,62,1
+401507199,2023-06-21,2023,False,Phoenix Mercury,PHX,Las Vegas Aces,LV,79,99,0
+401507198,2023-06-21,2023,False,Seattle Storm,SEA,Connecticut Sun,CON,79,85,0
+401507196,2023-06-21,2023,False,Dallas Wings,DAL,Atlanta Dream,ATL,85,73,1
+401507197,2023-06-21,2023,False,Los Angeles Sparks,LA,Minnesota Lynx,MIN,61,67,0
+401507203,2023-06-23,2023,False,Atlanta Dream,ATL,New York Liberty,NY,80,110,0
+401507200,2023-06-23,2023,False,Chicago Sky,CHI,Washington Mystics,WSH,59,80,0
+401507201,2023-06-23,2023,False,Minnesota Lynx,MIN,Connecticut Sun,CON,68,89,0
+401507202,2023-06-23,2023,False,Seattle Storm,SEA,Indiana Fever,IND,68,80,0
+401507204,2023-06-24,2023,False,Los Angeles Sparks,LA,Dallas Wings,DAL,76,74,1
+401507205,2023-06-25,2023,False,Las Vegas Aces,LV,Indiana Fever,IND,101,88,1
+401507206,2023-06-25,2023,False,Seattle Storm,SEA,Phoenix Mercury,PHX,97,74,1
+401507207,2023-06-25,2023,False,Connecticut Sun,CON,Chicago Sky,CHI,96,72,1
+401507208,2023-06-25,2023,False,New York Liberty,NY,Washington Mystics,WSH,89,88,1
+401507209,2023-06-25,2023,False,Los Angeles Sparks,LA,Dallas Wings,DAL,93,83,1
+401507210,2023-06-27,2023,False,Las Vegas Aces,LV,Indiana Fever,IND,88,80,1
+401507211,2023-06-27,2023,False,Connecticut Sun,CON,New York Liberty,NY,81,89,0
+401507215,2023-06-28,2023,False,Washington Mystics,WSH,Atlanta Dream,ATL,109,86,1
+401507214,2023-06-28,2023,False,Chicago Sky,CHI,Los Angeles Sparks,LA,80,63,1
+401507212,2023-06-28,2023,False,Minnesota Lynx,MIN,Seattle Storm,SEA,104,93,1
+401507213,2023-06-28,2023,False,Phoenix Mercury,PHX,Dallas Wings,DAL,62,77,0
+401507216,2023-06-30,2023,False,Las Vegas Aces,LV,New York Liberty,NY,98,81,1
+401507217,2023-06-30,2023,False,Phoenix Mercury,PHX,Indiana Fever,IND,85,63,1
+401507218,2023-06-30,2023,False,Seattle Storm,SEA,Minnesota Lynx,MIN,97,99,0
+401507219,2023-06-30,2023,False,Atlanta Dream,ATL,Washington Mystics,WSH,94,89,1
+401507221,2023-07-01,2023,False,Las Vegas Aces,LV,Connecticut Sun,CON,102,84,1
+401507220,2023-07-01,2023,False,Chicago Sky,CHI,Los Angeles Sparks,LA,86,78,1
+401507222,2023-07-02,2023,False,Phoenix Mercury,PHX,Minnesota Lynx,MIN,76,86,0
+401507223,2023-07-02,2023,False,Atlanta Dream,ATL,Los Angeles Sparks,LA,112,84,1
+401507225,2023-07-02,2023,False,Dallas Wings,DAL,Washington Mystics,WSH,89,72,1
+401507224,2023-07-02,2023,False,Indiana Fever,IND,Chicago Sky,CHI,87,89,0
+401507226,2023-07-02,2023,False,Seattle Storm,SEA,New York Liberty,NY,66,81,0
+401507227,2023-07-05,2023,False,New York Liberty,NY,Phoenix Mercury,PHX,99,95,1
+401507231,2023-07-06,2023,False,Connecticut Sun,CON,Seattle Storm,SEA,93,73,1
+401507230,2023-07-06,2023,False,Los Angeles Sparks,LA,Atlanta Dream,ATL,79,90,0
+401507229,2023-07-06,2023,False,Las Vegas Aces,LV,Dallas Wings,DAL,89,82,1
+401507228,2023-07-06,2023,False,Minnesota Lynx,MIN,Indiana Fever,IND,90,83,1
+401507232,2023-07-07,2023,False,Washington Mystics,WSH,Indiana Fever,IND,96,88,1
+401507233,2023-07-08,2023,False,Chicago Sky,CHI,Atlanta Dream,ATL,68,82,0
+401507234,2023-07-08,2023,False,Dallas Wings,DAL,Las Vegas Aces,LV,80,78,1
+401507235,2023-07-08,2023,False,Minnesota Lynx,MIN,Phoenix Mercury,PHX,75,64,1
+401507236,2023-07-08,2023,False,New York Liberty,NY,Seattle Storm,SEA,80,76,1
+401507237,2023-07-09,2023,False,Connecticut Sun,CON,Washington Mystics,WSH,92,84,1
+401507238,2023-07-09,2023,False,Indiana Fever,IND,Dallas Wings,DAL,76,77,0
+401507239,2023-07-09,2023,False,Phoenix Mercury,PHX,Los Angeles Sparks,LA,78,72,1
+401507240,2023-07-09,2023,False,Minnesota Lynx,MIN,Las Vegas Aces,LV,89,113,0
+401507241,2023-07-10,2023,False,Chicago Sky,CHI,Atlanta Dream,ATL,77,88,0
+401507242,2023-07-11,2023,False,Washington Mystics,WSH,Seattle Storm,SEA,93,86,1
+401507247,2023-07-12,2023,False,Atlanta Dream,ATL,Seattle Storm,SEA,85,75,1
+401507246,2023-07-12,2023,False,Minnesota Lynx,MIN,Dallas Wings,DAL,67,107,0
+401507245,2023-07-12,2023,False,Chicago Sky,CHI,Connecticut Sun,CON,72,84,0
+401507244,2023-07-12,2023,False,Indiana Fever,IND,New York Liberty,NY,87,95,0
+401507243,2023-07-12,2023,False,Las Vegas Aces,LV,Phoenix Mercury,PHX,98,72,1
+401507248,2023-07-13,2023,False,Los Angeles Sparks,LA,Las Vegas Aces,LV,78,97,0
+401507249,2023-07-18,2023,False,Atlanta Dream,ATL,Minnesota Lynx,MIN,82,73,1
+401507250,2023-07-19,2023,False,Phoenix Mercury,PHX,Connecticut Sun,CON,72,66,1
+401507251,2023-07-19,2023,False,Washington Mystics,WSH,Indiana Fever,IND,76,82,0
+401507252,2023-07-19,2023,False,New York Liberty,NY,Dallas Wings,DAL,88,98,0
+401507253,2023-07-20,2023,False,Connecticut Sun,CON,Atlanta Dream,ATL,82,71,1
+401507254,2023-07-21,2023,False,Minnesota Lynx,MIN,Los Angeles Sparks,LA,73,70,1
+401507255,2023-07-21,2023,False,Phoenix Mercury,PHX,Chicago Sky,CHI,80,62,1
+401507256,2023-07-21,2023,False,Seattle Storm,SEA,Las Vegas Aces,LV,63,79,0
+401507257,2023-07-21,2023,False,Washington Mystics,WSH,New York Liberty,NY,87,96,0
+401507258,2023-07-22,2023,False,Atlanta Dream,ATL,Connecticut Sun,CON,78,86,0
+401507261,2023-07-22,2023,False,Minnesota Lynx,MIN,Las Vegas Aces,LV,81,98,0
+401507262,2023-07-23,2023,False,New York Liberty,NY,Indiana Fever,IND,101,83,1
+401507263,2023-07-23,2023,False,Washington Mystics,WSH,Phoenix Mercury,PHX,84,69,1
+401507260,2023-07-23,2023,False,Dallas Wings,DAL,Los Angeles Sparks,LA,98,84,1
+401507259,2023-07-23,2023,False,Seattle Storm,SEA,Chicago Sky,CHI,75,90,0
+401507264,2023-07-25,2023,False,Atlanta Dream,ATL,Phoenix Mercury,PHX,78,65,1
+401507265,2023-07-25,2023,False,New York Liberty,NY,Seattle Storm,SEA,86,82,1
+401507266,2023-07-25,2023,False,Chicago Sky,CHI,Las Vegas Aces,LV,95,107,0
+401507267,2023-07-26,2023,False,Dallas Wings,DAL,Connecticut Sun,CON,83,88,0
+401507268,2023-07-26,2023,False,Los Angeles Sparks,LA,Indiana Fever,IND,79,78,1
+401507270,2023-07-27,2023,False,Los Angeles Sparks,LA,Indiana Fever,IND,81,68,1
+401507271,2023-07-27,2023,False,New York Liberty,NY,Atlanta Dream,ATL,95,84,1
+401507269,2023-07-27,2023,False,Minnesota Lynx,MIN,Washington Mystics,WSH,97,92,1
+401507272,2023-07-29,2023,False,Chicago Sky,CHI,Seattle Storm,SEA,74,83,0
+401507273,2023-07-29,2023,False,Dallas Wings,DAL,Washington Mystics,WSH,90,62,1
+401558197,2023-07-29,2023,False,New York Liberty,NY,Minnesota Lynx,MIN,83,88,0
+401507278,2023-07-30,2023,False,Las Vegas Aces,LV,Dallas Wings,DAL,104,91,1
+401507279,2023-07-30,2023,False,Los Angeles Sparks,LA,New York Liberty,NY,79,87,0
+401507277,2023-07-30,2023,False,Chicago Sky,CHI,Phoenix Mercury,PHX,104,85,1
+401507276,2023-07-30,2023,False,Indiana Fever,IND,Seattle Storm,SEA,62,85,0
+401507275,2023-07-30,2023,False,Atlanta Dream,ATL,Washington Mystics,WSH,80,73,1
+401507274,2023-07-30,2023,False,Connecticut Sun,CON,Minnesota Lynx,MIN,83,87,0
+401507280,2023-08-01,2023,False,Connecticut Sun,CON,Minnesota Lynx,MIN,79,69,1
+401507281,2023-08-01,2023,False,Indiana Fever,IND,Phoenix Mercury,PHX,72,71,1
+401507282,2023-08-02,2023,False,Las Vegas Aces,LV,Atlanta Dream,ATL,93,72,1
+401507283,2023-08-02,2023,False,Los Angeles Sparks,LA,New York Liberty,NY,69,76,0
+401507284,2023-08-03,2023,False,Seattle Storm,SEA,Dallas Wings,DAL,65,76,0
+401507285,2023-08-04,2023,False,Phoenix Mercury,PHX,Atlanta Dream,ATL,91,71,1
+401507286,2023-08-04,2023,False,Indiana Fever,IND,Connecticut Sun,CON,72,88,0
+401507287,2023-08-04,2023,False,Washington Mystics,WSH,Los Angeles Sparks,LA,79,77,1
+401507288,2023-08-05,2023,False,Dallas Wings,DAL,Chicago Sky,CHI,89,104,0
+401507289,2023-08-05,2023,False,Minnesota Lynx,MIN,New York Liberty,NY,66,76,0
+401507294,2023-08-06,2023,False,Dallas Wings,DAL,Chicago Sky,CHI,96,104,0
+401507292,2023-08-06,2023,False,New York Liberty,NY,Las Vegas Aces,LV,99,61,1
+401507293,2023-08-06,2023,False,Washington Mystics,WSH,Los Angeles Sparks,LA,83,91,0
+401507290,2023-08-06,2023,False,Phoenix Mercury,PHX,Seattle Storm,SEA,91,97,0
+401507291,2023-08-06,2023,False,Atlanta Dream,ATL,Indiana Fever,IND,82,73,1
+401507295,2023-08-08,2023,False,Seattle Storm,SEA,Connecticut Sun,CON,69,81,0
+401507296,2023-08-08,2023,False,Indiana Fever,IND,Los Angeles Sparks,LA,80,87,0
+401507297,2023-08-09,2023,False,Chicago Sky,CHI,Minnesota Lynx,MIN,79,88,0
+401507298,2023-08-09,2023,False,Dallas Wings,DAL,Las Vegas Aces,LV,84,104,0
+401507299,2023-08-09,2023,False,Phoenix Mercury,PHX,Washington Mystics,WSH,91,72,1
+401507300,2023-08-10,2023,False,Indiana Fever,IND,Minnesota Lynx,MIN,91,73,1
+401507301,2023-08-11,2023,False,Phoenix Mercury,PHX,Connecticut Sun,CON,90,84,1
+401507302,2023-08-11,2023,False,Seattle Storm,SEA,Atlanta Dream,ATL,68,67,1
+401507303,2023-08-12,2023,False,New York Liberty,NY,Chicago Sky,CHI,89,73,1
+401507304,2023-08-12,2023,False,Las Vegas Aces,LV,Washington Mystics,WSH,113,89,1
+401507305,2023-08-12,2023,False,Los Angeles Sparks,LA,Atlanta Dream,ATL,85,74,1
+401507309,2023-08-13,2023,False,Indiana Fever,IND,New York Liberty,NY,89,100,0
+401507308,2023-08-13,2023,False,Seattle Storm,SEA,Phoenix Mercury,PHX,81,71,1
+401507307,2023-08-13,2023,False,Washington Mystics,WSH,Chicago Sky,CHI,83,76,1
+401507306,2023-08-13,2023,False,Dallas Wings,DAL,Connecticut Sun,CON,91,81,1
+401507310,2023-08-14,2023,False,Las Vegas Aces,LV,Atlanta Dream,ATL,86,65,1
+401507311,2023-08-18,2023,False,Las Vegas Aces,LV,New York Liberty,NY,88,75,1
+401507312,2023-08-18,2023,False,Connecticut Sun,CON,Dallas Wings,DAL,75,95,0
+401507313,2023-08-18,2023,False,Indiana Fever,IND,Washington Mystics,WSH,79,83,0
+401507314,2023-08-18,2023,False,Atlanta Dream,ATL,Chicago Sky,CHI,78,67,1
+401507315,2023-08-19,2023,False,Phoenix Mercury,PHX,New York Liberty,NY,63,85,0
+401507316,2023-08-19,2023,False,Seattle Storm,SEA,Minnesota Lynx,MIN,70,78,0
+401507317,2023-08-19,2023,False,Las Vegas Aces,LV,Los Angeles Sparks,LA,72,78,0
+401507318,2023-08-20,2023,False,Washington Mystics,WSH,Dallas Wings,DAL,84,97,0
+401507319,2023-08-20,2023,False,Chicago Sky,CHI,Connecticut Sun,CON,73,79,0
+401507320,2023-08-20,2023,False,Phoenix Mercury,PHX,Indiana Fever,IND,73,83,0
+401507321,2023-08-20,2023,False,Minnesota Lynx,MIN,Seattle Storm,SEA,74,88,0
+401507323,2023-08-22,2023,False,Washington Mystics,WSH,Connecticut Sun,CON,64,68,0
+401507322,2023-08-22,2023,False,Atlanta Dream,ATL,Las Vegas Aces,LV,100,112,0
+401507325,2023-08-23,2023,False,Minnesota Lynx,MIN,Dallas Wings,DAL,91,86,1
+401507324,2023-08-23,2023,False,Chicago Sky,CHI,Seattle Storm,SEA,102,79,1
+401507326,2023-08-24,2023,False,Los Angeles Sparks,LA,Phoenix Mercury,PHX,91,62,1
+401507327,2023-08-24,2023,False,Connecticut Sun,CON,New York Liberty,NY,90,95,0
+401507328,2023-08-24,2023,False,Indiana Fever,IND,Seattle Storm,SEA,90,86,1
+401507329,2023-08-25,2023,False,Chicago Sky,CHI,Las Vegas Aces,LV,87,94,0
+401507330,2023-08-25,2023,False,Dallas Wings,DAL,Minnesota Lynx,MIN,81,90,0
+401507331,2023-08-26,2023,False,Atlanta Dream,ATL,Los Angeles Sparks,LA,78,83,0
+401507332,2023-08-26,2023,False,Washington Mystics,WSH,Las Vegas Aces,LV,78,62,1
+401507333,2023-08-27,2023,False,Minnesota Lynx,MIN,New York Liberty,NY,76,111,0
+401507334,2023-08-27,2023,False,Connecticut Sun,CON,Los Angeles Sparks,LA,83,68,1
+401507335,2023-08-27,2023,False,Indiana Fever,IND,Atlanta Dream,ATL,83,80,1
+401507336,2023-08-27,2023,False,Phoenix Mercury,PHX,Dallas Wings,DAL,74,77,0
+401507337,2023-08-27,2023,False,Seattle Storm,SEA,Chicago Sky,CHI,85,90,0
+401507338,2023-08-28,2023,False,New York Liberty,NY,Las Vegas Aces,LV,94,85,1
+401507340,2023-08-29,2023,False,Washington Mystics,WSH,Minnesota Lynx,MIN,83,72,1
+401507339,2023-08-29,2023,False,Atlanta Dream,ATL,Phoenix Mercury,PHX,94,76,1
+401507341,2023-08-30,2023,False,Los Angeles Sparks,LA,Chicago Sky,CHI,75,76,0
+401507342,2023-08-31,2023,False,Connecticut Sun,CON,Phoenix Mercury,PHX,84,74,1
+401507343,2023-09-01,2023,False,Las Vegas Aces,LV,Washington Mystics,WSH,84,75,1
+401507344,2023-09-01,2023,False,Los Angeles Sparks,LA,Seattle Storm,SEA,61,72,0
+401507345,2023-09-01,2023,False,Indiana Fever,IND,Dallas Wings,DAL,100,110,0
+401507346,2023-09-02,2023,False,New York Liberty,NY,Connecticut Sun,CON,89,58,1
+401507347,2023-09-02,2023,False,Minnesota Lynx,MIN,Atlanta Dream,ATL,91,85,1
+401507348,2023-09-03,2023,False,Las Vegas Aces,LV,Seattle Storm,SEA,103,77,1
+401507349,2023-09-03,2023,False,Chicago Sky,CHI,New York Liberty,NY,69,86,0
+401507350,2023-09-03,2023,False,Dallas Wings,DAL,Indiana Fever,IND,84,97,0
+401507351,2023-09-03,2023,False,Minnesota Lynx,MIN,Phoenix Mercury,PHX,86,73,1
+401507352,2023-09-03,2023,False,Los Angeles Sparks,LA,Washington Mystics,WSH,72,64,1
+401507354,2023-09-05,2023,False,Indiana Fever,IND,Chicago Sky,CHI,69,96,0
+401507353,2023-09-05,2023,False,Connecticut Sun,CON,Los Angeles Sparks,LA,90,76,1
+401507357,2023-09-06,2023,False,Atlanta Dream,ATL,Seattle Storm,SEA,79,68,1
+401507356,2023-09-06,2023,False,Phoenix Mercury,PHX,Washington Mystics,WSH,77,100,0
+401507355,2023-09-06,2023,False,Dallas Wings,DAL,New York Liberty,NY,93,94,0
+401507358,2023-09-07,2023,False,New York Liberty,NY,Los Angeles Sparks,LA,96,89,1
+401507359,2023-09-08,2023,False,Connecticut Sun,CON,Indiana Fever,IND,76,59,1
+401507360,2023-09-08,2023,False,Washington Mystics,WSH,Atlanta Dream,ATL,75,80,0
+401507361,2023-09-09,2023,False,Chicago Sky,CHI,Minnesota Lynx,MIN,92,87,1
+401507362,2023-09-09,2023,False,Dallas Wings,DAL,Seattle Storm,SEA,106,91,1
+401507363,2023-09-09,2023,False,Phoenix Mercury,PHX,Las Vegas Aces,LV,73,94,0
+401507364,2023-09-10,2023,False,Atlanta Dream,ATL,Dallas Wings,DAL,77,94,0
+401507365,2023-09-10,2023,False,Connecticut Sun,CON,Chicago Sky,CHI,91,102,0
+401507366,2023-09-10,2023,False,Indiana Fever,IND,Minnesota Lynx,MIN,87,72,1
+401507367,2023-09-10,2023,False,New York Liberty,NY,Washington Mystics,WSH,88,90,0
+401507368,2023-09-10,2023,False,Las Vegas Aces,LV,Phoenix Mercury,PHX,100,85,1
+401507369,2023-09-10,2023,False,Seattle Storm,SEA,Los Angeles Sparks,LA,89,91,0
+401578549,2023-09-14,2023,True,Connecticut Sun,CON,Minnesota Lynx,MIN,90,60,1
+401578550,2023-09-14,2023,True,Las Vegas Aces,LV,Chicago Sky,CHI,87,59,1
+401578551,2023-09-15,2023,True,New York Liberty,NY,Washington Mystics,WSH,90,75,1
+401578552,2023-09-16,2023,True,Dallas Wings,DAL,Atlanta Dream,ATL,94,82,1
+401578553,2023-09-17,2023,True,Connecticut Sun,CON,Minnesota Lynx,MIN,75,82,0
+401578554,2023-09-17,2023,True,Las Vegas Aces,LV,Chicago Sky,CHI,92,70,1
+401578555,2023-09-19,2023,True,New York Liberty,NY,Washington Mystics,WSH,90,85,1
+401578556,2023-09-20,2023,True,Dallas Wings,DAL,Atlanta Dream,ATL,101,74,1
+401578557,2023-09-21,2023,True,Minnesota Lynx,MIN,Connecticut Sun,CON,75,90,0
+401578561,2023-09-24,2023,True,New York Liberty,NY,Connecticut Sun,CON,63,78,0
+401578562,2023-09-24,2023,True,Las Vegas Aces,LV,Dallas Wings,DAL,97,83,1
+401578563,2023-09-27,2023,True,New York Liberty,NY,Connecticut Sun,CON,84,77,1
+401578564,2023-09-27,2023,True,Las Vegas Aces,LV,Dallas Wings,DAL,91,84,1
+401578565,2023-09-29,2023,True,Connecticut Sun,CON,New York Liberty,NY,81,92,0
+401578566,2023-09-30,2023,True,Dallas Wings,DAL,Las Vegas Aces,LV,61,64,0
+401578567,2023-10-01,2023,True,Connecticut Sun,CON,New York Liberty,NY,84,87,0
+401578571,2023-10-08,2023,True,Las Vegas Aces,LV,New York Liberty,NY,99,82,1
+401578572,2023-10-12,2023,True,Las Vegas Aces,LV,New York Liberty,NY,104,76,1
+401578573,2023-10-15,2023,True,New York Liberty,NY,Las Vegas Aces,LV,87,73,1
+401578574,2023-10-19,2023,True,New York Liberty,NY,Las Vegas Aces,LV,69,70,0

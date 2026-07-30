@@ -1,0 +1,148 @@
+game_id,date,season,is_playoff,home_team,home_abbr,away_team,away_abbr,home_score,away_score,home_win
+401230733,2020-07-25,2020,False,New York Liberty,NY,Seattle Storm,SEA,71,87,0
+401230734,2020-07-25,2020,False,Phoenix Mercury,PHX,Los Angeles Sparks,LA,76,99,0
+401230735,2020-07-25,2020,False,Washington Mystics,WSH,Indiana Fever,IND,101,76,1
+401230461,2020-07-26,2020,False,Minnesota Lynx,MIN,Connecticut Sun,CON,77,69,1
+401230462,2020-07-26,2020,False,Las Vegas Aces,LV,Chicago Sky,CHI,86,88,0
+401230463,2020-07-26,2020,False,Atlanta Dream,ATL,Dallas Wings,DAL,105,95,1
+401230464,2020-07-28,2020,False,Connecticut Sun,CON,Washington Mystics,WSH,89,94,0
+401230467,2020-07-29,2020,False,Indiana Fever,IND,Phoenix Mercury,PHX,106,100,1
+401230466,2020-07-29,2020,False,Seattle Storm,SEA,Minnesota Lynx,MIN,90,66,1
+401230465,2020-07-29,2020,False,Chicago Sky,CHI,Los Angeles Sparks,LA,96,78,1
+401230468,2020-07-30,2020,False,Dallas Wings,DAL,New York Liberty,NY,93,80,1
+401230469,2020-07-30,2020,False,Las Vegas Aces,LV,Atlanta Dream,ATL,100,70,1
+401230470,2020-07-30,2020,False,Washington Mystics,WSH,Seattle Storm,SEA,89,71,1
+401230471,2020-07-31,2020,False,Minnesota Lynx,MIN,Chicago Sky,CHI,83,81,1
+401230472,2020-07-31,2020,False,Los Angeles Sparks,LA,Connecticut Sun,CON,81,76,1
+401230753,2020-07-31,2020,False,Atlanta Dream,ATL,New York Liberty,NY,84,78,1
+401230757,2020-08-01,2020,False,Chicago Sky,CHI,Washington Mystics,WSH,88,86,1
+401230756,2020-08-01,2020,False,Connecticut Sun,CON,Minnesota Lynx,MIN,69,78,0
+401230755,2020-08-01,2020,False,Phoenix Mercury,PHX,Las Vegas Aces,LV,102,95,1
+401230754,2020-08-01,2020,False,Dallas Wings,DAL,Indiana Fever,IND,76,73,1
+401230758,2020-08-02,2020,False,Seattle Storm,SEA,Los Angeles Sparks,LA,81,75,1
+401230759,2020-08-02,2020,False,New York Liberty,NY,Phoenix Mercury,PHX,67,96,0
+401230760,2020-08-02,2020,False,Indiana Fever,IND,Atlanta Dream,ATL,93,77,1
+401230761,2020-08-02,2020,False,Las Vegas Aces,LV,Dallas Wings,DAL,79,70,1
+401230762,2020-08-04,2020,False,Chicago Sky,CHI,Dallas Wings,DAL,82,79,1
+401230763,2020-08-04,2020,False,Atlanta Dream,ATL,Phoenix Mercury,PHX,74,81,0
+401230765,2020-08-05,2020,False,New York Liberty,NY,Minnesota Lynx,MIN,66,92,0
+401230764,2020-08-05,2020,False,Seattle Storm,SEA,Connecticut Sun,CON,87,74,1
+401230766,2020-08-06,2020,False,Washington Mystics,WSH,Las Vegas Aces,LV,77,83,0
+401230767,2020-08-06,2020,False,Los Angeles Sparks,LA,Indiana Fever,IND,86,75,1
+401230768,2020-08-06,2020,False,Atlanta Dream,ATL,Seattle Storm,SEA,92,93,0
+401230772,2020-08-07,2020,False,Washington Mystics,WSH,New York Liberty,NY,66,74,0
+401230769,2020-08-07,2020,False,Dallas Wings,DAL,Connecticut Sun,CON,68,91,0
+401230770,2020-08-07,2020,False,Phoenix Mercury,PHX,Chicago Sky,CHI,96,86,1
+401230771,2020-08-07,2020,False,Minnesota Lynx,MIN,Indiana Fever,IND,87,80,1
+401230776,2020-08-08,2020,False,Connecticut Sun,CON,Chicago Sky,CHI,93,100,0
+401230775,2020-08-08,2020,False,Seattle Storm,SEA,Phoenix Mercury,PHX,74,68,1
+401230773,2020-08-08,2020,False,Las Vegas Aces,LV,Los Angeles Sparks,LA,86,82,1
+401230774,2020-08-08,2020,False,Dallas Wings,DAL,Atlanta Dream,ATL,85,75,1
+401230779,2020-08-09,2020,False,Los Angeles Sparks,LA,Minnesota Lynx,MIN,97,81,1
+401230777,2020-08-09,2020,False,New York Liberty,NY,Las Vegas Aces,LV,76,78,0
+401230778,2020-08-09,2020,False,Indiana Fever,IND,Washington Mystics,WSH,91,84,1
+401230780,2020-08-10,2020,False,Atlanta Dream,ATL,Connecticut Sun,CON,82,93,0
+401230781,2020-08-10,2020,False,Dallas Wings,DAL,Phoenix Mercury,PHX,79,91,0
+401230782,2020-08-11,2020,False,Seattle Storm,SEA,Chicago Sky,CHI,89,71,1
+401230784,2020-08-11,2020,False,Indiana Fever,IND,Las Vegas Aces,LV,79,98,0
+401230786,2020-08-12,2020,False,Connecticut Sun,CON,Dallas Wings,DAL,70,66,1
+401230783,2020-08-12,2020,False,Minnesota Lynx,MIN,Washington Mystics,WSH,68,48,1
+401230785,2020-08-12,2020,False,Los Angeles Sparks,LA,New York Liberty,NY,93,78,1
+401230787,2020-08-13,2020,False,Chicago Sky,CHI,Phoenix Mercury,PHX,89,71,1
+401230788,2020-08-13,2020,False,Seattle Storm,SEA,Atlanta Dream,ATL,100,63,1
+401230789,2020-08-13,2020,False,New York Liberty,NY,Indiana Fever,IND,79,86,0
+401230790,2020-08-13,2020,False,Washington Mystics,WSH,Los Angeles Sparks,LA,64,81,0
+401230792,2020-08-14,2020,False,Chicago Sky,CHI,Connecticut Sun,CON,74,77,0
+401230791,2020-08-14,2020,False,Las Vegas Aces,LV,Minnesota Lynx,MIN,87,77,1
+401230796,2020-08-15,2020,False,Minnesota Lynx,MIN,New York Liberty,NY,94,64,1
+401230795,2020-08-15,2020,False,Indiana Fever,IND,Los Angeles Sparks,LA,76,90,0
+401230793,2020-08-15,2020,False,Dallas Wings,DAL,Seattle Storm,SEA,65,83,0
+401230794,2020-08-15,2020,False,Phoenix Mercury,PHX,Atlanta Dream,ATL,96,80,1
+401230797,2020-08-15,2020,False,Las Vegas Aces,LV,Washington Mystics,WSH,88,73,1
+401230822,2020-08-16,2020,False,Phoenix Mercury,PHX,Dallas Wings,DAL,89,95,0
+401230821,2020-08-16,2020,False,Connecticut Sun,CON,Seattle Storm,SEA,72,95,0
+401230820,2020-08-16,2020,False,Atlanta Dream,ATL,Chicago Sky,CHI,67,92,0
+401230823,2020-08-18,2020,False,Connecticut Sun,CON,Indiana Fever,IND,84,62,1
+401230824,2020-08-19,2020,False,Chicago Sky,CHI,Las Vegas Aces,LV,84,82,1
+401230825,2020-08-19,2020,False,Seattle Storm,SEA,New York Liberty,NY,105,64,1
+401230798,2020-08-19,2020,False,Washington Mystics,WSH,Atlanta Dream,ATL,98,91,1
+401230827,2020-08-20,2020,False,Los Angeles Sparks,LA,Phoenix Mercury,PHX,83,74,1
+401230799,2020-08-20,2020,False,New York Liberty,NY,Chicago Sky,CHI,85,101,0
+401230826,2020-08-20,2020,False,Minnesota Lynx,MIN,Dallas Wings,DAL,91,84,1
+401230828,2020-08-21,2020,False,Indiana Fever,IND,Seattle Storm,SEA,90,84,1
+401230800,2020-08-21,2020,False,Las Vegas Aces,LV,Connecticut Sun,CON,99,78,1
+401230829,2020-08-21,2020,False,Atlanta Dream,ATL,Los Angeles Sparks,LA,85,93,0
+401230833,2020-08-22,2020,False,Connecticut Sun,CON,New York Liberty,NY,82,65,1
+401230832,2020-08-22,2020,False,Chicago Sky,CHI,Indiana Fever,IND,87,76,1
+401230830,2020-08-22,2020,False,Dallas Wings,DAL,Washington Mystics,WSH,101,92,1
+401230831,2020-08-22,2020,False,Phoenix Mercury,PHX,Minnesota Lynx,MIN,80,90,0
+401230801,2020-08-22,2020,False,Las Vegas Aces,LV,Seattle Storm,SEA,82,74,1
+401230834,2020-08-23,2020,False,Minnesota Lynx,MIN,Atlanta Dream,ATL,75,78,0
+401230835,2020-08-23,2020,False,Los Angeles Sparks,LA,Dallas Wings,DAL,84,81,1
+401230836,2020-08-24,2020,False,Washington Mystics,WSH,Phoenix Mercury,PHX,87,88,0
+401230837,2020-08-25,2020,False,Chicago Sky,CHI,New York Liberty,NY,99,101,0
+401230838,2020-08-26,2020,False,Dallas Wings,DAL,Las Vegas Aces,LV,92,96,0
+401230839,2020-08-26,2020,False,Seattle Storm,SEA,Indiana Fever,IND,87,74,1
+401230843,2020-08-28,2020,False,Atlanta Dream,ATL,Minnesota Lynx,MIN,79,88,0
+401230844,2020-08-29,2020,False,Connecticut Sun,CON,Los Angeles Sparks,LA,76,80,0
+401230845,2020-08-29,2020,False,Phoenix Mercury,PHX,Washington Mystics,WSH,94,72,1
+401230807,2020-08-29,2020,False,Las Vegas Aces,LV,New York Liberty,NY,80,63,1
+401230806,2020-08-29,2020,False,Chicago Sky,CHI,Seattle Storm,SEA,74,88,0
+401230805,2020-08-29,2020,False,Indiana Fever,IND,Dallas Wings,DAL,78,82,0
+401230846,2020-08-30,2020,False,Washington Mystics,WSH,Connecticut Sun,CON,63,76,0
+401230847,2020-08-30,2020,False,Minnesota Lynx,MIN,Phoenix Mercury,PHX,79,83,0
+401241306,2020-08-31,2020,False,Indiana Fever,IND,Chicago Sky,CHI,77,100,0
+401230808,2020-08-31,2020,False,Los Angeles Sparks,LA,Atlanta Dream,ATL,84,79,1
+401241307,2020-09-01,2020,False,Minnesota Lynx,MIN,Los Angeles Sparks,LA,96,78,1
+401230848,2020-09-01,2020,False,New York Liberty,NY,Connecticut Sun,CON,65,70,0
+401230849,2020-09-02,2020,False,Atlanta Dream,ATL,Indiana Fever,IND,102,90,1
+401230850,2020-09-02,2020,False,Las Vegas Aces,LV,Phoenix Mercury,PHX,85,92,0
+401230851,2020-09-02,2020,False,Chicago Sky,CHI,Minnesota Lynx,MIN,83,86,0
+401230809,2020-09-03,2020,False,Dallas Wings,DAL,Los Angeles Sparks,LA,83,91,0
+401230852,2020-09-03,2020,False,Seattle Storm,SEA,Washington Mystics,WSH,71,64,1
+401230810,2020-09-03,2020,False,New York Liberty,NY,Atlanta Dream,ATL,56,62,0
+401230811,2020-09-04,2020,False,Connecticut Sun,CON,Las Vegas Aces,LV,78,93,0
+401230812,2020-09-04,2020,False,Phoenix Mercury,PHX,Indiana Fever,IND,105,81,1
+401230853,2020-09-04,2020,False,Washington Mystics,WSH,Chicago Sky,CHI,79,69,1
+401230854,2020-09-05,2020,False,Dallas Wings,DAL,Minnesota Lynx,MIN,75,88,0
+401230813,2020-09-05,2020,False,Los Angeles Sparks,LA,Seattle Storm,SEA,89,90,0
+401230855,2020-09-05,2020,False,Indiana Fever,IND,Connecticut Sun,CON,77,96,0
+401230814,2020-09-05,2020,False,Atlanta Dream,ATL,Las Vegas Aces,LV,79,89,0
+401230856,2020-09-06,2020,False,Washington Mystics,WSH,Dallas Wings,DAL,94,101,0
+401230857,2020-09-06,2020,False,Minnesota Lynx,MIN,Seattle Storm,SEA,88,103,0
+401230815,2020-09-06,2020,False,Phoenix Mercury,PHX,New York Liberty,NY,83,67,1
+401230858,2020-09-07,2020,False,Los Angeles Sparks,LA,Chicago Sky,CHI,86,80,1
+401241308,2020-09-07,2020,False,Phoenix Mercury,PHX,Connecticut Sun,CON,70,85,0
+401230859,2020-09-08,2020,False,New York Liberty,NY,Los Angeles Sparks,LA,70,96,0
+401230860,2020-09-09,2020,False,Washington Mystics,WSH,Minnesota Lynx,MIN,89,86,1
+401230861,2020-09-09,2020,False,Las Vegas Aces,LV,Indiana Fever,IND,92,86,1
+401230862,2020-09-09,2020,False,Connecticut Sun,CON,Phoenix Mercury,PHX,95,100,0
+401230863,2020-09-10,2020,False,Chicago Sky,CHI,Atlanta Dream,ATL,89,97,0
+401230816,2020-09-10,2020,False,Seattle Storm,SEA,Dallas Wings,DAL,107,95,1
+401230864,2020-09-10,2020,False,Indiana Fever,IND,New York Liberty,NY,85,75,1
+401230865,2020-09-11,2020,False,Minnesota Lynx,MIN,Las Vegas Aces,LV,89,104,0
+401230866,2020-09-11,2020,False,Los Angeles Sparks,LA,Washington Mystics,WSH,72,80,0
+401230867,2020-09-11,2020,False,Connecticut Sun,CON,Atlanta Dream,ATL,75,82,0
+401230818,2020-09-12,2020,False,Indiana Fever,IND,Minnesota Lynx,MIN,86,98,0
+401230817,2020-09-12,2020,False,New York Liberty,NY,Washington Mystics,WSH,58,75,0
+401230819,2020-09-12,2020,False,Los Angeles Sparks,LA,Las Vegas Aces,LV,70,84,0
+401230868,2020-09-12,2020,False,Dallas Wings,DAL,Chicago Sky,CHI,88,95,0
+401230869,2020-09-12,2020,False,Phoenix Mercury,PHX,Seattle Storm,SEA,60,83,0
+401241309,2020-09-13,2020,False,New York Liberty,NY,Dallas Wings,DAL,79,82,0
+401241310,2020-09-13,2020,False,Seattle Storm,SEA,Las Vegas Aces,LV,84,86,0
+401241311,2020-09-13,2020,False,Atlanta Dream,ATL,Washington Mystics,WSH,78,85,0
+401244169,2020-09-15,2020,True,Chicago Sky,CHI,Connecticut Sun,CON,81,94,0
+401244170,2020-09-16,2020,True,Phoenix Mercury,PHX,Washington Mystics,WSH,85,84,1
+401244171,2020-09-17,2020,True,Minnesota Lynx,MIN,Phoenix Mercury,PHX,80,79,1
+401244172,2020-09-18,2020,True,Los Angeles Sparks,LA,Connecticut Sun,CON,59,73,0
+401244173,2020-09-20,2020,True,Las Vegas Aces,LV,Connecticut Sun,CON,62,87,0
+401244176,2020-09-22,2020,True,Las Vegas Aces,LV,Connecticut Sun,CON,83,75,1
+401244175,2020-09-23,2020,True,Seattle Storm,SEA,Minnesota Lynx,MIN,88,86,1
+401244178,2020-09-24,2020,True,Seattle Storm,SEA,Minnesota Lynx,MIN,89,79,1
+401244177,2020-09-25,2020,True,Connecticut Sun,CON,Las Vegas Aces,LV,77,68,1
+401244179,2020-09-27,2020,True,Connecticut Sun,CON,Las Vegas Aces,LV,75,84,0
+401244180,2020-09-27,2020,True,Minnesota Lynx,MIN,Seattle Storm,SEA,71,92,0
+401248413,2020-09-29,2020,True,Las Vegas Aces,LV,Connecticut Sun,CON,66,63,1
+401244183,2020-10-02,2020,True,Las Vegas Aces,LV,Seattle Storm,SEA,80,93,0
+401244184,2020-10-04,2020,True,Las Vegas Aces,LV,Seattle Storm,SEA,91,104,0
+401244185,2020-10-06,2020,True,Seattle Storm,SEA,Las Vegas Aces,LV,92,59,1
