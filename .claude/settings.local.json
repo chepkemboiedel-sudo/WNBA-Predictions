@@ -18,7 +18,16 @@
       "Bash(python src/visuals.py)",
       "Bash(python src/compare_odds.py)",
       "Bash(python run_all.py)",
-      "Bash(python \"C:/Users/EDELKI~1/AppData/Local/Temp/claude/C--Users-Edel-Kiprop-Desktop-WNBA-Predictions/ffb4e28a-f0ed-4427-aace-437cc6cbddaf/scratchpad/build_site.py\")"
+      "Bash(python \"C:/Users/EDELKI~1/AppData/Local/Temp/claude/C--Users-Edel-Kiprop-Desktop-WNBA-Predictions/ffb4e28a-f0ed-4427-aace-437cc6cbddaf/scratchpad/build_site.py\")",
+      "Bash(cp \"C:/Users/EDELKI~1/AppData/Local/Temp/claude/C--Users-Edel-Kiprop-Desktop-WNBA-Predictions/ffb4e28a-f0ed-4427-aace-437cc6cbddaf/scratchpad/build_site.py\" src/build_site.py)",
+      "Bash(python -c \"import json;json.load\\(open\\('vercel.json'\\)\\);print\\('vercel.json OK'\\)\")",
+      "Bash(awk '{print $2}')",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(gh pr create --base main --head deploy-vercel-static-site --title 'Add Vercel static-site deployment config' --body ' *)",
+      "PowerShell($g = Get-Command gh -ErrorAction SilentlyContinue; if \\($g\\) { $g.Source; gh --version } else { \"GH_NOT_FOUND\" })"
     ]
   }
 }
