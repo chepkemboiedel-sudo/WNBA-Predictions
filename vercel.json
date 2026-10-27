@@ -6,7 +6,7 @@
   "outputDirectory": "public",
   "headers": [
     {
-      "source": "/refresh_meta.json",
+      "source": "/refresh_(meta|health).json",
       "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }]
     },
     {
