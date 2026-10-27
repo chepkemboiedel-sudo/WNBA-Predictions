@@ -1,9 +1,17 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "builds": [
-    { "src": "public/index.html", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/public/index.html" }
+  "framework": null,
+  "buildCommand": "",
+  "installCommand": "",
+  "outputDirectory": "public",
+  "headers": [
+    {
+      "source": "/refresh_meta.json",
+      "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }]
+    },
+    {
+      "source": "/",
+      "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+    }
   ]
 }

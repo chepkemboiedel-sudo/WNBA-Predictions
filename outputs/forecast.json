@@ -1,0 +1,50 @@
+{
+  "n_sims": 20000,
+  "data_through": "2026-10-27",
+  "game_count": 2658,
+  "completed_playoff_games": 21,
+  "observed_series": {
+    "Minnesota Lynx|New York Liberty": {
+      "hw": 0,
+      "lw": 2
+    },
+    "Las Vegas Aces|Indiana Fever": {
+      "hw": 2,
+      "lw": 1
+    },
+    "Atlanta Dream|Washington Mystics": {
+      "hw": 2,
+      "lw": 0
+    },
+    "Golden State Valkyries|Dallas Wings": {
+      "hw": 2,
+      "lw": 1
+    },
+    "Golden State Valkyries|Las Vegas Aces": {
+      "hw": 3,
+      "lw": 0
+    },
+    "Atlanta Dream|New York Liberty": {
+      "hw": 3,
+      "lw": 0
+    },
+    "Golden State Valkyries|Atlanta Dream": {
+      "hw": 3,
+      "lw": 2
+    }
+  },
+  "top_matchups": [
+    {
+      "teams": [
+        "Golden State Valkyries",
+        "Atlanta Dream"
+      ],
+      "probability": 1.0
+    }
+  ],
+  "conferences": {
+    "both_west": 0.0,
+    "mixed": 1.0,
+    "both_east": 0.0
+  }
+}

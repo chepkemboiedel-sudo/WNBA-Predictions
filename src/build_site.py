@@ -2,60 +2,82 @@
 including an interactive, client-side bracket driven by the model's real
 pairwise win-probability matrix."""
 import base64, json, os, sys
+from datetime import datetime
+from pathlib import Path
 
-ROOT = r"C:\Users\Edel Kiprop\Desktop\WNBA Predictions"
-OUT = os.path.join(ROOT, "site")
-os.makedirs(OUT, exist_ok=True)
-sys.path.insert(0, os.path.join(ROOT, "src"))
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "site"
+OUT.mkdir(parents=True, exist_ok=True)
+sys.path.insert(0, str(ROOT / "src"))
 
 import pandas as pd, joblib
 import simulate as S
 
 def b64(p):
-    with open(os.path.join(ROOT, "outputs", p), "rb") as f:
+    with open(ROOT / "outputs" / p, "rb") as f:
         return "data:image/png;base64," + base64.b64encode(f.read()).decode()
 
 shap_img = b64("shap_summary.png")
 calib_img = b64("calibration.png")
 
 # --- export the model's pairwise probability matrix for client-side sim ----- #
-games = pd.read_csv(os.path.join(ROOT, "data", "all_games.csv"), parse_dates=["date"])
+games = pd.read_csv(ROOT / "data" / "all_games.csv", parse_dates=["date"])
 standings = S.compute_standings(games)
-seeds = standings["team"].head(8).tolist()
-model = joblib.load(os.path.join(ROOT, "data", "models.joblib"))["logistic"]
+seeds = S.playoff_seeds(games)
+model = joblib.load(ROOT / "data" / "models.joblib")["logistic"]
 feats = S.current_team_features(games, seeds)
 Pmat = S.build_prob_matrix(model, feats, seeds)   # (x, y, x_home) -> P(x beats y)
 PROB = {f"{x}|{y}|{1 if h else 0}": round(Pmat[(x, y, h)], 5)
         for (x, y, h) in Pmat}
 DATA = {"seeds": seeds, "conf": {t: S.CONFERENCE[t] for t in seeds}, "prob": PROB}
+# All displayed figures come from the same run as the interactive probability matrix.
+forecast = json.loads((ROOT / "outputs" / "forecast.json").read_text(encoding="utf-8"))
+results = pd.read_csv(ROOT / "outputs" / "finals_probabilities.csv")
+teams = [(r.team, r.seed, r.conference, r.win_pct,
+          r.p_reach_finals * 100, r.p_champion * 100)
+         for r in results.itertuples()]
+matchups = [(m["teams"][0], m["teams"][1], m["probability"] * 100)
+            for m in forecast["top_matchups"]]
+odds = pd.read_csv(ROOT / "data" / "market_odds.csv")
+comparison = results.merge(odds[["team", "market_novig"]], on="team", how="left")
+market = [(r.team, r.p_champion * 100, r.market_novig * 100)
+          for r in comparison.sort_values("p_champion", ascending=False).itertuples()
+          if pd.notna(r.market_novig)]
+REACH_SCALE = max(50.0, results.p_reach_finals.max() * 100)
+CHAMP_SCALE = max(30.0, results.p_champion.max() * 100,
+                  odds.market_novig.max() * 100)
+DATA["reach_scale"] = REACH_SCALE
+DATA["observed"] = forecast["observed_series"]
+DATA["refresh"] = globals().get("REFRESH_META") or json.loads(
+    (ROOT / "public" / "refresh_meta.json").read_text(encoding="utf-8"))
 data_json = json.dumps(DATA)
-
-# --- display data (from the 20,000-run simulation) ------------------------- #
-teams = [
-    ("Minnesota Lynx", 1, "West", .793, 46.8, 29.0),
-    ("Golden State Valkyries", 3, "West", .679, 36.6, 18.5),
-    ("Las Vegas Aces", 2, "West", .704, 36.3, 16.8),
-    ("Indiana Fever", 4, "East", .643, 33.7, 19.6),
-    ("Atlanta Dream", 6, "East", .630, 17.3, 6.1),
-    ("Dallas Wings", 5, "West", .643, 16.4, 7.2),
-    ("New York Liberty", 7, "East", .571, 9.8, 2.4),
-    ("Washington Mystics", 8, "East", .556, 3.2, 0.5),
-]
-matchups = [
-    ("Minnesota Lynx", "Las Vegas Aces", 17.2),
-    ("Minnesota Lynx", "Golden State Valkyries", 17.1),
-    ("Golden State Valkyries", "Indiana Fever", 12.2),
-    ("Las Vegas Aces", "Indiana Fever", 12.0),
-    ("Minnesota Lynx", "Atlanta Dream", 7.8),
-    ("Golden State Valkyries", "Dallas Wings", 6.2),
-]
-market = [
-    ("Minnesota Lynx", 29.0, 22.2), ("Indiana Fever", 19.6, 19.9),
-    ("Golden State Valkyries", 18.5, 3.0), ("Las Vegas Aces", 16.8, 19.9),
-    ("Dallas Wings", 7.2, 2.7), ("Atlanta Dream", 6.1, 4.1),
-    ("New York Liberty", 2.4, 11.1), ("Washington Mystics", 0.5, 1.9),
-]
-REACH_SCALE, CHAMP_SCALE = 50.0, 30.0
+favorite = results.loc[results.p_champion.idxmax()]
+data_date = datetime.strptime(forecast["data_through"], "%Y-%m-%d").strftime("%b %d, %Y")
+conf = forecast["conferences"]
+metrics = pd.read_csv(ROOT / "outputs" / "validation_metrics.csv")
+metrics_html = "".join(
+    f'<tr><td>{r.model}</td><td>{r.log_loss:.3f}</td><td>{r.brier:.3f}</td>'
+    f'<td>{r.accuracy:.1%}</td></tr>' for r in metrics.itertuples())
+playoff_status = f"{forecast['completed_playoff_games']} completed playoff games included."
+if matchups[0][2] == 100:
+    finalists = sorted(matchups[0][:2], key=seeds.index)
+    score = DATA["observed"].get("|".join(finalists), {"hw": 0, "lw": 0})
+    lead, trail = (finalists if score["hw"] >= score["lw"] else finalists[::-1])
+    wins, losses = sorted((score["hw"], score["lw"]), reverse=True)
+    playoff_status = (f"{lead} won the Finals {wins}–{losses}." if wins >= 4 else
+                      f"Finals: {lead} and {trail} tied {wins}–{losses}." if wins == losses else
+                      f"Finals: {lead} leads {trail} {wins}–{losses}.")
+market_meta_path = ROOT / "data" / "market_meta.json"
+market_meta = json.loads(market_meta_path.read_text(encoding="utf-8")) if market_meta_path.exists() else {}
+market_note = (
+    "Market odds retrieved during this refresh. Differences reflect information the score-only model cannot see."
+    if market_meta.get("status") == "live" else
+    "Live championship futures were unavailable. Market bars show a cached snapshot and may be out of date; model predictions use the refreshed game results."
+)
+if forecast["completed_playoff_games"] and (
+    (comparison.p_champion == 0) & (comparison.market_novig > 0)
+).any():
+    market_note = "ESPN returned a futures snapshot that still assigns odds to eliminated teams. These market odds appear stale and are shown for historical reference only. The model uses the latest completed playoff games."
 def cc(c): return "west" if c == "West" else "east"
 
 rows = []
@@ -80,7 +102,7 @@ mm = []
 for j, (a, b, p) in enumerate(matchups):
     top = " top" if j == 0 else ""
     mm.append(f'''<li class="mrow{top}"><span class="mteams">{a} <i>vs</i> {b}</span>
-        <span class="mbarwrap"><span class="mbar" style="--w:{p/17.2*100:.0f}%"></span></span>
+        <span class="mbarwrap"><span class="mbar" style="--w:{p/max(m[2] for m in matchups)*100:.0f}%"></span></span>
         <span class="mpct">{p:.1f}%</span></li>''')
 matchups_html = "".join(mm)
 
@@ -150,15 +172,41 @@ b,strong{font-weight:800}
 .hero .court::after{content:"";position:absolute;right:-360px;top:50%;transform:translateY(-50%);
   width:360px;height:520px;border:2px solid var(--hair);border-radius:0 260px 260px 0}
 .hero-inner{position:relative;padding:72px 0 60px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:start}
 .hero h1{font-size:clamp(2rem,5.2vw,3.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.05;
   margin:.5rem 0 0;max-width:16ch;text-wrap:balance}
-.pickcard{display:flex;flex-wrap:wrap;align-items:flex-end;gap:8px 40px;margin-top:34px;padding:26px 30px;
+.hero-copy,.status-card{background:color-mix(in srgb,var(--card) 82%,transparent);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.hero-copy{padding:22px 24px}
+.status-card{padding:18px 20px}
+.status-card .label{font-size:.68rem;font-weight:800;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.status-card .big{font-size:1.6rem;font-weight:800;letter-spacing:-.03em;margin-top:6px}
+.status-card .meta{display:grid;gap:10px;margin-top:16px}
+.status-card .meta div{display:flex;justify-content:space-between;gap:12px;padding-top:10px;border-top:1px solid var(--hair)}
+.status-card .meta div:first-child{border-top:none;padding-top:0}
+.status-card .meta span{color:var(--muted)}
+.pickcard{display:flex;flex-wrap:wrap;align-items:flex-end;gap:8px 40px;padding:26px 30px;
   background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);max-width:640px}
 .pickcard .big{font-size:clamp(3.4rem,11vw,5.6rem);font-weight:800;line-height:.9;letter-spacing:-.04em;color:var(--west)}
 .pickcard .who{font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
 .pickcard .sub{color:var(--muted);font-size:.95rem}
 .pickcard .lbl{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
 .hero .foot{margin-top:16px;color:var(--muted);font-size:.85rem;max-width:60ch}
+.refresh-badge{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 14px;border:1px solid var(--line);background:var(--card);border-radius:999px;box-shadow:var(--shadow);max-width:760px}
+.live-dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--pos);box-shadow:0 0 0 6px color-mix(in srgb,var(--pos) 20%,transparent);margin-right:4px}
+.refresh-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.refresh-item{display:inline-flex;align-items:center;gap:6px;font-size:.84rem;color:var(--ink);font-weight:700}
+.refresh-item span{color:var(--muted);font-weight:600}
+.summary-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:20px 0 18px}
+.summary-card,.section-card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.summary-card{padding:16px 18px}
+.summary-card .label{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.summary-card .value{font-size:1.1rem;font-weight:800;letter-spacing:-.02em;margin-top:8px}
+.summary-card .sub{font-size:.82rem;color:var(--muted);margin-top:4px}
+.mvp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:0 0 24px}
+.mvp-card{display:flex;flex-direction:column;gap:4px;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+.mvp-card .team{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.mvp-card .player{font-size:.96rem;font-weight:800;letter-spacing:-.02em}
+.section-card{padding:18px}
 .board{display:flex;flex-direction:column;gap:2px;background:var(--card);border:1px solid var(--line);
   border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
 .row{display:grid;grid-template-columns:minmax(180px,1fr) 2.2fr auto;align-items:center;gap:18px;padding:13px 20px}
@@ -296,14 +344,48 @@ const FMT = { R1:[1,0,1], SEMI:[1,1,0,0,1], FINALS:[1,1,0,0,1,0,1] }; // 1 = hig
 const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
 const seedIdx = t => SEEDS.indexOf(t);           // 0-based; smaller = higher seed
 const pGame = (hi, lo, hiHome) => PROB[hi + "|" + lo + "|" + (hiHome ? 1 : 0)];
+function updateRefreshStatus(){
+  const meta = D.refresh || {};
+  const el = document.getElementById("updated-at"), cd = document.getElementById("countdown");
+  if (el) el.textContent = meta.last_updated ? new Date(meta.last_updated).toLocaleString([], {
+    month:"short", day:"numeric", hour:"2-digit", minute:"2-digit" }) : "Not available";
+  const seconds = Math.max(0, Math.floor((Date.parse(meta.next_refresh_at) - Date.now()) / 1000));
+  if (cd) cd.textContent = !Number.isFinite(seconds) ? "Not scheduled" : seconds === 0 ? "Awaiting next run" :
+    [Math.floor(seconds/3600), Math.floor(seconds/60)%60, seconds%60].map(n=>String(n).padStart(2,"0")).join(":");
+}
+updateRefreshStatus();
+setInterval(updateRefreshStatus, 1000);
+let checkingForUpdates = false;
+async function checkForUpdates(){
+  if (checkingForUpdates || document.hidden) return;
+  checkingForUpdates = true;
+  try {
+    const response = await fetch("refresh_meta.json", {cache:"no-store"});
+    if (!response.ok) return;
+    const meta = await response.json();
+    if (meta.last_updated && meta.last_updated !== D.refresh.last_updated) {
+      window.location.reload();
+    }
+  } catch {
+    // Keep displaying the last successful forecast when the server is offline.
+  } finally {
+    checkingForUpdates = false;
+  }
+}
+setInterval(checkForUpdates, 60000);
+document.addEventListener("visibilitychange", checkForUpdates);
+window.addEventListener("focus", checkForUpdates);
+checkForUpdates();
 
 // Simulate one best-of-N series game by game; returns winner + series score.
 function simSeries(a, b, fmtKey){
   let hi = a, lo = b;
   if (seedIdx(a) > seedIdx(b)) { hi = b; lo = a; }
   const pat = FMT[fmtKey], need = (pat.length >> 1) + 1;
-  let hw = 0, lw = 0;
-  for (const host of pat){
+  const score = D.observed[hi + "|" + lo] || {hw:0,lw:0};
+  let hw = score.hw, lw = score.lw;
+  for (const host of pat.slice(hw + lw)){
+    if (hw >= need || lw >= need) break;
     if (Math.random() < pGame(hi, lo, host === 1)) hw++; else lw++;
     if (hw === need || lw === need) break;
   }
@@ -339,8 +421,8 @@ function updateLeaderboard(agg){
     const t = row.dataset.team, rf = agg.reach[t], ch = agg.champ[t];
     const reachBar = row.querySelector(".bar.reach"), champBar = row.querySelector(".bar.champ");
     [reachBar, champBar].forEach(b => { b.style.animation = "none"; b.style.transition = "width .5s ease"; });
-    reachBar.style.width = Math.min(rf / 50 * 100, 100) + "%";
-    champBar.style.width = Math.min(ch / 50 * 100, 100) + "%";
+    reachBar.style.width = Math.min(rf / D.reach_scale * 100, 100) + "%";
+    champBar.style.width = Math.min(ch / D.reach_scale * 100, 100) + "%";
     row.querySelector(".val b").textContent = Math.round(rf) + "%";
     row.querySelector(".champcell b").textContent = Math.round(ch) + "%";
   });
@@ -390,7 +472,10 @@ function paintMatch(node){
         s.querySelector(".w").textContent = wins;
         if (tm === res.winner) s.classList.add("win", CONF[tm]==="West"?"cw":"ce");
         else s.classList.add("lose");
-      } else s.querySelector(".w").textContent = "";
+      } else {
+        const [hi,lo] = ordered, score = D.observed[hi + "|" + lo];
+        s.querySelector(".w").textContent = score ? (tm === hi ? score.hw : score.lw) : "";
+      }
     });
   }
   const btn = el.querySelector(".play");
@@ -421,11 +506,22 @@ function autoSim(){
   const step = () => { const n = nextReady(); if (!n) return; play(n); setTimeout(step, 260); };
   step();
 }
-function reset(){ fresh(); paintAll(); setStatus(); }
+function reset(){
+  fresh();
+  for (const node of ORDER){
+    const teams = teamsFor(node); if (!teams) continue;
+    const [hi,lo] = teams.slice().sort((a,b)=>seedIdx(a)-seedIdx(b));
+    const score = D.observed[hi+"|"+lo], need = (FMT[fmtFor(node)].length >> 1) + 1;
+    if (score && (score.hw >= need || score.lw >= need)) {
+      store(node, {hi,lo,hw:score.hw,lw:score.lw,winner:score.hw>=need?hi:lo});
+    }
+  }
+  paintAll(); setStatus();
+}
 function setStatus(){
   const s = document.getElementById("bstatus");
   if (st.finals) s.innerHTML = "🏆 <b>" + st.finals.winner + "</b> wins this simulated bracket. Run it again — every play is a fresh draw from the model.";
-  else { const n = nextReady(); s.innerHTML = n ? "Click <b>Play series</b> on any open matchup — or auto-simulate the whole bracket." : "…"; }
+  else { const n = nextReady(); s.innerHTML = n ? "Completed series are fixed. Click <b>Play series</b> to simulate the remaining games." : "…"; }
 }
 
 document.addEventListener("click", e => {
@@ -452,14 +548,28 @@ TITLE = "<title>2026 WNBA Finals Forecast</title>"
 
 BODY = f'''
 <div class="hero"><div class="court"></div><div class="wrap hero-inner">
-  <span class="eyebrow">2026 WNBA · Playoff Forecast</span>
-  <h1>Who reaches the Finals — from 20,000 simulated brackets.</h1>
-  <div class="pickcard">
-    <div><span class="lbl">Model's champion pick</span><span class="big">29%</span></div>
-    <div><span class="who">Minnesota Lynx</span><div class="sub">#1 seed · 46.8% to reach the Finals</div></div>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">2026 WNBA · Playoff Forecast</span>
+      <h1>Who wins the title — from {forecast["n_sims"]:,} updated simulations.</h1>
+      <div class="pickcard">
+        <div><span class="lbl">Model's champion pick</span><span class="big">{favorite.p_champion:.0%}</span></div>
+        <div><span class="who">{favorite.team}</span><div class="sub">#{favorite.seed} seed · {favorite.p_reach_finals:.1%} to reach the Finals</div></div>
+      </div>
+      <p class="foot">A per-game model, validated on 2016–2025, simulating the real 3-round bracket
+        (best-of-3 → 5 → 7). Data through {data_date}. {playoff_status}</p>
+    </div>
+    <aside class="status-card">
+      <div class="label">Automatic data refresh</div>
+      <div class="big">{DATA['refresh'].get('schedule_label', 'Daily refresh')}</div>
+      <p class="foot">{'Runs in the cloud, even when your computer is off.' if DATA['refresh'].get('scheduler') == 'github_actions' else 'Runs on this computer while Codex is open.'}</p>
+      <div class="meta">
+        <div><span>Last update</span><strong id="updated-at">--</strong></div>
+        <div><span>Next refresh</span><strong id="countdown">24:00:00</strong></div>
+        <div><span>Source</span><strong>ESPN public API</strong></div>
+      </div>
+    </aside>
   </div>
-  <p class="foot">A per-game model, validated on 2016–2025, simulating the real 3-round bracket
-    (best-of-3 → 5 → 7). Data through Jul 30, 2026 — season in progress.</p>
 </div></div>
 
 <section id="board"><div class="wrap">
@@ -467,72 +577,92 @@ BODY = f'''
   <h2>Probability of reaching the Finals</h2>
   <p class="lead">Each bracket half sends exactly one team to the Finals, so the pale bar is
     the chance a team gets there; the solid inner bar is its chance to win it all.</p>
+  <div class="summary-strip">
+    <div class="summary-card"><div class="label">Champion favorite</div>
+      <div class="value">{favorite.team}</div><div class="sub">{favorite.p_champion:.1%} title probability</div></div>
+    <div class="summary-card"><div class="label">Latest completed game</div>
+      <div class="value">{data_date}</div><div class="sub">{forecast['completed_playoff_games']} completed playoff games included</div></div>
+    <div class="summary-card"><div class="label">Finals pairing</div>
+      <div class="value">{matchups[0][0]} vs. {matchups[0][1]}</div>
+      <div class="sub">{matchups[0][2]:.1f}% of simulations</div></div>
+    <div class="summary-card"><div class="label">Conference split</div>
+      <div class="value">{conf['both_west']:.1%} all-West</div>
+      <div class="sub">{conf['mixed']:.1%} mixed · {conf['both_east']:.1%} all-East</div></div>
+  </div>
+  <p class="lead">Player highlights below are editorial selections, not model predictions.</p>
+  <div class="mvp-grid">
+    <div class="mvp-card"><span class="team">Minnesota Lynx</span><span class="player">Napheesa Collier</span></div>
+    <div class="mvp-card"><span class="team">Las Vegas Aces</span><span class="player">A'ja Wilson</span></div>
+    <div class="mvp-card"><span class="team">Golden State Valkyries</span><span class="player">Kayla Thornton</span></div>
+    <div class="mvp-card"><span class="team">Indiana Fever</span><span class="player">Caitlin Clark</span></div>
+    <div class="mvp-card"><span class="team">Dallas Wings</span><span class="player">Arike Ogunbowale</span></div>
+    <div class="mvp-card"><span class="team">Atlanta Dream</span><span class="player">Rhyne Howard</span></div>
+    <div class="mvp-card"><span class="team">New York Liberty</span><span class="player">Breanna Stewart</span></div>
+    <div class="mvp-card"><span class="team">Washington Mystics</span><span class="player">Brittney Sykes</span></div>
+  </div>
   <div class="board">{rows_html}</div>
   <div class="legend">
     <span><i style="background:var(--west)"></i>West</span>
     <span><i style="background:var(--east)"></i>East</span>
     <span><i style="background:var(--west-soft)"></i>Reach Finals</span>
     <span><i style="background:var(--west)"></i>Win title</span>
-    <span>Track = 0–50%</span>
+    <span>Track = 0–{REACH_SCALE:.0f}%</span>
   </div>
 </div></section>
 
 <section id="play"><div class="wrap">
-  <span class="eyebrow">Play it yourself</span>
-  <h2>The interactive bracket</h2>
-  <p class="lead">Every series is simulated game by game from the model's real win
-    probabilities — the same engine behind the numbers above. Play one series at a time,
-    auto-simulate a full run, or re-run the whole Monte Carlo.</p>
-  <div class="controls">
-    <button class="ctrl primary" id="btn-auto">▶ Auto-simulate bracket</button>
-    <button class="ctrl" id="btn-reset">↺ Reset</button>
-    <button class="ctrl" id="btn-many">↻ Run 10,000× → update odds</button>
+  <div class="section-card">
+    <span class="eyebrow">Play it yourself</span>
+    <h2>The interactive bracket</h2>
+    <p class="lead">Completed playoff results are retained. Remaining games use the model's win
+      probabilities — the same engine behind the numbers above. Play one series at a time,
+      auto-simulate a full run, or re-run the whole Monte Carlo.</p>
+    <div class="controls">
+      <button class="ctrl primary" id="btn-auto">▶ Auto-simulate bracket</button>
+      <button class="ctrl" id="btn-reset">↺ Reset</button>
+      <button class="ctrl" id="btn-many">↻ Run 10,000× → update odds</button>
+    </div>
+    <div class="status" id="bstatus"></div>
+    <div class="bracket-wrap">
+      <div class="roundlbls"><span>Round 1 · Bo3</span><span>Semifinals · Bo5</span><span>Finals · Bo7</span><span>Champion</span></div>
+      <div class="bracket">{bracket_html}</div>
+    </div>
+    <div class="status" id="manystatus" style="margin-top:14px"></div>
   </div>
-  <div class="status" id="bstatus"></div>
-  <div class="bracket-wrap">
-    <div class="roundlbls"><span>Round 1 · Bo3</span><span>Semifinals · Bo5</span><span>Finals · Bo7</span><span>Champion</span></div>
-    <div class="bracket">{bracket_html}</div>
-  </div>
-  <div class="status" id="manystatus" style="margin-top:14px"></div>
 </div></section>
 
 <section id="matchups"><div class="wrap">
   <span class="eyebrow">Most likely pairings</span>
   <h2>The Finals matchups the model sees most</h2>
-  <p class="lead">The top two are effectively tied — both send Minnesota against the
-    strongest survivor of the bottom bracket half.</p>
+  <p class="lead">Pairings reflect the latest standings and all completed playoff results.</p>
   <ul class="matchups">{matchups_html}</ul>
 </div></section>
 
 <section id="conf"><div class="wrap">
   <span class="eyebrow">Secondary cut · illustrative only</span>
   <h2>Which conference reaches the Finals?</h2>
-  <p class="lead">Conference plays no role in seeding — this is just for interest. Because the
-    West holds the top seed plus two of the next three strongest teams, an all-West Finals
-    is the single most likely outcome.</p>
+  <p class="lead">Conference plays no role in seeding. These probabilities include completed playoff results.</p>
   <div class="tiles">
-    <div class="tile w"><div class="n">46.3%</div><div class="k">Both finalists from the West</div></div>
-    <div class="tile"><div class="n">43.4%</div><div class="k">Mixed — one West, one East</div></div>
-    <div class="tile e"><div class="n">10.3%</div><div class="k">Both finalists from the East</div></div>
+    <div class="tile w"><div class="n">{conf['both_west']:.1%}</div><div class="k">Both finalists from the West</div></div>
+    <div class="tile"><div class="n">{conf['mixed']:.1%}</div><div class="k">Mixed — one West, one East</div></div>
+    <div class="tile e"><div class="n">{conf['both_east']:.1%}</div><div class="k">Both finalists from the East</div></div>
   </div>
 </div></section>
 
 <section id="market"><div class="wrap">
-  <span class="eyebrow">Sanity check</span>
-  <h2>Model vs. the betting market</h2>
-  <p class="lead">Championship probability from the simulation against de-vigged ESPN BET
-    futures. Close agreement on most teams is a good sign — the disagreements are where it
-    gets interesting.</p>
-  <div class="vvkey">
-    <span><i style="background:var(--west)"></i>Model (simulation)</span>
-    <span><i style="background:color-mix(in srgb,var(--ink) 42%,var(--bg))"></i>Market (ESPN BET)</span>
-    <span>Bars scaled 0–30%</span>
+  <div class="section-card">
+    <span class="eyebrow">Sanity check</span>
+    <h2>Model vs. the betting market</h2>
+    <p class="lead">Championship probability from the refreshed simulation alongside the
+      championship futures snapshot returned by ESPN. Check the source status below before comparing.</p>
+    <div class="vvkey">
+      <span><i style="background:var(--west)"></i>Model (simulation)</span>
+      <span><i style="background:color-mix(in srgb,var(--ink) 42%,var(--bg))"></i>Market (ESPN BET)</span>
+      <span>Bars scaled 0–{CHAMP_SCALE:.0f}%</span>
+    </div>
+    <div class="vv">{vv_html}</div>
+    <div class="callout">{market_note}</div>
   </div>
-  <div class="vv">{vv_html}</div>
-  <div class="callout"><b>The Golden State gap.</b> The model rates the Valkyries a top-three
-    title threat on scoring margin alone; the market has them a longshot. The model isn't
-    smarter — it's blind. It sees only scores, while the market prices in roster changes,
-    injuries, and playoff experience a young expansion team may lack. Treat GSV's number with caution.</div>
 </div></section>
 
 <section id="how"><div class="wrap">
@@ -542,27 +672,23 @@ BODY = f'''
     describes, and validation splits by time — train on the past, test on the future — so the
     model never peeks ahead.</p>
   <div class="chips">
-    <span class="chip">2,516 games · 2016–2026</span><span class="chip">ESPN public API</span>
+    <span class="chip">{len(games):,} games · 2016–2026</span><span class="chip">ESPN public API</span>
     <span class="chip">Point differential</span><span class="chip">Pythagorean expectation</span>
     <span class="chip">Strength of schedule</span><span class="chip">Rest / home-away splits</span>
-    <span class="chip">Logistic + gradient boosting</span><span class="chip">20,000-run Monte Carlo</span>
+    <span class="chip">Logistic + gradient boosting</span><span class="chip">{forecast['n_sims']:,}-run Monte Carlo</span>
     <span class="chip">SHAP explanations</span>
   </div>
   <div class="tblwrap"><table>
     <thead><tr><th>Model (held-out 2024–25)</th><th>Log-loss ↓</th><th>Brier ↓</th><th>Accuracy</th></tr></thead>
-    <tbody>
-      <tr><td>Baseline — better record wins</td><td>0.644</td><td>0.225</td><td>67.0%</td></tr>
-      <tr><td>Logistic regression</td><td>0.611</td><td>0.212</td><td>65.5%</td></tr>
-      <tr class="best"><td>Gradient boosting <span class="best-tag">▶ best</span></td><td>0.608</td><td>0.210</td><td>67.9%</td></tr>
-    </tbody></table></div>
+    <tbody>{metrics_html}</tbody></table></div>
   <p class="lead" style="margin-top:14px">Both models beat the "better record" baseline on the
     probability metrics that matter for simulation. The logistic model runs the sim — it's
     naturally symmetric and well-calibrated.</p>
   <div class="grid2" style="margin-top:30px">
     <figure><img src="{shap_img}" alt="SHAP summary of feature importance">
-      <figcaption><b>What drives a prediction.</b> Pythagorean edge (scoring margin) dominates,
-        then home court and recent form. Raw win% barely registers once margin is in — a
-        textbook collinearity effect, not a claim that winning hurts.</figcaption></figure>
+      <figcaption><b>What drives a prediction.</b> The chart compares scoring-based strength,
+        point differential, home court, and recent form. Correlated features
+        share predictive signal; individual contributions need to be read together.</figcaption></figure>
     <figure><img src="{calib_img}" alt="Calibration plot">
       <figcaption><b>Are the probabilities honest?</b> On held-out seasons, when the model says
         70% the teams really win about 70% of the time — both models hug the diagonal.</figcaption></figure>
@@ -575,13 +701,13 @@ BODY = f'''
   <ul class="limits">
     <li><b>It knows only scores.</b> No rosters, injuries, minutes, or trades — the Golden State and New York gaps are where that blind spot shows.</li>
     <li><b>Playoff rest is neutralized.</b> The sim doesn't model a team resting after a sweep or grinding through a decisive Game 3.</li>
-    <li><b>Seeding tiebreakers are simplified</b> (win% then point differential), not the league's full head-to-head chain — the Indiana / Dallas 4–5 order hinges on this.</li>
-    <li><b>The season is still live.</b> These numbers move as results come in; re-running the pipeline updates everything.</li>
+    <li><b>Seeding tiebreakers are simplified</b> (win% then point differential), not the league's full head-to-head chain before the playoffs. Once available, actual first-round pairings resolve tied seeds.</li>
+    <li><b>Completed results are fixed.</b> Only unplayed playoff games are simulated. {playoff_status}</li>
   </ul>
 </div></section>
 
 <footer><div class="wrap">
-  Built with Python · pandas · scikit-learn · SHAP. Data: ESPN public API, through 2026-07-30.
+  Built with Python · pandas · scikit-learn · SHAP. Data: ESPN public API, through {forecast['data_through']}.
   Reproduce locally with <code>python run_all.py</code>. Probabilities are model estimates, not
   certainties — and not betting advice.
 </div></footer>
@@ -593,8 +719,9 @@ scripts = ("\n<script>window.__WNBA__=" + data_json + ";</script>\n<script>" + J
 #     host wraps it in that skeleton itself.
 artifact_html = TITLE + "\n<style>" + CSS + "</style>\n" + BODY + scripts
 path = os.path.join(OUT, "index.html")
-with open(path, "w", encoding="utf-8") as f:
+with open(path + ".tmp", "w", encoding="utf-8") as f:
     f.write(artifact_html)
+os.replace(path + ".tmp", path)
 
 # (b) Standalone full document for direct hosting (Vercel / any static host):
 #     complete <html> shell with charset, mobile viewport, and social-preview
@@ -614,9 +741,41 @@ standalone_html = head + BODY + scripts + "\n</body>\n</html>\n"
 pub = os.path.join(ROOT, "public")
 os.makedirs(pub, exist_ok=True)
 pub_path = os.path.join(pub, "index.html")
-with open(pub_path, "w", encoding="utf-8") as f:
+with open(pub_path + ".tmp", "w", encoding="utf-8") as f:
     f.write(standalone_html)
+os.replace(pub_path + ".tmp", pub_path)
 
 print("wrote", path, f"({len(artifact_html)/1024:.0f} KB, Artifact format)")
 print("wrote", pub_path, f"({len(standalone_html)/1024:.0f} KB, standalone for Vercel)")
 print("prob entries:", len(PROB), "· seeds:", seeds[:3], "...")
+
+summary_rows = "\n".join(
+    f"| {r.seed} | {r.team} | {r.p_reach_finals:.1%} | {r.p_champion:.1%} |"
+    for r in results.itertuples())
+summary = f"""# 2026 WNBA forecast — refreshed results
+
+Data through **{data_date}**, retrieved from ESPN. {len(games):,} games across 2016–2026,
+including {forecast['completed_playoff_games']} completed 2026 playoff games.
+
+**{playoff_status}**
+
+The model gives **{favorite.team} a {favorite.p_champion:.1%} championship probability**.
+These estimates retain completed playoff results and simulate only the games still to play,
+using {forecast['n_sims']:,} brackets. Eliminated teams cannot advance.
+
+| Seed | Team | Reach Finals | Champion |
+|---:|---|---:|---:|
+{summary_rows}
+
+The actual first-round pairings resolve tied regular-season seeds once playoffs begin.
+Game probabilities come from logistic regression fitted to 2016–2025 score-based team form;
+validation trains on 2016–2023 and tests on 2024–2025. Validation metrics are in
+`outputs/validation_metrics.csv`. Injuries, rosters, and player-level statistics are not modeled.
+Regular-season team-strength features stay fixed during the playoff simulation and playoff
+rest differences are neutralized.
+
+Market source status: {market_note}
+
+Run `python run_all.py` to refresh data, forecasts, charts, and the website together.
+"""
+(ROOT / "SUMMARY.md").write_text(summary, encoding="utf-8")
