@@ -274,8 +274,10 @@ def run(n_sims: int = 20000, seed: int = 7):
 
     feats = current_team_features(games, seeds)
     availability = availability_mod.load_snapshot()
-    P = build_prob_matrix(model, feats, seeds, availability)
-    baseline_P = build_prob_matrix(model, feats, seeds)
+    # Published predictions always use score-only probabilities. A verified
+    # player feed makes the experimental comparison available, never default.
+    P = build_prob_matrix(model, feats, seeds)
+    optional_P = build_prob_matrix(model, feats, seeds, availability)
 
     rng = np.random.default_rng(seed)
     reach = Counter()
@@ -287,11 +289,11 @@ def run(n_sims: int = 20000, seed: int = 7):
         champ[c] += 1
         matchup[frozenset((f1, f2))] += 1
 
-    baseline_reach, baseline_champ = Counter(), Counter()
-    baseline_rng = np.random.default_rng(seed)
+    optional_reach, optional_champ = Counter(), Counter()
+    optional_rng = np.random.default_rng(seed)
     for _ in range(n_sims):
-        f1,f2,c = sim_bracket(seeds,baseline_P,baseline_rng,observed)
-        baseline_reach[f1]+=1;baseline_reach[f2]+=1;baseline_champ[c]+=1
+        f1,f2,c = sim_bracket(seeds,optional_P,optional_rng,observed)
+        optional_reach[f1]+=1;optional_reach[f2]+=1;optional_champ[c]+=1
 
     res = pd.DataFrame({
         "seed": range(1, 9),
@@ -300,8 +302,10 @@ def run(n_sims: int = 20000, seed: int = 7):
         "win_pct": [round(standings.loc[standings.team == t, "win_pct"].iloc[0], 3) for t in seeds],
         "p_reach_finals": [reach[t] / n_sims for t in seeds],
         "p_champion": [champ[t] / n_sims for t in seeds],
-        "p_reach_finals_baseline": [baseline_reach[t] / n_sims for t in seeds],
-        "p_champion_baseline": [baseline_champ[t] / n_sims for t in seeds],
+        "p_reach_finals_baseline": [reach[t] / n_sims for t in seeds],
+        "p_champion_baseline": [champ[t] / n_sims for t in seeds],
+        "p_reach_finals_availability": [optional_reach[t] / n_sims for t in seeds],
+        "p_champion_availability": [optional_champ[t] / n_sims for t in seeds],
     }).sort_values("p_reach_finals", ascending=False).reset_index(drop=True)
 
     top_matchups = sorted(matchup.items(), key=lambda kv: -kv[1])[:6]
@@ -323,7 +327,8 @@ def run(n_sims: int = 20000, seed: int = 7):
         "game_count": len(games),
         "completed_playoff_games": int(((games.season == 2026) & games.is_playoff).sum()),
         "observed_series": observed,
-        "probability_model": "availability-experimental" if availability.get("apply_adjustments") else "score-only",
+        "probability_model": "score-only",
+        "injury_adjustment_default": False,
         "availability": {key:availability.get(key) for key in ("status","fetched_at","apply_adjustments","message","model","boxscore_coverage")},
         "top_matchups": [{"teams": list(pair), "probability": probability}
                          for pair, probability in top_matchups],

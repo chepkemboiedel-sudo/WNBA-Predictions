@@ -24,7 +24,7 @@ def roster_section(team_name, availability):
         minutes = f"{player['minutes']:.1f}" if player.get("minutes") is not None else "—"
         points = f"{player['points']:.1f}" if player.get("points") is not None else "—"
         applied = availability.get("apply_adjustments") and player.get("extra_absence_points",0)>0
-        impact = f"−{player['extra_absence_points']:.2f} pts" if applied else "No added penalty"
+        impact = f"Optional: −{player['extra_absence_points']:.2f} pts" if applied else "No optional penalty"
         scope = {"long_term":"Long-term report","next_game":"Next game only","none":"Not assumed absent"}[player.get("scope","none")]
         reason = player.get("reason","") if player["status"]!="No report" else ""
         rows.append(f'''<tr><td><a class="team-link" href="{escape(player['source_url'])}">{escape(player['name'])} ↗</a><div class="report-note">{escape(player['position'])} · #{escape(player.get('jersey',''))}</div></td>
@@ -36,7 +36,7 @@ def roster_section(team_name, availability):
     coverage = availability.get("boxscore_coverage",{})
     table = '<div class="tblwrap"><table class="roster-table"><thead><tr><th>Player</th><th>Reported status</th><th>Report date</th><th>GP sample</th><th>MPG</th><th>PPG</th><th>Forecast treatment</th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>' if rows else '<p class="lead">The roster could not be retrieved. No missing-player adjustment is assumed.</p>'
     return f'''<section id="roster"><div class="wrap"><span class="eyebrow">Who is listed, who may be missing</span><h2>Roster &amp; availability</h2>
-      <p class="lead">Published status reports are shown separately from roster membership. “No report” does not guarantee that a player will play.</p>
+      <p class="lead">Published predictions use the score-only model. The treatments below apply only to the optional injury adjustment. “No report” does not guarantee that a player will play.</p>
       <div class="availability-notice">{escape(availability.get('message','Player feeds unavailable; score-only forecasts are used.'))}</div>
       <div class="roster-source"><span>Fetched: {escape(freshness)}</span><span>{changes}</span><a class="team-link" href="{escape(team.get('roster_url','https://www.espn.com/wnba/teams'))}">ESPN season roster ↗</a></div>
       <p class="feature-note">GP, minutes, and points use covered 2026 regular-season box scores for this team. Archive coverage: {coverage.get('covered_games',0)}/{coverage.get('expected_games',0)} games across 2025–26. {team.get('missing_boxscores',0)} current-season box scores unavailable for this team.</p>
@@ -49,16 +49,18 @@ def overview(availability, results):
     for result in results.sort_values("seed").itertuples():
         team = availability.get("teams",{}).get(result.team,{})
         baseline = getattr(result,"p_champion_baseline",result.p_champion)
+        optional = getattr(result,"p_champion_availability",baseline)
         applied = sum(p.get("extra_absence_points",0)>0 for p in team.get("players",[])) if enabled else 0
         shift = team_shift(team) if enabled else 0
-        rows.append(f'''<tr><td><a class="team-link" href="/teams/{slug(result.team)}/#roster">{escape(result.team)} ↗</a></td><td>{applied}</td><td>{shift:+.2f} pts</td><td>{baseline:.1%}</td><td>{result.p_champion:.1%}</td><td>{(result.p_champion-baseline)*100:+.1f} pp</td></tr>''')
+        rows.append(f'''<tr><td><a class="team-link" href="/teams/{slug(result.team)}/#roster">{escape(result.team)} ↗</a></td><td>{applied}</td><td>{shift:+.2f} pts</td><td>{baseline:.1%}</td><td>{optional:.1%}</td><td>{(optional-baseline)*100:+.1f} pp</td></tr>''')
     model = availability.get("model",{})
     stamp = availability.get("fetched_at","Not available")
-    label = "Availability-adjusted estimate · experimental" if enabled else "Score-only fallback · player adjustments disabled"
+    label = "Score-only is the default · injury adjustments are optional and experimental"
     return f'''<section id="availability"><div class="wrap"><span class="eyebrow">The players behind the forecast</span><h2>Injuries &amp; roster impact</h2>
       <p class="lead">{label}</p><div class="availability-notice">{escape(availability.get('message','No verified player feeds are available.'))}</div>
+      <p>Historical testing has not shown a clear improvement from injury adjustments. <a class="team-link" href="#play">Try the optional toggle in the interactive bracket ↓</a></p>
       <p>Player reports fetched {escape(stamp)}. <a class="team-link" href="https://www.espn.com/wnba/injuries">View ESPN injury reports ↗</a></p>
-      <div class="tblwrap"><table><thead><tr><th>Team / roster</th><th>Absences with estimated effect</th><th>Long-term adjustment</th><th>Score-only title</th><th>Adjusted title</th><th>Change</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
+      <div class="tblwrap"><table><thead><tr><th>Team / roster</th><th>Absences with estimated effect</th><th>Optional long-term adjustment</th><th>Score-only title (default)</th><th>Optional injury-adjusted title</th><th>Optional change</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
       <details class="availability-notice"><summary>How missing players affect the forecast</summary>
         <p>Player effects are shrunken associations between participation and score residuals in {model.get('training_games',0)} completed regular-season games from 2025–26. Only teams with complete current-season player history are adjusted.</p>
         <p>Confirmed season-long absences carry through the remaining bracket. Fresh game-specific “Out” reports apply only to the next scheduled game within 72 hours. Older reports contradicted by later appearances, ambiguous roster assignments, and questionable or probable statuses do not trigger an assumed absence.</p>
