@@ -1,6 +1,4 @@
 # WNBA 2026 Finals Prediction
-Link: [https://wnba-predictions-4oai-eotji3xav-chepkemboiedel-sudos-projects.vercel.app/](https://wnba-predictions-4oai-git-7fc683-chepkemboiedel-sudos-projects.vercel.app?_vercel_share=JljOUJOadkqaTeo8nYcfOeOQUaEKxFSK)
-
 
 Estimates, with defensible probabilities, which two teams meet in the 2026 WNBA Finals —
 by simulating the league's **actual** 8-team, 3-round playoff bracket (best-of-3 →
@@ -16,10 +14,33 @@ pip install -r requirements.txt
 python run_all.py
 ```
 
-That runs the whole pipeline and writes every chart + CSV to `outputs/`. The first run
+That runs the whole pipeline, writes every chart + CSV to `outputs/`, refreshes `SUMMARY.md`,
+and rebuilds the website in `public/` and `site/`. The first run
 downloads ~11 seasons from ESPN (a few minutes); afterwards historical seasons are cached
 and only the live 2026 season is refreshed. Use `python run_all.py --refresh` to force a
 full re-download, or `--sims 50000` for more simulations.
+Use `python run_all.py --skip-fetch` to rebuild from an already refreshed local game cache.
+
+The **Daily WNBA refresh** GitHub Actions workflow runs the pipeline in the cloud every day
+at **7:00 a.m. America/Los_Angeles**, following Pacific daylight saving time. It does not
+require your computer or Codex to be running. Successful refreshes commit the generated
+artifacts to `main`; the existing Vercel integration publishes the updated `public/` directory.
+The workflow checks Vercel's deployment result and reports failures in GitHub Actions.
+GitHub may start scheduled jobs later than their target time.
+
+Use the online Vercel app to see cloud updates. `http://127.0.0.1:8080` is a separate local
+preview and is available only while its local server runs. The earlier local Codex schedule
+is superseded once the cloud deployment is verified. `refresh_schedule.json` keeps the
+page's countdown in sync; change both that file and the workflow when changing the schedule.
+
+An open page checks the local refresh marker every minute and when you return to the tab,
+then reloads automatically after a successful rebuild. Refresh markers are published after
+the page is rebuilt, and incomplete downloads preserve the previous cached results.
+
+Completed playoff games are retained in both the forecast and interactive bracket. Only
+unplayed games are simulated, so eliminated teams cannot return. Once the playoffs start,
+actual first-round pairings resolve tied seeds. The page shows the latest completed game
+date and labels market odds that still price eliminated teams as stale.
 
 ## How it works (build order)
 

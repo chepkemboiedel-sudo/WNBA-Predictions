@@ -21,6 +21,7 @@ fast dictionary look-ups.
 from __future__ import annotations
 
 import os
+import json
 from collections import Counter, defaultdict
 
 import joblib
@@ -40,6 +41,9 @@ CONFERENCE = {
     "Golden State Valkyries": "West", "Dallas Wings": "West",
     "Indiana Fever": "East", "Atlanta Dream": "East",
     "New York Liberty": "East", "Washington Mystics": "East",
+    "Connecticut Sun": "East", "Chicago Sky": "East", "Toronto Tempo": "East",
+    "Los Angeles Sparks": "West", "Phoenix Mercury": "West",
+    "Seattle Storm": "West", "Portland Fire": "West",
 }
 
 # Home-court host pattern for each series length. "H" = higher seed hosts,
@@ -123,6 +127,37 @@ def current_team_features(games: pd.DataFrame, teams: list[str], season: int = 2
     return feats
 
 
+def playoff_seeds(games: pd.DataFrame, season: int = 2026) -> list[str]:
+    """Use the actual first-round pairings once available to resolve tied seeds."""
+    seeds = compute_standings(games, season)["team"].head(8).tolist()
+    playoffs = games[(games.season == season) & games.is_playoff].sort_values("date")
+    seen = set()
+    for row in playoffs.itertuples():
+        if row.home_team in seen or row.away_team in seen:
+            continue
+        high = seeds.index(row.home_team)
+        if high >= 4:
+            raise ValueError("First playoff host does not match a top-four seed.")
+        low = 7 - high
+        actual_low = seeds.index(row.away_team)
+        seeds[low], seeds[actual_low] = seeds[actual_low], seeds[low]
+        seen.update((row.home_team, row.away_team))
+    return seeds
+
+
+def completed_series(games: pd.DataFrame, seeds: list[str], season: int = 2026) -> dict:
+    """Observed playoff wins, keyed by higher/lower seed, shared with the browser."""
+    result = {}
+    playoffs = games[(games.season == season) & games.is_playoff].sort_values("date")
+    for row in playoffs.itertuples():
+        high, low = sorted((row.home_team, row.away_team), key=seeds.index)
+        key = high + "|" + low
+        score = result.setdefault(key, {"hw": 0, "lw": 0})
+        winner = row.home_team if row.home_win else row.away_team
+        score["hw" if winner == high else "lw"] += 1
+    return result
+
+
 # --------------------------------------------------------------------------- #
 # 2. Per-game probability from the model (antisymmetric)
 # --------------------------------------------------------------------------- #
@@ -170,15 +205,19 @@ def build_prob_matrix(model, feats: dict, teams: list[str]) -> dict:
 # --------------------------------------------------------------------------- #
 # 3. Series and bracket simulation
 # --------------------------------------------------------------------------- #
-def sim_series(high: str, low: str, fmt: str, P: dict, rng: np.random.Generator) -> str:
+def sim_series(high: str, low: str, fmt: str, P: dict, rng: np.random.Generator,
+               observed: dict | None = None) -> str:
     """
     Simulate one best-of-N series between the higher seed `high` and lower seed
     `low`, game by game, and return the winner. `high` hosts on 'H' games.
     """
     pattern = SERIES_FORMATS[fmt]
     need = len(pattern) // 2 + 1          # wins required (2, 3, or 4)
-    hw = lw = 0
-    for host in pattern:
+    score = (observed or {}).get(high + "|" + low, {})
+    hw, lw = score.get("hw", 0), score.get("lw", 0)
+    if hw >= need or lw >= need:
+        return high if hw >= need else low
+    for host in pattern[hw + lw:]:
         high_home = host == "H"
         p_high = P[(high, low, True)] if high_home else P[(high, low, False)]
         if rng.random() < p_high:
@@ -190,7 +229,7 @@ def sim_series(high: str, low: str, fmt: str, P: dict, rng: np.random.Generator)
     return high if hw == need else low
 
 
-def sim_bracket(seeds: list[str], P: dict, rng: np.random.Generator):
+def sim_bracket(seeds: list[str], P: dict, rng: np.random.Generator, observed=None):
     """
     One full bracket. `seeds` is the ordered seed list (index 0 = #1 seed).
     Returns (finalist_1, finalist_2, champion). Higher seed = lower list index.
@@ -200,24 +239,25 @@ def sim_bracket(seeds: list[str], P: dict, rng: np.random.Generator):
 
     s = seeds
     # Round 1 (best-of-3): 1v8, 4v5 feed the top semifinal; 2v7, 3v6 the bottom.
-    w18 = sim_series(*higher(s[0], s[7]), "R1", P, rng)
-    w45 = sim_series(*higher(s[3], s[4]), "R1", P, rng)
-    w27 = sim_series(*higher(s[1], s[6]), "R1", P, rng)
-    w36 = sim_series(*higher(s[2], s[5]), "R1", P, rng)
+    w18 = sim_series(*higher(s[0], s[7]), "R1", P, rng, observed)
+    w45 = sim_series(*higher(s[3], s[4]), "R1", P, rng, observed)
+    w27 = sim_series(*higher(s[1], s[6]), "R1", P, rng, observed)
+    w36 = sim_series(*higher(s[2], s[5]), "R1", P, rng, observed)
 
     # Semifinals (best-of-5), no reseeding.
-    f_top = sim_series(*higher(w18, w45), "SEMI", P, rng)
-    f_bot = sim_series(*higher(w27, w36), "SEMI", P, rng)
+    f_top = sim_series(*higher(w18, w45), "SEMI", P, rng, observed)
+    f_bot = sim_series(*higher(w27, w36), "SEMI", P, rng, observed)
 
     # Finals (best-of-7).
-    champ = sim_series(*higher(f_top, f_bot), "FINALS", P, rng)
+    champ = sim_series(*higher(f_top, f_bot), "FINALS", P, rng, observed)
     return f_top, f_bot, champ
 
 
 def run(n_sims: int = 20000, seed: int = 7):
     games = pd.read_csv(os.path.join(DATA, "all_games.csv"), parse_dates=["date"])
     standings = compute_standings(games)
-    seeds = standings["team"].head(8).tolist()
+    seeds = playoff_seeds(games)
+    observed = completed_series(games, seeds)
 
     bundle = joblib.load(os.path.join(DATA, "models.joblib"))
     model = bundle["logistic"]  # primary predictor: calibrated & antisymmetric
@@ -230,7 +270,7 @@ def run(n_sims: int = 20000, seed: int = 7):
     champ = Counter()
     matchup = Counter()
     for _ in range(n_sims):
-        f1, f2, c = sim_bracket(seeds, P, rng)
+        f1, f2, c = sim_bracket(seeds, P, rng, observed)
         reach[f1] += 1; reach[f2] += 1
         champ[c] += 1
         matchup[frozenset((f1, f2))] += 1
@@ -249,7 +289,28 @@ def run(n_sims: int = 20000, seed: int = 7):
         (tuple(sorted(pair, key=seeds.index)), cnt / n_sims) for pair, cnt in top_matchups
     ]
 
+    os.makedirs(OUT, exist_ok=True)
     res.to_csv(os.path.join(OUT, "finals_probabilities.csv"), index=False)
+    conference_counts = Counter()
+    for pair, count in matchup.items():
+        conferences = {CONFERENCE.get(t, "?") for t in pair}
+        category = "both_west" if conferences == {"West"} else (
+            "both_east" if conferences == {"East"} else "mixed")
+        conference_counts[category] += count
+    forecast = {
+        "n_sims": n_sims,
+        "data_through": games[games.season == 2026].date.max().strftime("%Y-%m-%d"),
+        "game_count": len(games),
+        "completed_playoff_games": int(((games.season == 2026) & games.is_playoff).sum()),
+        "observed_series": observed,
+        "top_matchups": [{"teams": list(pair), "probability": probability}
+                         for pair, probability in top_matchups],
+        "conferences": {key: conference_counts[key] / n_sims
+                        for key in ("both_west", "mixed", "both_east")},
+    }
+    with open(os.path.join(OUT, "forecast.json"), "w", encoding="utf-8") as f:
+        json.dump(forecast, f, indent=2)
+        f.write("\n")
     return res, top_matchups, seeds, feats
 
 

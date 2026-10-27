@@ -13,6 +13,8 @@ summed to ~1.29, i.e. a 29% overround -- which we divide out.
 from __future__ import annotations
 
 import os
+import json
+from datetime import datetime, timezone
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -38,7 +40,7 @@ def fetch_market_odds(season: int = 2026) -> pd.DataFrame:
             f"seasons/{season}/teams?limit=50", headers=HDR, timeout=20).json()
         idname = {}
         for it in teams["items"]:
-            t = requests.get(it["$ref"], headers=HDR, timeout=20).json()
+            t = requests.get(it["$ref"].replace("http://", "https://"), headers=HDR, timeout=20).json()
             idname[str(t["id"])] = t.get("displayName")
         fut = requests.get(
             f"https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/"
@@ -52,9 +54,19 @@ def fetch_market_odds(season: int = 2026) -> pd.DataFrame:
         df = pd.DataFrame(rows)
         df["market_novig"] = df.implied_raw / df.implied_raw.sum()
         df.to_csv(cache, index=False)
+        with open(os.path.join(DATA, "market_meta.json"), "w", encoding="utf-8") as f:
+            json.dump({"status": "live", "fetched_at": datetime.now(timezone.utc).isoformat()}, f)
         return df
     except Exception as e:  # network hiccup -> use last saved snapshot
         print(f"  (live odds fetch failed: {e}; using cache)")
+        meta_path = os.path.join(DATA, "market_meta.json")
+        metadata = {"status": "cached", "fetched_at": None}
+        if os.path.exists(meta_path):
+            with open(meta_path, encoding="utf-8") as f:
+                metadata.update(json.load(f))
+        metadata["status"] = "cached"
+        with open(meta_path, "w", encoding="utf-8") as f:
+            json.dump(metadata, f)
         return pd.read_csv(cache)
 
 

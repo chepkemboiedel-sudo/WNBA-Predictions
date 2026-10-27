@@ -86,7 +86,7 @@ def _game_dates_for_season(year: int) -> list[str]:
     no inline date.
     """
     start = datetime(year, 5, 1)
-    end = datetime(year, 11, 5)
+    end = min(datetime(year, 11, 5), datetime.now(timezone.utc).replace(tzinfo=None))
     days = (end - start).days + 1
     return [(start + timedelta(days=i)).strftime("%Y%m%d") for i in range(days)]
 
@@ -160,6 +160,7 @@ def fetch_season(year: int, force: bool = False) -> pd.DataFrame:
     print(f"  {year}: {len(dates)} game-days to fetch...")
 
     rows: list[dict] = []
+    failed_dates = []
     # A small thread pool keeps this polite but quick (each day is one request).
     with ThreadPoolExecutor(max_workers=8) as pool:
         futs = {
@@ -167,15 +168,33 @@ def fetch_season(year: int, force: bool = False) -> pd.DataFrame:
         }
         for fut in as_completed(futs):
             payload = fut.result()
-            if payload:
+            if payload is None or "events" not in payload:
+                failed_dates.append(futs[fut])
+            else:
                 rows.extend(_parse_scoreboard_day(payload, year))
+    if failed_dates:
+        raise RuntimeError(
+            f"Could not refresh {year}: {len(failed_dates)} scoreboard requests failed. "
+            "Existing cached data has been preserved."
+        )
 
     df = pd.DataFrame(rows)
     if not df.empty:
         # Dedupe (a game can surface under two adjacent day queries) and sort.
         df = df.drop_duplicates("game_id").sort_values("date").reset_index(drop=True)
         df["date"] = pd.to_datetime(df["date"])
-        df.to_csv(cache, index=False)
+        if os.path.exists(cache):
+            previous = pd.read_csv(cache)
+            if len(df) < len(previous):
+                raise RuntimeError(
+                    f"Refresh returned fewer games ({len(df)}) than the cache "
+                    f"({len(previous)}); refusing to replace it."
+                )
+        temporary = cache + ".tmp"
+        df.to_csv(temporary, index=False)
+        os.replace(temporary, cache)
+    else:
+        raise RuntimeError(f"No completed games returned for {year}; cache preserved.")
     print(f"  {year}: {len(df)} games "
           f"({int(df['is_playoff'].sum()) if not df.empty else 0} playoff)")
     return df
