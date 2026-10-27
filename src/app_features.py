@@ -37,7 +37,7 @@ CSS = r"""
 
 
 def navigation():
-    return '<nav class="app-nav" aria-label="Main navigation"><a href="/">Forecast</a><a href="/#availability">Availability</a><a href="/#history">History</a><a href="/#teams">Teams</a><a href="/#refresh-health">Refresh health</a></nav>'
+    return '<nav class="app-nav" aria-label="Main navigation"><a href="/">Forecast</a><a href="/#availability">Availability</a><a href="/#backtest">Backtest</a><a href="/#history">History</a><a href="/#teams">Teams</a><a href="/#refresh-health">Refresh health</a></nav>'
 
 
 def health_section(health):

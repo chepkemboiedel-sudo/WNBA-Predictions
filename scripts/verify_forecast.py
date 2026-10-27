@@ -1,11 +1,14 @@
 """Reject an inconsistent forecast before publishing any refreshed artifacts."""
 import json
 import re
+import sys
 from pathlib import Path
 
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/"src"))
+import backtest_ui
 
 
 def verify():
@@ -16,6 +19,14 @@ def verify():
     if match is None:
         raise ValueError("Website is missing its forecast data.")
     embedded = json.loads(match[1])
+    if embedded.get("backtest")!=backtest_ui.load_results():
+        raise ValueError("Displayed backtest results differ from the saved evaluation.")
+    if '<section id="backtest">' not in page:
+        raise ValueError("The backtest comparison section is missing.")
+    for folder in ("public","site"):
+        for name in ("results.json","predictions.csv","REPORT.md"):
+            if (ROOT/folder/"backtest"/name).read_bytes()!=(ROOT/"outputs/availability_backtest"/name).read_bytes():
+                raise ValueError("A downloadable backtest asset differs from the saved source.")
     if embedded["refresh"] != meta:
         raise ValueError("Page and refresh metadata disagree.")
     if embedded["observed"] != forecast["observed_series"]:

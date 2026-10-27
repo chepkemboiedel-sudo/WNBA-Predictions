@@ -120,6 +120,12 @@ injury/roster-fetch pipeline. Retain the experimental label; see
 `outputs/availability_backtest/REPORT.md` for methodology and coverage limitations.
 Running the backtest does not rebuild or publish live forecasts.
 
+The app's **Backtest** section at `/#backtest` displays this saved evaluation,
+with paired accuracy/log-loss/Brier comparisons, uncertainty intervals, sample
+selection, coverage warnings, and downloads. The evaluation date is separate from
+the daily forecast refresh date. Daily site builds re-export the saved results;
+they do not rerun the historical study or enable injury adjustments.
+
 ## How it works (build order)
 
 | Stage | Script | What it does |

@@ -58,7 +58,7 @@ def overview(availability, results):
     label = "Score-only is the default · injury adjustments are optional and experimental"
     return f'''<section id="availability"><div class="wrap"><span class="eyebrow">The players behind the forecast</span><h2>Injuries &amp; roster impact</h2>
       <p class="lead">{label}</p><div class="availability-notice">{escape(availability.get('message','No verified player feeds are available.'))}</div>
-      <p>Historical testing has not shown a clear improvement from injury adjustments. <a class="team-link" href="#play">Try the optional toggle in the interactive bracket ↓</a></p>
+      <p>Historical testing has not shown a clear improvement from injury adjustments. <a class="team-link" href="#backtest">Compare backtest accuracy ↓</a> · <a class="team-link" href="#play">Try the optional toggle in the interactive bracket ↓</a></p>
       <p>Player reports fetched {escape(stamp)}. <a class="team-link" href="https://www.espn.com/wnba/injuries">View ESPN injury reports ↗</a></p>
       <div class="tblwrap"><table><thead><tr><th>Team / roster</th><th>Absences with estimated effect</th><th>Optional long-term adjustment</th><th>Score-only title (default)</th><th>Optional injury-adjusted title</th><th>Optional change</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
       <details class="availability-notice"><summary>How missing players affect the forecast</summary>
