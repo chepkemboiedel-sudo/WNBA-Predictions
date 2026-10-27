@@ -60,6 +60,35 @@ unplayed games are simulated, so eliminated teams cannot return. Once the playof
 actual first-round pairings resolve tied seeds. The page shows the latest completed game
 date and labels market odds that still price eliminated teams as stale.
 
+## Rosters and missing players
+
+The daily pipeline refreshes ESPN season rosters and injury reports, and caches parsed
+2025–26 player box scores in `data/player_game_stats.csv`. Current reports, coverage, and
+per-player forecast treatment are stored in `data/player_availability.json` and displayed
+on each team page. A fresh feed timestamp does not make an old individual report current.
+
+The availability layer is **experimental**. It estimates shrunken associations between
+player participation and score residuals, with no claim of causal injury effects or
+independent injury-adjusted calibration. A point-margin-to-log-odds mapping is fitted on
+historical score-form features. The existing validation and SHAP charts describe only
+the score-only baseline; both baseline and adjusted title estimates are displayed.
+
+Only confirmed absences are applied. Season-long reports persist through the bracket;
+fresh game-specific reports are limited to the next scheduled game within 72 hours.
+Questionable/probable statuses, old reports contradicted by later appearances, and ambiguous
+roster assignments do not create assumed absences. Penalties are discounted by prior
+participation to avoid double counting missed time already in team form. Player effects
+are capped at four margin points and team effects at six. No effect is invented when
+there is no usable participation comparison.
+
+The model requires at least 98% archive coverage and complete current-season player
+history for each adjusted team. The initial archive has 635 of 637 games; the two ESPN
+404s affect New York, Dallas, Chicago, and Minnesota, which retain their baseline strength.
+Current finalists have complete player history. Unverified or stale feeds disable the
+adjustment and mark player data as partial. Cached roster information is labeled separately.
+Minute restrictions and mid-game injuries are not forecast. Interactive bracket controls
+can switch between adjusted and score-only game probabilities without rewriting history.
+
 ## How it works (build order)
 
 | Stage | Script | What it does |

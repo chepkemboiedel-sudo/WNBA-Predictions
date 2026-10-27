@@ -33,6 +33,35 @@
       "lw": 2
     }
   },
+  "probability_model": "availability-experimental",
+  "availability": {
+    "status": "partial",
+    "fetched_at": "2026-10-27T20:22:58.208390Z",
+    "apply_adjustments": true,
+    "message": "Live reports; 635/637 box scores available. Adjustments are limited to teams with complete current-season player history.",
+    "model": {
+      "version": "participation-ridge-v1",
+      "experimental": true,
+      "training_games": 565,
+      "training_seasons": [
+        2025,
+        2026
+      ],
+      "ridge_alpha": 30,
+      "max_player_points": 4.0,
+      "max_team_points": 6.0,
+      "margin_logit_coefficient": 0.09804409836852912,
+      "players_with_comparison": 225
+    },
+    "boxscore_coverage": {
+      "expected_games": 637,
+      "covered_games": 635,
+      "missing_games": [
+        "401856934",
+        "401856947"
+      ]
+    }
+  },
   "top_matchups": [
     {
       "teams": [

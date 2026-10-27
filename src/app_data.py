@@ -32,7 +32,8 @@ def snapshot(results: pd.DataFrame, forecast: dict, meta: dict, *, source="publi
     return {"id": hashlib.sha256(identity.encode()).hexdigest()[:16],
             "generated_at": meta.get("last_updated"), "data_through": forecast["data_through"],
             "source": source, "n_sims": forecast["n_sims"], "teams": teams,
-            "run_url": meta.get("run_url")}
+            "run_url": meta.get("run_url"), "probability_model":forecast.get("probability_model","score-only"),
+            "availability_fetched_at":forecast.get("availability",{}).get("fetched_at")}
 
 
 def append_snapshot(history: dict, entry: dict) -> dict:
@@ -62,7 +63,8 @@ def successful_health(games: pd.DataFrame, forecast: dict, meta: dict, *, verifi
             "coverage": {"season_games": len(current), "regular_games": int((~current.is_playoff).sum()),
                          "playoff_games": int(current.is_playoff.sum()), "historical_games": len(games)},
             "source": "ESPN completed game results", "verified": verified,
-            "run_url": meta.get("run_url"), "message": "Last forecast refresh completed successfully."}
+            "run_url": meta.get("run_url"), "availability":forecast.get("availability"),
+            "message": "Last forecast refresh completed successfully."}
 
 
 def failed_health(previous: dict, *, now: datetime | None = None, run_url: str | None = None) -> dict:
@@ -115,6 +117,7 @@ def team_profiles(games: pd.DataFrame, results: pd.DataFrame, seeds: list[str]) 
                          "points_against": round(sum(row["pa"] for row in regular) / len(regular), 1),
                          "point_diff": round(sum(row["pf"] - row["pa"] for row in regular) / len(regular), 1),
                          "probabilities": {"reach_finals": probability["p_reach_finals"],
-                                           "champion": probability["p_champion"]} if probability else None,
+                                           "champion": probability["p_champion"],
+                                           "champion_baseline":probability.get("p_champion_baseline",probability["p_champion"])} if probability else None,
                          "recent": list(reversed(rows[-10:])), "head_to_head": opponents})
     return profiles

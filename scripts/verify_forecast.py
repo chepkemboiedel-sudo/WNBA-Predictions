@@ -30,6 +30,16 @@ def verify():
         raise ValueError("Forecast probabilities do not sum correctly.")
     if results.sort_values("seed").team.tolist() != embedded["seeds"]:
         raise ValueError("Website and simulation seeds disagree.")
+    if "p_champion_baseline" in results and abs(results.p_champion_baseline.sum()-1)>1e-8:
+        raise ValueError("Score-only comparison probabilities do not sum correctly.")
+    availability_path=ROOT/"data/player_availability.json"
+    if availability_path.exists():
+        availability=json.loads(availability_path.read_text(encoding="utf-8"))
+        if embedded.get("availability",{}).get("fetched_at")!=availability.get("fetched_at"):
+            raise ValueError("Website is using a different player-data snapshot.")
+        for team in availability.get("teams",{}).values():
+            if not team.get("adjustment_ready") and any(p.get("extra_absence_points",0)>0 for p in team.get("players",[])):
+                raise ValueError("An incomplete team player archive received an adjustment.")
     history = json.loads((ROOT / "data/forecast_history.json").read_text(encoding="utf-8"))
     health = json.loads((ROOT / "public/refresh_health.json").read_text(encoding="utf-8"))
     if embedded["history"] != history or embedded["health"] != health:

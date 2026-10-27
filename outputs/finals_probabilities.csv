@@ -1,9 +1,9 @@
-seed,team,conference,win_pct,p_reach_finals,p_champion
-2,Golden State Valkyries,West,0.727,1.0,0.73335
-4,Atlanta Dream,East,0.682,1.0,0.26665
-1,Minnesota Lynx,West,0.75,0.0,0.0
-3,Las Vegas Aces,West,0.705,0.0,0.0
-5,Washington Mystics,East,0.636,0.0,0.0
-6,Indiana Fever,East,0.636,0.0,0.0
-7,Dallas Wings,West,0.614,0.0,0.0
-8,New York Liberty,East,0.591,0.0,0.0
+seed,team,conference,win_pct,p_reach_finals,p_champion,p_reach_finals_baseline,p_champion_baseline
+2,Golden State Valkyries,West,0.727,1.0,0.73335,1.0,0.73335
+4,Atlanta Dream,East,0.682,1.0,0.26665,1.0,0.26665
+1,Minnesota Lynx,West,0.75,0.0,0.0,0.0,0.0
+3,Las Vegas Aces,West,0.705,0.0,0.0,0.0,0.0
+5,Washington Mystics,East,0.636,0.0,0.0,0.0,0.0
+6,Indiana Fever,East,0.636,0.0,0.0,0.0,0.0
+7,Dallas Wings,West,0.614,0.0,0.0,0.0,0.0
+8,New York Liberty,East,0.591,0.0,0.0,0.0,0.0

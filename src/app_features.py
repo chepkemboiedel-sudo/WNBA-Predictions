@@ -3,6 +3,7 @@ from html import escape
 import json
 
 from app_data import atomic_json, slug
+import availability_ui
 
 CSS = r"""
 .app-nav{display:flex;gap:8px;flex-wrap:wrap;padding:18px 24px;margin:auto;max-width:1108px}
@@ -36,7 +37,7 @@ CSS = r"""
 
 
 def navigation():
-    return '<nav class="app-nav" aria-label="Main navigation"><a href="/">Forecast</a><a href="/#history">History</a><a href="/#teams">Teams</a><a href="/#refresh-health">Refresh health</a></nav>'
+    return '<nav class="app-nav" aria-label="Main navigation"><a href="/">Forecast</a><a href="/#availability">Availability</a><a href="/#history">History</a><a href="/#teams">Teams</a><a href="/#refresh-health">Refresh health</a></nav>'
 
 
 def health_section(health):
@@ -71,8 +72,8 @@ def history_section(history, default_team, *, fixed=False):
         <div class="metric-card"><div class="metric-label">Title change</div><div class="metric-value" id="history-change">—</div><div class="metric-help">Percentage points since the previous saved forecast</div></div></div>
       <div class="chart-shell"><svg id="history-chart" class="history-chart" viewBox="0 0 800 300" role="img" aria-label="Saved championship and Finals probabilities"></svg>
         <div class="chart-key"><span><b style="background:var(--west)"></b>Win championship</span><span><b style="background:var(--east)"></b>Reach Finals</span></div></div>
-      <p class="feature-note">Lines connect saved observations across gaps. Both odds and confirmed playoff results can change between snapshots. The chart uses a 0–100% scale.</p>
-      <div class="tblwrap"><table><thead><tr><th>Forecast saved</th><th>Data through</th><th>Reach Finals</th><th>Title</th></tr></thead><tbody id="history-table"></tbody></table></div>
+      <p class="feature-note">Lines connect saved observations across gaps. Model versions and confirmed results can change between snapshots. Archived points use their data date when the save time is unknown. The chart uses a 0–100% scale.</p>
+      <div class="tblwrap"><table><thead><tr><th>Forecast saved</th><th>Data through</th><th>Reach Finals</th><th>Title</th><th>Model</th></tr></thead><tbody id="history-table"></tbody></table></div>
     </div></section>'''
 
 
@@ -87,7 +88,7 @@ def team_directory(profiles):
     return f'<section id="teams"><div class="wrap"><span class="eyebrow">Explore the league</span><h2>Team detail pages</h2><p class="lead">Records, recent games, head-to-head results, and saved forecasts for all {len(profiles)} teams in the 2026 data.</p><div class="team-directory">' + ''.join(cards) + '</div></div></section>'
 
 
-def team_page(team, data, css, *, script):
+def team_page(team, data, css, *, script, availability=None):
     def rec(value):
         return f"{value['wins']}–{value['losses']}"
 
@@ -110,6 +111,7 @@ def team_page(team, data, css, *, script):
       <div class="profile-stats" style="margin-top:22px">{cards}</div></div></header>
       <section><div class="wrap"><span class="eyebrow">Latest performances</span><h2>Last 10 completed games</h2><p class="lead">Most recent first. Playoff games are labeled separately.</p>
         <div class="tblwrap"><table><thead><tr><th>Date</th><th>Opponent</th><th>Venue</th><th>Phase</th><th>Result</th></tr></thead><tbody>{recent}</tbody></table></div></div></section>'''
+    body += availability_ui.roster_section(team['team'],availability or {})
     body += history_section(data['history'], team['team'], fixed=True)
     body += f'''<section><div class="wrap"><span class="eyebrow">Season matchups</span><h2>Head-to-head records</h2><p class="lead">Regular season only. Point differential is per game from {escape(team['team'])}'s perspective.</p>
       <div class="tblwrap"><table><thead><tr><th>Opponent</th><th>Record</th><th>Avg. point differential</th></tr></thead><tbody>{h2h}</tbody></table></div></div></section>'''
@@ -132,6 +134,7 @@ function healthState(report, now=Date.now()){
   if (Number.isFinite(Date.parse(report.next_refresh_at)) && now > Date.parse(report.next_refresh_at) + 2*60*60*1000) {
     return {state:'overdue',label:'Refresh overdue',message:'The next scheduled refresh is overdue. Showing the last successful forecast; the cloud run may be delayed or missed.'};
   }
+  if(report.availability && report.availability.status!=='live') return {state:'partial',label:'Partial player data',message:report.availability.message || 'Score results are current, but some player data could not be verified.'};
   return {state:'ok',label:'Refresh healthy',message:'The latest recorded forecast refresh completed successfully. Predictions include completed games through ' + report.data_through + '.'};
 }
 function updateHealth(report){
@@ -160,8 +163,8 @@ function renderHistory(){
   document.getElementById('history-finals').textContent=latest?percent(latest.reach_finals):'Not modeled';
   document.getElementById('history-change').textContent=previous?((latest.champion-previous.champion)>=0?'+':'')+((latest.champion-previous.champion)*100).toFixed(1)+' pp':'No earlier snapshot';
   const table=document.getElementById('history-table');
-  table.innerHTML=points.slice().reverse().map(p=>'<tr><td>'+htmlEscape(p.entry.generated_at?timestamp(p.entry.generated_at):dateOnly(p.entry.data_through)+' · archived')+'</td><td>'+htmlEscape(p.entry.data_through)+'</td><td>'+percent(p.reach_finals)+'</td><td>'+percent(p.champion)+'</td></tr>').join('');
-  if(!points.length){chart.innerHTML='<text x="400" y="145" text-anchor="middle" fill="currentColor">No saved forecast for this team yet.</text>';table.innerHTML='<tr><td colspan="4">This team is outside the saved eight-team forecasts.</td></tr>';return;}
+  table.innerHTML=points.slice().reverse().map(p=>'<tr><td>'+htmlEscape(p.entry.generated_at?timestamp(p.entry.generated_at):'Archived · save time unknown')+'</td><td>'+htmlEscape(p.entry.data_through)+'</td><td>'+percent(p.reach_finals)+'</td><td>'+percent(p.champion)+'</td><td>'+(p.entry.probability_model==='availability-experimental'?'Availability (experimental)':'Score-only')+'</td></tr>').join('');
+  if(!points.length){chart.innerHTML='<text x="400" y="145" text-anchor="middle" fill="currentColor">No saved forecast for this team yet.</text>';table.innerHTML='<tr><td colspan="5">This team is outside the saved eight-team forecasts.</td></tr>';return;}
   const dates=points.map(p=>Date.parse(p.entry.generated_at || p.entry.data_through+'T12:00:00Z'));
   const first=Math.min(...dates),last=Math.max(...dates);
   const x=i=>last===first?420:65+(dates[i]-first)/(last-first)*700, y=p=>250-p*220;
