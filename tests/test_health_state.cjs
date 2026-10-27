@@ -11,4 +11,5 @@ assert.equal(state(healthy,'2026-10-28T15:59:59Z').state,'ok','an off day and sc
 assert.equal(state(healthy,'2026-10-28T16:00:01Z').state,'overdue','a missed run must be visible');
 assert.equal(state({...healthy,status:'failed',message:'Failed; keeping saved data'},'2026-10-27T15:00:00Z').state,'failed');
 assert.equal(state({},'2026-10-27T15:00:00Z').state,'unknown');
+assert.equal(state({...healthy,availability:{status:'partial',message:'Two archived games unavailable'}},'2026-10-27T15:00:00Z').state,'partial');
 console.log('Refresh health-state checks passed.');

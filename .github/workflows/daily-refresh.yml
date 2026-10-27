@@ -61,6 +61,7 @@ jobs:
           python -m unittest discover -s tests -v
           node tests/test_refresh_polling.cjs
           node tests/test_health_state.cjs
+          node tests/test_availability_browser.cjs
 
       - name: Run refresh pipeline
         if: github.event_name != 'pull_request'

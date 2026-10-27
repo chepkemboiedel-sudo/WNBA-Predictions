@@ -13,6 +13,8 @@ sys.path.insert(0, str(ROOT / "src"))
 import pandas as pd, joblib
 import simulate as S
 import app_features as UI
+import availability as AV
+import availability_ui as AVUI
 from app_data import append_snapshot, atomic_json, load_history, snapshot, slug, successful_health, team_profiles
 
 def b64(p):
@@ -28,10 +30,16 @@ standings = S.compute_standings(games)
 seeds = S.playoff_seeds(games)
 model = joblib.load(ROOT / "data" / "models.joblib")["logistic"]
 feats = S.current_team_features(games, seeds)
-Pmat = S.build_prob_matrix(model, feats, seeds)   # (x, y, x_home) -> P(x beats y)
+player_snapshot = AV.load_snapshot()
+Pmat = S.build_prob_matrix(model, feats, seeds, player_snapshot)
+baseline_matrix = S.build_prob_matrix(model, feats, seeds)
 PROB = {f"{x}|{y}|{1 if h else 0}": round(Pmat[(x, y, h)], 5)
-        for (x, y, h) in Pmat}
-DATA = {"seeds": seeds, "conf": {t: S.CONFERENCE[t] for t in seeds}, "prob": PROB}
+        for key in Pmat if len(key)==3 for x,y,h in [key]}
+BASE_PROB = {f"{x}|{y}|{1 if h else 0}":round(value,5) for (x,y,h),value in baseline_matrix.items()}
+NEXT_PROB = {f"{key[0]}|{key[1]}|{1 if key[2] else 0}":round(value,5) for key,value in Pmat.items() if len(key)==4}
+DATA = {"seeds": seeds, "conf": {t: S.CONFERENCE[t] for t in seeds}, "prob": PROB,
+        "prob_base":BASE_PROB,"prob_next":NEXT_PROB,
+        "availability":{key:player_snapshot.get(key) for key in ("status","fetched_at","apply_adjustments","message","model","boxscore_coverage")}}
 # All displayed figures come from the same run as the interactive probability matrix.
 forecast = json.loads((ROOT / "outputs" / "forecast.json").read_text(encoding="utf-8"))
 results = pd.read_csv(ROOT / "outputs" / "finals_probabilities.csv")
@@ -350,6 +358,12 @@ const FMT = { R1:[1,0,1], SEMI:[1,1,0,0,1], FINALS:[1,1,0,0,1,0,1] }; // 1 = hig
 const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
 const seedIdx = t => SEEDS.indexOf(t);           // 0-based; smaller = higher seed
 const pGame = (hi, lo, hiHome) => PROB[hi + "|" + lo + "|" + (hiHome ? 1 : 0)];
+let applyAvailability = Boolean(D.availability.apply_adjustments);
+function gameProbability(hi,lo,home,next){
+  const key=hi+'|'+lo+'|'+(home?1:0);
+  if(!applyAvailability) return D.prob_base[key];
+  return next && key in D.prob_next ? D.prob_next[key] : PROB[key];
+}
 
 // Simulate one best-of-N series game by game; returns winner + series score.
 function simSeries(a, b, fmtKey){
@@ -358,9 +372,11 @@ function simSeries(a, b, fmtKey){
   const pat = FMT[fmtKey], need = (pat.length >> 1) + 1;
   const score = D.observed[hi + "|" + lo] || {hw:0,lw:0};
   let hw = score.hw, lw = score.lw;
+  let firstUnplayed=true;
   for (const host of pat.slice(hw + lw)){
     if (hw >= need || lw >= need) break;
-    if (Math.random() < pGame(hi, lo, host === 1)) hw++; else lw++;
+    if (Math.random() < gameProbability(hi, lo, host === 1, firstUnplayed)) hw++; else lw++;
+    firstUnplayed=false;
     if (hw === need || lw === need) break;
   }
   const winner = hw === need ? hi : lo;
@@ -516,6 +532,10 @@ document.getElementById("btn-many").addEventListener("click", () => {
   }, 30);
 });
 reset();
+document.getElementById('use-availability')?.addEventListener('change',event=>{
+  applyAvailability=event.target.checked;reset();
+  document.getElementById('manystatus').textContent='Interactive games now use '+(applyAvailability?'the availability adjustment.':'the score-only baseline.')+' Published forecasts and history stay unchanged.';
+});
 """
 
 TITLE = "<title>2026 WNBA Finals Forecast</title>"
@@ -530,7 +550,7 @@ BODY = f'''
         <div><span class="lbl">Model's champion pick</span><span class="big">{favorite.p_champion:.0%}</span></div>
         <div><span class="who">{favorite.team}</span><div class="sub">#{favorite.seed} seed · {favorite.p_reach_finals:.1%} to reach the Finals</div></div>
       </div>
-      <p class="foot">A per-game model, validated on 2016–2025, simulating the real 3-round bracket
+      <p class="foot">A score-only baseline validated on 2016–2025, with an experimental player-availability layer, simulating the real 3-round bracket
         (best-of-3 → 5 → 7). Data through {data_date}. {playoff_status}</p>
     </div>
     <aside class="status-card">
@@ -564,17 +584,7 @@ BODY = f'''
       <div class="value">{conf['both_west']:.1%} all-West</div>
       <div class="sub">{conf['mixed']:.1%} mixed · {conf['both_east']:.1%} all-East</div></div>
   </div>
-  <p class="lead">Player highlights below are editorial selections, not model predictions.</p>
-  <div class="mvp-grid">
-    <div class="mvp-card"><span class="team">Minnesota Lynx</span><span class="player">Napheesa Collier</span></div>
-    <div class="mvp-card"><span class="team">Las Vegas Aces</span><span class="player">A'ja Wilson</span></div>
-    <div class="mvp-card"><span class="team">Golden State Valkyries</span><span class="player">Kayla Thornton</span></div>
-    <div class="mvp-card"><span class="team">Indiana Fever</span><span class="player">Caitlin Clark</span></div>
-    <div class="mvp-card"><span class="team">Dallas Wings</span><span class="player">Arike Ogunbowale</span></div>
-    <div class="mvp-card"><span class="team">Atlanta Dream</span><span class="player">Rhyne Howard</span></div>
-    <div class="mvp-card"><span class="team">New York Liberty</span><span class="player">Breanna Stewart</span></div>
-    <div class="mvp-card"><span class="team">Washington Mystics</span><span class="player">Brittney Sykes</span></div>
-  </div>
+  <p class="lead"><a class="team-link" href="#availability">View current roster and injury information, plus the score-only comparison ↓</a></p>
   <div class="board">{rows_html}</div>
   <div class="legend">
     <span><i style="background:var(--west)"></i>West</span>
@@ -596,6 +606,7 @@ BODY = f'''
       <button class="ctrl primary" id="btn-auto">▶ Auto-simulate bracket</button>
       <button class="ctrl" id="btn-reset">↺ Reset</button>
       <button class="ctrl" id="btn-many">↻ Run 10,000× → update odds</button>
+      <label class="ctrl"><input id="use-availability" type="checkbox" {'checked' if player_snapshot.get('apply_adjustments') else 'disabled'}> Apply availability adjustment (experimental)</label>
     </div>
     <div class="status" id="bstatus"></div>
     <div class="bracket-wrap">
@@ -642,7 +653,7 @@ BODY = f'''
 
 <section id="how"><div class="wrap">
   <span class="eyebrow">Under the hood</span>
-  <h2>How it was built</h2>
+  <h2>Score-only baseline validation</h2>
   <p class="lead">Every form feature uses only games played <em>before</em> the game it
     describes, and validation splits by time — train on the past, test on the future — so the
     model never peeks ahead.</p>
@@ -661,7 +672,7 @@ BODY = f'''
     naturally symmetric and well-calibrated.</p>
   <div class="grid2" style="margin-top:30px">
     <figure><img src="{shap_img}" alt="SHAP summary of feature importance">
-      <figcaption><b>What drives a prediction.</b> The chart compares scoring-based strength,
+      <figcaption><b>What drives the score-only baseline.</b> The chart compares scoring-based strength,
         point differential, home court, and recent form. Correlated features
         share predictive signal; individual contributions need to be read together.</figcaption></figure>
     <figure><img src="{calib_img}" alt="Calibration plot">
@@ -674,7 +685,7 @@ BODY = f'''
   <span class="eyebrow">Reading it fairly</span>
   <h2>What the model can't see</h2>
   <ul class="limits">
-    <li><b>It knows only scores.</b> No rosters, injuries, minutes, or trades — the Golden State and New York gaps are where that blind spot shows.</li>
+    <li><b>Player effects are experimental.</b> Current rosters and reported absences are used conservatively; the availability layer has not been independently calibrated. Uncertain reports do not imply confirmed absences.</li>
     <li><b>Playoff rest is neutralized.</b> The sim doesn't model a team resting after a sweep or grinding through a decisive Game 3.</li>
     <li><b>Seeding tiebreakers are simplified</b> (win% then point differential), not the league's full head-to-head chain before the playoffs. Once available, actual first-round pairings resolve tied seeds.</li>
     <li><b>Completed results are fixed.</b> Only unplayed playoff games are simulated. {playoff_status}</li>
@@ -688,9 +699,9 @@ BODY = f'''
 </div></footer>
 '''
 
-CSS += UI.CSS
+CSS += UI.CSS + AVUI.CSS
 BODY = UI.navigation() + BODY.replace('<section id="play">',
-    UI.history_section(DATA["history"], favorite.team) + UI.team_directory(profiles) + '<section id="play">')
+    AVUI.overview(player_snapshot,results) + UI.history_section(DATA["history"], favorite.team) + UI.team_directory(profiles) + '<section id="play">')
 BODY += UI.health_section(DATA["health"])
 scripts = ("\n<script>window.__WNBA__=" + data_json + ";</script>\n<script>" + JS + UI.JS + UI.POLL_JS + "</script>\n")
 
@@ -749,7 +760,12 @@ using {forecast['n_sims']:,} brackets. Eliminated teams cannot advance.
 The actual first-round pairings resolve tied regular-season seeds once playoffs begin.
 Game probabilities come from logistic regression fitted to 2016–2025 score-based team form;
 validation trains on 2016–2023 and tests on 2024–2025. Validation metrics are in
-`outputs/validation_metrics.csv`. Injuries, rosters, and player-level statistics are not modeled.
+`outputs/validation_metrics.csv`. These metrics validate the score-only baseline.
+The experimental player-availability layer uses current ESPN rosters and verified absence
+reports, with shrunken participation effects from 2025–26 box scores. It has not been
+independently calibrated. Score-only title estimate for {favorite.team}:
+{getattr(favorite, 'p_champion_baseline', favorite.p_champion):.1%}.
+Player-data status: {player_snapshot.get('message', 'Unavailable; baseline used.')}
 Regular-season team-strength features stay fixed during the playoff simulation and playoff
 rest differences are neutralized.
 
@@ -764,7 +780,7 @@ for folder in ("public", "site"):
         target = ROOT / folder / "teams" / team["slug"] / "index.html"
         target.parent.mkdir(parents=True, exist_ok=True)
         temporary = target.with_name("index.html.tmp")
-        temporary.write_text(UI.team_page(team, DATA, CSS, script=UI.JS + UI.POLL_JS), encoding="utf-8")
+        temporary.write_text(UI.team_page(team, DATA, CSS, script=UI.JS + UI.POLL_JS, availability=player_snapshot), encoding="utf-8")
         os.replace(temporary, target)
     atomic_json(ROOT / folder / "refresh_health.json", DATA["health"])
 atomic_json(history_path, DATA["history"])

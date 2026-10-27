@@ -29,6 +29,7 @@ import numpy as np
 import pandas as pd
 
 from features import FEATURE_COLS, PYTH_EXP
+import availability as availability_mod
 
 HERE = os.path.dirname(__file__)
 DATA = os.path.abspath(os.path.join(HERE, "..", "data"))
@@ -190,15 +191,24 @@ def prob_A_beats_B(model, A: dict, B: dict, a_home: bool) -> float:
     return 0.5 * (p_a + (1.0 - p_b))
 
 
-def build_prob_matrix(model, feats: dict, teams: list[str]) -> dict:
+def build_prob_matrix(model, feats: dict, teams: list[str], availability: dict | None = None) -> dict:
     """Pre-compute P(x beats y | x at home) for every ordered pair -- 8x8x(home)."""
     P = {}
+    availability = availability or {}
+    enabled = availability.get("apply_adjustments", False)
+    beta = availability.get("model", {}).get("margin_logit_coefficient", 0)
     for x in teams:
         for y in teams:
             if x == y:
                 continue
-            P[(x, y, True)] = prob_A_beats_B(model, feats[x], feats[y], a_home=True)
-            P[(x, y, False)] = prob_A_beats_B(model, feats[x], feats[y], a_home=False)
+            for home in (True, False):
+                base = prob_A_beats_B(model, feats[x], feats[y], a_home=home)
+                a = availability.get("teams",{}).get(x,{})
+                b = availability.get("teams",{}).get(y,{})
+                P[(x,y,home)] = availability_mod.adjust_probability(base,availability_mod.team_shift(a),availability_mod.team_shift(b),beta) if enabled else base
+                next_game = availability.get("next_games",{}).get(x,{})
+                if enabled and next_game.get("opponent") == y and next_game.get("home") == home:
+                    P[(x,y,home,"next")] = availability_mod.adjust_probability(base,availability_mod.team_shift(a,"next_game"),availability_mod.team_shift(b,"next_game"),beta)
     return P
 
 
@@ -217,9 +227,9 @@ def sim_series(high: str, low: str, fmt: str, P: dict, rng: np.random.Generator,
     hw, lw = score.get("hw", 0), score.get("lw", 0)
     if hw >= need or lw >= need:
         return high if hw >= need else low
-    for host in pattern[hw + lw:]:
+    for index,host in enumerate(pattern[hw + lw:]):
         high_home = host == "H"
-        p_high = P[(high, low, True)] if high_home else P[(high, low, False)]
+        p_high = P.get((high,low,high_home,"next"),P[(high,low,high_home)]) if index == 0 else P[(high,low,high_home)]
         if rng.random() < p_high:
             hw += 1
         else:
@@ -263,7 +273,9 @@ def run(n_sims: int = 20000, seed: int = 7):
     model = bundle["logistic"]  # primary predictor: calibrated & antisymmetric
 
     feats = current_team_features(games, seeds)
-    P = build_prob_matrix(model, feats, seeds)
+    availability = availability_mod.load_snapshot()
+    P = build_prob_matrix(model, feats, seeds, availability)
+    baseline_P = build_prob_matrix(model, feats, seeds)
 
     rng = np.random.default_rng(seed)
     reach = Counter()
@@ -275,6 +287,12 @@ def run(n_sims: int = 20000, seed: int = 7):
         champ[c] += 1
         matchup[frozenset((f1, f2))] += 1
 
+    baseline_reach, baseline_champ = Counter(), Counter()
+    baseline_rng = np.random.default_rng(seed)
+    for _ in range(n_sims):
+        f1,f2,c = sim_bracket(seeds,baseline_P,baseline_rng,observed)
+        baseline_reach[f1]+=1;baseline_reach[f2]+=1;baseline_champ[c]+=1
+
     res = pd.DataFrame({
         "seed": range(1, 9),
         "team": seeds,
@@ -282,6 +300,8 @@ def run(n_sims: int = 20000, seed: int = 7):
         "win_pct": [round(standings.loc[standings.team == t, "win_pct"].iloc[0], 3) for t in seeds],
         "p_reach_finals": [reach[t] / n_sims for t in seeds],
         "p_champion": [champ[t] / n_sims for t in seeds],
+        "p_reach_finals_baseline": [baseline_reach[t] / n_sims for t in seeds],
+        "p_champion_baseline": [baseline_champ[t] / n_sims for t in seeds],
     }).sort_values("p_reach_finals", ascending=False).reset_index(drop=True)
 
     top_matchups = sorted(matchup.items(), key=lambda kv: -kv[1])[:6]
@@ -303,6 +323,8 @@ def run(n_sims: int = 20000, seed: int = 7):
         "game_count": len(games),
         "completed_playoff_games": int(((games.season == 2026) & games.is_playoff).sum()),
         "observed_series": observed,
+        "probability_model": "availability-experimental" if availability.get("apply_adjustments") else "score-only",
+        "availability": {key:availability.get(key) for key in ("status","fetched_at","apply_adjustments","message","model","boxscore_coverage")},
         "top_matchups": [{"teams": list(pair), "probability": probability}
                          for pair, probability in top_matchups],
         "conferences": {key: conference_counts[key] / n_sims

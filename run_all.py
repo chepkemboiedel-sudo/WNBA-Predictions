@@ -36,6 +36,7 @@ import simulate as sim_mod
 import visuals as vis_mod
 import explain as explain_mod
 import compare_odds as odds_mod
+import availability as availability_mod
 from app_data import workflow_url
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -87,6 +88,10 @@ def main():
 
     print("\n[2/7] + [3/7] Building features & training / validating models ...")
     model_mod.main()
+
+    print("\nRefreshing rosters, injuries, and player participation data ...")
+    if not args.skip_fetch:
+        availability_mod.refresh()
 
     print(f"\n[4/7] Simulating the bracket ({args.sims:,} runs) ...")
     res, top_matchups, seeds, feats = sim_mod.run(n_sims=args.sims)
