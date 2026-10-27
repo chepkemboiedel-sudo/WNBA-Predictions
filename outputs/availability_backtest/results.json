@@ -379,6 +379,51 @@
         "harmed": 0,
         "mcnemar_exact_p": 1.0
       }
+    },
+    "initial_study": {
+      "n": 202,
+      "days": 97,
+      "changed_games": 120,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.5567341622655784,
+          "adjusted": 0.5559212583001837,
+          "delta": -0.0008129039653945598,
+          "delta_ci95": [
+            -0.0038121203486394134,
+            0.0024501207946720093
+          ]
+        },
+        "brier": {
+          "baseline": 0.186296757043223,
+          "adjusted": 0.1861838085307265,
+          "delta": -0.00011294851249653599,
+          "delta_ci95": [
+            -0.001442453492021767,
+            0.0013366173737468635
+          ]
+        },
+        "accuracy": {
+          "baseline": 0.7227722772277227,
+          "adjusted": 0.7227722772277227,
+          "delta": 0.0,
+          "delta_ci95": [
+            -0.014778325123152709,
+            0.014563106796116505
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 1,
+        "harmed": 1,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "newly_evaluated": {
+      "n": 0
+    },
+    "prospective": {
+      "n": 0
     }
   },
   "by_month": {

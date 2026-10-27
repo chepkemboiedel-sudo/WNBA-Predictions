@@ -118,13 +118,39 @@ including no improvement. Only five covered games were playoff games.
 These findings do not validate championship probabilities or the complete ESPN
 injury/roster-fetch pipeline. Retain the experimental label; see
 `outputs/availability_backtest/REPORT.md` for methodology and coverage limitations.
-Running the backtest does not rebuild or publish live forecasts.
+Running the standalone backtest does not rebuild or publish live forecasts.
 
-The app's **Backtest** section at `/#backtest` displays this saved evaluation,
+The app's **Backtest** section at `/#backtest` displays this evaluation,
 with paired accuracy/log-loss/Brier comparisons, uncertainty intervals, sample
-selection, coverage warnings, and downloads. The evaluation date is separate from
-the daily forecast refresh date. Daily site builds re-export the saved results;
-they do not rerun the historical study or enable injury adjustments.
+selection, coverage warnings, and downloads. The existing daily cloud refresh
+also runs `src/evaluation.py`: it reuses the hashed report manifest, fetches reports
+for newly completed games, and appends only previously unseen prediction rows.
+Earlier rows are never re-predicted. The initial study is frozen in
+`data/backtests/initial_results.json` and `initial_predictions.csv`.
+
+A separate prospective trial records the first paired production game prediction
+5 minutes to 24 hours before scheduled tip, using a verified player snapshot fetched
+within two hours. The probabilities, model hash, timestamp, and team-level injury/roster
+evidence are saved immediately in `data/backtests/prospective_predictions.json`.
+Matching completed results are scored on subsequent daily checks. Missing pregame
+captures are never reconstructed after the fact. Daily 7 a.m. Pacific sampling can
+miss early games and last-minute updates. The trial uses production regular-season
+form; historical walk-forward results use running pregame form, so the cohorts stay
+separate. This project currently evaluates the 2026 season.
+
+The app shows the last check, failures, pending/scored prospective counts, the frozen
+study, newly evaluated games, and cumulative accuracy-difference checkpoints.
+Unchanged daily checks add no points. Empty cohorts show no inferred accuracy.
+`outputs/availability_backtest/auto_status.json`, `progress.json`, and `prospective.csv`
+are exported alongside the main evaluation and pregame journal. Repeated checkpoints
+are not independent significance tests. Score-only remains default; automatic
+monitoring never promotes injury adjustments.
+
+Evaluation updates stage their output and roll back a failed promotion. A failed
+evaluation preserves the last successful metrics and publishes a failure notice,
+while score-only forecast refreshes can continue. Pregame journal captures survive
+a later retrospective evaluation failure. Use `python src/evaluation.py --offline`
+to check cached data without retrieving new historical reports.
 
 ## How it works (build order)
 

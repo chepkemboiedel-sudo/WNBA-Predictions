@@ -37,6 +37,7 @@ import visuals as vis_mod
 import explain as explain_mod
 import compare_odds as odds_mod
 import availability as availability_mod
+import evaluation as evaluation_mod
 from app_data import workflow_url
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -92,6 +93,8 @@ def main():
     print("\nRefreshing rosters, injuries, and player participation data ...")
     if not args.skip_fetch:
         availability_mod.refresh()
+        print("\nUpdating historical backtests and prospective evaluation ...")
+        evaluation_mod.update()
 
     print(f"\n[4/7] Simulating the bracket ({args.sims:,} runs) ...")
     res, top_matchups, seeds, feats = sim_mod.run(n_sims=args.sims)

@@ -3,10 +3,13 @@ const fs=require('node:fs');
 const path=require('node:path');
 const vm=require('node:vm');
 const root=path.join(__dirname,'..');
-const result=JSON.parse(fs.readFileSync(path.join(root,'outputs/availability_backtest/results.json'),'utf8'));
+const result=JSON.parse(fs.readFileSync(path.join(root,'data/backtests/initial_results.json'),'utf8'));
+result.groups.initial_study=result.groups.verified_report_games;
+result.groups.newly_evaluated={n:0};result.groups.prospective={n:0};
+result.progress={checkpoints:[{at:'2026-10-27T23:00:00Z',groups:{verified_report_games:{n:202,accuracy_delta:0}}}]};
 const source=fs.readFileSync(path.join(root,'src/backtest_ui.py'),'utf8').split('JS = r"""')[1].split('"""')[0];
 const elements={};
-for(const id of ['sample','n','changed','picks','metrics','finding','acc-base','acc-adj','bar-base','bar-adj','context']) elements['backtest-'+id]={value:'',textContent:'',innerHTML:'',style:{},addEventListener:(name,fn)=>{elements['backtest-sample'].change=fn;}};
+for(const id of ['sample','n','changed','picks','metrics','finding','acc-base','acc-adj','bar-base','bar-adj','context','progress','progress-note']) elements['backtest-'+id]={value:'',textContent:'',innerHTML:'',style:{},addEventListener:(name,fn)=>{elements['backtest-sample'].change=fn;}};
 const context=vm.createContext({window:{__WNBA__:{backtest:result}},document:{getElementById:id=>elements[id]}});
 vm.runInContext(source,context);
 assert.equal(elements['backtest-sample'].value,'verified_report_games');
@@ -16,6 +19,8 @@ assert.equal(elements['backtest-acc-adj'].textContent,'72.28%');
 assert(elements['backtest-metrics'].innerHTML.includes('0.556734'));
 assert(elements['backtest-metrics'].innerHTML.includes('0.555921'));
 assert(elements['backtest-finding'].textContent.includes('No clear improvement'));
+assert(elements['backtest-progress'].innerHTML.includes('<circle'));
+assert(elements['backtest-progress-note'].textContent.includes('One starting checkpoint'));
 for(const key of ['all_eligible_games','changed_games','regular_season','playoffs']){
   elements['backtest-sample'].value=key;elements['backtest-sample'].change();
   assert.equal(elements['backtest-n'].textContent,String(result.groups[key].n));
@@ -23,5 +28,12 @@ for(const key of ['all_eligible_games','changed_games','regular_season','playoff
 }
 assert(elements['backtest-finding'].textContent.includes('Small sample: 5 games'));
 assert(elements['backtest-context'].textContent.includes('cannot establish'));
+for(const key of ['newly_evaluated','prospective']){
+  elements['backtest-sample'].value=key;elements['backtest-sample'].change();
+  assert.equal(elements['backtest-n'].textContent,'0');
+  assert.equal(elements['backtest-acc-base'].textContent,'—');
+  assert(elements['backtest-finding'].textContent.includes('No completed games'));
+  assert(elements['backtest-progress'].innerHTML.includes('Awaiting scored games'));
+}
 assert(!('applyAvailability' in context),'comparing backtest samples must not enable injury forecasts');
 console.log('Backtest sample switching, metrics, and uncertainty checks passed.');

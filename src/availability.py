@@ -296,7 +296,7 @@ def refresh(games=None):
                     team = competitor["team"]["displayName"]
                     opponent = next(c["team"]["displayName"] for c in competitors if c is not competitor)
                     if team not in next_games:
-                        next_games[team] = {"event_id":str(event["id"]),"date":event["date"],"opponent":opponent,"home":competitor["homeAway"]=="home"}
+                        next_games[team] = {"event_id":str(event["id"]),"date":event["date"],"opponent":opponent,"home":competitor["homeAway"]=="home","is_playoff":event.get("season",{}).get("type")==3}
         value["next_games"] = next_games
         regular = boxes[(boxes.season==2026) & ~boxes.is_playoff] if not boxes.empty else pd.DataFrame()
         owners = {}
