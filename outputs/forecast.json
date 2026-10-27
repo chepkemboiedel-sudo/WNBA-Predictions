@@ -4,13 +4,13 @@
   "game_count": 2658,
   "completed_playoff_games": 21,
   "observed_series": {
-    "Minnesota Lynx|New York Liberty": {
-      "hw": 0,
-      "lw": 2
-    },
     "Las Vegas Aces|Indiana Fever": {
       "hw": 2,
       "lw": 1
+    },
+    "Minnesota Lynx|New York Liberty": {
+      "hw": 0,
+      "lw": 2
     },
     "Atlanta Dream|Washington Mystics": {
       "hw": 2,
@@ -37,7 +37,7 @@
   "injury_adjustment_default": false,
   "availability": {
     "status": "partial",
-    "fetched_at": "2026-10-27T22:59:27.655319Z",
+    "fetched_at": "2026-10-27T23:35:54.709764Z",
     "apply_adjustments": true,
     "message": "Live reports; 636/637 box scores available. Adjustments are limited to teams with complete current-season player history.",
     "model": {
