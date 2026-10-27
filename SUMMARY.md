@@ -28,7 +28,7 @@ The experimental player-availability layer uses current ESPN rosters and verifie
 reports, with shrunken participation effects from 2025–26 box scores. It has not been
 independently calibrated. Score-only title estimate for Golden State Valkyries:
 73.3%.
-Player-data status: Live reports; 635/637 box scores available. Adjustments are limited to teams with complete current-season player history.
+Player-data status: Live reports; 636/637 box scores available. Adjustments are limited to teams with complete current-season player history.
 Regular-season team-strength features stay fixed during the playoff simulation and playoff
 rest differences are neutralized.
 
