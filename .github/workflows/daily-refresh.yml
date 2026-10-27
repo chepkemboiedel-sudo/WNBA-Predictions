@@ -60,6 +60,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -v
           node tests/test_refresh_polling.cjs
+          node tests/test_health_state.cjs
 
       - name: Run refresh pipeline
         if: github.event_name != 'pull_request'
@@ -92,3 +93,29 @@ jobs:
           GH_REPOSITORY: ${{ github.repository }}
           DEPLOY_COMMIT: ${{ steps.publish.outputs.sha }}
         run: python scripts/wait_for_deployment.py
+
+  report_failure:
+    needs: refresh
+    if: ${{ failure() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the last published forecast
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Record failure without replacing predictions
+        run: python scripts/record_refresh_failure.py
+      - name: Publish refresh health notice
+        env:
+          REFRESH_OWNER: ${{ github.repository_owner }}
+          REFRESH_OWNER_ID: ${{ github.repository_owner_id }}
+        run: |
+          git config user.name "$REFRESH_OWNER (forecast automation)"
+          git config user.email "$REFRESH_OWNER_ID+$REFRESH_OWNER@users.noreply.github.com"
+          git add public/refresh_health.json site/refresh_health.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Report failed WNBA refresh [automated]"
+            git push origin HEAD:main
+          fi

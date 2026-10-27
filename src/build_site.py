@@ -12,6 +12,8 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import pandas as pd, joblib
 import simulate as S
+import app_features as UI
+from app_data import append_snapshot, atomic_json, load_history, snapshot, slug, successful_health, team_profiles
 
 def b64(p):
     with open(ROOT / "outputs" / p, "rb") as f:
@@ -50,7 +52,11 @@ DATA["reach_scale"] = REACH_SCALE
 DATA["observed"] = forecast["observed_series"]
 DATA["refresh"] = globals().get("REFRESH_META") or json.loads(
     (ROOT / "public" / "refresh_meta.json").read_text(encoding="utf-8"))
-data_json = json.dumps(DATA)
+history_path = ROOT / "data" / "forecast_history.json"
+DATA["history"] = append_snapshot(load_history(history_path), snapshot(results, forecast, DATA["refresh"]))
+DATA["health"] = successful_health(games, forecast, DATA["refresh"])
+profiles = team_profiles(games, results, seeds)
+data_json = json.dumps(DATA, ensure_ascii=False).replace("<", "\\u003c")
 favorite = results.loc[results.p_champion.idxmax()]
 data_date = datetime.strptime(forecast["data_through"], "%Y-%m-%d").strftime("%b %d, %Y")
 conf = forecast["conferences"]
@@ -85,7 +91,7 @@ for i, (t, s, c, wp, rf, ch) in enumerate(teams):
     rows.append(f'''
       <div class="row" data-team="{t}" style="--i:{i}">
         <div class="teamcell">
-          <span class="seed">{s}</span><span class="tname">{t}</span>
+          <span class="seed">{s}</span><a class="tname team-link" href="/teams/{slug(t)}/">{t} ↗</a>
           <span class="dot {cc(c)}"></span><span class="conf">{c}</span>
         </div>
         <div class="track">
@@ -344,38 +350,6 @@ const FMT = { R1:[1,0,1], SEMI:[1,1,0,0,1], FINALS:[1,1,0,0,1,0,1] }; // 1 = hig
 const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
 const seedIdx = t => SEEDS.indexOf(t);           // 0-based; smaller = higher seed
 const pGame = (hi, lo, hiHome) => PROB[hi + "|" + lo + "|" + (hiHome ? 1 : 0)];
-function updateRefreshStatus(){
-  const meta = D.refresh || {};
-  const el = document.getElementById("updated-at"), cd = document.getElementById("countdown");
-  if (el) el.textContent = meta.last_updated ? new Date(meta.last_updated).toLocaleString([], {
-    month:"short", day:"numeric", hour:"2-digit", minute:"2-digit" }) : "Not available";
-  const seconds = Math.max(0, Math.floor((Date.parse(meta.next_refresh_at) - Date.now()) / 1000));
-  if (cd) cd.textContent = !Number.isFinite(seconds) ? "Not scheduled" : seconds === 0 ? "Awaiting next run" :
-    [Math.floor(seconds/3600), Math.floor(seconds/60)%60, seconds%60].map(n=>String(n).padStart(2,"0")).join(":");
-}
-updateRefreshStatus();
-setInterval(updateRefreshStatus, 1000);
-let checkingForUpdates = false;
-async function checkForUpdates(){
-  if (checkingForUpdates || document.hidden) return;
-  checkingForUpdates = true;
-  try {
-    const response = await fetch("refresh_meta.json", {cache:"no-store"});
-    if (!response.ok) return;
-    const meta = await response.json();
-    if (meta.last_updated && meta.last_updated !== D.refresh.last_updated) {
-      window.location.reload();
-    }
-  } catch {
-    // Keep displaying the last successful forecast when the server is offline.
-  } finally {
-    checkingForUpdates = false;
-  }
-}
-setInterval(checkForUpdates, 60000);
-document.addEventListener("visibilitychange", checkForUpdates);
-window.addEventListener("focus", checkForUpdates);
-checkForUpdates();
 
 // Simulate one best-of-N series game by game; returns winner + series score.
 function simSeries(a, b, fmtKey){
@@ -562,6 +536,7 @@ BODY = f'''
     <aside class="status-card">
       <div class="label">Automatic data refresh</div>
       <div class="big">{DATA['refresh'].get('schedule_label', 'Daily refresh')}</div>
+      <p><a class="team-link" href="#refresh-health" aria-label="Refresh health details"><span class="health-pill" data-health-badge role="status">Checking refresh status</span></a></p>
       <p class="foot">{'Runs in the cloud, even when your computer is off.' if DATA['refresh'].get('scheduler') == 'github_actions' else 'Runs on this computer while Codex is open.'}</p>
       <div class="meta">
         <div><span>Last update</span><strong id="updated-at">--</strong></div>
@@ -713,7 +688,11 @@ BODY = f'''
 </div></footer>
 '''
 
-scripts = ("\n<script>window.__WNBA__=" + data_json + ";</script>\n<script>" + JS + "</script>\n")
+CSS += UI.CSS
+BODY = UI.navigation() + BODY.replace('<section id="play">',
+    UI.history_section(DATA["history"], favorite.team) + UI.team_directory(profiles) + '<section id="play">')
+BODY += UI.health_section(DATA["health"])
+scripts = ("\n<script>window.__WNBA__=" + data_json + ";</script>\n<script>" + JS + UI.JS + UI.POLL_JS + "</script>\n")
 
 # (a) Artifact-format file: no <!doctype>/<html>/<head>/<body> — the Artifact
 #     host wraps it in that skeleton itself.
@@ -779,3 +758,14 @@ Market source status: {market_note}
 Run `python run_all.py` to refresh data, forecasts, charts, and the website together.
 """
 (ROOT / "SUMMARY.md").write_text(summary, encoding="utf-8")
+
+for folder in ("public", "site"):
+    for team in profiles:
+        target = ROOT / folder / "teams" / team["slug"] / "index.html"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        temporary = target.with_name("index.html.tmp")
+        temporary.write_text(UI.team_page(team, DATA, CSS, script=UI.JS + UI.POLL_JS), encoding="utf-8")
+        os.replace(temporary, target)
+    atomic_json(ROOT / folder / "refresh_health.json", DATA["health"])
+atomic_json(history_path, DATA["history"])
+print(f"wrote {len(profiles)} team pages; retained {len(DATA['history']['snapshots'])} forecast snapshots")

@@ -37,6 +37,24 @@ An open page checks the local refresh marker every minute and when you return to
 then reloads automatically after a successful rebuild. Refresh markers are published after
 the page is rebuilt, and incomplete downloads preserve the previous cached results.
 
+## History, teams, and refresh health
+
+`data/forecast_history.json` retains each successful published forecast. Rebuilding the same
+forecast timestamp does not add duplicates. The history starts with an archived July 30
+project output and the October 27 cloud forecast; gaps are shown honestly rather than
+backfilled. Charts, percentage-point changes, and per-team CSV downloads use these snapshots.
+
+All teams in the current season have pages at `/teams/<team-name>/`, with regular-season
+records and scoring averages, separate playoff records, recent results, regular-season
+head-to-head records, and forecast history. Teams outside the modeled eight-team bracket
+show that distinction instead of inventing probabilities.
+
+`public/refresh_health.json` reports the latest attempt, last success, data date, and game
+coverage. The app checks it every minute and flags refreshes more than two hours overdue.
+If the main cloud job fails, a separate job checks out the last published forecast and
+publishes only a failure notice; saved predictions and history stay intact. If deployment
+itself is unavailable, the overdue indicator can still warn about the old published data.
+
 Completed playoff games are retained in both the forecast and interactive bracket. Only
 unplayed games are simulated, so eliminated teams cannot return. Once the playoffs start,
 actual first-round pairings resolve tied seeds. The page shows the latest completed game

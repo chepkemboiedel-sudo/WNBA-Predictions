@@ -30,6 +30,15 @@ def verify():
         raise ValueError("Forecast probabilities do not sum correctly.")
     if results.sort_values("seed").team.tolist() != embedded["seeds"]:
         raise ValueError("Website and simulation seeds disagree.")
+    history = json.loads((ROOT / "data/forecast_history.json").read_text(encoding="utf-8"))
+    health = json.loads((ROOT / "public/refresh_health.json").read_text(encoding="utf-8"))
+    if embedded["history"] != history or embedded["health"] != health:
+        raise ValueError("Page history or refresh health does not match published assets.")
+    latest = history["snapshots"][-1]
+    if latest["generated_at"] != meta["last_updated"] or health["last_success_at"] != meta["last_updated"]:
+        raise ValueError("Forecast history and health do not describe this successful run.")
+    if len(list((ROOT / "public/teams").glob("*/index.html"))) != len(set(pd.read_csv(ROOT / "data/games_2026.csv").home_team)):
+        raise ValueError("A team detail page is missing.")
     print(f"Verified forecast through {forecast['data_through']}, {forecast['n_sims']:,} simulations.")
 
 

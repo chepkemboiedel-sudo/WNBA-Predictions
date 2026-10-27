@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const source=fs.readFileSync(path.join(__dirname,'../src/app_features.py'),'utf8');
+const fn=source.slice(source.indexOf('function healthState('),source.indexOf('function updateHealth('));
+const context=vm.createContext({});vm.runInContext(fn,context);
+const state=(report,now)=>context.healthState(report,Date.parse(now));
+const healthy={status:'ok',last_success_at:'2026-10-27T14:03:00Z',next_refresh_at:'2026-10-28T14:00:00Z',data_through:'2026-10-25'};
+assert.equal(state(healthy,'2026-10-28T15:59:59Z').state,'ok','an off day and scheduling grace must not look like a failure');
+assert.equal(state(healthy,'2026-10-28T16:00:01Z').state,'overdue','a missed run must be visible');
+assert.equal(state({...healthy,status:'failed',message:'Failed; keeping saved data'},'2026-10-27T15:00:00Z').state,'failed');
+assert.equal(state({},'2026-10-27T15:00:00Z').state,'unknown');
+console.log('Refresh health-state checks passed.');

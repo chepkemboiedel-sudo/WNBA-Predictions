@@ -36,6 +36,7 @@ import simulate as sim_mod
 import visuals as vis_mod
 import explain as explain_mod
 import compare_odds as odds_mod
+from app_data import workflow_url
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "outputs")
@@ -56,6 +57,7 @@ def make_refresh_meta(now: datetime | None = None) -> dict:
         "schedule_label": schedule["label"],
         "schedule_timezone": schedule["timezone"],
         "scheduler": schedule.get("scheduler", "local"),
+        "run_url": workflow_url(),
     }
 
 

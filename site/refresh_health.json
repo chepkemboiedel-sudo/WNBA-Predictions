@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "status": "ok",
+  "last_attempt_at": "2026-10-27T19:25:59.414157Z",
+  "last_success_at": "2026-10-27T19:25:59.414157Z",
+  "next_refresh_at": "2026-10-28T14:00:00Z",
+  "data_through": "2026-10-27",
+  "season": 2026,
+  "coverage": {
+    "season_games": 351,
+    "regular_games": 330,
+    "playoff_games": 21,
+    "historical_games": 2658
+  },
+  "source": "ESPN completed game results",
+  "verified": true,
+  "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/40568898387",
+  "message": "Last forecast refresh completed successfully."
+}
