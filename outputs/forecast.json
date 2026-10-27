@@ -37,7 +37,7 @@
   "injury_adjustment_default": false,
   "availability": {
     "status": "partial",
-    "fetched_at": "2026-10-27T22:36:38.144495Z",
+    "fetched_at": "2026-10-27T22:59:27.655319Z",
     "apply_adjustments": true,
     "message": "Live reports; 636/637 box scores available. Adjustments are limited to teams with complete current-season player history.",
     "model": {
