@@ -24,9 +24,20 @@ def verify():
     if '<section id="backtest">' not in page:
         raise ValueError("The backtest comparison section is missing.")
     for folder in ("public","site"):
-        for name in ("results.json","predictions.csv","REPORT.md"):
+        for name in ("results.json","predictions.csv","REPORT.md","auto_status.json","progress.json","prospective.csv"):
             if (ROOT/folder/"backtest"/name).read_bytes()!=(ROOT/"outputs/availability_backtest"/name).read_bytes():
                 raise ValueError("A downloadable backtest asset differs from the saved source.")
+        for name in ("initial_results.json","initial_predictions.csv"):
+            if (ROOT/folder/"backtest"/name).read_bytes()!=(ROOT/"data/backtests"/name).read_bytes():
+                raise ValueError("A frozen initial-study download differs from its archive.")
+        if (ROOT/folder/"backtest/pregame_predictions.json").read_bytes()!=(ROOT/"data/backtests/prospective_predictions.json").read_bytes():
+            raise ValueError("The pregame journal download differs from recorded evidence.")
+    prospective=json.loads((ROOT/"data/backtests/prospective_predictions.json").read_text(encoding="utf-8"))
+    seen=set()
+    for row in prospective["predictions"]:
+        if row["game_id"] in seen or pd.Timestamp(row["locked_at"])>=pd.Timestamp(row["tip"]):
+            raise ValueError("Prospective evidence is duplicated or recorded after tip.")
+        seen.add(row["game_id"])
     if embedded["refresh"] != meta:
         raise ValueError("Page and refresh metadata disagree.")
     if embedded["observed"] != forecast["observed_series"]:

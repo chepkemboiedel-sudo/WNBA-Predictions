@@ -120,20 +120,30 @@ def score(rows,bootstrap=10000):
     return result
 
 
-def run():
+def run(*, append_only=False, destination=None):
+    output=Path(destination) if destination is not None else OUT
+    old_summary=json.loads((output/"results.json").read_text(encoding="utf-8")) if append_only and (output/"results.json").exists() else {}
+    retained=pd.read_csv(output/"predictions.csv",dtype={"game_id":str},float_precision="round_trip") if old_summary else pd.DataFrame()
+    if not retained.empty:
+        retained["player_details"]=retained.player_details.map(json.loads)
+        retained["fallback_reason"]=retained.fallback_reason.fillna("")
     games=pd.read_csv(ROOT/"data/all_games.csv",dtype={"game_id":str},parse_dates=["date"])
     boxes=pd.read_csv(ROOT/"data/player_game_stats.csv",dtype={"game_id":str,"player_id":str},parse_dates=["date"])
     manifest=json.loads((ROOT/"data/backtests/injury_report_manifest.json").read_text(encoding="utf-8"))
     reports={r["published_at"]:r for r in manifest["reports"] if r["status"]==200}
     matchups=build_matchup_table(games)
     training=matchups[matchups.season<=2025]
-    baseline=make_logistic().fit(training[FEATURE_COLS],training.target)
     test=matchups[(matchups.season==2026)&(matchups.home==1)].copy().sort_values(["date","game_id"])
+    if not retained.empty:
+        test=test[~test.game_id.astype(str).isin(set(retained.game_id))]
+    if test.empty and old_summary:
+        return old_summary,retained
+    baseline=make_logistic().fit(training[FEATURE_COLS],training.target)
     test["p_baseline"]=baseline.predict_proba(test[FEATURE_COLS])[:,1]
     tips=boxes.drop_duplicates("game_id").set_index("game_id").started_at.to_dict()
     originals=games.set_index("game_id")
     models={}
-    predictions=[]
+    predictions=retained.to_dict("records") if not retained.empty else []
     for row in test.itertuples():
         tip=datetime.fromisoformat(tips[row.game_id].replace("Z","+00:00")) if row.game_id in tips else None
         month=pd.Timestamp(row.date).to_period("M").start_time
@@ -170,16 +180,21 @@ def run():
     groups={"all_eligible_games":frame,"verified_report_games":frame[frame.report_covered],"verified_reports_with_out":frame[frame.report_covered&(frame.out_count>0)],"changed_games":frame[abs(frame.p_adjusted-frame.p_baseline)>1e-10],"regular_season":frame[frame.report_covered&~frame.is_playoff],"playoffs":frame[frame.report_covered&frame.is_playoff]}
     results={name:score(rows) for name,rows in groups.items()}
     summary={"version":1,"created_at":datetime.now(ZoneInfo("UTC")).isoformat(),"primary_comparison":"verified_report_games","test_season":2026,"baseline_train_seasons":[2016,2025],"player_fits":[{"before":str(k.date()),**v[1]} for k,v in models.items()],"report_policy":manifest["policy"],"report_files_requested":len(manifest["reports"]),"report_files_verified":len(reports),"report_failures":[r for r in manifest["reports"] if r["status"]!=200],"fallback_counts":dict(Counter(frame.loc[~frame.report_covered,"fallback_reason"])),"out_records":int(frame.out_count.sum()),"unmatched_out_records":int(frame.unmatched_out.sum()),"incomplete_team_history_games":int((frame.report_covered&(frame.fallback_reason!="")).sum()),"groups":results,"by_month":{str(month):score(rows,bootstrap=2000) for month,rows in frame[frame.report_covered].groupby(frame.date.str[:7])}}
-    OUT.mkdir(parents=True,exist_ok=True)
-    (OUT/"results.json").write_text(json.dumps(summary,indent=2),encoding="utf-8")
-    frame.assign(player_details=frame.player_details.map(json.dumps)).to_csv(OUT/"predictions.csv",index=False)
+    if old_summary:
+        fits={f["before"]:f for f in old_summary.get("player_fits",[])}
+        fits.update({f["before"]:f for f in summary["player_fits"]})
+        summary["player_fits"]=list(fits.values())
+    output.mkdir(parents=True,exist_ok=True)
+    (output/"results.json").write_text(json.dumps(summary,indent=2),encoding="utf-8")
+    frame.assign(player_details=frame.player_details.map(json.dumps)).to_csv(output/"predictions.csv",index=False)
     for name,result in results.items():
         print(name,json.dumps(result),flush=True)
-    write_report(summary,frame)
+    write_report(summary,frame,destination=output)
     return summary,frame
 
 
-def write_report(summary,frame):
+def write_report(summary,frame,*,destination=None):
+    output=Path(destination) if destination is not None else OUT
     primary=summary["groups"]["verified_report_games"]
     probability_scores=[primary["metrics"][name] for name in ("log_loss","brier")]
     clear_improvement=all(m["delta_ci95"][1]<0 for m in probability_scores)
@@ -203,7 +218,7 @@ def write_report(summary,frame):
         m=result["metrics"]
         lines.append(f"| {name.replace('_',' ')} | {result['n']} | {result['changed_games']} | {m['accuracy']['baseline']:.2%} | {m['accuracy']['adjusted']:.2%} | {m['log_loss']['delta']:+.6f} | {m['brier']['delta']:+.6f} |")
     lines += ["", "## Method and safeguards","", "- Score-only logistic regression is fitted on 2016-2025 games. Held-out games are in 2026; early games lacking the existing feature minimum are excluded. Each game contributes once, from the home team's perspective.","- Player effects are refitted at the start of each month using only preceding games, including 2025 box scores and earlier 2026 regular-season games. The existing ridge penalty, positive-effect clipping, participation discount, probability mapping, and player/team caps are retained without tuning to these results.","- Official report selection is fixed before scoring: 09:00 ET for games tipping before 16:00 ET, otherwise 15:00 ET, with at least one hour before tip. Eastern dates are derived from recorded scheduled game timestamps, not UTC game-log dates.","- Both teams must be explicitly submitted for the exact date and matchup. Missing, unsubmitted, malformed, or wrong-league reports produce the score-only fallback. An omitted team is not inferred to be healthy. This conservative rule makes the covered subset unrepresentative of the whole league.","- Only Out/Suspended records trigger an absence. Doubtful, Questionable, Probable, and Available do not. Each game uses its own report; no report is carried into subsequent games.","- Report names are normalized and matched uniquely to athlete IDs seen in earlier box scores. Current rosters, today's ESPN statuses, future aliases, future participation, and the test game's box-score statistics are not prediction inputs. The scheduled start timestamp is the only field taken from the held-out game's box-score record.","- Prior participation and team archive completeness use games strictly before the report's UTC calendar date, conservatively omitting earlier games on that date. Incomplete prior player history disables that team's penalty. Training folds exclude the entire test month and all later dates.","", "## Coverage and limits","",f"- {summary['report_files_verified']} of {summary['report_files_requested']} fixed-time report files passed validation. Five URLs returned documents containing non-WNBA teams; two returned HTTP 403.",f"- Of {summary['groups']['all_eligible_games']['n']} eligible 2026 games, {primary['n']} had both-team report coverage. The remaining games use the same baseline in both comparisons. Only {summary['groups']['playoffs']['n']} covered games are playoff games, which is too small to validate championship forecasts.",f"- {summary['out_records']} Out/Suspended player-game records were considered; {summary['unmatched_out_records']} could not be matched to a unique previously seen athlete and received no invented effect. {summary['incomplete_team_history_games']} covered games had an incomplete prior archive for at least one side; that side retained baseline strength.","- This tests the existing numerical adjustment with independently archived official statuses. It does not recreate historical ESPN fetches, roster snapshots, feed delays, return-date fields, or the full season-long-report propagation logic. Those were not archived. It therefore does not certify the complete live injury pipeline.","- Historical game probabilities use the model's pregame running-form features, which include earlier playoff games. Production bracket simulations use a fixed regular-season form snapshot and neutral rest. These are not a direct backtest of series or championship probabilities.","- Test outcomes influenced neither report-time selection nor hyperparameter selection. The model was not retuned or promoted after viewing these results. The report-covered subset is selected by data availability, so its accuracy must not be compared directly with the all-games accuracy as if model quality changed.","", "## Reproduce","", "1. Use the bundled PDF Python runtime (pdfplumber required) to run `python scripts/collect_historical_injuries.py`. It downloads archived PDFs into `tmp/pdfs/historical_injuries/` and writes dated, hashed records plus the manifest under `data/backtests/`.","2. Run `.venv/Scripts/python.exe -X utf8 scripts/backtest_availability.py`. It uses the manifest and existing game/player caches; no network access or live forecast rebuild is required.","3. Inspect `predictions.csv` for every game, selected report URL/timestamp, model cutoff, fallback reason, probability pair, and per-player treatment. `results.json` includes monthly fits, subgroups, and uncertainty intervals.","", "Sources: [Official WNBA injury reporting rules](https://www.wnba.com/wnba-injury-report). Every downloaded report's exact source URL and SHA-256 are recorded in `data/backtests/injury_report_manifest.json`.","", "Recommendation: retain the experimental label. These results do not justify claiming better accuracy. Collect prospective ESPN report/roster snapshots and evaluate a larger untouched sample before promoting or retuning the live adjustment.",""]
-    (OUT/"REPORT.md").write_text("\n".join(lines),encoding="utf-8")
+    (output/"REPORT.md").write_text("\n".join(lines),encoding="utf-8")
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -224,9 +239,10 @@ def write_report(summary,frame):
     fig.suptitle("Historical injury-adjustment test" if clear_improvement else "No clear improvement from the injury adjustment",fontweight="bold")
     fig.text(.5,.015,"2026 held-out games; 95% paired game-day bootstrap intervals. Negative changes favor the adjustment.",ha="center",fontsize=9)
     fig.tight_layout(rect=(0,.05,1,.93))
-    fig.savefig(OUT/"comparison.png",dpi=160)
+    fig.savefig(output/"comparison.png",dpi=160)
     plt.close(fig)
 
 
 if __name__=="__main__":
     run()
+

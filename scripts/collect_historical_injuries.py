@@ -7,14 +7,14 @@ import csv
 import hashlib
 import json
 import re
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 
-import pdfplumber
 
 ROOT = Path(__file__).resolve().parents[1]
 ET = ZoneInfo("America/New_York")
@@ -23,7 +23,9 @@ PARSER_VERSION = 2
 
 
 def parse_report(path):
+    import pdfplumber
     records, teams = [], {}
+    status_counts=Counter()
     game_date = matchup = team = None
     with pdfplumber.open(path) as pdf:
         header = pdf.pages[0].extract_text()
@@ -39,6 +41,9 @@ def parse_report(path):
                 columns = [headers[name]["x0"] - 1 for name in ("GameDate", "GameTime", "Matchup", "Team", "PlayerName", "CurrentStatus", "Reason")]
             if columns is None:
                 raise ValueError("Missing column header")
+            for word in words:
+                if (125 if "GameDate" in headers else 80)<word["top"]<page.height-65 and columns[5]<=word["x0"]<columns[6] and word["text"] in {"Out","Doubtful","Questionable","Probable","Available","Suspended"}:
+                    status_counts[word["text"]]+=1
             lines = {}
             for word in words:
                 if not (125 if "GameDate" in headers else 80) < word["top"] < page.height-65:
@@ -68,6 +73,8 @@ def parse_report(path):
                     records.append({"date":game_date,"matchup":matchup,"team":team,"player":cells[4],"status":cells[5]})
                 elif reason in {"NONE","NOINJURIES","NOREPORTABLEINJURIES"}:
                     teams[key]["submitted"] = True
+    if status_counts!=Counter(record["status"] for record in records):
+        raise ValueError("Parsed player rows do not match the PDF status cells")
     with (ROOT/"data/all_games.csv").open(encoding="utf-8",newline="") as stream:
         known = {re.sub(r"\s+","",row["home_team"]) for row in csv.DictReader(stream)}
     if any(re.sub(r"\s+","",t["team"]) not in known for t in teams.values()):
@@ -108,10 +115,11 @@ def collect(day_hour):
         return {"url":url,"status":"error","error":str(error)}
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--limit",type=int)
-    args = parser.parse_args()
+def refresh_manifest(limit=None, now=None):
+    now=now or datetime.now(timezone.utc)
+    manifest_path=ROOT/"data/backtests/injury_report_manifest.json"
+    previous=json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {"reports":[]}
+    cached={r["url"]:r for r in previous["reports"]}
     slots = set()
     with (ROOT/"data/player_game_stats.csv").open(encoding="utf-8",newline="") as stream:
         for row in csv.DictReader(stream):
@@ -122,19 +130,41 @@ def main():
             if tip.hour >= hour+1:
                 slots.add((tip.date().isoformat(),hour))
     slots = sorted(slots)
-    if args.limit:
-        slots=slots[:args.limit]
+    if limit:
+        slots=slots[:limit]
     for folder in ("tmp/pdfs/historical_injuries","data/backtests/injury_reports"):
         (ROOT/folder).mkdir(parents=True,exist_ok=True)
     results=[]
+    def incremental(slot):
+        day,hour=slot
+        suffix="09_00AM" if hour==9 else "03_00PM"
+        url=BASE+f"Injury-Report_{day}_{suffix}.pdf"
+        old=cached.get(url)
+        if old and old.get("status")==200 and old.get("parser_version")==PARSER_VERSION:
+            return old
+        attempted=datetime.fromisoformat(old["attempted_at"]) if old and old.get("attempted_at") else None
+        # Old missing reports stay documented; retry recent failures at most daily.
+        if old and ((now.date()-datetime.fromisoformat(day).date()).days>7 or (attempted and now-attempted<timedelta(days=1))):
+            return old
+        return {**collect(slot),"attempted_at":now.isoformat()}
     with ThreadPoolExecutor(max_workers=4) as pool:
-        for i,result in enumerate(pool.map(collect,slots),1):
+        for i,result in enumerate(pool.map(incremental,slots),1):
             results.append(result)
             if i%20==0 or i==len(slots):
                 print(f"Reports checked {i}/{len(slots)}; parsed {sum(r['status']==200 for r in results)}",flush=True)
-    manifest={"policy":"09:00 ET for tips before 16:00 ET; 15:00 ET for later tips; at least one hour before tip. No outcome-dependent report selection.","reports":results}
-    (ROOT/"data/backtests/injury_report_manifest.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
+    merged={**cached,**{r["url"]:r for r in results}}
+    manifest={"policy":"09:00 ET for tips before 16:00 ET; 15:00 ET for later tips; at least one hour before tip. No outcome-dependent report selection.","reports":sorted(merged.values(),key=lambda r:r["url"])}
+    temporary=manifest_path.with_suffix(".json.tmp")
+    temporary.write_text(json.dumps(manifest,indent=2),encoding="utf-8")
+    temporary.replace(manifest_path)
     print(json.dumps({"requested":len(slots),"parsed":sum(r["status"]==200 for r in results),"failures":[r for r in results if r["status"]!=200][:3]}),flush=True)
+    return manifest
+
+
+def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--limit",type=int)
+    refresh_manifest(parser.parse_args().limit)
 
 
 if __name__=="__main__":

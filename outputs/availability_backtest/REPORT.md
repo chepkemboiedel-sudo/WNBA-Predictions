@@ -53,3 +53,11 @@ The adjustment corrected 1 winner picks and harmed 1; two-sided exact McNemar p 
 Sources: [Official WNBA injury reporting rules](https://www.wnba.com/wnba-injury-report). Every downloaded report's exact source URL and SHA-256 are recorded in `data/backtests/injury_report_manifest.json`.
 
 Recommendation: retain the experimental label. These results do not justify claiming better accuracy. Collect prospective ESPN report/roster snapshots and evaluate a larger untouched sample before promoting or retuning the live adjustment.
+
+## Automatic monitoring
+
+Checked 2026-10-27T23:20:12.962114Z. Historical predictions are append-only. The initial study is frozen separately; 0 later completed games have been evaluated. New archived-report rows are retrospective walk-forward evaluations, not prospective forecasts.
+
+The separate prospective trial freezes the first paired production game prediction within 24 hours before scheduled tip, using a player snapshot fetched within two hours. Captured probabilities, model hash, and relevant roster/injury evidence are stored before outcomes. Missing pregame captures are never backfilled. There are 0 scored and 0 pending predictions. Daily 7 a.m. Pacific sampling may miss early games or last-minute injury updates. This trial uses fixed regular-season form, while the historical test uses pregame running form. Their results must not be pooled as one experiment.
+
+Checkpoints are added only when scored evidence changes. Repeated daily checks do not count as new games or independent significance tests. The initial one-point trend is a starting checkpoint, not a historical performance curve. Score-only remains default; no statistical threshold automatically promotes injuries.
