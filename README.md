@@ -73,6 +73,16 @@ independent injury-adjusted calibration. A point-margin-to-log-odds mapping is f
 historical score-form features. The existing validation and SHAP charts describe only
 the score-only baseline; both baseline and adjusted title estimates are displayed.
 
+**Score-only is the default.** Published odds, team pages, daily cloud refreshes, and
+new history entries use score-only predictions. Verified player data makes an optional
+injury-adjusted comparison available, but does not enable it automatically. The
+interactive bracket's injury toggle starts unchecked on every page load; switching
+models restores the published score-only leaderboard, and a new interactive Monte
+Carlo can then compare the selected model. Earlier injury-adjusted history is retained
+with its original label. There is no automatic promotion after a favorable backtest;
+the adjustment stays optional pending clear evidence of improvement and an explicit
+decision to change the default.
+
 Only confirmed absences are applied. Season-long reports persist through the bracket;
 fresh game-specific reports are limited to the next scheduled game within 72 hours.
 Questionable/probable statuses, old reports contradicted by later appearances, and ambiguous
@@ -88,6 +98,27 @@ Current finalists have complete player history. Unverified or stale feeds disabl
 adjustment and mark player data as partial. Cached roster information is labeled separately.
 Minute restrictions and mid-game injuries are not forecast. Interactive bracket controls
 can switch between adjusted and score-only game probabilities without rewriting history.
+
+## Historical test of the injury adjustment
+
+Run `python scripts/collect_historical_injuries.py` using a Python runtime with
+`pdfplumber` (the bundled PDF runtime is supported), then run
+`.venv/Scripts/python.exe -X utf8 scripts/backtest_availability.py`.
+The comparison uses dated official pregame reports and monthly player models
+trained only on earlier games. It does not reuse today's injury snapshot.
+`scripts/audit_historical_injuries.py` independently checks PDF status-cell counts
+and team/matchup assignments. The report collector and audit require `pdfplumber`;
+the numerical test uses the existing project dependencies.
+
+Results, game-level predictions, uncertainty intervals, and a chart are saved in
+`outputs/availability_backtest/`. The initial 2026 test covered 202 games with
+explicit reports for both teams: winner accuracy was 72.28% for both models;
+log-loss and Brier score improved only slightly, with uncertainty intervals
+including no improvement. Only five covered games were playoff games.
+These findings do not validate championship probabilities or the complete ESPN
+injury/roster-fetch pipeline. Retain the experimental label; see
+`outputs/availability_backtest/REPORT.md` for methodology and coverage limitations.
+Running the backtest does not rebuild or publish live forecasts.
 
 ## How it works (build order)
 

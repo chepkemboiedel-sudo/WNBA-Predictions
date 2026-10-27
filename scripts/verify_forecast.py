@@ -23,6 +23,15 @@ def verify():
     if forecast["data_through"] not in page:
         raise ValueError("Page does not show the latest completed game date.")
     results = pd.read_csv(ROOT / "outputs/finals_probabilities.csv")
+    if forecast.get("probability_model")!="score-only" or forecast.get("injury_adjustment_default") is not False:
+        raise ValueError("Published forecasts must use the score-only default.")
+    if not results.p_champion.equals(results.p_champion_baseline) or not results.p_reach_finals.equals(results.p_reach_finals_baseline):
+        raise ValueError("Published odds differ from score-only probabilities.")
+    if embedded.get("default_model")!="score-only" or embedded["prob"]!=embedded["prob_base"]:
+        raise ValueError("Interactive page does not default to score-only probabilities.")
+    optional_input=re.search(r'<input id="use-availability"[^>]*>',page)
+    if not optional_input or "checked" in optional_input[0]:
+        raise ValueError("The optional injury toggle must start unchecked.")
     if not ((results.p_champion >= 0) & (results.p_champion <= results.p_reach_finals)
             & (results.p_reach_finals <= 1)).all():
         raise ValueError("Invalid championship or Finals probabilities.")
@@ -45,6 +54,8 @@ def verify():
     if embedded["history"] != history or embedded["health"] != health:
         raise ValueError("Page history or refresh health does not match published assets.")
     latest = history["snapshots"][-1]
+    if latest.get("probability_model")!="score-only":
+        raise ValueError("New saved forecasts must be labeled score-only.")
     if latest["generated_at"] != meta["last_updated"] or health["last_success_at"] != meta["last_updated"]:
         raise ValueError("Forecast history and health do not describe this successful run.")
     if len(list((ROOT / "public/teams").glob("*/index.html"))) != len(set(pd.read_csv(ROOT / "data/games_2026.csv").home_team)):

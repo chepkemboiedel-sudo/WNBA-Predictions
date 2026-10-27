@@ -37,12 +37,15 @@ PROB = {f"{x}|{y}|{1 if h else 0}": round(Pmat[(x, y, h)], 5)
         for key in Pmat if len(key)==3 for x,y,h in [key]}
 BASE_PROB = {f"{x}|{y}|{1 if h else 0}":round(value,5) for (x,y,h),value in baseline_matrix.items()}
 NEXT_PROB = {f"{key[0]}|{key[1]}|{1 if key[2] else 0}":round(value,5) for key,value in Pmat.items() if len(key)==4}
-DATA = {"seeds": seeds, "conf": {t: S.CONFERENCE[t] for t in seeds}, "prob": PROB,
-        "prob_base":BASE_PROB,"prob_next":NEXT_PROB,
+DATA = {"seeds": seeds, "conf": {t: S.CONFERENCE[t] for t in seeds}, "prob": BASE_PROB,
+        "prob_base":BASE_PROB,"prob_availability":PROB,"prob_next":NEXT_PROB,
+        "default_model":"score-only",
         "availability":{key:player_snapshot.get(key) for key in ("status","fetched_at","apply_adjustments","message","model","boxscore_coverage")}}
 # All displayed figures come from the same run as the interactive probability matrix.
 forecast = json.loads((ROOT / "outputs" / "forecast.json").read_text(encoding="utf-8"))
 results = pd.read_csv(ROOT / "outputs" / "finals_probabilities.csv")
+DATA["published_baseline"] = {"reach":dict(zip(results.team,results.p_reach_finals*100)),
+                              "champ":dict(zip(results.team,results.p_champion*100))}
 teams = [(r.team, r.seed, r.conference, r.win_pct,
           r.p_reach_finals * 100, r.p_champion * 100)
          for r in results.itertuples()]
@@ -358,11 +361,11 @@ const FMT = { R1:[1,0,1], SEMI:[1,1,0,0,1], FINALS:[1,1,0,0,1,0,1] }; // 1 = hig
 const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
 const seedIdx = t => SEEDS.indexOf(t);           // 0-based; smaller = higher seed
 const pGame = (hi, lo, hiHome) => PROB[hi + "|" + lo + "|" + (hiHome ? 1 : 0)];
-let applyAvailability = Boolean(D.availability.apply_adjustments);
+let applyAvailability = false;
 function gameProbability(hi,lo,home,next){
   const key=hi+'|'+lo+'|'+(home?1:0);
   if(!applyAvailability) return D.prob_base[key];
-  return next && key in D.prob_next ? D.prob_next[key] : PROB[key];
+  return next && key in D.prob_next ? D.prob_next[key] : D.prob_availability[key];
 }
 
 // Simulate one best-of-N series game by game; returns winner + series score.
@@ -526,15 +529,21 @@ document.getElementById("btn-many").addEventListener("click", () => {
   setTimeout(() => {
     const agg = runMany(10000);
     updateLeaderboard(agg);
+    document.getElementById('board-model').textContent='Interactive simulation · '+(applyAvailability?'injury-adjusted (experimental)':'score-only');
     const best = SEEDS.slice().sort((a,b)=>agg.champ[b]-agg.champ[a])[0];
     out.innerHTML = "Updated the leaderboard above from a fresh <b>10,000-run</b> Monte Carlo — top title odds: <b>" +
-      best + " " + Math.round(agg.champ[best]) + "%</b>. (Wiggles a little each run; that's Monte-Carlo noise.)";
+      best + " " + Math.round(agg.champ[best]) + "%</b>. Model: "+(applyAvailability?'optional injury adjustment (experimental)':'score-only')+". Published forecasts and history stay unchanged.";
   }, 30);
 });
 reset();
-document.getElementById('use-availability')?.addEventListener('change',event=>{
-  applyAvailability=event.target.checked;reset();
-  document.getElementById('manystatus').textContent='Interactive games now use '+(applyAvailability?'the availability adjustment.':'the score-only baseline.')+' Published forecasts and history stay unchanged.';
+const availabilityToggle=document.getElementById('use-availability');
+if(availabilityToggle) availabilityToggle.checked=false;
+availabilityToggle?.addEventListener('change',event=>{
+  applyAvailability=event.target.checked && Boolean(D.availability.apply_adjustments);
+  event.target.checked=applyAvailability;reset();
+  updateLeaderboard(D.published_baseline);
+  document.getElementById('board-model').textContent='Published score-only forecast';
+  document.getElementById('manystatus').textContent='Interactive games now use '+(applyAvailability?'the optional injury adjustment (experimental).':'the score-only default.')+' Run 10,000× to compare leaderboard odds. Published forecasts and history stay score-only.';
 });
 """
 
@@ -547,10 +556,10 @@ BODY = f'''
       <span class="eyebrow">2026 WNBA · Playoff Forecast</span>
       <h1>Who wins the title — from {forecast["n_sims"]:,} updated simulations.</h1>
       <div class="pickcard">
-        <div><span class="lbl">Model's champion pick</span><span class="big">{favorite.p_champion:.0%}</span></div>
+        <div><span class="lbl">Score-only champion pick</span><span class="big">{favorite.p_champion:.0%}</span></div>
         <div><span class="who">{favorite.team}</span><div class="sub">#{favorite.seed} seed · {favorite.p_reach_finals:.1%} to reach the Finals</div></div>
       </div>
-      <p class="foot">A score-only baseline validated on 2016–2025, with an experimental player-availability layer, simulating the real 3-round bracket
+      <p class="foot">Score-only predictions are the default, validated on 2016–2025. Injury adjustments are optional and experimental. Simulating the real 3-round bracket
         (best-of-3 → 5 → 7). Data through {data_date}. {playoff_status}</p>
     </div>
     <aside class="status-card">
@@ -584,7 +593,8 @@ BODY = f'''
       <div class="value">{conf['both_west']:.1%} all-West</div>
       <div class="sub">{conf['mixed']:.1%} mixed · {conf['both_east']:.1%} all-East</div></div>
   </div>
-  <p class="lead"><a class="team-link" href="#availability">View current roster and injury information, plus the score-only comparison ↓</a></p>
+  <p class="feature-note" id="board-model" role="status">Published score-only forecast</p>
+  <p class="lead"><a class="team-link" href="#availability">View current roster and injury information, plus the optional injury comparison ↓</a></p>
   <div class="board">{rows_html}</div>
   <div class="legend">
     <span><i style="background:var(--west)"></i>West</span>
@@ -606,14 +616,14 @@ BODY = f'''
       <button class="ctrl primary" id="btn-auto">▶ Auto-simulate bracket</button>
       <button class="ctrl" id="btn-reset">↺ Reset</button>
       <button class="ctrl" id="btn-many">↻ Run 10,000× → update odds</button>
-      <label class="ctrl"><input id="use-availability" type="checkbox" {'checked' if player_snapshot.get('apply_adjustments') else 'disabled'}> Apply availability adjustment (experimental)</label>
+      <label class="ctrl"><input id="use-availability" type="checkbox" {'' if player_snapshot.get('apply_adjustments') else 'disabled'}> Use injury adjustments (optional, experimental)</label>
     </div>
     <div class="status" id="bstatus"></div>
     <div class="bracket-wrap">
       <div class="roundlbls"><span>Round 1 · Bo3</span><span>Semifinals · Bo5</span><span>Finals · Bo7</span><span>Champion</span></div>
       <div class="bracket">{bracket_html}</div>
     </div>
-    <div class="status" id="manystatus" style="margin-top:14px"></div>
+    <div class="status" id="manystatus" style="margin-top:14px">Score-only is selected by default. Injury adjustments have not shown a clear accuracy improvement. This toggle applies to interactive simulations.</div>
   </div>
 </div></section>
 
@@ -761,9 +771,11 @@ The actual first-round pairings resolve tied regular-season seeds once playoffs 
 Game probabilities come from logistic regression fitted to 2016–2025 score-based team form;
 validation trains on 2016–2023 and tests on 2024–2025. Validation metrics are in
 `outputs/validation_metrics.csv`. These metrics validate the score-only baseline.
-The experimental player-availability layer uses current ESPN rosters and verified absence
+Published forecasts and new history entries use the score-only model by default.
+The optional, experimental player-availability layer uses current ESPN rosters and verified absence
 reports, with shrunken participation effects from 2025–26 box scores. It has not been
-independently calibrated. Score-only title estimate for {favorite.team}:
+independently calibrated and has not shown a clear improvement in the historical test.
+It is available through an unchecked interactive toggle. Score-only title estimate for {favorite.team}:
 {getattr(favorite, 'p_champion_baseline', favorite.p_champion):.1%}.
 Player-data status: {player_snapshot.get('message', 'Unavailable; baseline used.')}
 Regular-season team-strength features stay fixed during the playoff simulation and playoff

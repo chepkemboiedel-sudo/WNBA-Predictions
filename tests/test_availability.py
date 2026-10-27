@@ -88,3 +88,20 @@ class AvailabilityTests(TestCase):
         matrix=S.build_prob_matrix(CoinModel(),{"A":form,"B":form},["A","B"],report)
         self.assertLess(matrix[("A","B",True)],.5)
         self.assertAlmostEqual(matrix[("A","B",True)]+matrix[("B","A",False)],1)
+
+    def test_published_forecast_is_score_only_even_with_verified_injuries(self):
+        class CoinModel:
+            def predict_proba(self,rows):
+                return np.array([[.5,.5]]*len(rows))
+        report={"apply_adjustments":True,"model":{"margin_logit_coefficient":.1},
+                "teams":{"Golden State Valkyries":{"players":[{"scope":"long_term","extra_absence_points":4}]}}}
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.object(S,"OUT",directory),patch.object(S.availability_mod,"load_snapshot",return_value=report),patch.object(S.joblib,"load",return_value={"logistic":CoinModel()}):
+                results,_,_,_=S.run(n_sims=1000)
+            forecast=json.loads(Path(directory,"forecast.json").read_text())
+        self.assertEqual(forecast["probability_model"],"score-only")
+        self.assertFalse(forecast["injury_adjustment_default"])
+        np.testing.assert_array_equal(results.p_champion,results.p_champion_baseline)
+        np.testing.assert_array_equal(results.p_reach_finals,results.p_reach_finals_baseline)
+        team=results.set_index("team").loc["Golden State Valkyries"]
+        self.assertLess(team.p_champion_availability,team.p_champion)

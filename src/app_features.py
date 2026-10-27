@@ -95,7 +95,7 @@ def team_page(team, data, css, *, script, availability=None):
     probability = team["probabilities"]
     odds = f"{probability['champion']:.1%}" if probability else 'Not modeled'
     seed = f"Playoff seed #{team['seed']}" if team["seed"] else 'Outside the current eight-team bracket'
-    metrics = [("Regular-season record", rec(team['regular'])), ("Title probability", odds),
+    metrics = [("Regular-season record", rec(team['regular'])), ("Score-only title probability", odds),
                ("Home / away record", rec(team['home']) + " / " + rec(team['away'])),
                ("Last 10 regular-season games", rec(team['last10'])),
                ("Points scored / allowed", f"{team['points_for']:.1f} / {team['points_against']:.1f}"),

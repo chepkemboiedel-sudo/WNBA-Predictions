@@ -1,0 +1,1287 @@
+{
+  "reports_checked": 146,
+  "all_passed": true,
+  "checks": [
+    "independent PDF status-cell counts",
+    "team belongs to reported matchup"
+  ],
+  "reports": [
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-08_03_00PM.pdf",
+      "statuses": {
+        "Out": 12,
+        "Available": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-09_09_00AM.pdf",
+      "statuses": {
+        "Probable": 2,
+        "Questionable": 3,
+        "Out": 12
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-09_03_00PM.pdf",
+      "statuses": {
+        "Available": 2,
+        "Out": 14,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-10_09_00AM.pdf",
+      "statuses": {
+        "Out": 14
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-10_03_00PM.pdf",
+      "statuses": {
+        "Out": 15
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-12_03_00PM.pdf",
+      "statuses": {
+        "Out": 9,
+        "Probable": 1,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-13_03_00PM.pdf",
+      "statuses": {
+        "Out": 17,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-14_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 5,
+        "Out": 6
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-15_03_00PM.pdf",
+      "statuses": {
+        "Out": 11,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-17_09_00AM.pdf",
+      "statuses": {
+        "Out": 20,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-17_03_00PM.pdf",
+      "statuses": {
+        "Out": 21,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-18_03_00PM.pdf",
+      "statuses": {
+        "Out": 3,
+        "Probable": 1,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-19_03_00PM.pdf",
+      "statuses": {
+        "Out": 4,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-20_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 3,
+        "Out": 11
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-21_03_00PM.pdf",
+      "statuses": {
+        "Out": 13,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-22_03_00PM.pdf",
+      "statuses": {
+        "Out": 9,
+        "Probable": 1,
+        "Questionable": 1,
+        "Available": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-23_09_00AM.pdf",
+      "statuses": {
+        "Out": 12,
+        "Questionable": 5,
+        "Probable": 1,
+        "Available": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-23_03_00PM.pdf",
+      "statuses": {
+        "Out": 14,
+        "Available": 3,
+        "Questionable": 3,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-24_09_00AM.pdf",
+      "statuses": {
+        "Questionable": 1,
+        "Out": 8,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-24_03_00PM.pdf",
+      "statuses": {
+        "Out": 13,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-25_03_00PM.pdf",
+      "statuses": {
+        "Out": 3,
+        "Questionable": 3,
+        "Probable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-27_03_00PM.pdf",
+      "statuses": {
+        "Probable": 2,
+        "Out": 19,
+        "Available": 2,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-28_03_00PM.pdf",
+      "statuses": {
+        "Out": 2,
+        "Probable": 2,
+        "Questionable": 1,
+        "Doubtful": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-29_03_00PM.pdf",
+      "statuses": {
+        "Probable": 2,
+        "Out": 13,
+        "Questionable": 5
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-30_09_00AM.pdf",
+      "statuses": {
+        "Out": 7,
+        "Probable": 2,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-30_03_00PM.pdf",
+      "statuses": {
+        "Out": 8,
+        "Available": 2,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-31_09_00AM.pdf",
+      "statuses": {
+        "Out": 1,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-01_03_00PM.pdf",
+      "statuses": {
+        "Out": 9,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-02_03_00PM.pdf",
+      "statuses": {
+        "Out": 9,
+        "Questionable": 4
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-03_03_00PM.pdf",
+      "statuses": {
+        "Out": 9
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-04_03_00PM.pdf",
+      "statuses": {
+        "Out": 4,
+        "Probable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-05_03_00PM.pdf",
+      "statuses": {
+        "Out": 7,
+        "Questionable": 2,
+        "Doubtful": 2,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-06_09_00AM.pdf",
+      "statuses": {
+        "Out": 10,
+        "Questionable": 4,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-06_03_00PM.pdf",
+      "statuses": {
+        "Out": 13,
+        "Available": 3,
+        "Questionable": 2,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-07_09_00AM.pdf",
+      "statuses": {
+        "Out": 5,
+        "Questionable": 2,
+        "Probable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-07_03_00PM.pdf",
+      "statuses": {
+        "Out": 8,
+        "Available": 2,
+        "Probable": 2,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-08_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 2,
+        "Probable": 1,
+        "Out": 8,
+        "Available": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-09_03_00PM.pdf",
+      "statuses": {
+        "Out": 10,
+        "Probable": 2,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-10_03_00PM.pdf",
+      "statuses": {
+        "Out": 7
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-11_03_00PM.pdf",
+      "statuses": {
+        "Out": 8,
+        "Probable": 1,
+        "Questionable": 3,
+        "Available": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-12_03_00PM.pdf",
+      "statuses": {
+        "Available": 1,
+        "Out": 4,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-13_03_00PM.pdf",
+      "statuses": {
+        "Probable": 3,
+        "Out": 7,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-14_09_00AM.pdf",
+      "statuses": {
+        "Out": 3,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-15_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 4,
+        "Out": 6,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-16_03_00PM.pdf",
+      "statuses": {
+        "Out": 2,
+        "Probable": 1,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-17_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 8,
+        "Out": 15
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-18_03_00PM.pdf",
+      "statuses": {
+        "Out": 2,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-19_03_00PM.pdf",
+      "statuses": {
+        "Out": 6,
+        "Questionable": 3
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-20_09_00AM.pdf",
+      "statuses": {
+        "Probable": 1,
+        "Out": 11,
+        "Questionable": 3
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-20_03_00PM.pdf",
+      "statuses": {
+        "Available": 1,
+        "Out": 16,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-21_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 1,
+        "Out": 7
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-22_03_00PM.pdf",
+      "statuses": {
+        "Out": 15,
+        "Questionable": 3,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-23_03_00PM.pdf",
+      "statuses": {
+        "Out": 4
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-24_03_00PM.pdf",
+      "statuses": {
+        "Out": 11,
+        "Available": 1,
+        "Probable": 1,
+        "Questionable": 3
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-25_03_00PM.pdf",
+      "statuses": {
+        "Out": 13,
+        "Probable": 1,
+        "Doubtful": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-26_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 2,
+        "Out": 7
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-27_09_00AM.pdf",
+      "statuses": {
+        "Out": 12
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-27_03_00PM.pdf",
+      "statuses": {
+        "Out": 13,
+        "Doubtful": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-28_09_00AM.pdf",
+      "statuses": {
+        "Out": 10,
+        "Questionable": 3
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-28_03_00PM.pdf",
+      "statuses": {
+        "Out": 14,
+        "Probable": 1,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-02_03_00PM.pdf",
+      "statuses": {
+        "Out": 6,
+        "Questionable": 3,
+        "Probable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-06_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 1,
+        "Out": 7,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-07_03_00PM.pdf",
+      "statuses": {
+        "Out": 5,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-08_03_00PM.pdf",
+      "statuses": {
+        "Out": 8,
+        "Doubtful": 1,
+        "Questionable": 1,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-09_03_00PM.pdf",
+      "statuses": {
+        "Out": 6,
+        "Questionable": 3,
+        "Probable": 2,
+        "Doubtful": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-10_03_00PM.pdf",
+      "statuses": {
+        "Out": 11,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-11_09_00AM.pdf",
+      "statuses": {
+        "Questionable": 6,
+        "Out": 8,
+        "Doubtful": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-11_03_00PM.pdf",
+      "statuses": {
+        "Available": 2,
+        "Out": 12,
+        "Doubtful": 1,
+        "Questionable": 5
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-12_09_00AM.pdf",
+      "statuses": {
+        "Out": 7,
+        "Questionable": 2,
+        "Probable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-12_03_00PM.pdf",
+      "statuses": {
+        "Out": 11,
+        "Available": 3,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-13_03_00PM.pdf",
+      "statuses": {
+        "Out": 5,
+        "Questionable": 2,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-14_09_00AM.pdf",
+      "statuses": {
+        "Questionable": 2,
+        "Out": 5
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-14_03_00PM.pdf",
+      "statuses": {
+        "Out": 8,
+        "Available": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-15_09_00AM.pdf",
+      "statuses": {
+        "Questionable": 4,
+        "Out": 7,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-15_03_00PM.pdf",
+      "statuses": {
+        "Available": 1,
+        "Out": 11,
+        "Questionable": 1,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-16_03_00PM.pdf",
+      "statuses": {
+        "Out": 2,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-17_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 5,
+        "Available": 2,
+        "Out": 8,
+        "Probable": 4,
+        "Doubtful": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-18_03_00PM.pdf",
+      "statuses": {
+        "Out": 8,
+        "Questionable": 1,
+        "Probable": 1,
+        "Doubtful": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-19_09_00AM.pdf",
+      "statuses": {
+        "Out": 6,
+        "Probable": 7,
+        "Doubtful": 2,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-19_03_00PM.pdf",
+      "statuses": {
+        "Out": 13,
+        "Probable": 5,
+        "Questionable": 1,
+        "Doubtful": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-20_03_00PM.pdf",
+      "statuses": {
+        "Out": 13,
+        "Doubtful": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-22_09_00AM.pdf",
+      "statuses": {
+        "Out": 13,
+        "Probable": 2,
+        "Questionable": 6
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-22_03_00PM.pdf",
+      "statuses": {
+        "Out": 18,
+        "Available": 2,
+        "Questionable": 5,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-29_03_00PM.pdf",
+      "statuses": {
+        "Out": 1,
+        "Probable": 1,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-30_03_00PM.pdf",
+      "statuses": {
+        "Out": 9,
+        "Questionable": 5,
+        "Probable": 1,
+        "Doubtful": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-31_03_00PM.pdf",
+      "statuses": {
+        "Out": 5,
+        "Probable": 4
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-01_09_00AM.pdf",
+      "statuses": {
+        "Questionable": 1,
+        "Out": 5
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-02_09_00AM.pdf",
+      "statuses": {
+        "Probable": 3,
+        "Out": 8,
+        "Questionable": 3
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-02_03_00PM.pdf",
+      "statuses": {
+        "Available": 2,
+        "Out": 14,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-03_03_00PM.pdf",
+      "statuses": {
+        "Out": 7,
+        "Questionable": 1,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-04_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 1,
+        "Probable": 1,
+        "Out": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-05_03_00PM.pdf",
+      "statuses": {
+        "Out": 6,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-06_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 2,
+        "Out": 6,
+        "Probable": 4,
+        "Doubtful": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-07_03_00PM.pdf",
+      "statuses": {
+        "Out": 2,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-08_09_00AM.pdf",
+      "statuses": {
+        "Out": 9,
+        "Probable": 4,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-08_03_00PM.pdf",
+      "statuses": {
+        "Out": 13,
+        "Available": 2,
+        "Questionable": 1,
+        "Probable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-09_09_00AM.pdf",
+      "statuses": {
+        "Out": 3,
+        "Questionable": 7,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-09_03_00PM.pdf",
+      "statuses": {
+        "Available": 2,
+        "Out": 14,
+        "Questionable": 2,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-10_03_00PM.pdf",
+      "statuses": {
+        "Available": 1,
+        "Out": 5,
+        "Questionable": 3
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-11_03_00PM.pdf",
+      "statuses": {
+        "Out": 6,
+        "Probable": 1,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-12_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 6,
+        "Out": 7,
+        "Doubtful": 1,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-13_03_00PM.pdf",
+      "statuses": {
+        "Out": 8,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-14_03_00PM.pdf",
+      "statuses": {
+        "Out": 6,
+        "Probable": 2,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-15_09_00AM.pdf",
+      "statuses": {
+        "Out": 6,
+        "Questionable": 5
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-15_03_00PM.pdf",
+      "statuses": {
+        "Out": 10,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-16_03_00PM.pdf",
+      "statuses": {
+        "Out": 7,
+        "Probable": 2,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-17_03_00PM.pdf",
+      "statuses": {
+        "Out": 2,
+        "Probable": 1,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-18_03_00PM.pdf",
+      "statuses": {
+        "Probable": 3,
+        "Out": 10,
+        "Available": 2,
+        "Questionable": 5
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-19_03_00PM.pdf",
+      "statuses": {
+        "Probable": 1,
+        "Out": 3,
+        "Doubtful": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-20_03_00PM.pdf",
+      "statuses": {
+        "Probable": 5,
+        "Out": 4,
+        "Questionable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-21_03_00PM.pdf",
+      "statuses": {
+        "Out": 7,
+        "Questionable": 1,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-22_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 5,
+        "Probable": 2,
+        "Out": 4
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-24_03_00PM.pdf",
+      "statuses": {
+        "Out": 2,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-25_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 2,
+        "Out": 7,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-26_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 3,
+        "Out": 5,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-27_03_00PM.pdf",
+      "statuses": {
+        "Out": 2,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-28_03_00PM.pdf",
+      "statuses": {
+        "Out": 9,
+        "Questionable": 5,
+        "Probable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-29_09_00AM.pdf",
+      "statuses": {
+        "Out": 4,
+        "Questionable": 2,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-29_03_00PM.pdf",
+      "statuses": {
+        "Out": 4,
+        "Available": 1,
+        "Probable": 1,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-30_09_00AM.pdf",
+      "statuses": {
+        "Probable": 1,
+        "Out": 7,
+        "Questionable": 3
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-30_03_00PM.pdf",
+      "statuses": {
+        "Out": 8,
+        "Available": 1,
+        "Questionable": 3
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-17_03_00PM.pdf",
+      "statuses": {
+        "Out": 14,
+        "Questionable": 8
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-18_03_00PM.pdf",
+      "statuses": {
+        "Probable": 1,
+        "Questionable": 2,
+        "Out": 6
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-19_09_00AM.pdf",
+      "statuses": {
+        "Questionable": 3,
+        "Out": 10
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-19_03_00PM.pdf",
+      "statuses": {
+        "Out": 11,
+        "Available": 1,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-20_09_00AM.pdf",
+      "statuses": {
+        "Out": 8,
+        "Questionable": 4,
+        "Probable": 1,
+        "Doubtful": 3
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-20_03_00PM.pdf",
+      "statuses": {
+        "Out": 18,
+        "Available": 2,
+        "Questionable": 2,
+        "Doubtful": 3,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-21_03_00PM.pdf",
+      "statuses": {
+        "Out": 4,
+        "Probable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-22_03_00PM.pdf",
+      "statuses": {
+        "Out": 18,
+        "Questionable": 4,
+        "Probable": 4
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-23_03_00PM.pdf",
+      "statuses": {
+        "Out": 7,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-24_03_00PM.pdf",
+      "statuses": {
+        "Out": 19,
+        "Probable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-27_09_00AM.pdf",
+      "statuses": {
+        "Questionable": 2,
+        "Out": 5,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-27_03_00PM.pdf",
+      "statuses": {
+        "Available": 1,
+        "Out": 5,
+        "Questionable": 1,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-29_03_00PM.pdf",
+      "statuses": {
+        "Out": 3,
+        "Probable": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-30_03_00PM.pdf",
+      "statuses": {
+        "Out": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-01_03_00PM.pdf",
+      "statuses": {
+        "Probable": 2,
+        "Out": 2,
+        "Questionable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-02_03_00PM.pdf",
+      "statuses": {
+        "Probable": 1,
+        "Out": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-04_09_00AM.pdf",
+      "statuses": {
+        "Questionable": 2,
+        "Out": 2
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-04_03_00PM.pdf",
+      "statuses": {
+        "Available": 1,
+        "Out": 3
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-07_03_00PM.pdf",
+      "statuses": {
+        "Out": 2,
+        "Questionable": 2,
+        "Doubtful": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-09_03_00PM.pdf",
+      "statuses": {
+        "Questionable": 2,
+        "Out": 1,
+        "Probable": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-17_09_00AM.pdf",
+      "statuses": {
+        "Questionable": 1,
+        "Out": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-19_03_00PM.pdf",
+      "statuses": {
+        "Out": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-21_03_00PM.pdf",
+      "statuses": {
+        "Out": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-24_09_00AM.pdf",
+      "statuses": {
+        "Out": 1
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-26_03_00PM.pdf",
+      "statuses": {
+        "Out": 1
+      },
+      "passed": true
+    }
+  ]
+}
