@@ -15,6 +15,7 @@ import simulate as S
 import app_features as UI
 import availability as AV
 import availability_ui as AVUI
+import backtest_ui as BT
 from app_data import append_snapshot, atomic_json, load_history, snapshot, slug, successful_health, team_profiles
 
 def b64(p):
@@ -66,6 +67,8 @@ DATA["refresh"] = globals().get("REFRESH_META") or json.loads(
 history_path = ROOT / "data" / "forecast_history.json"
 DATA["history"] = append_snapshot(load_history(history_path), snapshot(results, forecast, DATA["refresh"]))
 DATA["health"] = successful_health(games, forecast, DATA["refresh"])
+DATA["backtest"] = BT.load_results()
+BT.export_assets()
 profiles = team_profiles(games, results, seeds)
 data_json = json.dumps(DATA, ensure_ascii=False).replace("<", "\\u003c")
 favorite = results.loc[results.p_champion.idxmax()]
@@ -709,11 +712,11 @@ BODY = f'''
 </div></footer>
 '''
 
-CSS += UI.CSS + AVUI.CSS
+CSS += UI.CSS + AVUI.CSS + BT.CSS
 BODY = UI.navigation() + BODY.replace('<section id="play">',
-    AVUI.overview(player_snapshot,results) + UI.history_section(DATA["history"], favorite.team) + UI.team_directory(profiles) + '<section id="play">')
+    AVUI.overview(player_snapshot,results) + BT.section(DATA["backtest"]) + UI.history_section(DATA["history"], favorite.team) + UI.team_directory(profiles) + '<section id="play">')
 BODY += UI.health_section(DATA["health"])
-scripts = ("\n<script>window.__WNBA__=" + data_json + ";</script>\n<script>" + JS + UI.JS + UI.POLL_JS + "</script>\n")
+scripts = ("\n<script>window.__WNBA__=" + data_json + ";</script>\n<script>" + JS + UI.JS + BT.JS + UI.POLL_JS + "</script>\n")
 
 # (a) Artifact-format file: no <!doctype>/<html>/<head>/<body> — the Artifact
 #     host wraps it in that skeleton itself.

@@ -233,7 +233,13 @@ footer code{background:color-mix(in srgb,var(--ink) 8%,transparent);padding:2px 
 .health-partial,.health-stale,.health-unavailable{color:#946200;background:color-mix(in srgb,#d39416 12%,var(--card))}
 .roster-table{min-width:750px}.roster-table td:first-child,.roster-table th:first-child{text-align:left}.roster-table .report-note{max-width:330px;font-size:.8rem;color:var(--muted);white-space:normal;margin-top:5px}
 .roster-source{display:flex;flex-wrap:wrap;gap:10px 24px;color:var(--muted);font-size:.85rem;margin:18px 0}
-</style></head><body><nav class="app-nav" aria-label="Main navigation"><a href="/">Forecast</a><a href="/#availability">Availability</a><a href="/#history">History</a><a href="/#teams">Teams</a><a href="/#refresh-health">Refresh health</a></nav><header class="profile-hero"><div class="wrap"><a class="back-link" href="/#teams">← All teams</a>
+
+.backtest-bars{margin:24px 0;padding:20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.backtest-bars>div{display:grid;grid-template-columns:145px minmax(60px,1fr) 75px;gap:14px;align-items:center;margin:15px 0;font-size:.9rem}.backtest-bars b{text-align:right}
+.backtest-track{height:15px;border-radius:8px;background:var(--line);overflow:hidden}.backtest-track i{display:block;height:100%;background:var(--ink);border-radius:8px}.backtest-track .backtest-optional{background:var(--west)}
+.backtest-metrics caption{padding:14px 16px;text-align:left;color:var(--muted);font-size:.85rem}.backtest-metrics th[scope=row]{text-align:left;font-size:.85rem;letter-spacing:0;text-transform:none;color:var(--ink)}
+@media(max-width:520px){.backtest-bars{padding:12px}.backtest-bars>div{grid-template-columns:95px minmax(40px,1fr) 64px;gap:8px;font-size:.8rem}}
+</style></head><body><nav class="app-nav" aria-label="Main navigation"><a href="/">Forecast</a><a href="/#availability">Availability</a><a href="/#backtest">Backtest</a><a href="/#history">History</a><a href="/#teams">Teams</a><a href="/#refresh-health">Refresh health</a></nav><header class="profile-hero"><div class="wrap"><a class="back-link" href="/#teams">← All teams</a>
       <p class="eyebrow">2026 team profile · Outside the current eight-team bracket</p><h1>Los Angeles Sparks</h1>
       <p class="lead">Results through 2026-10-27. Scoring averages and venue records use regular-season games.</p>
       <a class="team-link" href="#refresh-health" aria-label="Refresh health details"><span class="health-pill" data-health-badge role="status">Checking refresh status</span></a>
