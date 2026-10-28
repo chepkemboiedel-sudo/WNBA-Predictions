@@ -689,7 +689,7 @@ BODY = f'''
     <span class="chip">SHAP explanations</span>
   </div>
   <div class="tblwrap"><table>
-    <thead><tr><th>Model (held-out 2024–25)</th><th>Log-loss ↓</th><th>Brier ↓</th><th>Accuracy</th></tr></thead>
+    <thead><tr><th>Model (held-out {season-2}–{season-1})</th><th>Log-loss ↓</th><th>Brier ↓</th><th>Accuracy</th></tr></thead>
     <tbody>{metrics_html}</tbody></table></div>
   <p class="lead" style="margin-top:14px">Both models beat the "better record" baseline on the
     probability metrics that matter for simulation. The logistic model runs the sim — it's
@@ -788,7 +788,7 @@ validation trains through {season-3} and tests on {season-2}–{season-1}. Valid
 `outputs/validation_metrics.csv`. These metrics validate the score-only baseline.
 Published model: {forecast["probability_model"]}. Automatic selection uses fixed prospective blocks, never the retrospective study.
 The optional, experimental player-availability layer uses current ESPN rosters and verified absence
-reports, with shrunken participation effects from 2025–26 box scores. It has not been
+reports, with shrunken participation effects from {season-1}–{season} box scores. It has not been
 independently calibrated and has not shown a clear improvement in the historical test.
 The interactive toggle starts at the published model choice. Score-only title estimate for {favorite.team}:
 {getattr(favorite, 'p_champion_baseline', favorite.p_champion):.1%}.
