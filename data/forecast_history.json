@@ -718,6 +718,67 @@
       "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/40641108442",
       "probability_model": "score-only",
       "availability_fetched_at": "2026-10-28T05:59:49.778506Z"
+    },
+    {
+      "id": "c98268a2fac32a72",
+      "generated_at": "2026-10-28T19:23:42.196188Z",
+      "data_through": "2026-10-27",
+      "source": "published",
+      "season": 2026,
+      "n_sims": 20000,
+      "teams": [
+        {
+          "team": "Minnesota Lynx",
+          "seed": 1,
+          "reach_finals": 0.0,
+          "champion": 0.0
+        },
+        {
+          "team": "Golden State Valkyries",
+          "seed": 2,
+          "reach_finals": 1.0,
+          "champion": 0.73335
+        },
+        {
+          "team": "Las Vegas Aces",
+          "seed": 3,
+          "reach_finals": 0.0,
+          "champion": 0.0
+        },
+        {
+          "team": "Atlanta Dream",
+          "seed": 4,
+          "reach_finals": 1.0,
+          "champion": 0.26665
+        },
+        {
+          "team": "Washington Mystics",
+          "seed": 5,
+          "reach_finals": 0.0,
+          "champion": 0.0
+        },
+        {
+          "team": "Indiana Fever",
+          "seed": 6,
+          "reach_finals": 0.0,
+          "champion": 0.0
+        },
+        {
+          "team": "Dallas Wings",
+          "seed": 7,
+          "reach_finals": 0.0,
+          "champion": 0.0
+        },
+        {
+          "team": "New York Liberty",
+          "seed": 8,
+          "reach_finals": 0.0,
+          "champion": 0.0
+        }
+      ],
+      "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/40753728447",
+      "probability_model": "score-only",
+      "availability_fetched_at": "2026-10-28T19:23:29.977757Z"
     }
   ]
 }

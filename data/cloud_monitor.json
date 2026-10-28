@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-10-28T16:07:44.351Z",
+  "checked_at": "2026-10-28T19:23:44.390Z",
   "status": "ok",
   "error": null,
   "reports": [
@@ -195,7 +195,7 @@
           "id": "4432831",
           "name": "Aliyah Boston",
           "status": "Out",
-          "date": "2026-10-15T15:05Z",
+          "date": "2026-10-28T16:15Z",
           "detail": "Knee",
           "comment": "out",
           "url": "https://www.espn.com/wnba/player/_/id/4432831/aliyah-boston"
@@ -300,7 +300,7 @@
           "id": "4281929",
           "name": "Satou Sabally",
           "status": "Out",
-          "date": "2026-10-28T15:00Z",
+          "date": "2026-10-28T19:00Z",
           "detail": "Concussion",
           "comment": "out",
           "url": "https://www.espn.com/wnba/player/_/id/4281929/satou-sabally"

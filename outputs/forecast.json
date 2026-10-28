@@ -8,23 +8,23 @@
       "hw": 0,
       "lw": 2
     },
-    "Atlanta Dream|Washington Mystics": {
-      "hw": 2,
-      "lw": 0
-    },
     "Las Vegas Aces|Indiana Fever": {
       "hw": 2,
       "lw": 1
+    },
+    "Atlanta Dream|Washington Mystics": {
+      "hw": 2,
+      "lw": 0
     },
     "Golden State Valkyries|Dallas Wings": {
       "hw": 2,
       "lw": 1
     },
-    "Atlanta Dream|New York Liberty": {
+    "Golden State Valkyries|Las Vegas Aces": {
       "hw": 3,
       "lw": 0
     },
-    "Golden State Valkyries|Las Vegas Aces": {
+    "Atlanta Dream|New York Liberty": {
       "hw": 3,
       "lw": 0
     },
@@ -47,19 +47,19 @@
     "model_version": "score-logistic-v1+participation-ridge-minutes-v2",
     "season": 2026,
     "eligible_games": 0,
-    "registered_games": 0,
+    "registered_games": 1,
     "block_size": 100,
     "promoted": false,
     "checks": [],
     "reason": "Waiting for 100 independently recorded, completed games of the current model version.",
-    "checked_at": "2026-10-28T05:59:53.908425+00:00",
+    "checked_at": "2026-10-28T19:23:35.112936+00:00",
     "usable": false
   },
   "probability_model": "score-only",
   "injury_adjustment_default": false,
   "availability": {
     "status": "live",
-    "fetched_at": "2026-10-28T05:59:49.778506Z",
+    "fetched_at": "2026-10-28T19:23:29.977757Z",
     "apply_adjustments": true,
     "message": "Player feeds retrieved successfully.",
     "model": {
