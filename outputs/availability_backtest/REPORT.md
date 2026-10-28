@@ -56,8 +56,8 @@ Recommendation: retain the experimental label. These results do not justify clai
 
 ## Automatic monitoring
 
-Checked 2026-10-27T23:36:00.616080Z. Historical predictions are append-only. The initial study is frozen separately; 0 later completed games have been evaluated. New archived-report rows are retrospective walk-forward evaluations, not prospective forecasts.
+Checked 2026-10-28T01:32:45.994109Z. Historical predictions are append-only. The initial study is frozen separately; 0 later completed games have been evaluated. New archived-report rows are retrospective walk-forward evaluations, not prospective forecasts.
 
 The separate prospective trial freezes the first paired production game prediction within 24 hours before scheduled tip, using a player snapshot fetched within two hours. Captured probabilities, model hash, and relevant roster/injury evidence are stored before outcomes. Missing pregame captures are never backfilled. There are 0 scored and 0 pending predictions. Daily 7 a.m. Pacific sampling may miss early games or last-minute injury updates. This trial uses fixed regular-season form, while the historical test uses pregame running form. Their results must not be pooled as one experiment.
 
-Checkpoints are added only when scored evidence changes. Repeated daily checks do not count as new games or independent significance tests. The initial one-point trend is a starting checkpoint, not a historical performance curve. Score-only remains default; no statistical threshold automatically promotes injuries.
+Checkpoints are added only when scored evidence changes. Repeated daily checks do not count as new games or independent significance tests. The initial one-point trend is a starting checkpoint, not a historical performance curve. Score-only remains default; automatic promotion is evaluated separately using fixed prospective blocks; historical comparisons cannot promote a model.

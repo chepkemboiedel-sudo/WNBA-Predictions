@@ -8,13 +8,13 @@
       "hw": 2,
       "lw": 1
     },
-    "Minnesota Lynx|New York Liberty": {
-      "hw": 0,
-      "lw": 2
-    },
     "Atlanta Dream|Washington Mystics": {
       "hw": 2,
       "lw": 0
+    },
+    "Minnesota Lynx|New York Liberty": {
+      "hw": 0,
+      "lw": 2
     },
     "Golden State Valkyries|Dallas Wings": {
       "hw": 2,
@@ -33,15 +33,37 @@
       "lw": 2
     }
   },
+  "season": 2026,
+  "season_context": {
+    "season": 2026,
+    "latest_observed_season": 2026,
+    "calendar_season": 2026,
+    "waiting_for_season": false,
+    "format_provisional": false,
+    "message": "Eight-team bracket; observed playoff results are retained."
+  },
+  "promotion": {
+    "policy": "prospective-gate-v1",
+    "model_version": "score-logistic-v1+participation-ridge-minutes-v2",
+    "season": 2026,
+    "eligible_games": 0,
+    "registered_games": 0,
+    "block_size": 100,
+    "promoted": false,
+    "checks": [],
+    "reason": "Waiting for 100 independently recorded, completed games of the current model version.",
+    "checked_at": "2026-10-28T01:32:47.856749+00:00",
+    "usable": false
+  },
   "probability_model": "score-only",
   "injury_adjustment_default": false,
   "availability": {
     "status": "partial",
-    "fetched_at": "2026-10-27T23:35:54.709764Z",
+    "fetched_at": "2026-10-28T01:32:40.119474Z",
     "apply_adjustments": true,
     "message": "Live reports; 636/637 box scores available. Adjustments are limited to teams with complete current-season player history.",
     "model": {
-      "version": "participation-ridge-v1",
+      "version": "participation-ridge-minutes-v2",
       "experimental": true,
       "training_games": 566,
       "training_seasons": [

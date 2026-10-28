@@ -9853,27 +9853,32 @@
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-03_03_00PM.pdf",
       "status": "error",
-      "error": "Report contains an unrecognized/non-WNBA team"
+      "error": "Report contains an unrecognized/non-WNBA team",
+      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-04_03_00PM.pdf",
       "status": "error",
-      "error": "Report contains an unrecognized/non-WNBA team"
+      "error": "Report contains an unrecognized/non-WNBA team",
+      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-04_09_00AM.pdf",
       "status": "error",
-      "error": "Report contains an unrecognized/non-WNBA team"
+      "error": "Report contains an unrecognized/non-WNBA team",
+      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-05_03_00PM.pdf",
       "status": "error",
-      "error": "Report contains an unrecognized/non-WNBA team"
+      "error": "Report contains an unrecognized/non-WNBA team",
+      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-05_09_00AM.pdf",
       "status": "error",
-      "error": "Report contains an unrecognized/non-WNBA team"
+      "error": "Report contains an unrecognized/non-WNBA team",
+      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-06_03_00PM.pdf",
@@ -13592,7 +13597,8 @@
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-28_03_00PM.pdf",
-      "status": 403
+      "status": 403,
+      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-29_03_00PM.pdf",
@@ -17952,7 +17958,8 @@
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-23_03_00PM.pdf",
-      "status": 403
+      "status": 403,
+      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-24_03_00PM.pdf",

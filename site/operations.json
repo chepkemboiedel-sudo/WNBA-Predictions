@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-28T01:32:53.580048+00:00",
+  "season": {
+    "season": 2026,
+    "latest_observed_season": 2026,
+    "calendar_season": 2026,
+    "waiting_for_season": false,
+    "format_provisional": false,
+    "message": "Eight-team bracket; observed playoff results are retained."
+  },
+  "promotion": {
+    "policy": "prospective-gate-v1",
+    "model_version": "score-logistic-v1+participation-ridge-minutes-v2",
+    "season": 2026,
+    "eligible_games": 0,
+    "registered_games": 0,
+    "block_size": 100,
+    "promoted": false,
+    "checks": [],
+    "reason": "Waiting for 100 independently recorded, completed games of the current model version.",
+    "checked_at": "2026-10-28T01:32:47.856749+00:00",
+    "usable": false
+  },
+  "coverage": {
+    "boxscores": {
+      "expected_games": 637,
+      "covered_games": 636,
+      "missing_games": [
+        "401856947"
+      ]
+    },
+    "archived_reports_verified": 146,
+    "archived_reports_requested": 153,
+    "archived_report_failures": [
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-03_03_00PM.pdf",
+        "status": "error"
+      },
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-04_03_00PM.pdf",
+        "status": "error"
+      },
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-04_09_00AM.pdf",
+        "status": "error"
+      },
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-05_03_00PM.pdf",
+        "status": "error"
+      },
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-05_09_00AM.pdf",
+        "status": "error"
+      },
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-28_03_00PM.pdf",
+        "status": 403
+      },
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-23_03_00PM.pdf",
+        "status": 403
+      }
+    ],
+    "note": "Unknown reports are never counted as healthy. Missing public reports cannot be reconstructed reliably."
+  },
+  "championship_evaluation": {
+    "registered_seasons": 0,
+    "completed_seasons": 0,
+    "note": "One first pre-playoff forecast per season. Daily Finals snapshots are correlated and are not independent validation. No proven championship improvement is claimed.",
+    "predictions": []
+  }
+}

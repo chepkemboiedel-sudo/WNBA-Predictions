@@ -22,13 +22,13 @@ using 20,000 brackets. Eliminated teams cannot advance.
 
 The actual first-round pairings resolve tied regular-season seeds once playoffs begin.
 Game probabilities come from logistic regression fitted to 2016–2025 score-based team form;
-validation trains on 2016–2023 and tests on 2024–2025. Validation metrics are in
+validation trains through 2023 and tests on 2024–2025. Validation metrics are in
 `outputs/validation_metrics.csv`. These metrics validate the score-only baseline.
-Published forecasts and new history entries use the score-only model by default.
+Published model: score-only. Automatic selection uses fixed prospective blocks, never the retrospective study.
 The optional, experimental player-availability layer uses current ESPN rosters and verified absence
-reports, with shrunken participation effects from 2025–26 box scores. It has not been
+reports, with shrunken participation effects from 2025–2026 box scores. It has not been
 independently calibrated and has not shown a clear improvement in the historical test.
-It is available through an unchecked interactive toggle. Score-only title estimate for Golden State Valkyries:
+The interactive toggle starts at the published model choice. Score-only title estimate for Golden State Valkyries:
 73.3%.
 Player-data status: Live reports; 636/637 box scores available. Adjustments are limited to teams with complete current-season player history.
 Regular-season team-strength features stay fixed during the playoff simulation and playoff
