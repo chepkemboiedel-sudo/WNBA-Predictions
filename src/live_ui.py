@@ -3,15 +3,23 @@ import json
 from html import escape
 
 
-def section(snapshot, forecast):
+def section(snapshot, forecast, operations=None):
     teams=snapshot.get("teams",{})
     options=''.join(f'<option value="{escape(name)}">{escape(name)}</option>' for name in sorted(teams))
     policy=forecast.get("promotion",{})
+    coverage=(operations or {}).get("coverage",{})
+    box=coverage.get("boxscores",{})
+    recovery=coverage.get("recovery")
+    coverage_panel=f'''<div class="availability-notice" id="source-coverage"><strong>Current source coverage</strong>
+      <p>{box.get("covered_games",0)}/{box.get("expected_games",0)} player box scores · {coverage.get("archived_reports_verified",0)}/{coverage.get("archived_reports_requested",0)} verified fixed-time injury reports.</p>
+      <p>{"Recovered one box score and "+str(len(recovery["injury_reports"]["recovered"]))+" injury reports. " if recovery else ""}These are current archive counts. The original backtest retains its original inputs, predictions, and accuracy results.</p>
+      {"<a class='team-link' href='/data_recovery.json'>Download the recovery audit ↗</a>" if recovery else ""}</div>'''
     return f'''<section id="live"><div class="wrap"><span class="eyebrow">Between daily forecasts</span><h2>Live availability &amp; game context</h2>
       <p class="lead">Checks ESPN every minute while this page is visible. Cloud injury checks run hourly; full forecasts rebuild daily. Source reports can arrive late.</p>
       <p id="live-status" role="status">Checking live feeds…</p><div class="controls"><label class="ctrl">Team <select id="live-team">{options}</select></label>
       <label class="ctrl">Game <select id="live-game"><option value="">Today's scoreboard</option></select></label><button class="btn" id="live-retry">Refresh now</button></div>
       <div id="live-content" aria-live="polite"></div>
+      {coverage_panel}
       <details class="availability-notice"><summary>Mid-game injury scenario (experimental)</summary><p>Select a player assumed unable to return. This estimates only lost remaining point-margin contribution, using the saved participation effect and current game clock. It is not a calibrated live win probability. No absence is inferred from minutes played.</p>
       <label class="ctrl">Player assumed out <select id="live-scenario"></select></label><p id="live-scenario-result"></p></details>
       <div class="availability-notice"><strong>Automatic model selection: {escape(forecast.get('probability_model','score-only'))}</strong><p>{escape(policy.get('reason','Collecting prospective evidence.'))} {policy.get('eligible_games',0)}/100 games in the current evidence stream.</p>

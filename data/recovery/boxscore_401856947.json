@@ -1,0 +1,1948 @@
+{
+  "version": 1,
+  "recovered_at": "2026-10-28T05:38:56.533971+00:00",
+  "espn": {
+    "id": "401856947",
+    "date": "2026-05-29T23:30Z",
+    "completed": true,
+    "teams": {
+      "home": {
+        "id": "19",
+        "team": "Chicago Sky",
+        "players": [
+          {
+            "id": "3142010",
+            "name": "Azura Stevens",
+            "game_surname": "Stevens",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 18.0,
+              "points": 4.0,
+              "rebounds": 1.0,
+              "assists": 2.0
+            }
+          },
+          {
+            "id": "4433405",
+            "name": "Kamilla Cardoso",
+            "game_surname": "Cardoso",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 28.0,
+              "points": 12.0,
+              "rebounds": 13.0,
+              "assists": 1.0
+            }
+          },
+          {
+            "id": "2491205",
+            "name": "Skylar Diggins",
+            "game_surname": "Diggins",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 29.0,
+              "points": 12.0,
+              "rebounds": 5.0,
+              "assists": 3.0
+            }
+          },
+          {
+            "id": "2529137",
+            "name": "Natasha Cloud",
+            "game_surname": "Cloud",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 31.0,
+              "points": 6.0,
+              "rebounds": 4.0,
+              "assists": 2.0
+            }
+          },
+          {
+            "id": "4432865",
+            "name": "Jacy Sheldon",
+            "game_surname": "Sheldon",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 20.0,
+              "points": 5.0,
+              "rebounds": 1.0,
+              "assists": 2.0
+            }
+          },
+          {
+            "id": "2566081",
+            "name": "Elizabeth Williams",
+            "game_surname": "Williams",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 19.0,
+              "points": 0.0,
+              "rebounds": 5.0,
+              "assists": 1.0
+            }
+          },
+          {
+            "id": "2566186",
+            "name": "Rachel Banham",
+            "game_surname": "Banham",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 23.0,
+              "points": 8.0,
+              "rebounds": 7.0,
+              "assists": 0.0
+            }
+          },
+          {
+            "id": "4433433",
+            "name": "Aicha Coulibaly",
+            "game_surname": "Coulibaly",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 11.0,
+              "points": 4.0,
+              "rebounds": 3.0,
+              "assists": 0.0
+            }
+          },
+          {
+            "id": "4433542",
+            "name": "Saylor Poffenbarger",
+            "game_surname": "Poffenbarger",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 1.0,
+              "points": 0.0,
+              "rebounds": 0.0,
+              "assists": 0.0
+            }
+          },
+          {
+            "id": "4594786",
+            "name": "Sydney Taylor",
+            "game_surname": "Taylor",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 20.0,
+              "points": 7.0,
+              "rebounds": 2.0,
+              "assists": 4.0
+            }
+          },
+          {
+            "id": "4433630",
+            "name": "Rickea Jackson",
+            "game_surname": "Jackson",
+            "didNotPlay": true,
+            "statistics": {}
+          },
+          {
+            "id": "981",
+            "name": "Courtney Vandersloot",
+            "game_surname": "Vandersloot",
+            "didNotPlay": true,
+            "statistics": {}
+          },
+          {
+            "id": "4066548",
+            "name": "DiJonai Carrington",
+            "game_surname": "Carrington",
+            "didNotPlay": true,
+            "statistics": {}
+          },
+          {
+            "id": "4858656",
+            "name": "Gabriela Jaquez",
+            "game_surname": "Jaquez",
+            "didNotPlay": true,
+            "statistics": {}
+          }
+        ]
+      },
+      "away": {
+        "id": "8",
+        "team": "Minnesota Lynx",
+        "players": [
+          {
+            "id": "2529130",
+            "name": "Natasha Howard",
+            "game_surname": "Howard",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 29.0,
+              "points": 14.0,
+              "rebounds": 7.0,
+              "assists": 3.0
+            }
+          },
+          {
+            "id": "3054590",
+            "name": "Nia Brodie",
+            "game_surname": "Coffey",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 26.0,
+              "points": 20.0,
+              "rebounds": 8.0,
+              "assists": 2.0
+            }
+          },
+          {
+            "id": "2529205",
+            "name": "Kayla McBride",
+            "game_surname": "McBride",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 31.0,
+              "points": 9.0,
+              "rebounds": 5.0,
+              "assists": 2.0
+            }
+          },
+          {
+            "id": "2987891",
+            "name": "Courtney Williams",
+            "game_surname": "Williams",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 29.0,
+              "points": 10.0,
+              "rebounds": 4.0,
+              "assists": 5.0
+            }
+          },
+          {
+            "id": "4433791",
+            "name": "Olivia Miles",
+            "game_surname": "Miles",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 32.0,
+              "points": 17.0,
+              "rebounds": 6.0,
+              "assists": 6.0
+            }
+          },
+          {
+            "id": "4596309",
+            "name": "Liatu King",
+            "game_surname": "King",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 10.0,
+              "points": 2.0,
+              "rebounds": 3.0,
+              "assists": 0.0
+            }
+          },
+          {
+            "id": "4873358",
+            "name": "Antonia Delaere",
+            "game_surname": "Delaere",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 11.0,
+              "points": 0.0,
+              "rebounds": 0.0,
+              "assists": 1.0
+            }
+          },
+          {
+            "id": "5278237",
+            "name": "Anastasiia Olairi Kosu",
+            "game_surname": "Kosu",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 5.0,
+              "points": 2.0,
+              "rebounds": 2.0,
+              "assists": 0.0
+            }
+          },
+          {
+            "id": "3913903",
+            "name": "Teaira McCowan",
+            "game_surname": "McCowan",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 10.0,
+              "points": 0.0,
+              "rebounds": 4.0,
+              "assists": 1.0
+            }
+          },
+          {
+            "id": "4280850",
+            "name": "Maya Caldwell",
+            "game_surname": "Caldwell",
+            "didNotPlay": false,
+            "statistics": {
+              "minutes": 17.0,
+              "points": 5.0,
+              "rebounds": 4.0,
+              "assists": 0.0
+            }
+          },
+          {
+            "id": "3917450",
+            "name": "Napheesa Collier",
+            "game_surname": "Collier",
+            "didNotPlay": true,
+            "statistics": {}
+          },
+          {
+            "id": "4398938",
+            "name": "Dorka Juhasz",
+            "game_surname": "Juhasz",
+            "didNotPlay": true,
+            "statistics": {}
+          },
+          {
+            "id": "5345322",
+            "name": "Emma Cechova",
+            "game_surname": "Cechova",
+            "didNotPlay": true,
+            "statistics": {}
+          }
+        ]
+      }
+    }
+  },
+  "wnba": {
+    "gameId": "1022600058",
+    "gameStatus": 3,
+    "gameTimeUTC": "2026-05-29T23:30:00Z",
+    "period": 4,
+    "homeTeam": {
+      "teamId": 1611661329,
+      "teamName": "Sky",
+      "teamCity": "Chicago",
+      "teamTricode": "CHI",
+      "teamSlug": "sky",
+      "teamWins": 3,
+      "teamLosses": 5,
+      "score": 58,
+      "inBonus": "",
+      "timeoutsRemaining": 0,
+      "seed": 0,
+      "statistics": {
+        "minutes": "200:00",
+        "fieldGoalsMade": 20,
+        "fieldGoalsAttempted": 70,
+        "fieldGoalsPercentage": 0.286,
+        "threePointersMade": 5,
+        "threePointersAttempted": 30,
+        "threePointersPercentage": 0.167,
+        "freeThrowsMade": 13,
+        "freeThrowsAttempted": 18,
+        "freeThrowsPercentage": 0.722,
+        "reboundsOffensive": 9,
+        "reboundsDefensive": 32,
+        "reboundsTotal": 41,
+        "assists": 15,
+        "steals": 6,
+        "blocks": 6,
+        "turnovers": 17,
+        "foulsPersonal": 19,
+        "points": 58,
+        "plusMinusPoints": -21
+      },
+      "periods": [
+        {
+          "period": 1,
+          "periodType": "REGULAR",
+          "score": 12
+        },
+        {
+          "period": 2,
+          "periodType": "REGULAR",
+          "score": 18
+        },
+        {
+          "period": 3,
+          "periodType": "REGULAR",
+          "score": 16
+        },
+        {
+          "period": 4,
+          "periodType": "REGULAR",
+          "score": 12
+        }
+      ],
+      "players": [
+        {
+          "personId": 204333,
+          "firstName": "Natasha",
+          "familyName": "Cloud",
+          "nameI": "N. Cloud",
+          "playerSlug": "natasha-cloud",
+          "position": "F",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "30:50",
+            "fieldGoalsMade": 1,
+            "fieldGoalsAttempted": 7,
+            "fieldGoalsPercentage": 0.143,
+            "threePointersMade": 1,
+            "threePointersAttempted": 5,
+            "threePointersPercentage": 0.2,
+            "freeThrowsMade": 3,
+            "freeThrowsAttempted": 4,
+            "freeThrowsPercentage": 0.75,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 4,
+            "reboundsTotal": 4,
+            "assists": 2,
+            "steals": 2,
+            "blocks": 1,
+            "turnovers": 2,
+            "foulsPersonal": 3,
+            "points": 6,
+            "plusMinusPoints": -22
+          }
+        },
+        {
+          "personId": 1628922,
+          "firstName": "Azura",
+          "familyName": "Stevens",
+          "nameI": "A. Stevens",
+          "playerSlug": "azura-stevens",
+          "position": "F",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "17:46",
+            "fieldGoalsMade": 2,
+            "fieldGoalsAttempted": 8,
+            "fieldGoalsPercentage": 0.25,
+            "threePointersMade": 0,
+            "threePointersAttempted": 4,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 1,
+            "reboundsDefensive": 0,
+            "reboundsTotal": 1,
+            "assists": 2,
+            "steals": 0,
+            "blocks": 0,
+            "turnovers": 1,
+            "foulsPersonal": 1,
+            "points": 4,
+            "plusMinusPoints": -13
+          }
+        },
+        {
+          "personId": 1642289,
+          "firstName": "Kamilla",
+          "familyName": "Cardoso",
+          "nameI": "K. Cardoso",
+          "playerSlug": "kamilla-cardoso",
+          "position": "C",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "27:42",
+            "fieldGoalsMade": 4,
+            "fieldGoalsAttempted": 9,
+            "fieldGoalsPercentage": 0.444,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 4,
+            "freeThrowsAttempted": 4,
+            "freeThrowsPercentage": 1,
+            "reboundsOffensive": 3,
+            "reboundsDefensive": 10,
+            "reboundsTotal": 13,
+            "assists": 1,
+            "steals": 0,
+            "blocks": 2,
+            "turnovers": 3,
+            "foulsPersonal": 3,
+            "points": 12,
+            "plusMinusPoints": -27
+          }
+        },
+        {
+          "personId": 203400,
+          "firstName": "Skylar",
+          "familyName": "Diggins",
+          "nameI": "S. Diggins",
+          "playerSlug": "skylar-diggins",
+          "position": "G",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "29:07",
+            "fieldGoalsMade": 4,
+            "fieldGoalsAttempted": 12,
+            "fieldGoalsPercentage": 0.333,
+            "threePointersMade": 0,
+            "threePointersAttempted": 3,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 4,
+            "freeThrowsAttempted": 4,
+            "freeThrowsPercentage": 1,
+            "reboundsOffensive": 1,
+            "reboundsDefensive": 4,
+            "reboundsTotal": 5,
+            "assists": 3,
+            "steals": 2,
+            "blocks": 0,
+            "turnovers": 3,
+            "foulsPersonal": 4,
+            "points": 12,
+            "plusMinusPoints": -18
+          }
+        },
+        {
+          "personId": 1642292,
+          "firstName": "Jacy",
+          "familyName": "Sheldon",
+          "nameI": "J. Sheldon",
+          "playerSlug": "jacy-sheldon",
+          "position": "G",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "20:06",
+            "fieldGoalsMade": 2,
+            "fieldGoalsAttempted": 5,
+            "fieldGoalsPercentage": 0.4,
+            "threePointersMade": 1,
+            "threePointersAttempted": 3,
+            "threePointersPercentage": 0.333,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 1,
+            "reboundsTotal": 1,
+            "assists": 2,
+            "steals": 0,
+            "blocks": 0,
+            "turnovers": 2,
+            "foulsPersonal": 4,
+            "points": 5,
+            "plusMinusPoints": -10
+          }
+        },
+        {
+          "personId": 204322,
+          "firstName": "Elizabeth",
+          "familyName": "Williams",
+          "nameI": "E. Williams",
+          "playerSlug": "elizabeth-williams",
+          "position": "",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "19:06",
+            "fieldGoalsMade": 0,
+            "fieldGoalsAttempted": 3,
+            "fieldGoalsPercentage": 0,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 4,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 2,
+            "reboundsDefensive": 3,
+            "reboundsTotal": 5,
+            "assists": 1,
+            "steals": 0,
+            "blocks": 2,
+            "turnovers": 1,
+            "foulsPersonal": 0,
+            "points": 0,
+            "plusMinusPoints": -7
+          }
+        },
+        {
+          "personId": 1627671,
+          "firstName": "Rachel",
+          "familyName": "Banham",
+          "nameI": "R. Banham",
+          "playerSlug": "rachel-banham",
+          "position": "",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "22:58",
+            "fieldGoalsMade": 2,
+            "fieldGoalsAttempted": 10,
+            "fieldGoalsPercentage": 0.2,
+            "threePointersMade": 2,
+            "threePointersAttempted": 8,
+            "threePointersPercentage": 0.25,
+            "freeThrowsMade": 2,
+            "freeThrowsAttempted": 2,
+            "freeThrowsPercentage": 1,
+            "reboundsOffensive": 1,
+            "reboundsDefensive": 6,
+            "reboundsTotal": 7,
+            "assists": 0,
+            "steals": 0,
+            "blocks": 1,
+            "turnovers": 1,
+            "foulsPersonal": 1,
+            "points": 8,
+            "plusMinusPoints": -12
+          }
+        },
+        {
+          "personId": 1642786,
+          "firstName": "Aicha",
+          "familyName": "Coulibaly",
+          "nameI": "A. Coulibaly",
+          "playerSlug": "aicha-coulibaly",
+          "position": "",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "11:14",
+            "fieldGoalsMade": 2,
+            "fieldGoalsAttempted": 7,
+            "fieldGoalsPercentage": 0.286,
+            "threePointersMade": 0,
+            "threePointersAttempted": 1,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 1,
+            "reboundsDefensive": 2,
+            "reboundsTotal": 3,
+            "assists": 0,
+            "steals": 2,
+            "blocks": 0,
+            "turnovers": 3,
+            "foulsPersonal": 0,
+            "points": 4,
+            "plusMinusPoints": 5
+          }
+        },
+        {
+          "personId": 1642321,
+          "firstName": "Sydney",
+          "familyName": "Taylor",
+          "nameI": "S. Taylor",
+          "playerSlug": "sydney-taylor",
+          "position": "",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "20:04",
+            "fieldGoalsMade": 3,
+            "fieldGoalsAttempted": 9,
+            "fieldGoalsPercentage": 0.333,
+            "threePointersMade": 1,
+            "threePointersAttempted": 6,
+            "threePointersPercentage": 0.167,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 2,
+            "reboundsTotal": 2,
+            "assists": 4,
+            "steals": 0,
+            "blocks": 0,
+            "turnovers": 1,
+            "foulsPersonal": 3,
+            "points": 7,
+            "plusMinusPoints": -1
+          }
+        },
+        {
+          "personId": 1643458,
+          "firstName": "Saylor",
+          "familyName": "Poffenbarger",
+          "nameI": "S. Poffenbarger",
+          "playerSlug": "saylor-poffenbarger",
+          "position": "",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "1:08",
+            "fieldGoalsMade": 0,
+            "fieldGoalsAttempted": 0,
+            "fieldGoalsPercentage": 0,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 0,
+            "reboundsTotal": 0,
+            "assists": 0,
+            "steals": 0,
+            "blocks": 0,
+            "turnovers": 0,
+            "foulsPersonal": 0,
+            "points": 0,
+            "plusMinusPoints": 0
+          }
+        },
+        {
+          "personId": 1630096,
+          "firstName": "DiJonai",
+          "familyName": "Carrington",
+          "nameI": "D. Carrington",
+          "playerSlug": "dijonai-carrington",
+          "position": "",
+          "comment": "DND - Injury/Illness",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "",
+            "fieldGoalsMade": 0,
+            "fieldGoalsAttempted": 0,
+            "fieldGoalsPercentage": 0,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 0,
+            "reboundsTotal": 0,
+            "assists": 0,
+            "steals": 0,
+            "blocks": 0,
+            "turnovers": 0,
+            "foulsPersonal": 0,
+            "points": 0,
+            "plusMinusPoints": 0
+          }
+        },
+        {
+          "personId": 1642288,
+          "firstName": "Rickea",
+          "familyName": "Jackson",
+          "nameI": "R. Jackson",
+          "playerSlug": "rickea-jackson",
+          "position": "",
+          "comment": "DND - Injury/Illness",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "",
+            "fieldGoalsMade": 0,
+            "fieldGoalsAttempted": 0,
+            "fieldGoalsPercentage": 0,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 0,
+            "reboundsTotal": 0,
+            "assists": 0,
+            "steals": 0,
+            "blocks": 0,
+            "turnovers": 0,
+            "foulsPersonal": 0,
+            "points": 0,
+            "plusMinusPoints": 0
+          }
+        },
+        {
+          "personId": 1643447,
+          "firstName": "Gabriela",
+          "familyName": "Jaquez",
+          "nameI": "G. Jaquez",
+          "playerSlug": "gabriela-jaquez",
+          "position": "",
+          "comment": "DND - Injury/Illness",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "",
+            "fieldGoalsMade": 0,
+            "fieldGoalsAttempted": 0,
+            "fieldGoalsPercentage": 0,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 0,
+            "reboundsTotal": 0,
+            "assists": 0,
+            "steals": 0,
+            "blocks": 0,
+            "turnovers": 0,
+            "foulsPersonal": 0,
+            "points": 0,
+            "plusMinusPoints": 0
+          }
+        },
+        {
+          "personId": 202664,
+          "firstName": "Courtney",
+          "familyName": "Vandersloot",
+          "nameI": "C. Vandersloot",
+          "playerSlug": "courtney-vandersloot",
+          "position": "",
+          "comment": "DND - Injury/Illness",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "",
+            "fieldGoalsMade": 0,
+            "fieldGoalsAttempted": 0,
+            "fieldGoalsPercentage": 0,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 0,
+            "reboundsTotal": 0,
+            "assists": 0,
+            "steals": 0,
+            "blocks": 0,
+            "turnovers": 0,
+            "foulsPersonal": 0,
+            "points": 0,
+            "plusMinusPoints": 0
+          }
+        }
+      ],
+      "inactives": [
+        {
+          "personId": 1642818,
+          "firstName": "Maddy",
+          "familyName": "Westbeld",
+          "jerseyNum": "21  "
+        }
+      ],
+      "starters": {
+        "minutes": "125:31",
+        "fieldGoalsMade": 13,
+        "fieldGoalsAttempted": 41,
+        "fieldGoalsPercentage": 0.317,
+        "threePointersMade": 2,
+        "threePointersAttempted": 15,
+        "threePointersPercentage": 0.133,
+        "freeThrowsMade": 11,
+        "freeThrowsAttempted": 12,
+        "freeThrowsPercentage": 0.917,
+        "reboundsOffensive": 5,
+        "reboundsDefensive": 19,
+        "reboundsTotal": 24,
+        "assists": 10,
+        "steals": 4,
+        "blocks": 3,
+        "turnovers": 11,
+        "foulsPersonal": 15,
+        "points": 39
+      },
+      "bench": {
+        "minutes": "125:31",
+        "fieldGoalsMade": 7,
+        "fieldGoalsAttempted": 29,
+        "fieldGoalsPercentage": 0.241,
+        "threePointersMade": 3,
+        "threePointersAttempted": 15,
+        "threePointersPercentage": 0.2,
+        "freeThrowsMade": 2,
+        "freeThrowsAttempted": 6,
+        "freeThrowsPercentage": 0.333,
+        "reboundsOffensive": 4,
+        "reboundsDefensive": 13,
+        "reboundsTotal": 17,
+        "assists": 5,
+        "steals": 2,
+        "blocks": 3,
+        "turnovers": 6,
+        "foulsPersonal": 4,
+        "points": 19
+      }
+    },
+    "awayTeam": {
+      "teamId": 1611661324,
+      "teamName": "Lynx",
+      "teamCity": "Minnesota",
+      "teamTricode": "MIN",
+      "teamSlug": "lynx",
+      "teamWins": 6,
+      "teamLosses": 2,
+      "score": 79,
+      "inBonus": "",
+      "timeoutsRemaining": 1,
+      "seed": 0,
+      "statistics": {
+        "minutes": "200:00",
+        "fieldGoalsMade": 28,
+        "fieldGoalsAttempted": 71,
+        "fieldGoalsPercentage": 0.394,
+        "threePointersMade": 8,
+        "threePointersAttempted": 28,
+        "threePointersPercentage": 0.286,
+        "freeThrowsMade": 15,
+        "freeThrowsAttempted": 18,
+        "freeThrowsPercentage": 0.833,
+        "reboundsOffensive": 6,
+        "reboundsDefensive": 37,
+        "reboundsTotal": 43,
+        "assists": 20,
+        "steals": 13,
+        "blocks": 7,
+        "turnovers": 14,
+        "foulsPersonal": 17,
+        "points": 79,
+        "plusMinusPoints": 21
+      },
+      "periods": [
+        {
+          "period": 1,
+          "periodType": "REGULAR",
+          "score": 19
+        },
+        {
+          "period": 2,
+          "periodType": "REGULAR",
+          "score": 14
+        },
+        {
+          "period": 3,
+          "periodType": "REGULAR",
+          "score": 31
+        },
+        {
+          "period": 4,
+          "periodType": "REGULAR",
+          "score": 15
+        }
+      ],
+      "players": [
+        {
+          "personId": 203825,
+          "firstName": "Kayla",
+          "familyName": "McBride",
+          "nameI": "K. McBride",
+          "playerSlug": "kayla-mcbride",
+          "position": "F",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "31:09",
+            "fieldGoalsMade": 3,
+            "fieldGoalsAttempted": 13,
+            "fieldGoalsPercentage": 0.231,
+            "threePointersMade": 1,
+            "threePointersAttempted": 7,
+            "threePointersPercentage": 0.143,
+            "freeThrowsMade": 2,
+            "freeThrowsAttempted": 4,
+            "freeThrowsPercentage": 0.5,
+            "reboundsOffensive": 1,
+            "reboundsDefensive": 4,
+            "reboundsTotal": 5,
+            "assists": 2,
+            "steals": 3,
+            "blocks": 1,
+            "turnovers": 1,
+            "foulsPersonal": 2,
+            "points": 9,
+            "plusMinusPoints": 16
+          }
+        },
+        {
+          "personId": 1628269,
+          "firstName": "Nia",
+          "familyName": "Coffey",
+          "nameI": "N. Coffey",
+          "playerSlug": "nia-coffey",
+          "position": "F",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "26:27",
+            "fieldGoalsMade": 7,
+            "fieldGoalsAttempted": 12,
+            "fieldGoalsPercentage": 0.583,
+            "threePointersMade": 6,
+            "threePointersAttempted": 9,
+            "threePointersPercentage": 0.667,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 1,
+            "reboundsDefensive": 7,
+            "reboundsTotal": 8,
+            "assists": 2,
+            "steals": 1,
+            "blocks": 1,
+            "turnovers": 1,
+            "foulsPersonal": 0,
+            "points": 20,
+            "plusMinusPoints": 20
+          }
+        },
+        {
+          "personId": 203827,
+          "firstName": "Natasha",
+          "familyName": "Howard",
+          "nameI": "N. Howard",
+          "playerSlug": "natasha-howard",
+          "position": "C",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "29:19",
+            "fieldGoalsMade": 6,
+            "fieldGoalsAttempted": 11,
+            "fieldGoalsPercentage": 0.545,
+            "threePointersMade": 0,
+            "threePointersAttempted": 1,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 2,
+            "freeThrowsAttempted": 2,
+            "freeThrowsPercentage": 1,
+            "reboundsOffensive": 2,
+            "reboundsDefensive": 5,
+            "reboundsTotal": 7,
+            "assists": 3,
+            "steals": 4,
+            "blocks": 1,
+            "turnovers": 3,
+            "foulsPersonal": 3,
+            "points": 14,
+            "plusMinusPoints": 10
+          }
+        },
+        {
+          "personId": 1627675,
+          "firstName": "Courtney",
+          "familyName": "Williams",
+          "nameI": "C. Williams",
+          "playerSlug": "courtney-williams",
+          "position": "G",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "28:43",
+            "fieldGoalsMade": 5,
+            "fieldGoalsAttempted": 10,
+            "fieldGoalsPercentage": 0.5,
+            "threePointersMade": 0,
+            "threePointersAttempted": 1,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 4,
+            "reboundsTotal": 4,
+            "assists": 5,
+            "steals": 1,
+            "blocks": 0,
+            "turnovers": 2,
+            "foulsPersonal": 4,
+            "points": 10,
+            "plusMinusPoints": 9
+          }
+        },
+        {
+          "personId": 1643426,
+          "firstName": "Olivia",
+          "familyName": "Miles",
+          "nameI": "O. Miles",
+          "playerSlug": "olivia-miles",
+          "position": "G",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "31:41",
+            "fieldGoalsMade": 4,
+            "fieldGoalsAttempted": 10,
+            "fieldGoalsPercentage": 0.4,
+            "threePointersMade": 0,
+            "threePointersAttempted": 4,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 9,
+            "freeThrowsAttempted": 10,
+            "freeThrowsPercentage": 0.9,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 6,
+            "reboundsTotal": 6,
+            "assists": 6,
+            "steals": 2,
+            "blocks": 0,
+            "turnovers": 4,
+            "foulsPersonal": 2,
+            "points": 17,
+            "plusMinusPoints": 20
+          }
+        },
+        {
+          "personId": 1630471,
+          "firstName": "Maya",
+          "familyName": "Caldwell",
+          "nameI": "M. Caldwell",
+          "playerSlug": "maya-caldwell",
+          "position": "",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "17:25",
+            "fieldGoalsMade": 1,
+            "fieldGoalsAttempted": 6,
+            "fieldGoalsPercentage": 0.167,
+            "threePointersMade": 1,
+            "threePointersAttempted": 4,
+            "threePointersPercentage": 0.25,
+            "freeThrowsMade": 2,
+            "freeThrowsAttempted": 2,
+            "freeThrowsPercentage": 1,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 4,
+            "reboundsTotal": 4,
+            "assists": 0,
+            "steals": 1,
+            "blocks": 1,
+            "turnovers": 0,
+            "foulsPersonal": 0,
+            "points": 5,
+            "plusMinusPoints": 13
+          }
+        },
+        {
+          "personId": 1629479,
+          "firstName": "Teaira",
+          "familyName": "McCowan",
+          "nameI": "T. McCowan",
+          "playerSlug": "teaira-mccowan",
+          "position": "",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "9:33",
+            "fieldGoalsMade": 0,
+            "fieldGoalsAttempted": 2,
+            "fieldGoalsPercentage": 0,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 4,
+            "reboundsTotal": 4,
+            "assists": 1,
+            "steals": 0,
+            "blocks": 2,
+            "turnovers": 2,
+            "foulsPersonal": 2,
+            "points": 0,
+            "plusMinusPoints": 11
+          }
+        },
+        {
+          "personId": 1643489,
+          "firstName": "Antonia",
+          "familyName": "Delaere",
+          "nameI": "A. Delaere",
+          "playerSlug": "antonia-delaere",
+          "position": "",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "11:02",
+            "fieldGoalsMade": 0,
+            "fieldGoalsAttempted": 1,
+            "fieldGoalsPercentage": 0,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 0,
+            "reboundsTotal": 0,
+            "assists": 1,
+            "steals": 0,
+            "blocks": 0,
+            "turnovers": 0,
+            "foulsPersonal": 0,
+            "points": 0,
+            "plusMinusPoints": 5
+          }
+        },
+        {
+          "personId": 1642820,
+          "firstName": "Liatu",
+          "familyName": "King",
+          "nameI": "L. King",
+          "playerSlug": "liatu-king",
+          "position": "",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "9:38",
+            "fieldGoalsMade": 1,
+            "fieldGoalsAttempted": 4,
+            "fieldGoalsPercentage": 0.25,
+            "threePointersMade": 0,
+            "threePointersAttempted": 2,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 1,
+            "reboundsDefensive": 2,
+            "reboundsTotal": 3,
+            "assists": 0,
+            "steals": 0,
+            "blocks": 1,
+            "turnovers": 1,
+            "foulsPersonal": 3,
+            "points": 2,
+            "plusMinusPoints": -1
+          }
+        },
+        {
+          "personId": 1642797,
+          "firstName": "Anastasiia Olairi",
+          "familyName": "Kosu",
+          "nameI": "A. Kosu",
+          "playerSlug": "anastasiia-olairi-kosu",
+          "position": "",
+          "comment": "",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "5:04",
+            "fieldGoalsMade": 1,
+            "fieldGoalsAttempted": 2,
+            "fieldGoalsPercentage": 0.5,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 1,
+            "reboundsDefensive": 1,
+            "reboundsTotal": 2,
+            "assists": 0,
+            "steals": 1,
+            "blocks": 0,
+            "turnovers": 0,
+            "foulsPersonal": 1,
+            "points": 2,
+            "plusMinusPoints": 2
+          }
+        },
+        {
+          "personId": 1643488,
+          "firstName": "Emma",
+          "familyName": "Cechova",
+          "nameI": "E. Cechova",
+          "playerSlug": "emma-cechova",
+          "position": "",
+          "comment": "DND - Injury/Illness",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "",
+            "fieldGoalsMade": 0,
+            "fieldGoalsAttempted": 0,
+            "fieldGoalsPercentage": 0,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 0,
+            "reboundsTotal": 0,
+            "assists": 0,
+            "steals": 0,
+            "blocks": 0,
+            "turnovers": 0,
+            "foulsPersonal": 0,
+            "points": 0,
+            "plusMinusPoints": 0
+          }
+        },
+        {
+          "personId": 1629483,
+          "firstName": "Napheesa",
+          "familyName": "Collier",
+          "nameI": "N. Collier",
+          "playerSlug": "napheesa-collier",
+          "position": "",
+          "comment": "DND - Injury/Illness",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "",
+            "fieldGoalsMade": 0,
+            "fieldGoalsAttempted": 0,
+            "fieldGoalsPercentage": 0,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 0,
+            "reboundsTotal": 0,
+            "assists": 0,
+            "steals": 0,
+            "blocks": 0,
+            "turnovers": 0,
+            "foulsPersonal": 0,
+            "points": 0,
+            "plusMinusPoints": 0
+          }
+        },
+        {
+          "personId": 1641657,
+          "firstName": "Dorka",
+          "familyName": "Juhasz",
+          "nameI": "D. Juhasz",
+          "playerSlug": "dorka-juhasz",
+          "position": "",
+          "comment": "DND - Injury/Illness",
+          "jerseyNum": "",
+          "statistics": {
+            "minutes": "",
+            "fieldGoalsMade": 0,
+            "fieldGoalsAttempted": 0,
+            "fieldGoalsPercentage": 0,
+            "threePointersMade": 0,
+            "threePointersAttempted": 0,
+            "threePointersPercentage": 0,
+            "freeThrowsMade": 0,
+            "freeThrowsAttempted": 0,
+            "freeThrowsPercentage": 0,
+            "reboundsOffensive": 0,
+            "reboundsDefensive": 0,
+            "reboundsTotal": 0,
+            "assists": 0,
+            "steals": 0,
+            "blocks": 0,
+            "turnovers": 0,
+            "foulsPersonal": 0,
+            "points": 0,
+            "plusMinusPoints": 0
+          }
+        }
+      ],
+      "inactives": [
+        {
+          "personId": 1643490,
+          "firstName": "Eliska",
+          "familyName": "Hamzova",
+          "jerseyNum": "11  "
+        }
+      ],
+      "starters": {
+        "minutes": "147:19",
+        "fieldGoalsMade": 25,
+        "fieldGoalsAttempted": 56,
+        "fieldGoalsPercentage": 0.446,
+        "threePointersMade": 7,
+        "threePointersAttempted": 22,
+        "threePointersPercentage": 0.318,
+        "freeThrowsMade": 13,
+        "freeThrowsAttempted": 16,
+        "freeThrowsPercentage": 0.813,
+        "reboundsOffensive": 4,
+        "reboundsDefensive": 26,
+        "reboundsTotal": 30,
+        "assists": 18,
+        "steals": 11,
+        "blocks": 3,
+        "turnovers": 11,
+        "foulsPersonal": 11,
+        "points": 70
+      },
+      "bench": {
+        "minutes": "147:19",
+        "fieldGoalsMade": 3,
+        "fieldGoalsAttempted": 15,
+        "fieldGoalsPercentage": 0.2,
+        "threePointersMade": 1,
+        "threePointersAttempted": 6,
+        "threePointersPercentage": 0.167,
+        "freeThrowsMade": 2,
+        "freeThrowsAttempted": 2,
+        "freeThrowsPercentage": 1,
+        "reboundsOffensive": 2,
+        "reboundsDefensive": 11,
+        "reboundsTotal": 13,
+        "assists": 2,
+        "steals": 2,
+        "blocks": 4,
+        "turnovers": 3,
+        "foulsPersonal": 6,
+        "points": 9
+      }
+    }
+  },
+  "sources": [
+    {
+      "name": "espn_core.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947?lang=en&region=us",
+      "status": 200,
+      "bytes": 13301,
+      "type": "application/json;charset=utf-8",
+      "sha256": "ce5d3a84bae6f891240311e4b03bc89ea869dd1fe2848bdc72bf6c799429c300",
+      "keys": [
+        "$ref",
+        "id",
+        "uid",
+        "date",
+        "name",
+        "shortName",
+        "season",
+        "seasonType",
+        "timeValid",
+        "competitions",
+        "links",
+        "venues"
+      ]
+    },
+    {
+      "name": "wnba_box.html",
+      "url": "https://www.wnba.com/game/min-vs-chi-1022600058/box-score",
+      "status": 200,
+      "bytes": 341046,
+      "type": "text/html; charset=utf-8",
+      "sha256": "26484798b116768a4d0d104be734965dc8c4cc457f965e6521a1ca108e1c5fdb"
+    },
+    {
+      "name": "espn_roster_19.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster?lang=en&region=us",
+      "status": 200,
+      "bytes": 10853,
+      "type": "application/json;charset=utf-8",
+      "sha256": "e70da027bf521614ae8f046fdf99e46625ff372eff164b44211da54154c4e4da",
+      "keys": [
+        "$ref",
+        "entries",
+        "competition",
+        "team"
+      ]
+    },
+    {
+      "name": "espn_roster_8.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster?lang=en&region=us",
+      "status": 200,
+      "bytes": 10013,
+      "type": "application/json;charset=utf-8",
+      "sha256": "c8f8e11375755d2aa58878bee9d0eaa645f4989e34efdd85c3925e8cfc77c1c1",
+      "keys": [
+        "$ref",
+        "entries",
+        "competition",
+        "team"
+      ]
+    },
+    {
+      "name": "espn_status.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/status?lang=en&region=us",
+      "status": 200,
+      "bytes": 322,
+      "type": "application/json;charset=utf-8",
+      "sha256": "7554607468456081309e60908e183b64b44a1c72da240209e5e6b1e69375f3d9",
+      "keys": [
+        "$ref",
+        "clock",
+        "displayClock",
+        "period",
+        "type"
+      ]
+    },
+    {
+      "name": "stats-19-3142010.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/3142010/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22791,
+      "type": "application/json;charset=utf-8",
+      "sha256": "25612e98c4027aac991a6d14dbb8be3b082153af83883cdd9e93a49ac66bab76",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-4433405.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/4433405/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22874,
+      "type": "application/json;charset=utf-8",
+      "sha256": "b57ad5c35f17a6a51f2ab8d2cbfbc77b6c7b37ed6a3d0db82901dcb6edb6ead9",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-2491205.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/2491205/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22862,
+      "type": "application/json;charset=utf-8",
+      "sha256": "d3cc6f7eb4cdafb82ec2a35d59f85d2cb52731ac3fccc8fe7320acd37390e90a",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-2529137.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/2529137/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22864,
+      "type": "application/json;charset=utf-8",
+      "sha256": "c885618da0a3fe06282440af7dd90ff1535c7f1db425e52caeaac7d2e5be52f1",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-4432865.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/4432865/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22761,
+      "type": "application/json;charset=utf-8",
+      "sha256": "40cce0fa56b95e0c04c00237d6c25ac894da3a9d4c339fb8f36ca620772b8e8e",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-2566081.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/2566081/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22773,
+      "type": "application/json;charset=utf-8",
+      "sha256": "552c92f7c873925baf6ea9b408716351866a90ab83c67ed01b718b9be7608dce",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-2566186.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/2566186/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22829,
+      "type": "application/json;charset=utf-8",
+      "sha256": "f4f603022df3fd507df6f4f525e96945d7c9db805229ad1ba4724e1c89894f5c",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-4433433.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/4433433/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22820,
+      "type": "application/json;charset=utf-8",
+      "sha256": "ab7a337c3054daa7d5bdc8df83de1b3c91bf7e3457fc34bfde5d314fa97b654a",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-4433542.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/4433542/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22713,
+      "type": "application/json;charset=utf-8",
+      "sha256": "1357458e1afd1b3bff648f5f99979d8d13c6040cca8f8b984eaaa6caabc481b3",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-4594786.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/4594786/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22808,
+      "type": "application/json;charset=utf-8",
+      "sha256": "3d821d1733499f74267225982302fd4f161e9feae612736819c8d74a509ca978",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-2529130.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/2529130/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22889,
+      "type": "application/json;charset=utf-8",
+      "sha256": "f7f708a8e009a2c5772eae87fdc30899fe22dd9457e27e81022f825003c0c4df",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-3054590.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/3054590/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22871,
+      "type": "application/json;charset=utf-8",
+      "sha256": "aa8602ad4695f6b28ba60f3ed5d9631691cca389ca8db8e7d946ab8e25e6645f",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-2529205.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/2529205/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22878,
+      "type": "application/json;charset=utf-8",
+      "sha256": "baf873820d1890ba157a6362549b6d66d10320d8c7ef91c603ff48dc1f52a659",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-2987891.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/2987891/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22818,
+      "type": "application/json;charset=utf-8",
+      "sha256": "974df79cb4de539b7df18bca0fd668822bdbb2af63ad27e0177c89a9e8a96b14",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-4433791.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/4433791/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22775,
+      "type": "application/json;charset=utf-8",
+      "sha256": "4fe4b789530748280cf1e4e8f245c984214bd2b9bf6a742157db7a5a8ed467be",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-4596309.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/4596309/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22756,
+      "type": "application/json;charset=utf-8",
+      "sha256": "3c5b03fbaca2f21f98138171a392aefd5a72f4a46fc6da2757844ab638018f73",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-4873358.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/4873358/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22731,
+      "type": "application/json;charset=utf-8",
+      "sha256": "ddfee5be740300d77b2caa3926e7212c5e32eef8377636aeb554c9452d9ffa31",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-5278237.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/5278237/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22725,
+      "type": "application/json;charset=utf-8",
+      "sha256": "a77f67fb5f6694d7ec57da4d9a7d496dbb44c5f509b288cd23a6cddffac6b577",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-3913903.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/3913903/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22725,
+      "type": "application/json;charset=utf-8",
+      "sha256": "81d295f9b3bc81d5b7b702854ee450540d10d97691fc4ee9a191a9fee9627566",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-4280850.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/4280850/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22820,
+      "type": "application/json;charset=utf-8",
+      "sha256": "07f6e082eb248bb1c666f90a23a098438713ac2a0ce99baa72e1d876b4d8046c",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    }
+  ],
+  "method": "Exact existing ESPN athlete IDs; unique full-name or event-surname match to WNBA rows; identical points/rebounds/assists, rounded ESPN minutes corroborate exact WNBA clocks; complete team totals.",
+  "identities": [
+    {
+      "espn_id": "3142010",
+      "espn_name": "Azura Stevens",
+      "event_surname": "Stevens",
+      "wnba_id": 1628922,
+      "wnba_name": "Azura Stevens"
+    },
+    {
+      "espn_id": "4433405",
+      "espn_name": "Kamilla Cardoso",
+      "event_surname": "Cardoso",
+      "wnba_id": 1642289,
+      "wnba_name": "Kamilla Cardoso"
+    },
+    {
+      "espn_id": "2491205",
+      "espn_name": "Skylar Diggins",
+      "event_surname": "Diggins",
+      "wnba_id": 203400,
+      "wnba_name": "Skylar Diggins"
+    },
+    {
+      "espn_id": "2529137",
+      "espn_name": "Natasha Cloud",
+      "event_surname": "Cloud",
+      "wnba_id": 204333,
+      "wnba_name": "Natasha Cloud"
+    },
+    {
+      "espn_id": "4432865",
+      "espn_name": "Jacy Sheldon",
+      "event_surname": "Sheldon",
+      "wnba_id": 1642292,
+      "wnba_name": "Jacy Sheldon"
+    },
+    {
+      "espn_id": "2566081",
+      "espn_name": "Elizabeth Williams",
+      "event_surname": "Williams",
+      "wnba_id": 204322,
+      "wnba_name": "Elizabeth Williams"
+    },
+    {
+      "espn_id": "2566186",
+      "espn_name": "Rachel Banham",
+      "event_surname": "Banham",
+      "wnba_id": 1627671,
+      "wnba_name": "Rachel Banham"
+    },
+    {
+      "espn_id": "4433433",
+      "espn_name": "Aicha Coulibaly",
+      "event_surname": "Coulibaly",
+      "wnba_id": 1642786,
+      "wnba_name": "Aicha Coulibaly"
+    },
+    {
+      "espn_id": "4433542",
+      "espn_name": "Saylor Poffenbarger",
+      "event_surname": "Poffenbarger",
+      "wnba_id": 1643458,
+      "wnba_name": "Saylor Poffenbarger"
+    },
+    {
+      "espn_id": "4594786",
+      "espn_name": "Sydney Taylor",
+      "event_surname": "Taylor",
+      "wnba_id": 1642321,
+      "wnba_name": "Sydney Taylor"
+    },
+    {
+      "espn_id": "4433630",
+      "espn_name": "Rickea Jackson",
+      "event_surname": "Jackson",
+      "wnba_id": 1642288,
+      "wnba_name": "Rickea Jackson"
+    },
+    {
+      "espn_id": "981",
+      "espn_name": "Courtney Vandersloot",
+      "event_surname": "Vandersloot",
+      "wnba_id": 202664,
+      "wnba_name": "Courtney Vandersloot"
+    },
+    {
+      "espn_id": "4066548",
+      "espn_name": "DiJonai Carrington",
+      "event_surname": "Carrington",
+      "wnba_id": 1630096,
+      "wnba_name": "DiJonai Carrington"
+    },
+    {
+      "espn_id": "4858656",
+      "espn_name": "Gabriela Jaquez",
+      "event_surname": "Jaquez",
+      "wnba_id": 1643447,
+      "wnba_name": "Gabriela Jaquez"
+    },
+    {
+      "espn_id": "2529130",
+      "espn_name": "Natasha Howard",
+      "event_surname": "Howard",
+      "wnba_id": 203827,
+      "wnba_name": "Natasha Howard"
+    },
+    {
+      "espn_id": "3054590",
+      "espn_name": "Nia Brodie",
+      "event_surname": "Coffey",
+      "wnba_id": 1628269,
+      "wnba_name": "Nia Coffey"
+    },
+    {
+      "espn_id": "2529205",
+      "espn_name": "Kayla McBride",
+      "event_surname": "McBride",
+      "wnba_id": 203825,
+      "wnba_name": "Kayla McBride"
+    },
+    {
+      "espn_id": "2987891",
+      "espn_name": "Courtney Williams",
+      "event_surname": "Williams",
+      "wnba_id": 1627675,
+      "wnba_name": "Courtney Williams"
+    },
+    {
+      "espn_id": "4433791",
+      "espn_name": "Olivia Miles",
+      "event_surname": "Miles",
+      "wnba_id": 1643426,
+      "wnba_name": "Olivia Miles"
+    },
+    {
+      "espn_id": "4596309",
+      "espn_name": "Liatu King",
+      "event_surname": "King",
+      "wnba_id": 1642820,
+      "wnba_name": "Liatu King"
+    },
+    {
+      "espn_id": "4873358",
+      "espn_name": "Antonia Delaere",
+      "event_surname": "Delaere",
+      "wnba_id": 1643489,
+      "wnba_name": "Antonia Delaere"
+    },
+    {
+      "espn_id": "5278237",
+      "espn_name": "Anastasiia Olairi Kosu",
+      "event_surname": "Kosu",
+      "wnba_id": 1642797,
+      "wnba_name": "Anastasiia Olairi Kosu"
+    },
+    {
+      "espn_id": "3913903",
+      "espn_name": "Teaira McCowan",
+      "event_surname": "McCowan",
+      "wnba_id": 1629479,
+      "wnba_name": "Teaira McCowan"
+    },
+    {
+      "espn_id": "4280850",
+      "espn_name": "Maya Caldwell",
+      "event_surname": "Caldwell",
+      "wnba_id": 1630471,
+      "wnba_name": "Maya Caldwell"
+    },
+    {
+      "espn_id": "3917450",
+      "espn_name": "Napheesa Collier",
+      "event_surname": "Collier",
+      "wnba_id": 1629483,
+      "wnba_name": "Napheesa Collier"
+    },
+    {
+      "espn_id": "4398938",
+      "espn_name": "Dorka Juhasz",
+      "event_surname": "Juhasz",
+      "wnba_id": 1641657,
+      "wnba_name": "Dorka Juhasz"
+    },
+    {
+      "espn_id": "5345322",
+      "espn_name": "Emma Cechova",
+      "event_surname": "Cechova",
+      "wnba_id": 1643488,
+      "wnba_name": "Emma Cechova"
+    }
+  ]
+}
+

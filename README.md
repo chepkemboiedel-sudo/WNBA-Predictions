@@ -259,3 +259,31 @@ probabilities cannot be backfilled as independent preseason evidence. Complete
 public injury coverage and improved championship accuracy cannot be promised;
 unavailable observations stay explicit, and more prospective games are required.
 
+## Validated source recovery — October 27, 2026
+
+The missing May 29 Minnesota–Chicago player box score was recovered from ESPN's
+Core API and corroborated against the official WNBA box score. All 27 athlete
+identities and participation statuses were matched uniquely. Player points,
+rebounds and assists agree between sources, team scores are 79–58, and individual
+WNBA minute clocks sum to 200:01 per team (one second of aggregate rounding).
+The original clocks are retained. A validated archive supplies the fallback when
+the usual ESPN summary endpoint remains unavailable, bringing coverage to 637/637.
+
+Five fixed-time official injury PDFs from July 3–5 were recovered by accepting
+their identifiable WNBA sections and excluding four explicitly unsubmitted NBA
+placeholder rows in each file. Publication timestamps and PDF hashes are recorded;
+unknown teams, NBA player records, and mismatched WNBA matchups still fail
+validation. Parser version 3 retains compatibility with already verified clean
+version 2 reports. The July 28 and August 23 15:00 ET files still return HTTP 403,
+including alternate public CDN checks, and the public archive search found no
+copies. No differently timed report was substituted. Current archive coverage is
+151/153 reports.
+
+The new coverage panel and `/data_recovery.json` distinguish current source
+coverage from the historical study's original coverage. Recovery does not rescore
+old games: original backtest JSON, predictions CSV, comparison chart, and frozen
+initial-study files were checked against their pre-recovery SHA-256 hashes.
+Daily evaluation continues to append only genuinely new games. Raw recovered PDFs,
+parsed WNBA-only reports, the corroborated box-score archive, and the recovery
+receipt are retained under `data/recovery/` and `data/backtests/injury_reports/`.
+

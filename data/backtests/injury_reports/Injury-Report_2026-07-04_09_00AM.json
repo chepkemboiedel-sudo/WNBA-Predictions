@@ -1,0 +1,109 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-04_09_00AM.pdf",
+  "status": 200,
+  "sha256": "71ae179fad5ff30e8fc2322dab525b3162618905aea743e7292c17892751da8f",
+  "parser_version": 3,
+  "published_at": "2026-07-04T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-04",
+      "matchup": "GSV@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "PDX@SEA",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "PDX@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-05",
+      "matchup": "DAL@TOR",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-05",
+      "matchup": "DAL@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-05",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-05",
+      "matchup": "IND@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-04",
+      "matchup": "GSV@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "GSV@ATL",
+      "team": "AtlantaDream",
+      "player": "Nye,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "PDX@SEA",
+      "team": "PortlandFire",
+      "player": "Samuelson,Karlie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "PDX@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    }
+  ],
+  "excluded_non_wnba_placeholders": [
+    {
+      "date": "2026-07-04",
+      "matchup": "MEM@OKC",
+      "team": "MemphisGrizzlies",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "MEM@OKC",
+      "team": "OklahomaCityThunder",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "ATL@UTA",
+      "team": "AtlantaHawks",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "ATL@UTA",
+      "team": "UtahJazz",
+      "submitted": false
+    }
+  ],
+  "recovered_at": "2026-10-28T05:38:56.533971+00:00"
+}
+

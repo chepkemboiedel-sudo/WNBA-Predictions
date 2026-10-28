@@ -1,0 +1,576 @@
+{
+  "version": 1,
+  "recovered_at": "2026-10-28T05:38:56.533971+00:00",
+  "boxscore": {
+    "game_id": "401856947",
+    "official_game_id": "1022600058",
+    "player_rows": 27,
+    "home": "Chicago Sky",
+    "away": "Minnesota Lynx",
+    "score": [
+      58,
+      79
+    ],
+    "validation": "Both providers agree on player statistics. Individual WNBA minute clocks sum to 200 minutes per team within six seconds of rounding; original clocks are retained.",
+    "source_url": "https://www.wnba.com/game/min-vs-chi-1022600058/box-score",
+    "team_player_minutes": {
+      "Chicago Sky": 200.016667,
+      "Minnesota Lynx": 200.016667
+    }
+  },
+  "injury_reports": {
+    "before": 146,
+    "after": 151,
+    "requested": 153,
+    "recovered": [
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-03_03_00PM.pdf",
+        "sha256": "7b8486ece8d998a4c2b269b0e1dc2101c9b11b3ec8f50d75069d63fd891819c8",
+        "published_at": "2026-07-03T15:00:00-04:00",
+        "wnba_player_rows": 8,
+        "excluded_nba_placeholder_rows": 4
+      },
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-04_03_00PM.pdf",
+        "sha256": "05fa5bfe888910b51a7712fc55352a017ebaee235f92b63d6b7e0fca437fa4ce",
+        "published_at": "2026-07-04T15:00:00-04:00",
+        "wnba_player_rows": 8,
+        "excluded_nba_placeholder_rows": 4
+      },
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-04_09_00AM.pdf",
+        "sha256": "71ae179fad5ff30e8fc2322dab525b3162618905aea743e7292c17892751da8f",
+        "published_at": "2026-07-04T09:00:00-04:00",
+        "wnba_player_rows": 4,
+        "excluded_nba_placeholder_rows": 4
+      },
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-05_03_00PM.pdf",
+        "sha256": "c8b3e3df960639074c44f35fe756286b861c8a032bbe21e5584cbfc9fa30480e",
+        "published_at": "2026-07-05T15:00:00-04:00",
+        "wnba_player_rows": 10,
+        "excluded_nba_placeholder_rows": 4
+      },
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-05_09_00AM.pdf",
+        "sha256": "b274087932fb9e39d63ba07eeb36dcce1bf78b85d8fb394967d40a057e9a362d",
+        "published_at": "2026-07-05T09:00:00-04:00",
+        "wnba_player_rows": 7,
+        "excluded_nba_placeholder_rows": 4
+      }
+    ],
+    "still_unavailable": [
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-28_03_00PM.pdf",
+        "status": 403,
+        "attempted_at": "2026-10-28T01:32:45.994109+00:00"
+      },
+      {
+        "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-23_03_00PM.pdf",
+        "status": 403,
+        "attempted_at": "2026-10-28T01:32:45.994109+00:00"
+      }
+    ]
+  },
+  "recovery_attempts": [
+    {
+      "name": "Injury-Report_2026-07-03_03_00PM.pdf",
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-03_03_00PM.pdf",
+      "status": 200,
+      "bytes": 69926,
+      "type": "application/pdf",
+      "sha256": "7b8486ece8d998a4c2b269b0e1dc2101c9b11b3ec8f50d75069d63fd891819c8",
+      "header": "Injury Report: 07/03/26 03:00 PM"
+    },
+    {
+      "name": "Injury-Report_2026-07-04_03_00PM.pdf",
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-04_03_00PM.pdf",
+      "status": 200,
+      "bytes": 69307,
+      "type": "application/pdf",
+      "sha256": "05fa5bfe888910b51a7712fc55352a017ebaee235f92b63d6b7e0fca437fa4ce",
+      "header": "Injury Report: 07/04/26 03:00 PM"
+    },
+    {
+      "name": "Injury-Report_2026-07-04_09_00AM.pdf",
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-04_09_00AM.pdf",
+      "status": 200,
+      "bytes": 69089,
+      "type": "application/pdf",
+      "sha256": "71ae179fad5ff30e8fc2322dab525b3162618905aea743e7292c17892751da8f",
+      "header": "Injury Report: 07/04/26 09:00 AM"
+    },
+    {
+      "name": "Injury-Report_2026-07-05_03_00PM.pdf",
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-05_03_00PM.pdf",
+      "status": 200,
+      "bytes": 70965,
+      "type": "application/pdf",
+      "sha256": "c8b3e3df960639074c44f35fe756286b861c8a032bbe21e5584cbfc9fa30480e",
+      "header": "Injury Report: 07/05/26 03:00 PM"
+    },
+    {
+      "name": "Injury-Report_2026-07-05_09_00AM.pdf",
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-05_09_00AM.pdf",
+      "status": 200,
+      "bytes": 70180,
+      "type": "application/pdf",
+      "sha256": "b274087932fb9e39d63ba07eeb36dcce1bf78b85d8fb394967d40a057e9a362d",
+      "header": "Injury Report: 07/05/26 09:00 AM"
+    },
+    {
+      "name": "Injury-Report_2026-07-28_03_00PM.pdf",
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-28_03_00PM.pdf",
+      "status": 403
+    },
+    {
+      "name": "Injury-Report_2026-08-23_03_00PM.pdf",
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-23_03_00PM.pdf",
+      "status": 403
+    },
+    {
+      "name": "espn_summary.json",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/summary?event=401856947",
+      "status": 404
+    },
+    {
+      "name": "espn_core.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947?lang=en&region=us",
+      "status": 200,
+      "bytes": 13301,
+      "type": "application/json;charset=utf-8",
+      "sha256": "ce5d3a84bae6f891240311e4b03bc89ea869dd1fe2848bdc72bf6c799429c300",
+      "keys": [
+        "$ref",
+        "id",
+        "uid",
+        "date",
+        "name",
+        "shortName",
+        "season",
+        "seasonType",
+        "timeValid",
+        "competitions",
+        "links",
+        "venues"
+      ]
+    },
+    {
+      "name": "espn_cdn.json",
+      "url": "https://cdn.espn.com/core/wnba/boxscore?xhr=1&gameId=401856947",
+      "status": 200,
+      "bytes": 466489,
+      "type": "text/html; charset=utf-8",
+      "sha256": "7e8a59d30420c83f03bcc66a06d8c2c57a8cf719f19519ca042f80ce6ae55582"
+    },
+    {
+      "name": "wnba_box.json",
+      "url": "https://cdn.wnba.com/static/json/liveData/boxscore/boxscore_1022600058.json",
+      "status": 200,
+      "bytes": 3824,
+      "type": "text/html",
+      "sha256": "4da8ef7eb7cd0d2c23d900475100e468ff5bea1a3a4dd3ec142b6e81a00393f4"
+    },
+    {
+      "name": "nba_box.json",
+      "url": "https://cdn.nba.com/static/json/liveData/boxscore/boxscore_1022600058.json",
+      "status": 403
+    },
+    {
+      "name": "wnba_box.html",
+      "url": "https://www.wnba.com/game/min-vs-chi-1022600058/box-score",
+      "status": 200,
+      "bytes": 341046,
+      "type": "text/html; charset=utf-8",
+      "sha256": "26484798b116768a4d0d104be734965dc8c4cc457f965e6521a1ca108e1c5fdb"
+    },
+    {
+      "name": "wnba_injury.html",
+      "url": "https://www.wnba.com/wnba-injury-report",
+      "status": 200,
+      "bytes": 216931,
+      "type": "text/html; charset=utf-8",
+      "sha256": "7d33c3000602c4ff55a500c485b5f58c76200aab5ce6f56743ef097123f8208d"
+    },
+    {
+      "name": "espn_roster_19.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster?lang=en&region=us",
+      "status": 200,
+      "bytes": 10853,
+      "type": "application/json;charset=utf-8",
+      "sha256": "e70da027bf521614ae8f046fdf99e46625ff372eff164b44211da54154c4e4da",
+      "keys": [
+        "$ref",
+        "entries",
+        "competition",
+        "team"
+      ]
+    },
+    {
+      "name": "espn_roster_8.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster?lang=en&region=us",
+      "status": 200,
+      "bytes": 10013,
+      "type": "application/json;charset=utf-8",
+      "sha256": "c8f8e11375755d2aa58878bee9d0eaa645f4989e34efdd85c3925e8cfc77c1c1",
+      "keys": [
+        "$ref",
+        "entries",
+        "competition",
+        "team"
+      ]
+    },
+    {
+      "name": "espn_status.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/status?lang=en&region=us",
+      "status": 200,
+      "bytes": 322,
+      "type": "application/json;charset=utf-8",
+      "sha256": "7554607468456081309e60908e183b64b44a1c72da240209e5e6b1e69375f3d9",
+      "keys": [
+        "$ref",
+        "clock",
+        "displayClock",
+        "period",
+        "type"
+      ]
+    },
+    {
+      "name": "uncached-Injury-Report_2026-07-28_03_00PM.pdf",
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-28_03_00PM.pdf?recovery=1",
+      "status": 403
+    },
+    {
+      "name": "alternate-cdn-Injury-Report_2026-07-28_03_00PM.pdf",
+      "url": "https://cdn.nba.com/referee/wnba_injury/Injury-Report_2026-07-28_03_00PM.pdf",
+      "status": 403
+    },
+    {
+      "name": "earlier-Injury-Report_2026-07-28_03_00PM.pdf",
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-28_02_45PM.pdf",
+      "status": 403
+    },
+    {
+      "name": "archive-2026-07-28.json",
+      "url": "https://web.archive.org/cdx/search/cdx?url=ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-28_03_00PM.pdf&output=json&filter=statuscode:200&collapse=digest",
+      "status": 200,
+      "bytes": 3,
+      "type": "application/json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "keys": "array"
+    },
+    {
+      "name": "uncached-Injury-Report_2026-08-23_03_00PM.pdf",
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-23_03_00PM.pdf?recovery=1",
+      "status": 403
+    },
+    {
+      "name": "alternate-cdn-Injury-Report_2026-08-23_03_00PM.pdf",
+      "url": "https://cdn.nba.com/referee/wnba_injury/Injury-Report_2026-08-23_03_00PM.pdf",
+      "status": 403
+    },
+    {
+      "name": "earlier-Injury-Report_2026-08-23_03_00PM.pdf",
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-23_02_45PM.pdf",
+      "status": 403
+    },
+    {
+      "name": "archive-2026-08-23.json",
+      "url": "https://web.archive.org/cdx/search/cdx?url=ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-23_03_00PM.pdf&output=json&filter=statuscode:200&collapse=digest",
+      "status": 200,
+      "bytes": 3,
+      "type": "application/json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "keys": "array"
+    },
+    {
+      "name": "stats-19-3142010.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/3142010/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22791,
+      "type": "application/json;charset=utf-8",
+      "sha256": "25612e98c4027aac991a6d14dbb8be3b082153af83883cdd9e93a49ac66bab76",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-4433405.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/4433405/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22874,
+      "type": "application/json;charset=utf-8",
+      "sha256": "b57ad5c35f17a6a51f2ab8d2cbfbc77b6c7b37ed6a3d0db82901dcb6edb6ead9",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-2491205.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/2491205/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22862,
+      "type": "application/json;charset=utf-8",
+      "sha256": "d3cc6f7eb4cdafb82ec2a35d59f85d2cb52731ac3fccc8fe7320acd37390e90a",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-2529137.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/2529137/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22864,
+      "type": "application/json;charset=utf-8",
+      "sha256": "c885618da0a3fe06282440af7dd90ff1535c7f1db425e52caeaac7d2e5be52f1",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-4432865.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/4432865/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22761,
+      "type": "application/json;charset=utf-8",
+      "sha256": "40cce0fa56b95e0c04c00237d6c25ac894da3a9d4c339fb8f36ca620772b8e8e",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-2566081.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/2566081/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22773,
+      "type": "application/json;charset=utf-8",
+      "sha256": "552c92f7c873925baf6ea9b408716351866a90ab83c67ed01b718b9be7608dce",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-2566186.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/2566186/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22829,
+      "type": "application/json;charset=utf-8",
+      "sha256": "f4f603022df3fd507df6f4f525e96945d7c9db805229ad1ba4724e1c89894f5c",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-4433433.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/4433433/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22820,
+      "type": "application/json;charset=utf-8",
+      "sha256": "ab7a337c3054daa7d5bdc8df83de1b3c91bf7e3457fc34bfde5d314fa97b654a",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-4433542.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/4433542/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22713,
+      "type": "application/json;charset=utf-8",
+      "sha256": "1357458e1afd1b3bff648f5f99979d8d13c6040cca8f8b984eaaa6caabc481b3",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-19-4594786.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/19/roster/4594786/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22808,
+      "type": "application/json;charset=utf-8",
+      "sha256": "3d821d1733499f74267225982302fd4f161e9feae612736819c8d74a509ca978",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-2529130.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/2529130/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22889,
+      "type": "application/json;charset=utf-8",
+      "sha256": "f7f708a8e009a2c5772eae87fdc30899fe22dd9457e27e81022f825003c0c4df",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-3054590.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/3054590/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22871,
+      "type": "application/json;charset=utf-8",
+      "sha256": "aa8602ad4695f6b28ba60f3ed5d9631691cca389ca8db8e7d946ab8e25e6645f",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-2529205.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/2529205/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22878,
+      "type": "application/json;charset=utf-8",
+      "sha256": "baf873820d1890ba157a6362549b6d66d10320d8c7ef91c603ff48dc1f52a659",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-2987891.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/2987891/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22818,
+      "type": "application/json;charset=utf-8",
+      "sha256": "974df79cb4de539b7df18bca0fd668822bdbb2af63ad27e0177c89a9e8a96b14",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-4433791.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/4433791/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22775,
+      "type": "application/json;charset=utf-8",
+      "sha256": "4fe4b789530748280cf1e4e8f245c984214bd2b9bf6a742157db7a5a8ed467be",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-4596309.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/4596309/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22756,
+      "type": "application/json;charset=utf-8",
+      "sha256": "3c5b03fbaca2f21f98138171a392aefd5a72f4a46fc6da2757844ab638018f73",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-4873358.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/4873358/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22731,
+      "type": "application/json;charset=utf-8",
+      "sha256": "ddfee5be740300d77b2caa3926e7212c5e32eef8377636aeb554c9452d9ffa31",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-5278237.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/5278237/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22725,
+      "type": "application/json;charset=utf-8",
+      "sha256": "a77f67fb5f6694d7ec57da4d9a7d496dbb44c5f509b288cd23a6cddffac6b577",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-3913903.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/3913903/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22725,
+      "type": "application/json;charset=utf-8",
+      "sha256": "81d295f9b3bc81d5b7b702854ee450540d10d97691fc4ee9a191a9fee9627566",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    },
+    {
+      "name": "stats-8-4280850.json",
+      "url": "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/401856947/competitions/401856947/competitors/8/roster/4280850/statistics/0?lang=en&region=us",
+      "status": 200,
+      "bytes": 22820,
+      "type": "application/json;charset=utf-8",
+      "sha256": "07f6e082eb248bb1c666f90a23a098438713ac2a0ce99baa72e1d876b4d8046c",
+      "keys": [
+        "$ref",
+        "competition",
+        "splits",
+        "athlete"
+      ]
+    }
+  ],
+  "protected_backtest_sha256": {
+    "data/backtests/initial_results.json": "fd1e23092aa18caa26253e9c6efdfe18ae8c37b49c4ff835135429b0d3c44fe6",
+    "data/backtests/initial_predictions.csv": "48f3ff7b484fc67a2796263582b2ac59f3be02ee2a84085d3c9b70b13cb9ea5e",
+    "outputs/availability_backtest/results.json": "2d5ab4f7b48c8e1884ff481f4f7a87fc6a23cf84c68ebcac472d76dfafa95dad",
+    "outputs/availability_backtest/predictions.csv": "48f3ff7b484fc67a2796263582b2ac59f3be02ee2a84085d3c9b70b13cb9ea5e",
+    "outputs/availability_backtest/comparison.png": "10b8acffbc9aa4fbe79016fed3ad40b336adc897680016705d25a7cc01b91221"
+  },
+  "backtest_note": "Recovered inputs improve current archive coverage. Original study predictions, numerical results, and frozen initial-study files were not recalculated."
+}
+
