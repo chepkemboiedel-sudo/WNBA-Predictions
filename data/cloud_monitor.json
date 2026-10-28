@@ -1,0 +1,537 @@
+{
+  "version": 1,
+  "checked_at": "2026-10-28T01:21:40.939Z",
+  "status": "ok",
+  "error": null,
+  "reports": [
+    {
+      "team": "Atlanta Dream",
+      "id": "20",
+      "players": [
+        {
+          "id": "5209602",
+          "name": "Matilde Villa",
+          "status": "Out",
+          "date": "2026-09-23T22:50Z",
+          "detail": "Coach's Decision",
+          "comment": "Villa (coach's decision) has been ruled out for Wednesday's game against New York.",
+          "url": "https://www.espn.com/wnba/player/_/id/5209602/matilde-villa"
+        },
+        {
+          "id": "3058895",
+          "name": "Brionna Jones",
+          "status": "Out",
+          "date": "2026-09-17T16:08Z",
+          "detail": "Leg",
+          "comment": "Jones will miss the remainder of the season after sustaining a left leg injury against the Sun on Aug. 13, Annie Costabile of The Athletic reports.",
+          "url": "https://www.espn.com/wnba/player/_/id/3058895/brionna-jones"
+        }
+      ]
+    },
+    {
+      "team": "Chicago Sky",
+      "id": "19",
+      "players": [
+        {
+          "id": "4066548",
+          "name": "DiJonai Carrington",
+          "status": "Out",
+          "date": "2026-09-23T21:28Z",
+          "detail": "Foot",
+          "comment": "Carrington (foot) has been ruled out for Thursday's game against the Mystics.",
+          "url": "https://www.espn.com/wnba/player/_/id/4066548/dijonai-carrington"
+        },
+        {
+          "id": "4433433",
+          "name": "Aicha Coulibaly",
+          "status": "Out",
+          "date": "2026-09-23T21:27Z",
+          "detail": "Knee",
+          "comment": "Coulibaly (knee) is out for Thursday's game against the Mystics",
+          "url": "https://www.espn.com/wnba/player/_/id/4433433/aicha-coulibaly"
+        },
+        {
+          "id": "3142010",
+          "name": "Azura Stevens",
+          "status": "Out",
+          "date": "2026-09-23T21:25Z",
+          "detail": "Knee",
+          "comment": "Stevens (knee) is out for Thursday's game against the Mystics",
+          "url": "https://www.espn.com/wnba/player/_/id/3142010/azura-stevens"
+        },
+        {
+          "id": "2529137",
+          "name": "Natasha Cloud",
+          "status": "Out",
+          "date": "2026-09-23T21:22Z",
+          "detail": "Knee",
+          "comment": "Cloud (knee) is out for Thursday's game against the Mystics.",
+          "url": "https://www.espn.com/wnba/player/_/id/2529137/natasha-cloud"
+        },
+        {
+          "id": "2491205",
+          "name": "Skylar Diggins",
+          "status": "Out",
+          "date": "2026-09-01T14:17Z",
+          "detail": "Knee",
+          "comment": "Diggins (knee) will miss the remainder of the 2026 WNBA season, Sara Jane Gamelli of BallisLife.com reports.",
+          "url": "https://www.espn.com/wnba/player/_/id/2491205/skylar-diggins"
+        },
+        {
+          "id": "4433630",
+          "name": "Rickea Jackson",
+          "status": "Out",
+          "date": "2026-05-19T13:54Z",
+          "detail": "Knee",
+          "comment": "The Sky announced Tuesday that Jackson will miss the remainder of the season after suffering a torn ACL in her left knee during Sunday's 86-79 win over the Lynx.",
+          "url": "https://www.espn.com/wnba/player/_/id/4433630/rickea-jackson"
+        }
+      ]
+    },
+    {
+      "team": "Connecticut Sun",
+      "id": "18",
+      "players": [
+        {
+          "id": "4433792",
+          "name": "Rayah Marshall",
+          "status": "Out",
+          "date": "2026-09-25T00:21Z",
+          "detail": "Knee",
+          "comment": "Marshall has been ruled out for the remainder of Thursday's game against the Tempo due to a right knee injury.",
+          "url": "https://www.espn.com/wnba/player/_/id/4433792/rayah-marshall"
+        },
+        {
+          "id": "4398966",
+          "name": "Olivia Nelson-Ododa",
+          "status": "Out",
+          "date": "2026-09-23T20:54Z",
+          "detail": "Knee",
+          "comment": "Nelson-Ododa (knee) is out for Thursday's game against the Tempo.",
+          "url": "https://www.espn.com/wnba/player/_/id/4398966/olivia-nelson-ododa"
+        },
+        {
+          "id": "4433514",
+          "name": "Saniya Rivers",
+          "status": "Out",
+          "date": "2026-09-23T20:51Z",
+          "detail": "Ankle",
+          "comment": "Rivers (ankle) is out for Thursday's game against the Tempo.",
+          "url": "https://www.espn.com/wnba/player/_/id/4433514/saniya-rivers"
+        },
+        {
+          "id": "2490553",
+          "name": "Brittney Griner",
+          "status": "Out",
+          "date": "2026-09-23T20:49Z",
+          "detail": "Knee",
+          "comment": "Griner (knee) is out for Thursday's game against the Tempo.",
+          "url": "https://www.espn.com/wnba/player/_/id/2490553/brittney-griner"
+        },
+        {
+          "id": "3922628",
+          "name": "Kennedy Burke",
+          "status": "Out",
+          "date": "2026-09-14T19:53Z",
+          "detail": "Shoulder",
+          "comment": "The Sun announced Monday that Burke suffered a sprained AC joint in the FIBA World Cup and will miss the rest of the season.",
+          "url": "https://www.espn.com/wnba/player/_/id/3922628/kennedy-burke"
+        }
+      ]
+    },
+    {
+      "team": "Dallas Wings",
+      "id": "3",
+      "players": [
+        {
+          "id": "3913881",
+          "name": "Alanna Smith",
+          "status": "Out",
+          "date": "2026-10-01T23:48Z",
+          "detail": "Lower Leg",
+          "comment": "Smith (lower leg) is out for Game 3 of the first round of the playoffs against Golden State on Friday.",
+          "url": "https://www.espn.com/wnba/player/_/id/3913881/alanna-smith"
+        },
+        {
+          "id": "4433790",
+          "name": "Azzi Fudd",
+          "status": "Out",
+          "date": "2026-08-19T20:10Z",
+          "detail": "Knee",
+          "comment": "Fudd will undergo an arthroscopic procedure to address her right knee soreness and will be sidelined for the remainder of the 2026 season.",
+          "url": "https://www.espn.com/wnba/player/_/id/4433790/azzi-fudd"
+        },
+        {
+          "id": "5345473",
+          "name": "Costanza Verona",
+          "status": "Out",
+          "date": "2026-08-08T19:59Z",
+          "detail": "Personal",
+          "comment": "Verona's contract was temporarily suspended by the Wings Saturday.",
+          "url": "https://www.espn.com/wnba/player/_/id/5345473/costanza-verona"
+        }
+      ]
+    },
+    {
+      "team": "Golden State Valkyries",
+      "id": "129689",
+      "players": [
+        {
+          "id": "4790263",
+          "name": "Iliana Rupert",
+          "status": "Out",
+          "date": "2026-05-07T15:18Z",
+          "detail": "Not Injury Related",
+          "comment": "Rupert is pregnant, and the Valkyries have filed for a replacement contract ahead of the 2026 season, Alexa Philippou of ESPN.com reports Thursday.",
+          "url": "https://www.espn.com/wnba/player/_/id/4790263/iliana-rupert"
+        }
+      ]
+    },
+    {
+      "team": "Indiana Fever",
+      "id": "5",
+      "players": [
+        {
+          "id": "4432831",
+          "name": "Aliyah Boston",
+          "status": "Out",
+          "date": "2026-10-15T15:05Z",
+          "detail": "Knee",
+          "comment": "out",
+          "url": "https://www.espn.com/wnba/player/_/id/4432831/aliyah-boston"
+        },
+        {
+          "id": "4065760",
+          "name": "Tyasha Harris",
+          "status": "Out",
+          "date": "2026-09-26T19:21Z",
+          "detail": "Leg",
+          "comment": "Harris (leg) will miss the rest of the season, WNBA reporter Kareem Copeland reports.",
+          "url": "https://www.espn.com/wnba/player/_/id/4065760/tyasha-harris"
+        }
+      ]
+    },
+    {
+      "team": "Las Vegas Aces",
+      "id": "17",
+      "players": [
+        {
+          "id": "4398776",
+          "name": "NaLyssa Smith",
+          "status": "Out",
+          "date": "2026-08-27T19:29Z",
+          "detail": "Leg",
+          "comment": "The Aces announced Thursday that Smith will be sidelined for the rest of the season after suffering a non-contact left leg injury during Sunday's game versus the Tempo, per Chelsea Leite of TSN.",
+          "url": "https://www.espn.com/wnba/player/_/id/4398776/nalyssa-smith"
+        }
+      ]
+    },
+    {
+      "team": "Los Angeles Sparks",
+      "id": "6",
+      "players": [
+        {
+          "id": "5106170",
+          "name": "Ndjakalenga Mwenentanda",
+          "status": "Out",
+          "date": "2026-09-25T01:12Z",
+          "detail": "Coach's Decision",
+          "comment": "Mwenentanda (coach's decision) has been ruled out for Thursday's game against Golden State.",
+          "url": "https://www.espn.com/wnba/player/_/id/5106170/ndjakalenga-mwenentanda"
+        },
+        {
+          "id": "4433808",
+          "name": "Shyanne Sellers",
+          "status": "Out",
+          "date": "2026-09-25T01:08Z",
+          "detail": "Coach's Decision",
+          "comment": "Sellers (coach's decision) is out for Thursday's game against the Valkyries.",
+          "url": "https://www.espn.com/wnba/player/_/id/4433808/shyanne-sellers"
+        },
+        {
+          "id": "4433404",
+          "name": "Cameron Brink",
+          "status": "Out",
+          "date": "2026-09-24T00:25Z",
+          "detail": "Ankle",
+          "comment": "Brink (ankle) is listed as out for Thursday's game against Golden State.",
+          "url": "https://www.espn.com/wnba/player/_/id/4433404/cameron-brink"
+        },
+        {
+          "id": "4597509",
+          "name": "Aaliyah Nye",
+          "status": "Out",
+          "date": "2026-09-24T00:13Z",
+          "detail": "Ankle",
+          "comment": "Nye (ankle) has been ruled out for Thursday's game against Golden State.",
+          "url": "https://www.espn.com/wnba/player/_/id/4597509/aaliyah-nye"
+        }
+      ]
+    },
+    {
+      "team": "Minnesota Lynx",
+      "id": "8",
+      "players": [
+        {
+          "id": "5278237",
+          "name": "Anastasiia Olairi Kosu",
+          "status": "Out",
+          "date": "2026-09-28T21:13Z",
+          "detail": "Foot",
+          "comment": "Kosu (foot) has been ruled out for Tuesday's Game 2 of the first round of the playoffs against the Liberty.",
+          "url": "https://www.espn.com/wnba/player/_/id/5278237/anastasiia-olairi-kosu"
+        },
+        {
+          "id": "5208984",
+          "name": "Elena Buenavida",
+          "status": "Out",
+          "date": "2026-09-24T23:30Z",
+          "detail": "Coach's Decision",
+          "comment": "Buenavida (coach's decision) is out for Thursday's game against the Fever.",
+          "url": "https://www.espn.com/wnba/player/_/id/5208984/elena-buenavida"
+        }
+      ]
+    },
+    {
+      "team": "New York Liberty",
+      "id": "9",
+      "players": [
+        {
+          "id": "4281929",
+          "name": "Satou Sabally",
+          "status": "Out",
+          "date": "2026-10-28T01:01Z",
+          "detail": "Concussion",
+          "comment": "out",
+          "url": "https://www.espn.com/wnba/player/_/id/4281929/satou-sabally"
+        },
+        {
+          "id": "4398589",
+          "name": "Elizabeth Balogun",
+          "status": "Out",
+          "date": "2026-09-22T21:05Z",
+          "detail": "Not Injury Related",
+          "comment": "Balogun (not with team) is out for Wednesday's game against the Dream.",
+          "url": "https://www.espn.com/wnba/player/_/id/4398589/elizabeth-balogun"
+        }
+      ]
+    },
+    {
+      "team": "Phoenix Mercury",
+      "id": "11",
+      "players": [
+        {
+          "id": "4698730",
+          "name": "Kara Dunn",
+          "status": "Out",
+          "date": "2026-09-25T01:38Z",
+          "detail": "Coach's Decision",
+          "comment": "Dunn (coach's decision) is listed as out for Thursday's game against the Aces.",
+          "url": "https://www.espn.com/wnba/player/_/id/4698730/kara-dunn"
+        },
+        {
+          "id": "3065570",
+          "name": "Kelsey Plum",
+          "status": "Out",
+          "date": "2026-08-31T14:46Z",
+          "detail": "Lower Leg",
+          "comment": "Plum (leg) will miss the remainder of the 2026 WNBA season, Alexa Philippou of ESPN.com reports.",
+          "url": "https://www.espn.com/wnba/player/_/id/3065570/kelsey-plum"
+        },
+        {
+          "id": "3906769",
+          "name": "Jovana Nogic",
+          "status": "Out",
+          "date": "2026-06-28T00:25Z",
+          "detail": "Not Injury Related",
+          "comment": "Nogic (not injury related) intends to play professionally in Russia and won't return to Phoenix this season, Aya Abdeen of TheIXSports.com reports.",
+          "url": "https://www.espn.com/wnba/player/_/id/3906769/jovana-nogic"
+        }
+      ]
+    },
+    {
+      "team": "Portland Fire",
+      "id": "132052",
+      "players": [
+        {
+          "id": "4433690",
+          "name": "Holly Winterburn",
+          "status": "Out",
+          "date": "2026-09-23T01:22Z",
+          "detail": "Back",
+          "comment": "Winterburn (back) has been ruled out for Tuesday's game against Golden State.",
+          "url": "https://www.espn.com/wnba/player/_/id/4433690/holly-winterburn"
+        },
+        {
+          "id": "5209202",
+          "name": "Nyadiew Puoch",
+          "status": "Out",
+          "date": "2026-09-23T01:07Z",
+          "detail": "Knee",
+          "comment": "Puoch (knee) is listed as out for Tuesday's game against Golden State.",
+          "url": "https://www.espn.com/wnba/player/_/id/5209202/nyadiew-puoch"
+        },
+        {
+          "id": "5346554",
+          "name": "Teja Oblak",
+          "status": "Out",
+          "date": "2026-09-21T23:56Z",
+          "detail": "Knee",
+          "comment": "Oblak (knee) has been ruled out for Tuesday's game against the Valkyries.",
+          "url": "https://www.espn.com/wnba/player/_/id/5346554/teja-oblak"
+        },
+        {
+          "id": "4682797",
+          "name": "Luisa Geiselsoder",
+          "status": "Out",
+          "date": "2026-08-08T22:37Z",
+          "detail": "Personal",
+          "comment": "Geiselsoder (personal) won't return this season, according to Sean Highkin of RoseGardenReport.com.",
+          "url": "https://www.espn.com/wnba/player/_/id/4682797/luisa-geiselsoder"
+        },
+        {
+          "id": "4703794",
+          "name": "Sarah Ashlee Barker",
+          "status": "Out",
+          "date": "2026-07-24T15:18Z",
+          "detail": "Knee",
+          "comment": "The Fire announced Friday that Barker will undergo surgery to repair a torn ACL and will miss the remainder of the 2026 campaign.",
+          "url": "https://www.espn.com/wnba/player/_/id/4703794/sarah-ashlee-barker"
+        },
+        {
+          "id": "4433795",
+          "name": "Sania Feagin",
+          "status": "Out",
+          "date": "2026-07-09T23:15Z",
+          "detail": "Knee",
+          "comment": "Feagin (knee) was diagnosed with a torn left ACL on Thursday and will miss the rest of the 2026 campaign, WNBA reporter Kareem Copeland reports.",
+          "url": "https://www.espn.com/wnba/player/_/id/4433795/sania-feagin"
+        }
+      ]
+    },
+    {
+      "team": "Seattle Storm",
+      "id": "14",
+      "players": [
+        {
+          "id": "5106222",
+          "name": "Taina Mair",
+          "status": "Out",
+          "date": "2026-09-24T01:19Z",
+          "detail": "Coach's Decision",
+          "comment": "Mair (coach's decision) has been ruled out for Wednesday's game against the Wings.",
+          "url": "https://www.espn.com/wnba/player/_/id/5106222/taina-mair"
+        },
+        {
+          "id": "4432832",
+          "name": "Zia Cooke",
+          "status": "Out",
+          "date": "2026-09-23T00:06Z",
+          "detail": "Knee",
+          "comment": "Cooke (knee) has been ruled out for Wednesday's game against Dallas.",
+          "url": "https://www.espn.com/wnba/player/_/id/4432832/zia-cooke"
+        },
+        {
+          "id": "3917453",
+          "name": "Katie Lou Samuelson",
+          "status": "Out",
+          "date": "2026-09-11T18:10Z",
+          "detail": "Knee",
+          "comment": "The Storm announced Friday that Samuelson underwent successful left knee surgery and will miss the remainder of the season.",
+          "url": "https://www.espn.com/wnba/player/_/id/3917453/katie-lou-samuelson"
+        },
+        {
+          "id": "4420318",
+          "name": "Ezi Magbegor",
+          "status": "Out",
+          "date": "2026-09-10T18:26Z",
+          "detail": "Lower Leg",
+          "comment": "out",
+          "url": "https://www.espn.com/wnba/player/_/id/4420318/ezi-magbegor"
+        }
+      ]
+    },
+    {
+      "team": "Toronto Tempo",
+      "id": "131935",
+      "players": [
+        {
+          "id": "4398768",
+          "name": "Nyara Sabally",
+          "status": "Out",
+          "date": "2026-10-27T19:07Z",
+          "detail": "Knee",
+          "comment": "Sabally recently underwent arthroscopic left knee surgery but is expected to make a full recovery ahead of the 2027 season, Ian Finlayson of Sportsnet.ca reports.",
+          "url": "https://www.espn.com/wnba/player/_/id/4398768/nyara-sabally"
+        },
+        {
+          "id": "5017605",
+          "name": "Kamila Borkowska",
+          "status": "Out",
+          "date": "2026-09-24T22:34Z",
+          "detail": "Coach's Decision",
+          "comment": "Borkowska (coach's decision) is out for Thursday's game against the Sun.",
+          "url": "https://www.espn.com/wnba/player/_/id/5017605/kamila-borkowska"
+        },
+        {
+          "id": "4898548",
+          "name": "Maria Gakdeng",
+          "status": "Out",
+          "date": "2026-09-24T22:33Z",
+          "detail": "Coach's Decision",
+          "comment": "Gakdeng is out for Thursday's game against the Sun as a coach's decision.",
+          "url": "https://www.espn.com/wnba/player/_/id/4898548/maria-gakdeng"
+        },
+        {
+          "id": "3910470",
+          "name": "Maria Conde",
+          "status": "Out",
+          "date": "2026-09-24T18:24Z",
+          "detail": "Back",
+          "comment": "Conde (back) is out for Thursday's game against the Sun.",
+          "url": "https://www.espn.com/wnba/player/_/id/3910470/maria-conde"
+        },
+        {
+          "id": "2569044",
+          "name": "Temi Fagbenle",
+          "status": "Out",
+          "date": "2026-09-23T20:56Z",
+          "detail": "Personal",
+          "comment": "Fagbenle (personal) is out for Thursday's game against the Sun.",
+          "url": "https://www.espn.com/wnba/player/_/id/2569044/temi-fagbenle"
+        },
+        {
+          "id": "3904576",
+          "name": "Marina Mabrey",
+          "status": "Out",
+          "date": "2026-09-16T16:07Z",
+          "detail": "Hip",
+          "comment": "Mabrey (hip) will miss the final four games of the 2026 season, Zulfi Sheikh of Sportsnet reports.",
+          "url": "https://www.espn.com/wnba/player/_/id/3904576/marina-mabrey"
+        },
+        {
+          "id": "4684384",
+          "name": "Aneesah Morrow",
+          "status": "Out",
+          "date": "2026-08-23T21:12Z",
+          "detail": "Knee",
+          "comment": "Morrow (knee) will miss the rest of the 2026 season, Chelsea Leite of TSN reports.",
+          "url": "https://www.espn.com/wnba/player/_/id/4684384/aneesah-morrow"
+        },
+        {
+          "id": "2988756",
+          "name": "Brittney Sykes",
+          "status": "Out",
+          "date": "2026-08-23T21:07Z",
+          "detail": "Foot",
+          "comment": "Sykes (foot) will miss the remainder of the 2026 season, Chelsea Leite of TSN reports.",
+          "url": "https://www.espn.com/wnba/player/_/id/2988756/brittney-sykes"
+        }
+      ]
+    }
+  ],
+  "consecutive_failures": 0,
+  "failure_started_at": null,
+  "delivered": [],
+  "last_alerts": []
+}
