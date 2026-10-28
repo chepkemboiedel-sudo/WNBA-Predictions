@@ -28,6 +28,15 @@ def fixture():
 
 
 class EvaluationTests(TestCase):
+    def test_initial_study_scores_are_reused_without_floating_point_recalculation(self):
+        recorded={"n":202,"metrics":{"log_loss":{"delta":-0.0008129039653945601}}}
+        saved={"groups":{"initial_study":recorded}}
+        with patch.object(E.B,"score",side_effect=AssertionError("Frozen scores must not be recomputed")):
+            actual=E.frozen_initial_score(saved,pd.DataFrame())
+        self.assertEqual(actual,recorded)
+        actual["n"]=0
+        self.assertEqual(recorded["n"],202)
+
     def capture(self,ledger,games,snapshot,now=NOW,clock=None):
         def matrices(model,feats,teams,availability=None):
             return {("A","B",True):.6,**({("A","B",True,"next"):.4} if availability else {})}

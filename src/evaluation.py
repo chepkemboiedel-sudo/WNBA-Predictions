@@ -101,6 +101,12 @@ def trial_frame(ledger):
     return pd.DataFrame(rows,columns=["game_id","local_date","home","away","home_win","p_baseline","p_adjusted","locked_at","tip","settled_at","is_playoff"])
 
 
+def frozen_initial_score(saved_summary,initial):
+    """Reuse recorded scores exactly, avoiding numerical drift on later checks."""
+    recorded=saved_summary.get("groups",{}).get("initial_study")
+    return copy.deepcopy(recorded) if recorded is not None else B.score(initial[initial.report_covered])
+
+
 def checkpoint(progress,summary,frame,trials,now):
     signature=hashlib.sha256(json.dumps({"historical":frame[["game_id","home_win","p_baseline","p_adjusted"]].to_dict("records"),
                                        "prospective":trials[["game_id","home_win","p_baseline","p_adjusted"]].to_dict("records")},sort_keys=True).encode()).hexdigest()
@@ -165,9 +171,10 @@ def update(*,fetch_reports=True,now=None):
             for name in ("results.json","predictions.csv","REPORT.md","comparison.png"):
                 shutil.copyfile(output/name,stage/name)
             old_count=len(pd.read_csv(output/"predictions.csv"))
+            saved_summary=json.loads((output/"results.json").read_text(encoding="utf-8"))
             summary,frame=B.run(append_only=True,destination=stage)
             new_rows=frame[~frame.game_id.isin(set(initial.game_id))]
-            summary["groups"]["initial_study"]=B.score(initial[initial.report_covered])
+            summary["groups"]["initial_study"]=frozen_initial_score(saved_summary,initial)
             summary["groups"]["newly_evaluated"]=B.score(new_rows[new_rows.report_covered])
             summary["groups"]["prospective"]=B.score(trials)
             progress=checkpoint(progress,summary,frame,trials,now)
@@ -177,7 +184,8 @@ def update(*,fetch_reports=True,now=None):
                     "historical_new_games":len(new_rows),"prospective_scored":len(trials),"prospective_pending":pending,
                     "capture_note":ledger.get("capture_note"),"schedule_label":"Daily at 7:00 a.m. Pacific",
                     "message":"Automatic evaluation checked successfully. Existing predictions are retained; new completed games are added once."}
-            atomic_json(stage/"results.json",summary)
+            if summary!=saved_summary:
+                atomic_json(stage/"results.json",summary)
             atomic_json(stage/"progress.json",progress)
             atomic_json(stage/"auto_status.json",status)
             trials.to_csv(stage/"prospective.csv",index=False)
