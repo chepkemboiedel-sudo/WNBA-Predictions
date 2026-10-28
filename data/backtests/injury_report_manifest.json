@@ -9852,33 +9852,709 @@
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-03_03_00PM.pdf",
-      "status": "error",
-      "error": "Report contains an unrecognized/non-WNBA team",
-      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
+      "status": 200,
+      "sha256": "7b8486ece8d998a4c2b269b0e1dc2101c9b11b3ec8f50d75069d63fd891819c8",
+      "parser_version": 3,
+      "published_at": "2026-07-03T15:00:00-04:00",
+      "teams": [
+        {
+          "date": "2026-07-03",
+          "matchup": "MIN@NYL",
+          "team": "MinnesotaLynx",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-03",
+          "matchup": "MIN@NYL",
+          "team": "NewYorkLiberty",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-03",
+          "matchup": "CHI@LVA",
+          "team": "ChicagoSky",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-03",
+          "matchup": "CHI@LVA",
+          "team": "LasVegasAces",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "GoldenStateValkyries",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "AtlantaDream",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "PDX@SEA",
+          "team": "PortlandFire",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "PDX@SEA",
+          "team": "SeattleStorm",
+          "submitted": false
+        }
+      ],
+      "players": [
+        {
+          "date": "2026-07-03",
+          "matchup": "MIN@NYL",
+          "team": "MinnesotaLynx",
+          "player": "Cechova,Emma",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-03",
+          "matchup": "MIN@NYL",
+          "team": "MinnesotaLynx",
+          "player": "Collier,Napheesa",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-03",
+          "matchup": "MIN@NYL",
+          "team": "MinnesotaLynx",
+          "player": "Juhasz,Dorka",
+          "status": "Doubtful"
+        },
+        {
+          "date": "2026-07-03",
+          "matchup": "MIN@NYL",
+          "team": "NewYorkLiberty",
+          "player": "Sabally,Satou",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-03",
+          "matchup": "CHI@LVA",
+          "team": "ChicagoSky",
+          "player": "Carrington,DiJonai",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-03",
+          "matchup": "CHI@LVA",
+          "team": "LasVegasAces",
+          "player": "Barker,Janiah",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-03",
+          "matchup": "CHI@LVA",
+          "team": "LasVegasAces",
+          "player": "Evans,Dana",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-03",
+          "matchup": "CHI@LVA",
+          "team": "LasVegasAces",
+          "player": "Wilson,A'ja",
+          "status": "Questionable"
+        }
+      ],
+      "excluded_non_wnba_placeholders": [
+        {
+          "date": "2026-07-04",
+          "matchup": "MEM@OKC",
+          "team": "MemphisGrizzlies",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "MEM@OKC",
+          "team": "OklahomaCityThunder",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "ATL@UTA",
+          "team": "AtlantaHawks",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "ATL@UTA",
+          "team": "UtahJazz",
+          "submitted": false
+        }
+      ],
+      "recovered_at": "2026-10-28T05:38:56.533971+00:00",
+      "attempted_at": "2026-10-28T05:52:07.548946+00:00"
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-04_03_00PM.pdf",
-      "status": "error",
-      "error": "Report contains an unrecognized/non-WNBA team",
-      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
+      "status": 200,
+      "sha256": "05fa5bfe888910b51a7712fc55352a017ebaee235f92b63d6b7e0fca437fa4ce",
+      "parser_version": 3,
+      "published_at": "2026-07-04T15:00:00-04:00",
+      "teams": [
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "GoldenStateValkyries",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "AtlantaDream",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "PDX@SEA",
+          "team": "PortlandFire",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "PDX@SEA",
+          "team": "SeattleStorm",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "DallasWings",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "TorontoTempo",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "IndianaFever",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "LasVegasAces",
+          "submitted": false
+        }
+      ],
+      "players": [
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "GoldenStateValkyries",
+          "player": "Prechtel,Ashten",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "GoldenStateValkyries",
+          "player": "Sowah,Miela",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "AtlantaDream",
+          "player": "Jones,Brionna",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "AtlantaDream",
+          "player": "Nye,Aaliyah",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "AtlantaDream",
+          "player": "Okonkwo,Amy",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "AtlantaDream",
+          "player": "Sherrod,Jaylyn",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "PDX@SEA",
+          "team": "PortlandFire",
+          "player": "Samuelson,Karlie",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "PDX@SEA",
+          "team": "SeattleStorm",
+          "player": "Mair,Taina",
+          "status": "Out"
+        }
+      ],
+      "excluded_non_wnba_placeholders": [
+        {
+          "date": "2026-07-04",
+          "matchup": "MEM@OKC",
+          "team": "MemphisGrizzlies",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "MEM@OKC",
+          "team": "OklahomaCityThunder",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "ATL@UTA",
+          "team": "AtlantaHawks",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "ATL@UTA",
+          "team": "UtahJazz",
+          "submitted": false
+        }
+      ],
+      "recovered_at": "2026-10-28T05:38:56.533971+00:00",
+      "attempted_at": "2026-10-28T05:52:07.548946+00:00"
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-04_09_00AM.pdf",
-      "status": "error",
-      "error": "Report contains an unrecognized/non-WNBA team",
-      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
+      "status": 200,
+      "sha256": "71ae179fad5ff30e8fc2322dab525b3162618905aea743e7292c17892751da8f",
+      "parser_version": 3,
+      "published_at": "2026-07-04T09:00:00-04:00",
+      "teams": [
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "AtlantaDream",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "PDX@SEA",
+          "team": "PortlandFire",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "PDX@SEA",
+          "team": "SeattleStorm",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "DallasWings",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "TorontoTempo",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "IndianaFever",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "LasVegasAces",
+          "submitted": false
+        }
+      ],
+      "players": [
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "AtlantaDream",
+          "player": "Jones,Brionna",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "GSV@ATL",
+          "team": "AtlantaDream",
+          "player": "Nye,Aaliyah",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "PDX@SEA",
+          "team": "PortlandFire",
+          "player": "Samuelson,Karlie",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "PDX@SEA",
+          "team": "SeattleStorm",
+          "player": "Mair,Taina",
+          "status": "Out"
+        }
+      ],
+      "excluded_non_wnba_placeholders": [
+        {
+          "date": "2026-07-04",
+          "matchup": "MEM@OKC",
+          "team": "MemphisGrizzlies",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "MEM@OKC",
+          "team": "OklahomaCityThunder",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "ATL@UTA",
+          "team": "AtlantaHawks",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-04",
+          "matchup": "ATL@UTA",
+          "team": "UtahJazz",
+          "submitted": false
+        }
+      ],
+      "recovered_at": "2026-10-28T05:38:56.533971+00:00",
+      "attempted_at": "2026-10-28T05:52:07.548946+00:00"
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-05_03_00PM.pdf",
-      "status": "error",
-      "error": "Report contains an unrecognized/non-WNBA team",
-      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
+      "status": 200,
+      "sha256": "c8b3e3df960639074c44f35fe756286b861c8a032bbe21e5584cbfc9fa30480e",
+      "parser_version": 3,
+      "published_at": "2026-07-05T15:00:00-04:00",
+      "teams": [
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "DallasWings",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "TorontoTempo",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "IndianaFever",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "LasVegasAces",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "GSV@WAS",
+          "team": "GoldenStateValkyries",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "GSV@WAS",
+          "team": "WashingtonMystics",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "CON@MIN",
+          "team": "ConnecticutSun",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "CON@MIN",
+          "team": "MinnesotaLynx",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "SEA@LAS",
+          "team": "SeattleStorm",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "SEA@LAS",
+          "team": "LosAngelesSparks",
+          "submitted": false
+        }
+      ],
+      "players": [
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "DallasWings",
+          "player": "Jones,Haley",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "DallasWings",
+          "player": "Verona,Costanza",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "TorontoTempo",
+          "player": "Allemand,Julie",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "TorontoTempo",
+          "player": "Fagbenle,Temi",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "TorontoTempo",
+          "player": "Rice,Kiki",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "TorontoTempo",
+          "player": "Sykes,Brittney",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "IndianaFever",
+          "player": "Clark,Caitlin",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "LasVegasAces",
+          "player": "Barker,Janiah",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "LasVegasAces",
+          "player": "Evans,Dana",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "LasVegasAces",
+          "player": "Wilson,A'ja",
+          "status": "Out"
+        }
+      ],
+      "excluded_non_wnba_placeholders": [
+        {
+          "date": "2026-07-06",
+          "matchup": "ATL@OKC",
+          "team": "AtlantaHawks",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "ATL@OKC",
+          "team": "OklahomaCityThunder",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "MEM@UTA",
+          "team": "MemphisGrizzlies",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "MEM@UTA",
+          "team": "UtahJazz",
+          "submitted": false
+        }
+      ],
+      "recovered_at": "2026-10-28T05:38:56.533971+00:00",
+      "attempted_at": "2026-10-28T05:52:07.548946+00:00"
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-05_09_00AM.pdf",
-      "status": "error",
-      "error": "Report contains an unrecognized/non-WNBA team",
-      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
+      "status": 200,
+      "sha256": "b274087932fb9e39d63ba07eeb36dcce1bf78b85d8fb394967d40a057e9a362d",
+      "parser_version": 3,
+      "published_at": "2026-07-05T09:00:00-04:00",
+      "teams": [
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "TorontoTempo",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "IndianaFever",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "LasVegasAces",
+          "submitted": true
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "GSV@WAS",
+          "team": "GoldenStateValkyries",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "GSV@WAS",
+          "team": "WashingtonMystics",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "CON@MIN",
+          "team": "ConnecticutSun",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "CON@MIN",
+          "team": "MinnesotaLynx",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "SEA@LAS",
+          "team": "SeattleStorm",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "SEA@LAS",
+          "team": "LosAngelesSparks",
+          "submitted": false
+        }
+      ],
+      "players": [
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "TorontoTempo",
+          "player": "Fagbenle,Temi",
+          "status": "Questionable"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "TorontoTempo",
+          "player": "Rice,Kiki",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "DAL@TOR",
+          "team": "TorontoTempo",
+          "player": "Sykes,Brittney",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "IndianaFever",
+          "player": "Clark,Caitlin",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "LasVegasAces",
+          "player": "Barker,Janiah",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "LasVegasAces",
+          "player": "Evans,Dana",
+          "status": "Out"
+        },
+        {
+          "date": "2026-07-05",
+          "matchup": "IND@LVA",
+          "team": "LasVegasAces",
+          "player": "Wilson,A'ja",
+          "status": "Out"
+        }
+      ],
+      "excluded_non_wnba_placeholders": [
+        {
+          "date": "2026-07-06",
+          "matchup": "ATL@OKC",
+          "team": "AtlantaHawks",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "ATL@OKC",
+          "team": "OklahomaCityThunder",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "MEM@UTA",
+          "team": "MemphisGrizzlies",
+          "submitted": false
+        },
+        {
+          "date": "2026-07-06",
+          "matchup": "MEM@UTA",
+          "team": "UtahJazz",
+          "submitted": false
+        }
+      ],
+      "recovered_at": "2026-10-28T05:38:56.533971+00:00",
+      "attempted_at": "2026-10-28T05:52:07.548946+00:00"
     },
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-06_03_00PM.pdf",

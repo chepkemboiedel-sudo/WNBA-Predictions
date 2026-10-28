@@ -30,7 +30,7 @@ reports, with shrunken participation effects from 2025–2026 box scores. It has
 independently calibrated and has not shown a clear improvement in the historical test.
 The interactive toggle starts at the published model choice. Score-only title estimate for Golden State Valkyries:
 73.3%.
-Player-data status: Live reports; 636/637 box scores available. Adjustments are limited to teams with complete current-season player history.
+Player-data status: Player feeds retrieved successfully.
 Regular-season team-strength features stay fixed during the playoff simulation and playoff
 rest differences are neutralized.
 

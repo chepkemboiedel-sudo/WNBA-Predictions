@@ -1,8 +1,8 @@
 {
   "version": 1,
   "status": "ok",
-  "last_attempt_at": "2026-10-28T01:32:53.142313Z",
-  "last_success_at": "2026-10-28T01:32:53.142313Z",
+  "last_attempt_at": "2026-10-28T05:52:14.380914Z",
+  "last_success_at": "2026-10-28T05:52:14.380914Z",
   "next_refresh_at": "2026-10-28T14:00:00Z",
   "data_through": "2026-10-27",
   "season": 2026,
@@ -14,16 +14,16 @@
   },
   "source": "ESPN completed game results",
   "verified": true,
-  "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/40615557379",
+  "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/40640378503",
   "availability": {
-    "status": "partial",
-    "fetched_at": "2026-10-28T01:32:40.119474Z",
+    "status": "live",
+    "fetched_at": "2026-10-28T05:52:03.834531Z",
     "apply_adjustments": true,
-    "message": "Live reports; 636/637 box scores available. Adjustments are limited to teams with complete current-season player history.",
+    "message": "Player feeds retrieved successfully.",
     "model": {
       "version": "participation-ridge-minutes-v2",
       "experimental": true,
-      "training_games": 566,
+      "training_games": 567,
       "training_seasons": [
         2025,
         2026
@@ -36,10 +36,8 @@
     },
     "boxscore_coverage": {
       "expected_games": 637,
-      "covered_games": 636,
-      "missing_games": [
-        "401856947"
-      ]
+      "covered_games": 637,
+      "missing_games": []
     }
   },
   "message": "Last forecast refresh completed successfully."
