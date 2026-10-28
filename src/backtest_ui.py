@@ -73,7 +73,7 @@ def section(result):
     status="Automatic evaluation active" if auto.get("status")=="ok" else "Evaluation update failed — showing prior results" if auto.get("status")=="failed" else "Automatic evaluation not started"
     return f'''<section id="backtest"><div class="wrap">
       <span class="eyebrow">Evidence behind the model choice</span><h2>Score-only vs. injury-adjusted accuracy</h2>
-      <p class="lead">Compare predictions made for past games using dated pregame reports and models fitted only on earlier games. Score-only remains the default; injury adjustments are experimental.</p>
+      <p class="lead">Compare predictions made for past games using dated pregame reports and models fitted only on earlier games. The initial historical study has not established an injury-adjustment advantage. Automatic model selection uses the separate prospective rule.</p>
       <p class="feature-note">Evaluation results saved: {saved} · Games dated {result['date_range']['from']} to {result['date_range']['through']}. Past predictions are retained; new games are added once.</p>
       <div class="availability-notice" id="backtest-auto-status" role="status"><strong>{status}</strong><p>{escape(auto.get('message',''))}</p>
         <p class="feature-note">Daily at 7:00 a.m. Pacific · Last checked: {escape(checked)} · {auto.get('new_games_this_run',0)} new historical games this check · {auto.get('prospective_scored',0)} prospective results / {auto.get('prospective_pending',0)} pending</p></div>
@@ -181,3 +181,4 @@ function btTrend(progress,key){
   render();
 })();
 """
+

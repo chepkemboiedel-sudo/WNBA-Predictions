@@ -90,7 +90,7 @@ def _background(model):
     if _BG is None:
         games = pd.read_csv(os.path.join(DATA, "all_games.csv"), parse_dates=["date"])
         m = build_matchup_table(games)
-        _BG = m[m.season <= 2025][FEATURE_COLS].sample(500, random_state=1).reset_index(drop=True)
+        _BG = m[m.season < int(games.season.max())][FEATURE_COLS].sample(500, random_state=1).reset_index(drop=True)
     return _BG
 
 
@@ -108,16 +108,17 @@ def main():
     seeds = compute_standings(games)["team"].head(8).tolist()
     feats = current_team_features(games, seeds)
     # 1) The #1 seed hosting the #2 seed -- a marquee title-contender clash.
-    local_matchup(model, feats, "Minnesota Lynx", "Las Vegas Aces", True,
+    local_matchup(model, feats, seeds[0], seeds[1], True,
                   os.path.join(OUT, "shap_local_MIN_vs_LV.png"))
     # 2) A potential semifinal: Minnesota hosting the team that most often
     #    upsets it out of the top bracket half.
-    local_matchup(model, feats, "Minnesota Lynx", "Indiana Fever", True,
+    local_matchup(model, feats, seeds[0], seeds[3], True,
                   os.path.join(OUT, "shap_local_MIN_vs_IND.png"))
     # 3) The two strongest bottom-half seeds.
-    local_matchup(model, feats, "Las Vegas Aces", "Golden State Valkyries", True,
+    local_matchup(model, feats, seeds[1], seeds[2], True,
                   os.path.join(OUT, "shap_local_LV_vs_GSV.png"))
 
 
 if __name__ == "__main__":
     main()
+

@@ -181,15 +181,17 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     games = pd.read_csv(os.path.join(DATA, "all_games.csv"), parse_dates=["date"])
     matchups = build_matchup_table(games)
+    from seasons import forecast_season
+    season = forecast_season(games)
 
     # Time-based split: learn from 2016-2023, validate on the two most recent
     # COMPLETED seasons (2024-2025), which include real playoff games.
     lr, gbm, results = train_and_validate(
-        matchups, train_seasons=range(2016, 2024), test_seasons=range(2024, 2026)
+        matchups, train_seasons=range(2016, season-2), test_seasons=range(season-2, season)
     )
     report_logistic_coefficients(lr)
 
-    test = matchups[matchups.season.isin(range(2024, 2026))]
+    test = matchups[matchups.season.isin(range(season-2, season))]
     calibration_plot(
         {
             "logistic": lr.predict_proba(test[FEATURE_COLS])[:, 1],
@@ -203,7 +205,7 @@ def main():
     # it to the bracket simulator, so it uses every game available. We keep the
     # logistic model as the primary predictor: it validated competitively, is
     # naturally antisymmetric, and its probabilities are well-calibrated.
-    final_train = matchups[matchups.season <= 2025]
+    final_train = matchups[matchups.season < season]
     final_lr = make_logistic().fit(final_train[FEATURE_COLS], final_train["target"])
     final_gbm = make_gbm().fit(final_train[FEATURE_COLS], final_train["target"])
     joblib.dump(
@@ -216,3 +218,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

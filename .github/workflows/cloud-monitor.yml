@@ -1,0 +1,49 @@
+name: Cloud injury and improvement alerts
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['api/**', 'scripts/cloud-monitor.cjs', '.github/workflows/cloud-monitor.yml']
+  pull_request:
+    paths: ['api/**', 'scripts/cloud-monitor.cjs', 'tests/test_live_monitor.cjs', '.github/workflows/cloud-monitor.yml']
+permissions:
+  contents: read
+concurrency:
+  group: wnba-refresh-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify live API and alert safeguards
+        run: node tests/test_live_monitor.cjs
+      - name: Check sources and notify on material changes
+        if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALERT_RECIPIENT: chepkemboiedel-sudo
+        run: node scripts/cloud-monitor.cjs
+      - name: Save monitor state
+        if: github.event_name != 'pull_request'
+        env:
+          REFRESH_OWNER: ${{ github.repository_owner }}
+          REFRESH_OWNER_ID: ${{ github.repository_owner_id }}
+        run: |
+          git config user.name "$REFRESH_OWNER (forecast automation)"
+          git config user.email "$REFRESH_OWNER_ID+$REFRESH_OWNER@users.noreply.github.com"
+          git add data/cloud_monitor.json public/live_health.json site/live_health.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Check cloud injury alerts [skip ci]"
+            git push origin HEAD:main
+          fi
+

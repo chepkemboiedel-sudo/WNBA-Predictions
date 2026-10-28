@@ -123,7 +123,7 @@ def refresh_manifest(limit=None, now=None):
     slots = set()
     with (ROOT/"data/player_game_stats.csv").open(encoding="utf-8",newline="") as stream:
         for row in csv.DictReader(stream):
-            if row["season"] != "2026":
+            if int(row["season"]) < 2026:
                 continue
             tip = datetime.fromisoformat(row["started_at"].replace("Z","+00:00")).astimezone(ET)
             hour = 9 if tip.hour < 16 else 15
@@ -144,7 +144,7 @@ def refresh_manifest(limit=None, now=None):
             return old
         attempted=datetime.fromisoformat(old["attempted_at"]) if old and old.get("attempted_at") else None
         # Old missing reports stay documented; retry recent failures at most daily.
-        if old and ((now.date()-datetime.fromisoformat(day).date()).days>7 or (attempted and now-attempted<timedelta(days=1))):
+        if old and ((attempted and now-attempted<timedelta(days=7)) or (attempted and now-attempted<timedelta(days=1))):
             return old
         return {**collect(slot),"attempted_at":now.isoformat()}
     with ThreadPoolExecutor(max_workers=4) as pool:
@@ -169,3 +169,4 @@ def main():
 
 if __name__=="__main__":
     main()
+

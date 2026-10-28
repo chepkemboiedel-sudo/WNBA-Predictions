@@ -42,5 +42,6 @@ context.D.availability.apply_adjustments=false;
 toggle.checked=true;handlers.change({target:toggle});
 assert.equal(vm.runInContext('applyAvailability',context),false,'unverified player data must not be enabled');
 const input=source.match(/<input id="use-availability"[^>]+>/)[0];
-assert(!input.includes('checked'),'rendered optional toggle must start unchecked');
+assert(input.includes('injury_adjustment_default'),'rendered toggle must follow the verified published model policy');
 console.log('Browser availability and baseline-toggle checks passed.');
+

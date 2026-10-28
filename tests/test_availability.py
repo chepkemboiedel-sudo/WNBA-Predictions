@@ -93,7 +93,7 @@ class AvailabilityTests(TestCase):
         class CoinModel:
             def predict_proba(self,rows):
                 return np.array([[.5,.5]]*len(rows))
-        report={"apply_adjustments":True,"model":{"margin_logit_coefficient":.1},
+        report={"season":2026,"apply_adjustments":True,"model":{"margin_logit_coefficient":.1},
                 "teams":{"Golden State Valkyries":{"players":[{"scope":"long_term","extra_absence_points":4}]}}}
         with tempfile.TemporaryDirectory() as directory:
             with patch.object(S,"OUT",directory),patch.object(S.availability_mod,"load_snapshot",return_value=report),patch.object(S.joblib,"load",return_value={"logistic":CoinModel()}):
@@ -105,3 +105,20 @@ class AvailabilityTests(TestCase):
         np.testing.assert_array_equal(results.p_reach_finals,results.p_reach_finals_baseline)
         team=results.set_index("team").loc["Golden State Valkyries"]
         self.assertLess(team.p_champion_availability,team.p_champion)
+
+    def test_qualified_promotion_uses_adjusted_odds_and_retains_baseline(self):
+        class CoinModel:
+            def predict_proba(self,rows):
+                return np.array([[.5,.5]]*len(rows))
+        report={"season":2026,"apply_adjustments":True,"model":{"margin_logit_coefficient":.1},
+                "teams":{"Golden State Valkyries":{"players":[{"scope":"long_term","extra_absence_points":4}]}}}
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.object(S,"OUT",directory),patch.object(S.availability_mod,"load_snapshot",return_value=report),patch.object(S.joblib,"load",return_value={"logistic":CoinModel()}),patch.object(S.promotion,"current",return_value={"usable":True,"promoted":True}):
+                results,_,_,_=S.run(n_sims=1000)
+            forecast=json.loads(Path(directory,"forecast.json").read_text())
+        self.assertEqual(forecast["probability_model"],"injury-adjusted")
+        self.assertTrue(forecast["injury_adjustment_default"])
+        np.testing.assert_array_equal(results.p_champion,results.p_champion_availability)
+        team=results.set_index("team").loc["Golden State Valkyries"]
+        self.assertLess(team.p_champion,team.p_champion_baseline)
+

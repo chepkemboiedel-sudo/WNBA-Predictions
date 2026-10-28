@@ -37,7 +37,7 @@ CSS = r"""
 
 
 def navigation():
-    return '<nav class="app-nav" aria-label="Main navigation"><a href="/">Forecast</a><a href="/#availability">Availability</a><a href="/#backtest">Backtest</a><a href="/#history">History</a><a href="/#teams">Teams</a><a href="/#refresh-health">Refresh health</a></nav>'
+    return '<nav class="app-nav" aria-label="Main navigation"><a href="/">Forecast</a><a href="/#availability">Availability</a><a href="/#live">Live context</a><a href="/#backtest">Backtest</a><a href="/#history">History</a><a href="/#teams">Teams</a><a href="/#refresh-health">Refresh health</a></nav>'
 
 
 def health_section(health):
@@ -51,7 +51,7 @@ def health_section(health):
         <div class="metric-card"><div class="metric-label">Last successful refresh</div><div class="metric-value" id="health-last-success">—</div><div class="metric-help">Shown in your local time</div></div>
         <div class="metric-card"><div class="metric-label">Latest attempt</div><div class="metric-value" id="health-last-attempt">—</div><div class="metric-help">Includes reported failures</div></div>
         <div class="metric-card"><div class="metric-label">Latest completed game</div><div class="metric-value">{escape(health.get('data_through', 'Unknown'))}</div><div class="metric-help">An off day does not mean data is missing</div></div>
-        <div class="metric-card"><div class="metric-label">2026 coverage</div><div class="metric-value">{coverage.get('season_games', '—')} games</div><div class="metric-help">{coverage.get('regular_games', '—')} regular season · {coverage.get('playoff_games', '—')} playoff</div></div>
+        <div class="metric-card"><div class="metric-label">{health.get("season",2026)} coverage</div><div class="metric-value">{coverage.get('season_games', '—')} games</div><div class="metric-help">{coverage.get('regular_games', '—')} regular season · {coverage.get('playoff_games', '—')} playoff</div></div>
       </div>
       <p class="feature-note">ESPN completed results · published forecasts are checked for consistency. A refresh is marked overdue after a two-hour scheduling grace period. Cloud start times may vary.</p>
       <a id="health-run-link" class="health-report-link" href="{escape(run_url or '#')}" {'hidden' if not run_url else ''}>View the latest cloud run ↗</a>
@@ -85,7 +85,7 @@ def team_directory(profiles):
         odds = f'{team["probabilities"]["champion"]:.1%} title probability' if team["probabilities"] else 'No current bracket forecast'
         cards.append(f'''<a class="team-card" href="/teams/{team['slug']}/"><span class="eyebrow">{seed}</span>
           <h3>{escape(team['team'])} ↗</h3><p>{record['wins']}–{record['losses']} regular season · {team['point_diff']:+.1f} point differential</p><p>{odds}</p></a>''')
-    return f'<section id="teams"><div class="wrap"><span class="eyebrow">Explore the league</span><h2>Team detail pages</h2><p class="lead">Records, recent games, head-to-head results, and saved forecasts for all {len(profiles)} teams in the 2026 data.</p><div class="team-directory">' + ''.join(cards) + '</div></div></section>'
+    return f'<section id="teams"><div class="wrap"><span class="eyebrow">Explore the league</span><h2>Team detail pages</h2><p class="lead">Records, recent games, head-to-head results, and saved forecasts for all {len(profiles)} teams in the current forecast season.</p><div class="team-directory">' + ''.join(cards) + '</div></div></section>'
 
 
 def team_page(team, data, css, *, script, availability=None):
@@ -95,7 +95,7 @@ def team_page(team, data, css, *, script, availability=None):
     probability = team["probabilities"]
     odds = f"{probability['champion']:.1%}" if probability else 'Not modeled'
     seed = f"Playoff seed #{team['seed']}" if team["seed"] else 'Outside the current eight-team bracket'
-    metrics = [("Regular-season record", rec(team['regular'])), ("Score-only title probability", odds),
+    metrics = [("Regular-season record", rec(team['regular'])), ("Published title probability", odds),
                ("Home / away record", rec(team['home']) + " / " + rec(team['away'])),
                ("Last 10 regular-season games", rec(team['last10'])),
                ("Points scored / allowed", f"{team['points_for']:.1f} / {team['points_against']:.1f}"),
@@ -105,13 +105,13 @@ def team_page(team, data, css, *, script, availability=None):
     recent = ''.join(f'''<tr><td>{row['date']}</td><td><a class="team-link" href="/teams/{row['opponent_slug']}/">{escape(row['opponent'])}</a></td><td>{'Home' if row['home'] else 'Away'}</td><td>{'Playoff' if row['playoff'] else 'Regular'}</td><td class="{'game-win' if row['won'] else 'game-loss'}">{'W' if row['won'] else 'L'} {row['pf']}–{row['pa']}</td></tr>''' for row in team['recent'])
     h2h = ''.join(f'''<tr><td><a class="team-link" href="/teams/{row['slug']}/">{escape(row['team'])}</a></td><td>{row['wins']}–{row['losses']}</td><td>{row['margin']:+.1f}</td></tr>''' for row in team['head_to_head'])
     body = navigation() + f'''<header class="profile-hero"><div class="wrap"><a class="back-link" href="/#teams">← All teams</a>
-      <p class="eyebrow">2026 team profile · {seed}</p><h1>{escape(team['team'])}</h1>
+      <p class="eyebrow">{data["health"]["season"]} team profile · {seed}</p><h1>{escape(team['team'])}</h1>
       <p class="lead">Results through {data['health']['data_through']}. Scoring averages and venue records use regular-season games.</p>
       <a class="team-link" href="#refresh-health" aria-label="Refresh health details"><span class="health-pill" data-health-badge role="status">Checking refresh status</span></a>
       <div class="profile-stats" style="margin-top:22px">{cards}</div></div></header>
       <section><div class="wrap"><span class="eyebrow">Latest performances</span><h2>Last 10 completed games</h2><p class="lead">Most recent first. Playoff games are labeled separately.</p>
         <div class="tblwrap"><table><thead><tr><th>Date</th><th>Opponent</th><th>Venue</th><th>Phase</th><th>Result</th></tr></thead><tbody>{recent}</tbody></table></div></div></section>'''
-    body += availability_ui.roster_section(team['team'],availability or {})
+    body += availability_ui.roster_section(team['team'],availability or {},data.get('default_model','score-only'))
     body += history_section(data['history'], team['team'], fixed=True)
     body += f'''<section><div class="wrap"><span class="eyebrow">Season matchups</span><h2>Head-to-head records</h2><p class="lead">Regular season only. Point differential is per game from {escape(team['team'])}'s perspective.</p>
       <div class="tblwrap"><table><thead><tr><th>Opponent</th><th>Record</th><th>Avg. point differential</th></tr></thead><tbody>{h2h}</tbody></table></div></div></section>'''
@@ -155,7 +155,7 @@ function refreshClock(){
   if(cd) cd.textContent=!Number.isFinite(seconds)?'Not scheduled':seconds===0?'Awaiting next run':[Math.floor(seconds/3600),Math.floor(seconds/60)%60,seconds%60].map(n=>String(n).padStart(2,'0')).join(':');
 }
 function selectedHistoryTeam(){const select=document.getElementById('history-team');return APP.profile || (select && select.value);}
-function historyPoints(team){return (APP.history.snapshots || []).flatMap(entry=>{const row=entry.teams.find(t=>t.team===team);return row?[{...row,entry}]:[];});}
+function historyPoints(team){return (APP.history.snapshots || []).flatMap(entry=>{if((entry.season || Number(entry.data_through.slice(0,4)))!==APP.health.season)return [];const row=entry.teams.find(t=>t.team===team);return row?[{...row,entry}]:[];});}
 function renderHistory(){
   const chart=document.getElementById('history-chart'); if(!chart) return;
   const team=selectedHistoryTeam(),points=historyPoints(team),latest=points.at(-1),previous=points.at(-2);
@@ -207,3 +207,4 @@ document.addEventListener('visibilitychange',checkForUpdates);
 window.addEventListener('focus',checkForUpdates);
 checkForUpdates();
 """
+

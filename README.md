@@ -189,3 +189,73 @@ have produced their cached files.
   the league's real host patterns — not as a single per-series coin flip.
 
 See `SUMMARY.md` → *Honest limitations* for what the model can and cannot see.
+
+## Live context and cloud alerts
+
+The **Live context** section polls the fixed WNBA ESPN endpoints through a Vercel
+Node function every 60 seconds while the page is visible. The function caches
+responses briefly, bounds source timeouts, rejects arbitrary URLs, and returns an
+explicit unavailable state on failure. Report dates remain visible. A recent-usage
+rotation (five highest minute averages across three covered games) is a projection,
+not a confirmed starting lineup. Source-listed starters and actual minutes are
+displayed separately when supplied for a selected game.
+
+The optional player model now accepts a fresh, explicitly stated numeric minute
+restriction, scaled by the player's usual minutes. Negated, speculative, stale,
+contradicted, or nonnumeric restrictions receive no invented penalty. This changes
+the model version to `participation-ridge-minutes-v2`; the old historical study does
+not validate this extension. The mid-game scenario estimates lost remaining
+regulation point-margin contribution only. It does not infer injuries from playing
+time, update the published pregame forecast, or claim calibrated live win odds.
+
+`.github/workflows/cloud-monitor.yml` runs hourly at minute 17 UTC, independently
+of a local computer. It creates GitHub issues assigned to `chepkemboiedel-sudo`
+for material fresh availability changes affecting a game within 24 hours, a
+qualifying prospective improvement, or three consecutive failed source checks.
+The first successful check establishes the injury baseline without mass alerts.
+Repeated reports stay quiet. Issue markers and saved state prevent duplicates
+across reruns. Delivery by email/push depends on the account's GitHub notification
+settings. GitHub scheduling and ESPN reporting can be delayed; this is not an
+instant-alert guarantee. Full forecast generation remains daily at 7 a.m. Pacific.
+
+The workflows require repository-scoped `contents:write` and `issues:write` through
+the built-in Actions token; no new personal access token or paid feed is needed.
+`/live_health.json` reports the actual hourly check status. `/operations.json`
+exports evidence policy, missing box scores and report coverage, season readiness,
+and registered championship predictions. Failed historical reports are retried
+weekly; verified reports and prior scored predictions remain frozen.
+
+## Automatic selection and future seasons
+
+Score-only remains the current default. `src/promotion.py` can switch published
+and interactive defaults only for the current model version and season after an
+untouched prospective block passes every preregistered check: 100 games, 30
+distinct game days spanning at least 30 days, 30 changed probabilities, winner
+accuracy gain of at least 1 percentage point, positive paired accuracy interval,
+negative paired log-loss and Brier intervals, and a qualifying exact McNemar test.
+Blocks reserve slots by pregame capture time, including pending games, so delayed
+results cannot reshuffle the test. Checks use day-clustered paired bootstrap
+intervals with 20,000 deterministic resamples. Across fixed look k, the total
+allowance is `0.05/(k*(k+1))`, divided across the three intervals and McNemar.
+The intervals are approximate, conditional on the model, and are not proof of
+future generalization. Historical study results and daily cumulative charts
+cannot trigger selection. A new model version or season starts a new evidence
+stream. An unavailable, stale, or wrong-season player snapshot forces score-only
+even after a qualifying decision. The publisher independently rechecks the gate.
+
+The fetcher follows the calendar year and preserves prior caches when a new
+season has no completed games. The forecast rolls forward only when at least
+eight teams each have three completed regular-season games. Training and held-out
+validation windows roll forward without including the forecast season in final
+score-model training. Team pages and history respect the displayed season.
+Future playoff formats are labelled provisional until reviewed against league
+rules; the last verified eight-team best-of-3/5/7 format is not a guarantee about
+future rule changes.
+
+Championship validation registers one first qualifying pre-playoff forecast per
+season when a postseason game appears in the upcoming schedule. It settles after
+the champion is established under a verified bracket format. Today's Finals
+probabilities cannot be backfilled as independent preseason evidence. Complete
+public injury coverage and improved championship accuracy cannot be promised;
+unavailable observations stay explicit, and more prospective games are required.
+

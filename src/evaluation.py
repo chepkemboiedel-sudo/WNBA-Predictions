@@ -69,10 +69,14 @@ def capture(ledger,games,snapshot,model,now,model_hash,clock=None):
             continue
         if str(opposite.get("event_id"))!=gid or opposite.get("opponent")!=home or opposite.get("home") is not False:
             continue
-        # This project models 2026. Do not silently score a new season with it.
-        if tip.year!=2026 or games.date.max().date()>now.date():
+        # Never reuse the prior season's form for a new-season prediction.
+        if tip.year!=int(games.season.max()) or snapshot.get("season",tip.year)!=tip.year or games.date.max().date()>now.date():
             continue
-        feats=S.current_team_features(games,[home,away])
+        if snapshot.get("season"):
+            from seasons import forecast_season
+            if snapshot["season"]!=forecast_season(games):
+                continue
+        feats=S.current_team_features(games,[home,away],season=tip.year)
         baseline=S.build_prob_matrix(model,feats,[home,away])
         optional=S.build_prob_matrix(model,feats,[home,away],snapshot)
         baseline_p=float(baseline[(home,away,True)])
@@ -179,7 +183,7 @@ def update(*,fetch_reports=True,now=None):
             trials.to_csv(stage/"prospective.csv",index=False)
             # Keep the original methodology and append live monitoring provenance.
             methodology=(stage/"REPORT.md").read_text(encoding="utf-8").split("\n## Automatic monitoring")[0]
-            methodology+=f"\n## Automatic monitoring\n\nChecked {stamp(now)}. Historical predictions are append-only. The initial study is frozen separately; {len(new_rows)} later completed games have been evaluated. New archived-report rows are retrospective walk-forward evaluations, not prospective forecasts.\n\nThe separate prospective trial freezes the first paired production game prediction within 24 hours before scheduled tip, using a player snapshot fetched within two hours. Captured probabilities, model hash, and relevant roster/injury evidence are stored before outcomes. Missing pregame captures are never backfilled. There are {len(trials)} scored and {pending} pending predictions. Daily 7 a.m. Pacific sampling may miss early games or last-minute injury updates. This trial uses fixed regular-season form, while the historical test uses pregame running form. Their results must not be pooled as one experiment.\n\nCheckpoints are added only when scored evidence changes. Repeated daily checks do not count as new games or independent significance tests. The initial one-point trend is a starting checkpoint, not a historical performance curve. Score-only remains default; no statistical threshold automatically promotes injuries.\n"
+            methodology+=f"\n## Automatic monitoring\n\nChecked {stamp(now)}. Historical predictions are append-only. The initial study is frozen separately; {len(new_rows)} later completed games have been evaluated. New archived-report rows are retrospective walk-forward evaluations, not prospective forecasts.\n\nThe separate prospective trial freezes the first paired production game prediction within 24 hours before scheduled tip, using a player snapshot fetched within two hours. Captured probabilities, model hash, and relevant roster/injury evidence are stored before outcomes. Missing pregame captures are never backfilled. There are {len(trials)} scored and {pending} pending predictions. Daily 7 a.m. Pacific sampling may miss early games or last-minute injury updates. This trial uses fixed regular-season form, while the historical test uses pregame running form. Their results must not be pooled as one experiment.\n\nCheckpoints are added only when scored evidence changes. Repeated daily checks do not count as new games or independent significance tests. The initial one-point trend is a starting checkpoint, not a historical performance curve. Score-only remains default; automatic promotion is evaluated separately using fixed prospective blocks; historical comparisons cannot promote a model.\n"
             (stage/"REPORT.md").write_text(methodology,encoding="utf-8")
             changes={output/p.name:p.read_bytes() for p in stage.iterdir() if p.is_file()}
             changes[ledger_path]=(json.dumps(ledger,indent=2,ensure_ascii=False)+"\n").encode("utf-8")
@@ -195,3 +199,4 @@ def update(*,fetch_reports=True,now=None):
 
 if __name__=="__main__":
     update(fetch_reports="--offline" not in sys.argv)
+

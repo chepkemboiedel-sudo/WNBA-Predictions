@@ -31,7 +31,7 @@ def snapshot(results: pd.DataFrame, forecast: dict, meta: dict, *, source="publi
     identity = json.dumps([meta.get("last_updated"), forecast["data_through"], teams], sort_keys=True)
     return {"id": hashlib.sha256(identity.encode()).hexdigest()[:16],
             "generated_at": meta.get("last_updated"), "data_through": forecast["data_through"],
-            "source": source, "n_sims": forecast["n_sims"], "teams": teams,
+            "source": source, "season":forecast.get("season",int(forecast["data_through"][:4])), "n_sims": forecast["n_sims"], "teams": teams,
             "run_url": meta.get("run_url"), "probability_model":forecast.get("probability_model","score-only"),
             "availability_fetched_at":forecast.get("availability",{}).get("fetched_at")}
 
@@ -56,10 +56,10 @@ def workflow_url() -> str | None:
 
 
 def successful_health(games: pd.DataFrame, forecast: dict, meta: dict, *, verified=True) -> dict:
-    current = games[games.season == 2026]
+    current = games[games.season == forecast.get("season",int(games.season.max()))]
     return {"version": 1, "status": "ok", "last_attempt_at": meta["last_updated"],
             "last_success_at": meta["last_updated"], "next_refresh_at": meta["next_refresh_at"],
-            "data_through": forecast["data_through"], "season": 2026,
+            "data_through": forecast["data_through"], "season": forecast.get("season",int(games.season.max())),
             "coverage": {"season_games": len(current), "regular_games": int((~current.is_playoff).sum()),
                          "playoff_games": int(current.is_playoff.sum()), "historical_games": len(games)},
             "source": "ESPN completed game results", "verified": verified,
@@ -76,8 +76,8 @@ def failed_health(previous: dict, *, now: datetime | None = None, run_url: str |
     return value
 
 
-def team_profiles(games: pd.DataFrame, results: pd.DataFrame, seeds: list[str]) -> list[dict]:
-    current = games[games.season == 2026].sort_values(["date", "game_id"], kind="stable")
+def team_profiles(games: pd.DataFrame, results: pd.DataFrame, seeds: list[str], season=None) -> list[dict]:
+    current = games[games.season == (season or int(games.season.max()))].sort_values(["date", "game_id"], kind="stable")
     profiles = []
     probabilities = results.set_index("team").to_dict("index")
     for team in sorted(set(current.home_team) | set(current.away_team)):
@@ -121,3 +121,4 @@ def team_profiles(games: pd.DataFrame, results: pd.DataFrame, seeds: list[str]) 
                                            "champion_baseline":probability.get("p_champion_baseline",probability["p_champion"])} if probability else None,
                          "recent": list(reversed(rows[-10:])), "head_to_head": opponents})
     return profiles
+
