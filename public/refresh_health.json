@@ -1,8 +1,8 @@
 {
   "version": 1,
   "status": "ok",
-  "last_attempt_at": "2026-10-28T05:52:14.380914Z",
-  "last_success_at": "2026-10-28T05:52:14.380914Z",
+  "last_attempt_at": "2026-10-28T05:59:59.313324Z",
+  "last_success_at": "2026-10-28T05:59:59.313324Z",
   "next_refresh_at": "2026-10-28T14:00:00Z",
   "data_through": "2026-10-27",
   "season": 2026,
@@ -14,10 +14,10 @@
   },
   "source": "ESPN completed game results",
   "verified": true,
-  "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/40640378503",
+  "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/40641108442",
   "availability": {
     "status": "live",
-    "fetched_at": "2026-10-28T05:52:03.834531Z",
+    "fetched_at": "2026-10-28T05:59:49.778506Z",
     "apply_adjustments": true,
     "message": "Player feeds retrieved successfully.",
     "model": {

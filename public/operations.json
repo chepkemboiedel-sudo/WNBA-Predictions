@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28T05:52:14.735083+00:00",
+  "updated_at": "2026-10-28T05:59:59.514417+00:00",
   "season": {
     "season": 2026,
     "latest_observed_season": 2026,
@@ -19,7 +19,7 @@
     "promoted": false,
     "checks": [],
     "reason": "Waiting for 100 independently recorded, completed games of the current model version.",
-    "checked_at": "2026-10-28T05:52:08.297152+00:00",
+    "checked_at": "2026-10-28T05:59:53.908425+00:00",
     "usable": false
   },
   "coverage": {

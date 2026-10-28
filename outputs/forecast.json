@@ -8,23 +8,23 @@
       "hw": 0,
       "lw": 2
     },
-    "Las Vegas Aces|Indiana Fever": {
-      "hw": 2,
-      "lw": 1
-    },
     "Atlanta Dream|Washington Mystics": {
       "hw": 2,
       "lw": 0
+    },
+    "Las Vegas Aces|Indiana Fever": {
+      "hw": 2,
+      "lw": 1
     },
     "Golden State Valkyries|Dallas Wings": {
       "hw": 2,
       "lw": 1
     },
-    "Golden State Valkyries|Las Vegas Aces": {
+    "Atlanta Dream|New York Liberty": {
       "hw": 3,
       "lw": 0
     },
-    "Atlanta Dream|New York Liberty": {
+    "Golden State Valkyries|Las Vegas Aces": {
       "hw": 3,
       "lw": 0
     },
@@ -52,14 +52,14 @@
     "promoted": false,
     "checks": [],
     "reason": "Waiting for 100 independently recorded, completed games of the current model version.",
-    "checked_at": "2026-10-28T05:52:08.297152+00:00",
+    "checked_at": "2026-10-28T05:59:53.908425+00:00",
     "usable": false
   },
   "probability_model": "score-only",
   "injury_adjustment_default": false,
   "availability": {
     "status": "live",
-    "fetched_at": "2026-10-28T05:52:03.834531Z",
+    "fetched_at": "2026-10-28T05:59:49.778506Z",
     "apply_adjustments": true,
     "message": "Player feeds retrieved successfully.",
     "model": {
