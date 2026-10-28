@@ -22,6 +22,8 @@ jobs:
       issues: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || 'main' }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
