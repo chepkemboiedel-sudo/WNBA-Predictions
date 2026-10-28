@@ -54,7 +54,7 @@ forecast = json.loads((ROOT / "outputs" / "forecast.json").read_text(encoding="u
 results = pd.read_csv(ROOT / "outputs" / "finals_probabilities.csv")
 DATA["default_model"] = forecast["probability_model"]
 DATA["prob"] = PROB if forecast["injury_adjustment_default"] else BASE_PROB
-operations.update(ROOT,games,results,forecast,player_snapshot)
+DATA["operations"] = operations.update(ROOT,games,results,forecast,player_snapshot)
 DATA["published_baseline"] = {"reach":dict(zip(results.team,results.p_reach_finals*100)),
                               "champ":dict(zip(results.team,results.p_champion*100))}
 teams = [(r.team, r.seed, r.conference, r.win_pct,
@@ -726,7 +726,7 @@ BODY = f'''
 CSS += UI.CSS + AVUI.CSS + BT.CSS
 BODY = UI.navigation() + BODY.replace('<section id="play">',
     AVUI.overview(player_snapshot,results,forecast["probability_model"]) + BT.section(DATA["backtest"]) + UI.history_section(DATA["history"], favorite.team) + UI.team_directory(profiles) + '<section id="play">')
-BODY += LIVE.section(player_snapshot,forecast)
+BODY += LIVE.section(player_snapshot,forecast,DATA["operations"])
 BODY += UI.health_section(DATA["health"])
 scripts = ("\n<script>window.__WNBA__=" + data_json + ";</script><script>window.__PLAYER_CONTEXT__=" + LIVE.payload(player_snapshot) + ";</script>\n<script>" + JS + UI.JS + BT.JS + UI.POLL_JS + LIVE.JS + "</script>\n")
 

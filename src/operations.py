@@ -36,12 +36,17 @@ def update(root, games, results, forecast, snapshot):
     box=snapshot.get("boxscore_coverage",{})
     manifest=root/"data/backtests/injury_report_manifest.json"
     reports=json.loads(manifest.read_text(encoding="utf-8")).get("reports",[]) if manifest.exists() else []
+    recovery_path=root/"data/recovery/audit.json"
+    recovery=json.loads(recovery_path.read_text(encoding="utf-8")) if recovery_path.exists() else None
     value={"version":1,"updated_at":now,"season":forecast["season_context"],"promotion":forecast["promotion"],
            "coverage":{"boxscores":box,"archived_reports_verified":sum(r.get("status")==200 for r in reports),
                        "archived_reports_requested":len(reports),"archived_report_failures":[{"url":r["url"],"status":r["status"]} for r in reports if r.get("status")!=200],
-                       "note":"Unknown reports are never counted as healthy. Missing public reports cannot be reconstructed reliably."},
+                       "recovery":recovery,
+                       "note":"Current source coverage is separate from the frozen historical study. Recovered inputs do not rewrite its original predictions or accuracy. Unknown reports are never counted as healthy."},
            "championship_evaluation":{"registered_seasons":len(ledger["predictions"]),"completed_seasons":sum(r["status"]=="settled" for r in ledger["predictions"]),
                  "note":"One first pre-playoff forecast per season. Daily Finals snapshots are correlated and are not independent validation. No proven championship improvement is claimed.","predictions":ledger["predictions"]}}
-    for folder in ("public","site"):atomic_json(root/folder/"operations.json",value)
+    for folder in ("public","site"):
+        atomic_json(root/folder/"operations.json",value)
+        if recovery:atomic_json(root/folder/"data_recovery.json",recovery)
     return value
 

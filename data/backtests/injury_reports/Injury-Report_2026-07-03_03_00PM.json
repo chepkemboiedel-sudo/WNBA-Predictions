@@ -1,0 +1,143 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-03_03_00PM.pdf",
+  "status": 200,
+  "sha256": "7b8486ece8d998a4c2b269b0e1dc2101c9b11b3ec8f50d75069d63fd891819c8",
+  "parser_version": 3,
+  "published_at": "2026-07-03T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-03",
+      "matchup": "MIN@NYL",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "MIN@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "CHI@LVA",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "CHI@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "GSV@ATL",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "GSV@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "PDX@SEA",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "PDX@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-03",
+      "matchup": "MIN@NYL",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "MIN@NYL",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "MIN@NYL",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "MIN@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "CHI@LVA",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "CHI@LVA",
+      "team": "LasVegasAces",
+      "player": "Barker,Janiah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "CHI@LVA",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "CHI@LVA",
+      "team": "LasVegasAces",
+      "player": "Wilson,A'ja",
+      "status": "Questionable"
+    }
+  ],
+  "excluded_non_wnba_placeholders": [
+    {
+      "date": "2026-07-04",
+      "matchup": "MEM@OKC",
+      "team": "MemphisGrizzlies",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "MEM@OKC",
+      "team": "OklahomaCityThunder",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "ATL@UTA",
+      "team": "AtlantaHawks",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-04",
+      "matchup": "ATL@UTA",
+      "team": "UtahJazz",
+      "submitted": false
+    }
+  ],
+  "recovered_at": "2026-10-28T05:38:56.533971+00:00"
+}
+

@@ -19,7 +19,29 @@ from urllib.error import HTTPError
 ROOT = Path(__file__).resolve().parents[1]
 ET = ZoneInfo("America/New_York")
 BASE = "https://ak-static.cms.nba.com/referee/wnba_injury/"
-PARSER_VERSION = 2
+PARSER_VERSION = 3
+COMPATIBLE_PARSER_VERSIONS = (2, 3)
+NBA_PLACEHOLDER_TEAMS = {"MemphisGrizzlies", "OklahomaCityThunder", "AtlantaHawks", "UtahJazz"}
+ABBREVIATIONS={"GS":"GSV","NY":"NYL","LV":"LVA","WSH":"WAS","LA":"LAS","PHO":"PHX","POR":"PDX"}
+
+
+def wnba_sections(teams, records, known):
+    """Keep identifiable WNBA rows; discard only explicit NBA placeholders."""
+    normalize=lambda text:re.sub(r"\s+","",text)
+    excluded=[t for t in teams if normalize(t["team"]) not in known]
+    if any(normalize(t["team"]) not in NBA_PLACEHOLDER_TEAMS or t["submitted"] for t in excluded):
+        raise ValueError("Report contains an unrecognized/non-WNBA team")
+    if any(normalize(r["team"]) not in known for r in records):
+        raise ValueError("Non-WNBA player rows cannot be accepted as placeholders")
+    accepted=[t for t in teams if normalize(t["team"]) in known]
+    if not accepted:
+        raise ValueError("Report has no identifiable WNBA section")
+    codes=set(known.values())
+    for row in accepted:
+        matchup=row["matchup"].split("@")
+        if len(matchup)!=2 or not set(matchup).issubset(codes) or known[normalize(row["team"])] not in matchup:
+            raise ValueError("WNBA team and matchup disagree")
+    return accepted,records,excluded
 
 
 def parse_report(path):
@@ -76,10 +98,11 @@ def parse_report(path):
     if status_counts!=Counter(record["status"] for record in records):
         raise ValueError("Parsed player rows do not match the PDF status cells")
     with (ROOT/"data/all_games.csv").open(encoding="utf-8",newline="") as stream:
-        known = {re.sub(r"\s+","",row["home_team"]) for row in csv.DictReader(stream)}
-    if any(re.sub(r"\s+","",t["team"]) not in known for t in teams.values()):
-        raise ValueError("Report contains an unrecognized/non-WNBA team")
-    return {"parser_version":PARSER_VERSION,"published_at":published.isoformat(),"teams":list(teams.values()),"players":records}
+        known = {re.sub(r"\s+","",row[side+"_team"]):ABBREVIATIONS.get(row[side+"_abbr"],row[side+"_abbr"])
+                 for row in csv.DictReader(stream) for side in ("home","away")}
+    accepted,records,excluded=wnba_sections(list(teams.values()),records,known)
+    return {"parser_version":PARSER_VERSION,"published_at":published.isoformat(),"teams":accepted,"players":records,
+            "excluded_non_wnba_placeholders":excluded}
 
 
 def collect(day_hour):
@@ -91,7 +114,8 @@ def collect(day_hour):
     url = BASE+filename
     if target.exists():
         cached = json.loads(target.read_text(encoding="utf-8"))
-        if cached.get("parser_version") == PARSER_VERSION:
+        expected=datetime.fromisoformat(day).replace(hour=hour,tzinfo=ET)
+        if cached.get("parser_version") in COMPATIBLE_PARSER_VERSIONS and cached.get("url")==url and cached.get("status")==200 and datetime.fromisoformat(cached["published_at"])==expected:
             return cached
     try:
         if not raw.exists():
@@ -140,11 +164,17 @@ def refresh_manifest(limit=None, now=None):
         suffix="09_00AM" if hour==9 else "03_00PM"
         url=BASE+f"Injury-Report_{day}_{suffix}.pdf"
         old=cached.get(url)
-        if old and old.get("status")==200 and old.get("parser_version")==PARSER_VERSION:
+        if old and old.get("status")==200 and old.get("parser_version") in COMPATIBLE_PARSER_VERSIONS:
             return old
+        recovered=ROOT/"data/backtests/injury_reports"/(url.rsplit("/",1)[-1].replace(".pdf",".json"))
+        if recovered.exists():
+            candidate=collect(slot)
+            if candidate.get("status")==200:
+                return {**candidate,"attempted_at":now.isoformat()}
         attempted=datetime.fromisoformat(old["attempted_at"]) if old and old.get("attempted_at") else None
-        # Old missing reports stay documented; retry recent failures at most daily.
-        if old and ((attempted and now-attempted<timedelta(days=7)) or (attempted and now-attempted<timedelta(days=1))):
+        # Retry recent failures daily and older unavailable reports weekly.
+        old_report=(now.date()-datetime.fromisoformat(day).date()).days>7
+        if old and attempted and now-attempted<timedelta(days=7 if old_report else 1):
             return old
         return {**collect(slot),"attempted_at":now.isoformat()}
     with ThreadPoolExecutor(max_workers=4) as pool:

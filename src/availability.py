@@ -123,6 +123,10 @@ def fetch_boxscores(games):
     print(f"  Player box scores: {len(missing)} new games; {len(completed)} cached", flush=True)
 
     def fetch(game):
+        archive=DATA/"recovery"/f"boxscore_{game.game_id}.json"
+        if archive.exists():
+            from recovered_data import load_verified_boxscore
+            return load_verified_boxscore(DATA.parent,game)
         return parse_boxscore(get_json(API + f"/summary?event={game.game_id}"), game)
 
     with ThreadPoolExecutor(max_workers=6) as pool:
