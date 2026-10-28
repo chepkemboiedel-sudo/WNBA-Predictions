@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "status": "ok",
-  "last_attempt_at": "2026-10-27T23:36:06.374789Z",
+  "status": "failed",
+  "last_attempt_at": "2026-10-28T01:23:13.489581Z",
   "last_success_at": "2026-10-27T23:36:06.374789Z",
   "next_refresh_at": "2026-10-28T14:00:00Z",
   "data_through": "2026-10-27",
@@ -14,7 +14,7 @@
   },
   "source": "ESPN completed game results",
   "verified": true,
-  "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/40603115322",
+  "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/40614554439",
   "availability": {
     "status": "partial",
     "fetched_at": "2026-10-27T23:35:54.709764Z",
@@ -42,5 +42,5 @@
       ]
     }
   },
-  "message": "Last forecast refresh completed successfully."
+  "message": "The latest cloud refresh failed. The last published forecast is still available."
 }
