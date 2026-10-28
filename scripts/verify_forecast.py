@@ -45,15 +45,22 @@ def verify():
     if forecast["data_through"] not in page:
         raise ValueError("Page does not show the latest completed game date.")
     results = pd.read_csv(ROOT / "outputs/finals_probabilities.csv")
-    if forecast.get("probability_model")!="score-only" or forecast.get("injury_adjustment_default") is not False:
-        raise ValueError("Published forecasts must use the score-only default.")
-    if not results.p_champion.equals(results.p_champion_baseline) or not results.p_reach_finals.equals(results.p_reach_finals_baseline):
+    from promotion import current
+    import availability as A
+    decision=current(ROOT,A.load_snapshot(),forecast.get("season",2026))
+    promoted=decision["usable"]
+    expected_model="injury-adjusted" if promoted else "score-only"
+    if forecast.get("probability_model")!=expected_model or forecast.get("injury_adjustment_default")!=promoted:
+        raise ValueError("Published default disagrees with independently re-evaluated promotion evidence.")
+    if not promoted and (not results.p_champion.equals(results.p_champion_baseline) or not results.p_reach_finals.equals(results.p_reach_finals_baseline)):
         raise ValueError("Published odds differ from score-only probabilities.")
-    if embedded.get("default_model")!="score-only" or embedded["prob"]!=embedded["prob_base"]:
+    if embedded.get("default_model")!=expected_model or embedded["prob"]!=embedded["prob_availability" if promoted else "prob_base"]:
         raise ValueError("Interactive page does not default to score-only probabilities.")
     optional_input=re.search(r'<input id="use-availability"[^>]*>',page)
-    if not optional_input or "checked" in optional_input[0]:
+    if not optional_input or ("checked" in optional_input[0])!=promoted:
         raise ValueError("The optional injury toggle must start unchecked.")
+    if promoted and (not results.p_champion.equals(results.p_champion_availability) or not results.p_reach_finals.equals(results.p_reach_finals_availability)):
+        raise ValueError("Promoted published odds differ from the eligible injury-adjusted simulation.")
     if not ((results.p_champion >= 0) & (results.p_champion <= results.p_reach_finals)
             & (results.p_reach_finals <= 1)).all():
         raise ValueError("Invalid championship or Finals probabilities.")
@@ -76,14 +83,15 @@ def verify():
     if embedded["history"] != history or embedded["health"] != health:
         raise ValueError("Page history or refresh health does not match published assets.")
     latest = history["snapshots"][-1]
-    if latest.get("probability_model")!="score-only":
+    if latest.get("probability_model")!=expected_model:
         raise ValueError("New saved forecasts must be labeled score-only.")
     if latest["generated_at"] != meta["last_updated"] or health["last_success_at"] != meta["last_updated"]:
         raise ValueError("Forecast history and health do not describe this successful run.")
-    if len(list((ROOT / "public/teams").glob("*/index.html"))) != len(set(pd.read_csv(ROOT / "data/games_2026.csv").home_team)):
+    if len(list((ROOT / "public/teams").glob("*/index.html"))) != len(set(pd.read_csv(ROOT / ("data/games_"+str(forecast.get("season",2026))+".csv")).home_team)):
         raise ValueError("A team detail page is missing.")
     print(f"Verified forecast through {forecast['data_through']}, {forecast['n_sims']:,} simulations.")
 
 
 if __name__ == "__main__":
     verify()
+

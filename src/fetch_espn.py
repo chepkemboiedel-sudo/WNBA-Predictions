@@ -144,7 +144,7 @@ def _parse_scoreboard_day(payload: dict, year: int) -> list[dict]:
     return rows
 
 
-def fetch_season(year: int, force: bool = False) -> pd.DataFrame:
+def fetch_season(year: int, force: bool = False, allow_empty: bool = False) -> pd.DataFrame:
     """
     Fetch (or load from cache) every completed game for one season.
 
@@ -194,23 +194,28 @@ def fetch_season(year: int, force: bool = False) -> pd.DataFrame:
         df.to_csv(temporary, index=False)
         os.replace(temporary, cache)
     else:
+        if allow_empty and not os.path.exists(cache):
+            return pd.DataFrame()
         raise RuntimeError(f"No completed games returned for {year}; cache preserved.")
     print(f"  {year}: {len(df)} games "
           f"({int(df['is_playoff'].sum()) if not df.empty else 0} playoff)")
     return df
 
 
-def fetch_all(start: int = 2016, end: int = 2026, refresh_current: bool = True) -> pd.DataFrame:
+def fetch_all(start: int = 2016, end: int | None = None, refresh_current: bool = True) -> pd.DataFrame:
     """
     Fetch every season in [start, end] and write data/all_games.csv.
 
     The current (last) season is always re-downloaded so the model runs on the
     freshest standings; earlier seasons are served from cache once fetched.
     """
+    end = end or datetime.now(timezone.utc).year
     frames = []
     for yr in range(start, end + 1):
         force = refresh_current and yr == end
-        frames.append(fetch_season(yr, force=force))
+        frame = fetch_season(yr, force=force, allow_empty=(yr == end))
+        if not frame.empty:
+            frames.append(frame)
     allg = pd.concat(frames, ignore_index=True)
     allg = allg.sort_values("date").reset_index(drop=True)
     out = os.path.join(DATA_DIR, "all_games.csv")
@@ -222,3 +227,4 @@ def fetch_all(start: int = 2016, end: int = 2026, refresh_current: bool = True) 
 
 if __name__ == "__main__":
     fetch_all()
+

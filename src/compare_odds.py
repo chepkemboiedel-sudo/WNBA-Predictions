@@ -31,8 +31,11 @@ def _american_to_implied(value: str) -> float:
     return 100 / (a + 100) if a > 0 else abs(a) / (abs(a) + 100)
 
 
-def fetch_market_odds(season: int = 2026) -> pd.DataFrame:
+def fetch_market_odds(season: int | None = None) -> pd.DataFrame:
     """Live ESPN BET championship futures, de-vigged. Falls back to cache."""
+    if season is None:
+        from seasons import forecast_season
+        season = forecast_season(pd.read_csv(os.path.join(DATA,"all_games.csv")))
     cache = os.path.join(DATA, "market_odds.csv")
     try:
         teams = requests.get(
@@ -86,7 +89,7 @@ def compare(out_path: str):
     ax.set_yticks(list(y))
     ax.set_yticklabels([f"({s}) {t}" for s, t in zip(df.seed, df.team)])
     ax.set_xlabel("Championship probability (%)")
-    ax.set_title("Model vs. sportsbook — 2026 WNBA title odds")
+    ax.set_title("Model vs. sportsbook — WNBA title odds")
     ax.legend()
     ax.grid(axis="x", alpha=0.25)
     fig.tight_layout()
@@ -104,3 +107,4 @@ def compare(out_path: str):
 
 if __name__ == "__main__":
     compare(os.path.join(OUT, "model_vs_market.png"))
+

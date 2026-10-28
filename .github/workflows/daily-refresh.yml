@@ -33,6 +33,7 @@ jobs:
     permissions:
       contents: write
       statuses: read
+      issues: write
     env:
       MPLBACKEND: Agg
       PYTHONIOENCODING: utf-8
@@ -63,6 +64,7 @@ jobs:
           node tests/test_health_state.cjs
           node tests/test_availability_browser.cjs
           node tests/test_backtest_browser.cjs
+          node tests/test_live_monitor.cjs
 
       - name: Run refresh pipeline
         if: github.event_name != 'pull_request'
@@ -71,6 +73,13 @@ jobs:
       - name: Verify generated website and forecast
         if: github.event_name != 'pull_request'
         run: python scripts/verify_forecast.py
+
+      - name: Check cloud alerts
+        if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALERT_RECIPIENT: chepkemboiedel-sudo
+        run: node scripts/cloud-monitor.cjs
 
       - name: Commit refreshed outputs
         id: publish
@@ -121,3 +130,4 @@ jobs:
             git commit -m "Report failed WNBA refresh [automated]"
             git push origin HEAD:main
           fi
+

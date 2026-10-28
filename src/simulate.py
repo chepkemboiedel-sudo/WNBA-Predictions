@@ -30,6 +30,9 @@ import pandas as pd
 
 from features import FEATURE_COLS, PYTH_EXP
 import availability as availability_mod
+from seasons import forecast_season, context
+import promotion
+from pathlib import Path
 
 HERE = os.path.dirname(__file__)
 DATA = os.path.abspath(os.path.join(HERE, "..", "data"))
@@ -59,8 +62,9 @@ SERIES_FORMATS = {
 # --------------------------------------------------------------------------- #
 # 1. Standings, seeding, and current team form
 # --------------------------------------------------------------------------- #
-def compute_standings(games: pd.DataFrame, season: int = 2026) -> pd.DataFrame:
+def compute_standings(games: pd.DataFrame, season: int | None = None) -> pd.DataFrame:
     """Regular-season W-L, win%, and season point differential for `season`."""
+    season = season or forecast_season(games)
     reg = games[(games.season == season) & (~games.is_playoff)]
     rec = defaultdict(lambda: {"w": 0, "l": 0, "pf": 0, "pa": 0})
     for _, r in reg.iterrows():
@@ -88,12 +92,13 @@ def compute_standings(games: pd.DataFrame, season: int = 2026) -> pd.DataFrame:
     )
 
 
-def current_team_features(games: pd.DataFrame, teams: list[str], season: int = 2026) -> dict:
+def current_team_features(games: pd.DataFrame, teams: list[str], season: int | None = None) -> dict:
     """
     Snapshot each playoff team's form using ALL its regular-season games this
     year (inclusive -- there is no leakage, because the playoffs happen later).
     Returns a dict: team -> feature values consumed by the matchup builder.
     """
+    season = season or forecast_season(games)
     reg = games[(games.season == season) & (~games.is_playoff)]
     # Final regular-season win% per team, used for strength-of-schedule.
     final_wp = {}
@@ -128,8 +133,9 @@ def current_team_features(games: pd.DataFrame, teams: list[str], season: int = 2
     return feats
 
 
-def playoff_seeds(games: pd.DataFrame, season: int = 2026) -> list[str]:
+def playoff_seeds(games: pd.DataFrame, season: int | None = None) -> list[str]:
     """Use the actual first-round pairings once available to resolve tied seeds."""
+    season = season or forecast_season(games)
     seeds = compute_standings(games, season)["team"].head(8).tolist()
     playoffs = games[(games.season == season) & games.is_playoff].sort_values("date")
     seen = set()
@@ -146,8 +152,9 @@ def playoff_seeds(games: pd.DataFrame, season: int = 2026) -> list[str]:
     return seeds
 
 
-def completed_series(games: pd.DataFrame, seeds: list[str], season: int = 2026) -> dict:
+def completed_series(games: pd.DataFrame, seeds: list[str], season: int | None = None) -> dict:
     """Observed playoff wins, keyed by higher/lower seed, shared with the browser."""
+    season = season or forecast_season(games)
     result = {}
     playoffs = games[(games.season == season) & games.is_playoff].sort_values("date")
     for row in playoffs.itertuples():
@@ -274,10 +281,13 @@ def run(n_sims: int = 20000, seed: int = 7):
 
     feats = current_team_features(games, seeds)
     availability = availability_mod.load_snapshot()
-    # Published predictions always use score-only probabilities. A verified
-    # player feed makes the experimental comparison available, never default.
-    P = build_prob_matrix(model, feats, seeds)
+    season = forecast_season(games)
+    if availability.get("season") != season:
+        availability = dict(availability, apply_adjustments=False)
+    policy = promotion.current(Path(DATA).parent, availability, season)
+    baseline_P = build_prob_matrix(model, feats, seeds)
     optional_P = build_prob_matrix(model, feats, seeds, availability)
+    P = optional_P if policy["usable"] else baseline_P
 
     rng = np.random.default_rng(seed)
     reach = Counter()
@@ -289,6 +299,11 @@ def run(n_sims: int = 20000, seed: int = 7):
         champ[c] += 1
         matchup[frozenset((f1, f2))] += 1
 
+    baseline_reach, baseline_champ = Counter(), Counter()
+    baseline_rng = np.random.default_rng(seed)
+    for _ in range(n_sims):
+        f1,f2,c = sim_bracket(seeds,baseline_P,baseline_rng,observed)
+        baseline_reach[f1]+=1;baseline_reach[f2]+=1;baseline_champ[c]+=1
     optional_reach, optional_champ = Counter(), Counter()
     optional_rng = np.random.default_rng(seed)
     for _ in range(n_sims):
@@ -302,8 +317,8 @@ def run(n_sims: int = 20000, seed: int = 7):
         "win_pct": [round(standings.loc[standings.team == t, "win_pct"].iloc[0], 3) for t in seeds],
         "p_reach_finals": [reach[t] / n_sims for t in seeds],
         "p_champion": [champ[t] / n_sims for t in seeds],
-        "p_reach_finals_baseline": [reach[t] / n_sims for t in seeds],
-        "p_champion_baseline": [champ[t] / n_sims for t in seeds],
+        "p_reach_finals_baseline": [baseline_reach[t] / n_sims for t in seeds],
+        "p_champion_baseline": [baseline_champ[t] / n_sims for t in seeds],
         "p_reach_finals_availability": [optional_reach[t] / n_sims for t in seeds],
         "p_champion_availability": [optional_champ[t] / n_sims for t in seeds],
     }).sort_values("p_reach_finals", ascending=False).reset_index(drop=True)
@@ -323,12 +338,14 @@ def run(n_sims: int = 20000, seed: int = 7):
         conference_counts[category] += count
     forecast = {
         "n_sims": n_sims,
-        "data_through": games[games.season == 2026].date.max().strftime("%Y-%m-%d"),
+        "data_through": games[games.season == season].date.max().strftime("%Y-%m-%d"),
         "game_count": len(games),
-        "completed_playoff_games": int(((games.season == 2026) & games.is_playoff).sum()),
+        "completed_playoff_games": int(((games.season == season) & games.is_playoff).sum()),
         "observed_series": observed,
-        "probability_model": "score-only",
-        "injury_adjustment_default": False,
+        "season": season, "season_context": context(games),
+        "promotion": policy,
+        "probability_model": "injury-adjusted" if policy["usable"] else "score-only",
+        "injury_adjustment_default": policy["usable"],
         "availability": {key:availability.get(key) for key in ("status","fetched_at","apply_adjustments","message","model","boxscore_coverage")},
         "top_matchups": [{"teams": list(pair), "probability": probability}
                          for pair, probability in top_matchups],
@@ -356,3 +373,4 @@ if __name__ == "__main__":
     N = 20000
     res, top_matchups, seeds, feats = run(n_sims=N)
     _print_report(res, top_matchups, N)
+

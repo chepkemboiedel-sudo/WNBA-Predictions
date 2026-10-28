@@ -16,6 +16,9 @@ import app_features as UI
 import availability as AV
 import availability_ui as AVUI
 import backtest_ui as BT
+import live_ui as LIVE
+import operations
+from seasons import forecast_season
 from app_data import append_snapshot, atomic_json, load_history, snapshot, slug, successful_health, team_profiles
 
 def b64(p):
@@ -27,24 +30,31 @@ calib_img = b64("calibration.png")
 
 # --- export the model's pairwise probability matrix for client-side sim ----- #
 games = pd.read_csv(ROOT / "data" / "all_games.csv", parse_dates=["date"])
+season = forecast_season(games)
 standings = S.compute_standings(games)
 seeds = S.playoff_seeds(games)
 model = joblib.load(ROOT / "data" / "models.joblib")["logistic"]
 feats = S.current_team_features(games, seeds)
 player_snapshot = AV.load_snapshot()
+if player_snapshot.get("season") != season:
+    player_snapshot = dict(player_snapshot,apply_adjustments=False,
+                           message="Player feed season differs from the displayed forecast; adjustments disabled.")
 Pmat = S.build_prob_matrix(model, feats, seeds, player_snapshot)
 baseline_matrix = S.build_prob_matrix(model, feats, seeds)
 PROB = {f"{x}|{y}|{1 if h else 0}": round(Pmat[(x, y, h)], 5)
         for key in Pmat if len(key)==3 for x,y,h in [key]}
 BASE_PROB = {f"{x}|{y}|{1 if h else 0}":round(value,5) for (x,y,h),value in baseline_matrix.items()}
 NEXT_PROB = {f"{key[0]}|{key[1]}|{1 if key[2] else 0}":round(value,5) for key,value in Pmat.items() if len(key)==4}
-DATA = {"seeds": seeds, "conf": {t: S.CONFERENCE[t] for t in seeds}, "prob": BASE_PROB,
+DATA = {"seeds": seeds, "conf": {t: S.CONFERENCE.get(t,"Unknown") for t in seeds}, "prob": BASE_PROB,
         "prob_base":BASE_PROB,"prob_availability":PROB,"prob_next":NEXT_PROB,
         "default_model":"score-only",
         "availability":{key:player_snapshot.get(key) for key in ("status","fetched_at","apply_adjustments","message","model","boxscore_coverage")}}
 # All displayed figures come from the same run as the interactive probability matrix.
 forecast = json.loads((ROOT / "outputs" / "forecast.json").read_text(encoding="utf-8"))
 results = pd.read_csv(ROOT / "outputs" / "finals_probabilities.csv")
+DATA["default_model"] = forecast["probability_model"]
+DATA["prob"] = PROB if forecast["injury_adjustment_default"] else BASE_PROB
+operations.update(ROOT,games,results,forecast,player_snapshot)
 DATA["published_baseline"] = {"reach":dict(zip(results.team,results.p_reach_finals*100)),
                               "champ":dict(zip(results.team,results.p_champion*100))}
 teams = [(r.team, r.seed, r.conference, r.win_pct,
@@ -69,7 +79,7 @@ DATA["history"] = append_snapshot(load_history(history_path), snapshot(results, 
 DATA["health"] = successful_health(games, forecast, DATA["refresh"])
 DATA["backtest"] = BT.load_results()
 BT.export_assets()
-profiles = team_profiles(games, results, seeds)
+profiles = team_profiles(games, results, seeds, season=season)
 data_json = json.dumps(DATA, ensure_ascii=False).replace("<", "\\u003c")
 favorite = results.loc[results.p_champion.idxmax()]
 data_date = datetime.strptime(forecast["data_through"], "%Y-%m-%d").strftime("%b %d, %Y")
@@ -364,7 +374,7 @@ const FMT = { R1:[1,0,1], SEMI:[1,1,0,0,1], FINALS:[1,1,0,0,1,0,1] }; // 1 = hig
 const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
 const seedIdx = t => SEEDS.indexOf(t);           // 0-based; smaller = higher seed
 const pGame = (hi, lo, hiHome) => PROB[hi + "|" + lo + "|" + (hiHome ? 1 : 0)];
-let applyAvailability = false;
+let applyAvailability = D.default_model === "injury-adjusted";
 function gameProbability(hi,lo,home,next){
   const key=hi+'|'+lo+'|'+(home?1:0);
   if(!applyAvailability) return D.prob_base[key];
@@ -540,29 +550,30 @@ document.getElementById("btn-many").addEventListener("click", () => {
 });
 reset();
 const availabilityToggle=document.getElementById('use-availability');
-if(availabilityToggle) availabilityToggle.checked=false;
+availabilityToggle.checked=applyAvailability;
+if(availabilityToggle) availabilityToggle.checked=applyAvailability;
 availabilityToggle?.addEventListener('change',event=>{
   applyAvailability=event.target.checked && Boolean(D.availability.apply_adjustments);
   event.target.checked=applyAvailability;reset();
   updateLeaderboard(D.published_baseline);
-  document.getElementById('board-model').textContent='Published score-only forecast';
-  document.getElementById('manystatus').textContent='Interactive games now use '+(applyAvailability?'the optional injury adjustment (experimental).':'the score-only default.')+' Run 10,000× to compare leaderboard odds. Published forecasts and history stay score-only.';
+  document.getElementById('board-model').textContent='Published '+(D.default_model||'score-only')+' forecast';
+  document.getElementById('manystatus').textContent='Interactive games now use '+(applyAvailability?'the injury adjustment (experimental).':'score-only probabilities.')+' Run 10,000× to compare leaderboard odds. Published forecasts and history stay unchanged.';
 });
 """
 
-TITLE = "<title>2026 WNBA Finals Forecast</title>"
+TITLE = f"<title>{season} WNBA Finals Forecast</title>"
 
 BODY = f'''
 <div class="hero"><div class="court"></div><div class="wrap hero-inner">
   <div class="hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow">2026 WNBA · Playoff Forecast</span>
+      <span class="eyebrow">{season} WNBA · Playoff Forecast</span>
       <h1>Who wins the title — from {forecast["n_sims"]:,} updated simulations.</h1>
       <div class="pickcard">
-        <div><span class="lbl">Score-only champion pick</span><span class="big">{favorite.p_champion:.0%}</span></div>
+        <div><span class="lbl">{forecast["probability_model"]} champion pick</span><span class="big">{favorite.p_champion:.0%}</span></div>
         <div><span class="who">{favorite.team}</span><div class="sub">#{favorite.seed} seed · {favorite.p_reach_finals:.1%} to reach the Finals</div></div>
       </div>
-      <p class="foot">Score-only predictions are the default, validated on 2016–2025. Injury adjustments are optional and experimental. Simulating the real 3-round bracket
+      <p class="foot">Published model: {forecast["probability_model"]}. Score-model validation uses held-out seasons through {season-1}. Injury adjustments require prospective evidence before becoming default. Simulating the real 3-round bracket
         (best-of-3 → 5 → 7). Data through {data_date}. {playoff_status}</p>
     </div>
     <aside class="status-card">
@@ -596,7 +607,7 @@ BODY = f'''
       <div class="value">{conf['both_west']:.1%} all-West</div>
       <div class="sub">{conf['mixed']:.1%} mixed · {conf['both_east']:.1%} all-East</div></div>
   </div>
-  <p class="feature-note" id="board-model" role="status">Published score-only forecast</p>
+  <p class="feature-note" id="board-model" role="status">Published {forecast["probability_model"]} forecast</p>
   <p class="lead"><a class="team-link" href="#availability">View current roster and injury information, plus the optional injury comparison ↓</a></p>
   <div class="board">{rows_html}</div>
   <div class="legend">
@@ -619,14 +630,14 @@ BODY = f'''
       <button class="ctrl primary" id="btn-auto">▶ Auto-simulate bracket</button>
       <button class="ctrl" id="btn-reset">↺ Reset</button>
       <button class="ctrl" id="btn-many">↻ Run 10,000× → update odds</button>
-      <label class="ctrl"><input id="use-availability" type="checkbox" {'' if player_snapshot.get('apply_adjustments') else 'disabled'}> Use injury adjustments (optional, experimental)</label>
+      <label class="ctrl"><input id="use-availability" type="checkbox" {'checked' if forecast["injury_adjustment_default"] else ''} {'' if player_snapshot.get('apply_adjustments') else 'disabled'}> Use injury adjustments (optional, experimental)</label>
     </div>
     <div class="status" id="bstatus"></div>
     <div class="bracket-wrap">
       <div class="roundlbls"><span>Round 1 · Bo3</span><span>Semifinals · Bo5</span><span>Finals · Bo7</span><span>Champion</span></div>
       <div class="bracket">{bracket_html}</div>
     </div>
-    <div class="status" id="manystatus" style="margin-top:14px">Score-only is selected by default. Injury adjustments have not shown a clear accuracy improvement. This toggle applies to interactive simulations.</div>
+    <div class="status" id="manystatus" style="margin-top:14px">Selected model: {forecast["probability_model"]}. Automatic selection follows the prospective evidence rule. This toggle applies to interactive simulations.</div>
   </div>
 </div></section>
 
@@ -671,7 +682,7 @@ BODY = f'''
     describes, and validation splits by time — train on the past, test on the future — so the
     model never peeks ahead.</p>
   <div class="chips">
-    <span class="chip">{len(games):,} games · 2016–2026</span><span class="chip">ESPN public API</span>
+    <span class="chip">{len(games):,} games · 2016–{season}</span><span class="chip">ESPN public API</span>
     <span class="chip">Point differential</span><span class="chip">Pythagorean expectation</span>
     <span class="chip">Strength of schedule</span><span class="chip">Rest / home-away splits</span>
     <span class="chip">Logistic + gradient boosting</span><span class="chip">{forecast['n_sims']:,}-run Monte Carlo</span>
@@ -714,9 +725,10 @@ BODY = f'''
 
 CSS += UI.CSS + AVUI.CSS + BT.CSS
 BODY = UI.navigation() + BODY.replace('<section id="play">',
-    AVUI.overview(player_snapshot,results) + BT.section(DATA["backtest"]) + UI.history_section(DATA["history"], favorite.team) + UI.team_directory(profiles) + '<section id="play">')
+    AVUI.overview(player_snapshot,results,forecast["probability_model"]) + BT.section(DATA["backtest"]) + UI.history_section(DATA["history"], favorite.team) + UI.team_directory(profiles) + '<section id="play">')
+BODY += LIVE.section(player_snapshot,forecast)
 BODY += UI.health_section(DATA["health"])
-scripts = ("\n<script>window.__WNBA__=" + data_json + ";</script>\n<script>" + JS + UI.JS + BT.JS + UI.POLL_JS + "</script>\n")
+scripts = ("\n<script>window.__WNBA__=" + data_json + ";</script><script>window.__PLAYER_CONTEXT__=" + LIVE.payload(player_snapshot) + ";</script>\n<script>" + JS + UI.JS + BT.JS + UI.POLL_JS + LIVE.JS + "</script>\n")
 
 # (a) Artifact-format file: no <!doctype>/<html>/<head>/<body> — the Artifact
 #     host wraps it in that skeleton itself.
@@ -729,14 +741,14 @@ os.replace(path + ".tmp", path)
 # (b) Standalone full document for direct hosting (Vercel / any static host):
 #     complete <html> shell with charset, mobile viewport, and social-preview
 #     tags so the page renders correctly everywhere and previews on LinkedIn.
-DESC = ("Interactive 2026 WNBA Finals forecast — a click-through playoff bracket, "
+DESC = (f"Interactive {season} WNBA Finals forecast — a click-through playoff bracket, "
         "a live 10,000-run Monte Carlo, and how the model was built.")
 head = (
     '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
     '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
     f'<meta name="description" content="{DESC}">\n'
     '<meta property="og:type" content="website">\n'
-    '<meta property="og:title" content="2026 WNBA Finals Forecast">\n'
+    f'<meta property="og:title" content="{season} WNBA Finals Forecast">\n'
     f'<meta property="og:description" content="{DESC}">\n'
     + TITLE + "\n<style>" + CSS + "</style>\n</head>\n<body>\n"
 )
@@ -755,10 +767,10 @@ print("prob entries:", len(PROB), "· seeds:", seeds[:3], "...")
 summary_rows = "\n".join(
     f"| {r.seed} | {r.team} | {r.p_reach_finals:.1%} | {r.p_champion:.1%} |"
     for r in results.itertuples())
-summary = f"""# 2026 WNBA forecast — refreshed results
+summary = f"""# {season} WNBA forecast — refreshed results
 
-Data through **{data_date}**, retrieved from ESPN. {len(games):,} games across 2016–2026,
-including {forecast['completed_playoff_games']} completed 2026 playoff games.
+Data through **{data_date}**, retrieved from ESPN. {len(games):,} games across 2016–{season},
+including {forecast['completed_playoff_games']} completed {season} playoff games.
 
 **{playoff_status}**
 
@@ -771,14 +783,14 @@ using {forecast['n_sims']:,} brackets. Eliminated teams cannot advance.
 {summary_rows}
 
 The actual first-round pairings resolve tied regular-season seeds once playoffs begin.
-Game probabilities come from logistic regression fitted to 2016–2025 score-based team form;
-validation trains on 2016–2023 and tests on 2024–2025. Validation metrics are in
+Game probabilities come from logistic regression fitted to 2016–{season-1} score-based team form;
+validation trains through {season-3} and tests on {season-2}–{season-1}. Validation metrics are in
 `outputs/validation_metrics.csv`. These metrics validate the score-only baseline.
-Published forecasts and new history entries use the score-only model by default.
+Published model: {forecast["probability_model"]}. Automatic selection uses fixed prospective blocks, never the retrospective study.
 The optional, experimental player-availability layer uses current ESPN rosters and verified absence
 reports, with shrunken participation effects from 2025–26 box scores. It has not been
 independently calibrated and has not shown a clear improvement in the historical test.
-It is available through an unchecked interactive toggle. Score-only title estimate for {favorite.team}:
+The interactive toggle starts at the published model choice. Score-only title estimate for {favorite.team}:
 {getattr(favorite, 'p_champion_baseline', favorite.p_champion):.1%}.
 Player-data status: {player_snapshot.get('message', 'Unavailable; baseline used.')}
 Regular-season team-strength features stay fixed during the playoff simulation and playoff
@@ -800,3 +812,4 @@ for folder in ("public", "site"):
     atomic_json(ROOT / folder / "refresh_health.json", DATA["health"])
 atomic_json(history_path, DATA["history"])
 print(f"wrote {len(profiles)} team pages; retained {len(DATA['history']['snapshots'])} forecast snapshots")
+

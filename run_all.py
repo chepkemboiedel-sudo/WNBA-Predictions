@@ -85,7 +85,7 @@ def main():
     print("\n[1/7] Fetching game logs ...")
     if not args.skip_fetch:
         fetch_all(refresh_current=True) if not args.refresh else fetch_all(
-            start=2016, end=2026, refresh_current=True)
+            start=2016, refresh_current=True)
 
     print("\n[2/7] + [3/7] Building features & training / validating models ...")
     model_mod.main()
@@ -121,3 +121,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

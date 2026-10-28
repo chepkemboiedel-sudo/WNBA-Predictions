@@ -21,12 +21,14 @@ import requests
 from sklearn.linear_model import LogisticRegression, Ridge
 
 from app_data import atomic_json
+from seasons import latest as latest_season
+from player_context import minute_limit, projected_rotation
 from features import build_matchup_table
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 API = "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba"
-MODEL_VERSION = "participation-ridge-v1"
+MODEL_VERSION = "participation-ridge-minutes-v2"
 MAX_PLAYER_POINTS = 4.0
 MAX_TEAM_POINTS = 6.0
 REPORT_HOURS = 72
@@ -113,7 +115,8 @@ def parse_boxscore(payload, game):
 def fetch_boxscores(games):
     path = DATA / "player_game_stats.csv"
     cached = pd.read_csv(path, dtype={"game_id":str,"player_id":str}) if path.exists() else pd.DataFrame()
-    target = games[((games.season == 2025) & ~games.is_playoff) | (games.season == 2026)]
+    season = latest_season(games)
+    target = games[((games.season == season-1) & ~games.is_playoff) | (games.season == season)]
     completed = set(cached.game_id) if not cached.empty else set()
     missing = [row for row in target.itertuples() if str(row.game_id) not in completed]
     rows, failures = [], []
@@ -144,7 +147,8 @@ def fetch_boxscores(games):
 
 
 def fit_effects(games, boxscores):
-    regular = boxscores[~boxscores.is_playoff].copy()
+    season = latest_season(games)
+    regular = boxscores[(~boxscores.is_playoff) & boxscores.season.isin([season-1,season])].copy()
     played = regular[regular.minutes > 0]
     counts = played.groupby(["season","team","player_id"]).game_id.nunique().to_dict()
     team_counts = regular.groupby(["season","team"]).game_id.nunique().to_dict()
@@ -156,7 +160,7 @@ def fit_effects(games, boxscores):
     for (season,team,aid), value in mean.items():
         mean_by_team.setdefault((season,team), {})[aid] = value
     matchups = build_matchup_table(games)
-    rows = matchups[(matchups.season.isin([2025,2026])) & ~matchups.is_playoff & (matchups.home == 1)]
+    rows = matchups[(matchups.season.isin([season-1,season])) & ~matchups.is_playoff & (matchups.home == 1)]
     scores = games.set_index(games.game_id.astype(str))
     x, margins, form = [], [], []
     for row in rows.itertuples():
@@ -184,13 +188,13 @@ def fit_effects(games, boxscores):
             support[aid] = True
     effects = {aid:round(float(np.clip(model.coef_[index],0,MAX_PLAYER_POINTS)),4)
                if support.get(aid) else 0.0 for aid,index in columns.items()}
-    old = matchups[matchups.season <= 2025]
+    old = matchups[matchups.season < season]
     mapper = LogisticRegression(C=1, max_iter=1000).fit(old[["d_pt_diff","home"]],old.target)
     beta = float(mapper.coef_[0][0])
     if not 0 < beta < .5:
         raise ValueError("Invalid point-margin to probability conversion")
     return effects, {"version":MODEL_VERSION,"experimental":True,"training_games":len(x),
-                     "training_seasons":[2025,2026],"ridge_alpha":30,
+                     "training_seasons":[season-1,season],"ridge_alpha":30,
                      "max_player_points":MAX_PLAYER_POINTS,"max_team_points":MAX_TEAM_POINTS,
                      "margin_logit_coefficient":beta,"players_with_comparison":len(support)}
 
@@ -256,26 +260,27 @@ def load_snapshot(now=None):
 def refresh(games=None):
     now = datetime.now(timezone.utc)
     games = games if games is not None else pd.read_csv(DATA/"all_games.csv",parse_dates=["date"])
+    season = latest_season(games)
     path = DATA / "player_availability.json"
     previous = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-    value = {"version":1,"fetched_at":now.isoformat().replace("+00:00","Z"),"season":2026,
+    value = {"version":1,"fetched_at":now.isoformat().replace("+00:00","Z"),"season":season,
              "source":"ESPN roster, injury, and completed box-score feeds",
              "source_url":"https://www.espn.com/wnba/injuries","status":"live",
              "apply_adjustments":False,"teams":{},"message":"Player feeds retrieved successfully."}
     try:
         feed = get_json(API+"/injuries?limit=1000")
-        if feed.get("status") != "success" or feed.get("season",{}).get("year") != 2026:
+        if feed.get("status") != "success" or feed.get("season",{}).get("year") != season:
             raise ValueError("Injury feed season or status mismatch")
         value["source_timestamp"] = feed.get("timestamp")
         teams = get_json(API+"/teams?limit=100")["sports"][0]["leagues"][0]["teams"]
         reports = {str(row["id"]):row.get("injuries",[]) for row in feed.get("injuries",[])}
         raw_rosters = {}
         with ThreadPoolExecutor(max_workers=5) as pool:
-            futures = {pool.submit(get_json,API+f'/teams/{row["team"]["id"]}/roster?season=2026'):row["team"] for row in teams}
+            futures = {pool.submit(get_json,API+f'/teams/{row["team"]["id"]}/roster?season={season}'):row["team"] for row in teams}
             for future in as_completed(futures):
                 team = futures[future]
                 roster = future.result()
-                if roster.get("season",{}).get("year") != 2026 or not roster.get("athletes"):
+                if roster.get("season",{}).get("year") != season or not roster.get("athletes"):
                     raise ValueError("Missing or wrong-season roster")
                 raw_rosters[team["displayName"]] = (team,roster)
         boxes, coverage = fetch_boxscores(games)
@@ -298,7 +303,7 @@ def refresh(games=None):
                     if team not in next_games:
                         next_games[team] = {"event_id":str(event["id"]),"date":event["date"],"opponent":opponent,"home":competitor["homeAway"]=="home","is_playoff":event.get("season",{}).get("type")==3}
         value["next_games"] = next_games
-        regular = boxes[(boxes.season==2026) & ~boxes.is_playoff] if not boxes.empty else pd.DataFrame()
+        regular = boxes[(boxes.season==season) & ~boxes.is_playoff] if not boxes.empty else pd.DataFrame()
         owners = {}
         for name,(_,roster) in raw_rosters.items():
             for athlete in roster["athletes"]:
@@ -306,8 +311,8 @@ def refresh(games=None):
         for name,(team,roster) in raw_rosters.items():
             rows = []
             source_reports = {athlete_id(r.get("athlete",{})):r for r in reports.get(str(team["id"]),[]) if athlete_id(r.get("athlete",{}))}
-            team_games = int(((games.season==2026)&~games.is_playoff&((games.home_team==name)|(games.away_team==name))).sum())
-            missing_for_team = games[(games.season==2026)&games.game_id.astype(str).isin(coverage["missing_games"])&((games.home_team==name)|(games.away_team==name))]
+            team_games = int(((games.season==season)&~games.is_playoff&((games.home_team==name)|(games.away_team==name))).sum())
+            missing_for_team = games[(games.season==season)&games.game_id.astype(str).isin(coverage["missing_games"])&((games.home_team==name)|(games.away_team==name))]
             ready = missing_for_team.empty and bool(model)
             for athlete in roster["athletes"]:
                 aid = str(athlete["id"])
@@ -322,6 +327,11 @@ def refresh(games=None):
                 if len(owners[aid])>1:
                     evaluated={"scope":"none","reason":"Player appears on multiple season rosters; assignment is ambiguous."}
                 penalty = absence_penalty(effects.get(aid,0),gp/team_games if team_games else 0) if evaluated["scope"]!="none" else 0
+                typical = float(appearances.minutes.mean()) if gp else 0
+                cap = minute_limit(report,now,next_games.get(name),typical,last_played) if report else None
+                if cap and evaluated["scope"]=="none" and len(owners[aid])==1:
+                    evaluated={"scope":"next_game","reason":"Explicit fresh minute restriction; fractional absence estimate for next game only."}
+                    penalty=absence_penalty(effects.get(aid,0),gp/team_games if team_games else 0)*cap["fraction_missing"]
                 if not ready:
                     penalty=0.0
                     evaluated["reason"]+=" Team player history is incomplete; no adjustment is applied."
@@ -337,11 +347,13 @@ def refresh(games=None):
                              "games_played":gp,"minutes":round(float(appearances.minutes.mean()),1) if gp else None,
                              "points":round(float(appearances.points.mean()),1) if gp else None,
                              "baseline_participation":round(gp/team_games,4) if team_games else 0,
+                             "minute_limit":cap,"report_comment":report.get("shortComment","") if report else "",
                              "effect_points":effects.get(aid,0),"extra_absence_points":round(penalty,4),**evaluated})
             previous_ids = {p["id"] for p in previous.get("teams",{}).get(name,{}).get("players",[])}
             current_ids = {p["id"] for p in rows}
             value["teams"][name] = {"id":str(team["id"]),"players":rows,"roster_timestamp":roster.get("timestamp"),
                                    "adjustment_ready":ready,"missing_boxscores":len(missing_for_team),
+                                   "rotation":projected_rotation(boxes,name,season),
                                    "roster_url":f'https://www.espn.com/wnba/team/roster/_/id/{team["id"]}',
                                    "added_ids":sorted(current_ids-previous_ids) if previous_ids else [],
                                    "removed_ids":sorted(previous_ids-current_ids) if previous_ids else [],
@@ -364,3 +376,4 @@ def refresh(games=None):
 
 if __name__ == "__main__":
     refresh()
+
