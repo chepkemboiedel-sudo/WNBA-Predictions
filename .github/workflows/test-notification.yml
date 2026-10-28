@@ -1,0 +1,51 @@
+name: Test GitHub alert delivery
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/test-notification.yml']
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: wnba-notification-test-${{ github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  send-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Send one clearly labelled test through the production alert helper
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALERT_RECIPIENT: chepkemboiedel-sudo
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const { notify } = require('./scripts/cloud-monitor.cjs');
+          const repo = process.env.GITHUB_REPOSITORY;
+          const run = process.env.GITHUB_RUN_ID;
+          const workflow = `https://github.com/${repo}/actions/runs/${run}`;
+          const alert = {
+            marker: `delivery-test-${run}`,
+            title: 'TEST: WNBA prediction alert delivery',
+            body: 'This is the test notification you requested to confirm WNBA alerts reach your GitHub account. It was sent by the cloud workflow using the same notification helper as real alerts.\n\nThis test does not report an injury change or an accuracy improvement. Forecasts and model selection are unchanged.\n\n[Live app](https://wnba-predictions-4oai.vercel.app/#live) · [Test workflow](' + workflow + ')\n\nPlease check your GitHub notification inbox. Email and push delivery follow your GitHub notification settings.'
+          };
+          notify(alert, repo, process.env.GITHUB_TOKEN, process.env.ALERT_RECIPIENT)
+            .then(url => {
+              console.log(JSON.stringify({test: true, result: url}));
+              fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `Requested test alert: ${url}\n`);
+            })
+            .catch(error => { console.error(error.message); process.exitCode = 1; });
+          NODE
+
