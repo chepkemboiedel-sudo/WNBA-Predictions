@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28T19:23:42.622638+00:00",
+  "updated_at": "2026-10-29T19:27:21.695084+00:00",
   "season": {
     "season": 2026,
     "latest_observed_season": 2026,
@@ -13,23 +13,23 @@
     "policy": "prospective-gate-v1",
     "model_version": "score-logistic-v1+participation-ridge-minutes-v2",
     "season": 2026,
-    "eligible_games": 0,
+    "eligible_games": 1,
     "registered_games": 1,
     "block_size": 100,
     "promoted": false,
     "checks": [],
     "reason": "Waiting for 100 independently recorded, completed games of the current model version.",
-    "checked_at": "2026-10-28T19:23:35.112936+00:00",
+    "checked_at": "2026-10-29T19:27:15.248410+00:00",
     "usable": false
   },
   "coverage": {
     "boxscores": {
-      "expected_games": 637,
-      "covered_games": 637,
+      "expected_games": 638,
+      "covered_games": 638,
       "missing_games": []
     },
-    "archived_reports_verified": 151,
-    "archived_reports_requested": 153,
+    "archived_reports_verified": 152,
+    "archived_reports_requested": 154,
     "archived_report_failures": [
       {
         "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-28_03_00PM.pdf",

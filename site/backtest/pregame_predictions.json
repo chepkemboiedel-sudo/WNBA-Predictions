@@ -6,7 +6,7 @@
       "game_id": "401918310",
       "tip": "2026-10-29T16:30Z",
       "locked_at": "2026-10-28T19:23:34.177525Z",
-      "status": "pending",
+      "status": "settled",
       "home": "Atlanta Dream",
       "away": "Golden State Valkyries",
       "is_playoff": true,
@@ -710,7 +710,9 @@
           "home": true,
           "is_playoff": true
         }
-      }
+      },
+      "home_win": 1,
+      "settled_at": "2026-10-29T19:27:12.572606Z"
     }
   ],
   "capture_note": "First paired predictions are frozen 5 minutes to 24 hours before tip; late games are never backfilled as prospective."

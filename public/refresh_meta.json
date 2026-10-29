@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-10-28T19:23:42.196188Z",
-  "next_refresh_at": "2026-10-29T14:00:00Z",
+  "last_updated": "2026-10-29T19:27:21.265296Z",
+  "next_refresh_at": "2026-10-30T14:00:00Z",
   "schedule_label": "Daily at 7:00 a.m. Pacific",
   "schedule_timezone": "America/Los_Angeles",
   "scheduler": "github_actions",
-  "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/40753728447"
+  "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/40940072018"
 }

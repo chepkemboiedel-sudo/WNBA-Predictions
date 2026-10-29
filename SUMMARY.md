@@ -1,18 +1,18 @@
 # 2026 WNBA forecast — refreshed results
 
-Data through **Oct 27, 2026**, retrieved from ESPN. 2,658 games across 2016–2026,
-including 21 completed 2026 playoff games.
+Data through **Oct 29, 2026**, retrieved from ESPN. 2,659 games across 2016–2026,
+including 22 completed 2026 playoff games.
 
-**Finals: Golden State Valkyries leads Atlanta Dream 3–2.**
+**Finals: Golden State Valkyries and Atlanta Dream tied 3–3.**
 
-The model gives **Golden State Valkyries a 73.3% championship probability**.
+The model gives **Golden State Valkyries a 54.5% championship probability**.
 These estimates retain completed playoff results and simulate only the games still to play,
 using 20,000 brackets. Eliminated teams cannot advance.
 
 | Seed | Team | Reach Finals | Champion |
 |---:|---|---:|---:|
-| 2 | Golden State Valkyries | 100.0% | 73.3% |
-| 4 | Atlanta Dream | 100.0% | 26.7% |
+| 2 | Golden State Valkyries | 100.0% | 54.5% |
+| 4 | Atlanta Dream | 100.0% | 45.5% |
 | 1 | Minnesota Lynx | 0.0% | 0.0% |
 | 3 | Las Vegas Aces | 0.0% | 0.0% |
 | 5 | Washington Mystics | 0.0% | 0.0% |
@@ -29,7 +29,7 @@ The optional, experimental player-availability layer uses current ESPN rosters a
 reports, with shrunken participation effects from 2025–2026 box scores. It has not been
 independently calibrated and has not shown a clear improvement in the historical test.
 The interactive toggle starts at the published model choice. Score-only title estimate for Golden State Valkyries:
-73.3%.
+54.5%.
 Player-data status: Player feeds retrieved successfully.
 Regular-season team-strength features stay fixed during the playoff simulation and playoff
 rest differences are neutralized.

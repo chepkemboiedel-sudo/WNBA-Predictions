@@ -1,9 +1,13 @@
 {
   "n_sims": 20000,
-  "data_through": "2026-10-27",
-  "game_count": 2658,
-  "completed_playoff_games": 21,
+  "data_through": "2026-10-29",
+  "game_count": 2659,
+  "completed_playoff_games": 22,
   "observed_series": {
+    "Atlanta Dream|Washington Mystics": {
+      "hw": 2,
+      "lw": 0
+    },
     "Minnesota Lynx|New York Liberty": {
       "hw": 0,
       "lw": 2
@@ -12,25 +16,21 @@
       "hw": 2,
       "lw": 1
     },
-    "Atlanta Dream|Washington Mystics": {
-      "hw": 2,
-      "lw": 0
-    },
     "Golden State Valkyries|Dallas Wings": {
       "hw": 2,
       "lw": 1
-    },
-    "Golden State Valkyries|Las Vegas Aces": {
-      "hw": 3,
-      "lw": 0
     },
     "Atlanta Dream|New York Liberty": {
       "hw": 3,
       "lw": 0
     },
+    "Golden State Valkyries|Las Vegas Aces": {
+      "hw": 3,
+      "lw": 0
+    },
     "Golden State Valkyries|Atlanta Dream": {
       "hw": 3,
-      "lw": 2
+      "lw": 3
     }
   },
   "season": 2026,
@@ -46,20 +46,20 @@
     "policy": "prospective-gate-v1",
     "model_version": "score-logistic-v1+participation-ridge-minutes-v2",
     "season": 2026,
-    "eligible_games": 0,
+    "eligible_games": 1,
     "registered_games": 1,
     "block_size": 100,
     "promoted": false,
     "checks": [],
     "reason": "Waiting for 100 independently recorded, completed games of the current model version.",
-    "checked_at": "2026-10-28T19:23:35.112936+00:00",
+    "checked_at": "2026-10-29T19:27:15.248410+00:00",
     "usable": false
   },
   "probability_model": "score-only",
   "injury_adjustment_default": false,
   "availability": {
     "status": "live",
-    "fetched_at": "2026-10-28T19:23:29.977757Z",
+    "fetched_at": "2026-10-29T19:27:09.453979Z",
     "apply_adjustments": true,
     "message": "Player feeds retrieved successfully.",
     "model": {
@@ -73,12 +73,12 @@
       "ridge_alpha": 30,
       "max_player_points": 4.0,
       "max_team_points": 6.0,
-      "margin_logit_coefficient": 0.09804409836852912,
+      "margin_logit_coefficient": 0.09804504385349429,
       "players_with_comparison": 225
     },
     "boxscore_coverage": {
-      "expected_games": 637,
-      "covered_games": 637,
+      "expected_games": 638,
+      "covered_games": 638,
       "missing_games": []
     }
   },

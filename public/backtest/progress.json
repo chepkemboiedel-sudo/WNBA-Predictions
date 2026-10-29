@@ -55,6 +55,63 @@
           "n": 0
         }
       }
+    },
+    {
+      "at": "2026-10-29T19:27:12.572606Z",
+      "signature": "5b8b80032072293657815ce87ba765e0fc6228beb1e84917b9e215395e2625bc",
+      "groups": {
+        "all_eligible_games": {
+          "n": 325,
+          "accuracy_delta": 0.0,
+          "log_loss_delta": -0.0005052510800298497,
+          "brier_delta": -7.020184469015474e-05
+        },
+        "verified_report_games": {
+          "n": 202,
+          "accuracy_delta": 0.0,
+          "log_loss_delta": -0.0008129039653945601,
+          "brier_delta": -0.00011294851249653599
+        },
+        "verified_reports_with_out": {
+          "n": 197,
+          "accuracy_delta": 0.0,
+          "log_loss_delta": -0.0008335360457345235,
+          "brier_delta": -0.00011581522601167659
+        },
+        "changed_games": {
+          "n": 120,
+          "accuracy_delta": 0.0,
+          "log_loss_delta": -0.0013683883417475102,
+          "brier_delta": -0.00019012999603583655
+        },
+        "regular_season": {
+          "n": 197,
+          "accuracy_delta": 0.0,
+          "log_loss_delta": -0.0008335244039959352,
+          "brier_delta": -0.0001162595952156592
+        },
+        "playoffs": {
+          "n": 5,
+          "accuracy_delta": 0.0,
+          "log_loss_delta": -4.5868450038177855e-07,
+          "brier_delta": 1.7508146636913135e-05
+        },
+        "initial_study": {
+          "n": 202,
+          "accuracy_delta": 0.0,
+          "log_loss_delta": -0.0008129039653945601,
+          "brier_delta": -0.00011294851249653599
+        },
+        "newly_evaluated": {
+          "n": 0
+        },
+        "prospective": {
+          "n": 1,
+          "accuracy_delta": 0.0,
+          "log_loss_delta": -2.220446049250313e-16,
+          "brier_delta": -1.1102230246251565e-16
+        }
+      }
     }
   ]
 }

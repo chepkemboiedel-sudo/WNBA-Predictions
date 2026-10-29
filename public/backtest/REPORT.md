@@ -18,7 +18,7 @@ The adjustment corrected 1 winner picks and harmed 1; two-sided exact McNemar p 
 
 | Sample | Games | Changed probabilities | Baseline accuracy | Adjusted accuracy | Log-loss change | Brier change |
 |---|---:|---:|---:|---:|---:|---:|
-| all eligible games | 324 | 120 | 69.14% | 69.14% | -0.000507 | -0.000070 |
+| all eligible games | 325 | 120 | 69.23% | 69.23% | -0.000505 | -0.000070 |
 | verified report games | 202 | 120 | 72.28% | 72.28% | -0.000813 | -0.000113 |
 | verified reports with out | 197 | 120 | 72.59% | 72.59% | -0.000834 | -0.000116 |
 | changed games | 120 | 120 | 70.83% | 70.83% | -0.001368 | -0.000190 |
@@ -37,8 +37,8 @@ The adjustment corrected 1 winner picks and harmed 1; two-sided exact McNemar p 
 
 ## Coverage and limits
 
-- 146 of 153 fixed-time report files passed validation. Five URLs returned documents containing non-WNBA teams; two returned HTTP 403.
-- Of 324 eligible 2026 games, 202 had both-team report coverage. The remaining games use the same baseline in both comparisons. Only 5 covered games are playoff games, which is too small to validate championship forecasts.
+- 152 of 154 fixed-time report files passed validation. Five URLs returned documents containing non-WNBA teams; two returned HTTP 403.
+- Of 325 eligible 2026 games, 202 had both-team report coverage. The remaining games use the same baseline in both comparisons. Only 5 covered games are playoff games, which is too small to validate championship forecasts.
 - 589 Out/Suspended player-game records were considered; 7 could not be matched to a unique previously seen athlete and received no invented effect. 56 covered games had an incomplete prior archive for at least one side; that side retained baseline strength.
 - This tests the existing numerical adjustment with independently archived official statuses. It does not recreate historical ESPN fetches, roster snapshots, feed delays, return-date fields, or the full season-long-report propagation logic. Those were not archived. It therefore does not certify the complete live injury pipeline.
 - Historical game probabilities use the model's pregame running-form features, which include earlier playoff games. Production bracket simulations use a fixed regular-season form snapshot and neutral rest. These are not a direct backtest of series or championship probabilities.
@@ -56,8 +56,8 @@ Recommendation: retain the experimental label. These results do not justify clai
 
 ## Automatic monitoring
 
-Checked 2026-10-28T19:23:34.013759Z. Historical predictions are append-only. The initial study is frozen separately; 0 later completed games have been evaluated. New archived-report rows are retrospective walk-forward evaluations, not prospective forecasts.
+Checked 2026-10-29T19:27:12.572606Z. Historical predictions are append-only. The initial study is frozen separately; 1 later completed games have been evaluated. New archived-report rows are retrospective walk-forward evaluations, not prospective forecasts.
 
-The separate prospective trial freezes the first paired production game prediction within 24 hours before scheduled tip, using a player snapshot fetched within two hours. Captured probabilities, model hash, and relevant roster/injury evidence are stored before outcomes. Missing pregame captures are never backfilled. There are 0 scored and 1 pending predictions. Daily 7 a.m. Pacific sampling may miss early games or last-minute injury updates. This trial uses fixed regular-season form, while the historical test uses pregame running form. Their results must not be pooled as one experiment.
+The separate prospective trial freezes the first paired production game prediction within 24 hours before scheduled tip, using a player snapshot fetched within two hours. Captured probabilities, model hash, and relevant roster/injury evidence are stored before outcomes. Missing pregame captures are never backfilled. There are 1 scored and 0 pending predictions. Daily 7 a.m. Pacific sampling may miss early games or last-minute injury updates. This trial uses fixed regular-season form, while the historical test uses pregame running form. Their results must not be pooled as one experiment.
 
 Checkpoints are added only when scored evidence changes. Repeated daily checks do not count as new games or independent significance tests. The initial one-point trend is a starting checkpoint, not a historical performance curve. Score-only remains default; automatic promotion is evaluated separately using fixed prospective blocks; historical comparisons cannot promote a model.
