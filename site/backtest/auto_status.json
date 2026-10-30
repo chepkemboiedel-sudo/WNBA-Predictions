@@ -1,10 +1,10 @@
 {
   "status": "ok",
   "started_at": "2026-10-27T23:13:22.649873Z",
-  "last_checked_at": "2026-10-29T19:27:12.572606Z",
-  "last_success_at": "2026-10-29T19:27:12.572606Z",
+  "last_checked_at": "2026-10-30T19:02:33.624457Z",
+  "last_success_at": "2026-10-30T19:02:33.624457Z",
   "last_changed_at": "2026-10-29T19:27:12.572606Z",
-  "new_games_this_run": 1,
+  "new_games_this_run": 0,
   "historical_new_games": 1,
   "prospective_scored": 1,
   "prospective_pending": 0,

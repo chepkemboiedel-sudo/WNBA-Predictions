@@ -4,17 +4,17 @@
   "game_count": 2659,
   "completed_playoff_games": 22,
   "observed_series": {
-    "Atlanta Dream|Washington Mystics": {
+    "Las Vegas Aces|Indiana Fever": {
       "hw": 2,
-      "lw": 0
+      "lw": 1
     },
     "Minnesota Lynx|New York Liberty": {
       "hw": 0,
       "lw": 2
     },
-    "Las Vegas Aces|Indiana Fever": {
+    "Atlanta Dream|Washington Mystics": {
       "hw": 2,
-      "lw": 1
+      "lw": 0
     },
     "Golden State Valkyries|Dallas Wings": {
       "hw": 2,
@@ -52,14 +52,14 @@
     "promoted": false,
     "checks": [],
     "reason": "Waiting for 100 independently recorded, completed games of the current model version.",
-    "checked_at": "2026-10-29T19:27:15.248410+00:00",
+    "checked_at": "2026-10-30T19:02:34.194862+00:00",
     "usable": false
   },
   "probability_model": "score-only",
   "injury_adjustment_default": false,
   "availability": {
     "status": "live",
-    "fetched_at": "2026-10-29T19:27:09.453979Z",
+    "fetched_at": "2026-10-30T19:02:30.374068Z",
     "apply_adjustments": true,
     "message": "Player feeds retrieved successfully.",
     "model": {

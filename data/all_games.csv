@@ -2309,85 +2309,85 @@ game_id,date,season,is_playoff,home_team,home_abbr,away_team,away_abbr,home_scor
 401856890,2026-05-08,2026,False,New York Liberty,NY,Connecticut Sun,CON,106,75,1
 401856891,2026-05-08,2026,False,Toronto Tempo,TOR,Washington Mystics,WSH,65,68,0
 401856892,2026-05-09,2026,False,Seattle Storm,SEA,Golden State Valkyries,GS,80,91,0
-401856893,2026-05-09,2026,False,Indiana Fever,IND,Dallas Wings,DAL,104,107,0
 401856894,2026-05-09,2026,False,Las Vegas Aces,LV,Phoenix Mercury,PHX,66,99,0
-401856898,2026-05-10,2026,False,Los Angeles Sparks,LA,Las Vegas Aces,LV,78,105,0
+401856893,2026-05-09,2026,False,Indiana Fever,IND,Dallas Wings,DAL,104,107,0
 401856896,2026-05-10,2026,False,Connecticut Sun,CON,Seattle Storm,SEA,82,89,0
+401856898,2026-05-10,2026,False,Los Angeles Sparks,LA,Las Vegas Aces,LV,78,105,0
 401856897,2026-05-10,2026,False,Washington Mystics,WSH,New York Liberty,NY,93,98,0
 401856899,2026-05-10,2026,False,Minnesota Lynx,MIN,Atlanta Dream,ATL,90,91,0
 401856895,2026-05-10,2026,False,Portland Fire,POR,Chicago Sky,CHI,83,98,0
 401856900,2026-05-11,2026,False,Golden State Valkyries,GS,Phoenix Mercury,PHX,95,79,1
+401856902,2026-05-13,2026,False,Phoenix Mercury,PHX,Minnesota Lynx,MIN,84,88,0
 401856904,2026-05-13,2026,False,Toronto Tempo,TOR,Seattle Storm,SEA,86,73,1
 401856903,2026-05-13,2026,False,Portland Fire,POR,New York Liberty,NY,98,96,1
-401856902,2026-05-13,2026,False,Phoenix Mercury,PHX,Minnesota Lynx,MIN,84,88,0
 401856901,2026-05-13,2026,False,Dallas Wings,DAL,Atlanta Dream,ATL,72,77,0
 401856906,2026-05-14,2026,False,Golden State Valkyries,GS,Chicago Sky,CHI,63,69,0
 401856905,2026-05-14,2026,False,Connecticut Sun,CON,Las Vegas Aces,LV,69,98,0
 401856907,2026-05-14,2026,False,Los Angeles Sparks,LA,Indiana Fever,IND,78,87,0
-401856909,2026-05-15,2026,False,Portland Fire,POR,New York Liberty,NY,82,100,0
 401856911,2026-05-15,2026,False,Indiana Fever,IND,Washington Mystics,WSH,102,104,0
 401856910,2026-05-15,2026,False,Connecticut Sun,CON,Las Vegas Aces,LV,94,101,0
+401856909,2026-05-15,2026,False,Portland Fire,POR,New York Liberty,NY,82,100,0
 401856908,2026-05-15,2026,False,Dallas Wings,DAL,Minnesota Lynx,MIN,86,90,0
 401856912,2026-05-16,2026,False,Los Angeles Sparks,LA,Toronto Tempo,TOR,99,95,1
 401856913,2026-05-16,2026,False,Phoenix Mercury,PHX,Chicago Sky,CHI,91,83,1
-401856914,2026-05-17,2026,False,Minnesota Lynx,MIN,Chicago Sky,CHI,79,86,0
-401856917,2026-05-17,2026,False,Los Angeles Sparks,LA,Toronto Tempo,TOR,96,106,0
 401856915,2026-05-17,2026,False,Atlanta Dream,ATL,Las Vegas Aces,LV,84,85,0
 401856916,2026-05-17,2026,False,Indiana Fever,IND,Seattle Storm,SEA,89,78,1
-401856919,2026-05-19,2026,False,Portland Fire,POR,Connecticut Sun,CON,83,82,1
+401856914,2026-05-17,2026,False,Minnesota Lynx,MIN,Chicago Sky,CHI,79,86,0
+401856917,2026-05-17,2026,False,Los Angeles Sparks,LA,Toronto Tempo,TOR,96,106,0
 401856918,2026-05-19,2026,False,Dallas Wings,DAL,Washington Mystics,WSH,92,69,1
-401856921,2026-05-20,2026,False,Indiana Fever,IND,Portland Fire,POR,90,73,1
+401856919,2026-05-19,2026,False,Portland Fire,POR,Connecticut Sun,CON,83,82,1
 401856920,2026-05-20,2026,False,Phoenix Mercury,PHX,Toronto Tempo,TOR,90,98,0
+401856921,2026-05-20,2026,False,Indiana Fever,IND,Portland Fire,POR,90,73,1
 401856922,2026-05-21,2026,False,Chicago Sky,CHI,Dallas Wings,DAL,89,99,0
 401856923,2026-05-21,2026,False,Seattle Storm,SEA,Connecticut Sun,CON,78,80,0
-401856926,2026-05-22,2026,False,Phoenix Mercury,PHX,Los Angeles Sparks,LA,88,97,0
-401856925,2026-05-22,2026,False,Minnesota Lynx,MIN,Toronto Tempo,TOR,100,72,1
-401856924,2026-05-22,2026,False,New York Liberty,NY,Golden State Valkyries,GS,70,87,0
 401856927,2026-05-22,2026,False,Atlanta Dream,ATL,Dallas Wings,DAL,86,69,1
+401856926,2026-05-22,2026,False,Phoenix Mercury,PHX,Los Angeles Sparks,LA,88,97,0
 401856928,2026-05-22,2026,False,Indiana Fever,IND,Golden State Valkyries,GS,90,82,1
+401856924,2026-05-22,2026,False,New York Liberty,NY,Golden State Valkyries,GS,70,87,0
+401856925,2026-05-22,2026,False,Minnesota Lynx,MIN,Toronto Tempo,TOR,100,72,1
+401856930,2026-05-23,2026,False,Chicago Sky,CHI,Minnesota Lynx,MIN,75,85,0
 401856929,2026-05-23,2026,False,Seattle Storm,SEA,Connecticut Sun,CON,77,59,1
 401856931,2026-05-23,2026,False,Toronto Tempo,TOR,Portland Fire,POR,80,99,0
-401856930,2026-05-23,2026,False,Chicago Sky,CHI,Minnesota Lynx,MIN,75,85,0
-401856935,2026-05-24,2026,False,Seattle Storm,SEA,Washington Mystics,WSH,97,85,1
 401856932,2026-05-24,2026,False,Las Vegas Aces,LV,Los Angeles Sparks,LA,95,101,0
-401856933,2026-05-24,2026,False,Atlanta Dream,ATL,Phoenix Mercury,PHX,82,80,1
+401856935,2026-05-24,2026,False,Seattle Storm,SEA,Washington Mystics,WSH,97,85,1
 401856934,2026-05-24,2026,False,New York Liberty,NY,Dallas Wings,DAL,76,91,0
+401856933,2026-05-24,2026,False,Atlanta Dream,ATL,Phoenix Mercury,PHX,82,80,1
 401856937,2026-05-26,2026,False,Golden State Valkyries,GS,Connecticut Sun,CON,97,70,1
 401856936,2026-05-26,2026,False,New York Liberty,NY,Portland Fire,POR,74,81,0
 401856938,2026-05-27,2026,False,New York Liberty,NY,Phoenix Mercury,PHX,84,74,1
-401856941,2026-05-28,2026,False,Portland Fire,POR,Connecticut Sun,CON,71,61,1
-401856942,2026-05-28,2026,False,Seattle Storm,SEA,Washington Mystics,WSH,64,78,0
 401856939,2026-05-28,2026,False,Chicago Sky,CHI,Toronto Tempo,TOR,104,111,0
 401856940,2026-05-28,2026,False,Minnesota Lynx,MIN,Atlanta Dream,ATL,96,81,1
+401856942,2026-05-28,2026,False,Seattle Storm,SEA,Washington Mystics,WSH,64,78,0
+401856941,2026-05-28,2026,False,Portland Fire,POR,Connecticut Sun,CON,71,61,1
 401856944,2026-05-29,2026,False,Golden State Valkyries,GS,Indiana Fever,IND,90,88,1
-401856947,2026-05-29,2026,False,Chicago Sky,CHI,Minnesota Lynx,MIN,58,79,0
-401856946,2026-05-29,2026,False,Washington Mystics,WSH,Los Angeles Sparks,LA,87,92,0
-401856945,2026-05-29,2026,False,New York Liberty,NY,Phoenix Mercury,PHX,75,68,1
 401856943,2026-05-29,2026,False,Dallas Wings,DAL,Las Vegas Aces,LV,95,87,1
-401856948,2026-05-30,2026,False,Portland Fire,POR,Atlanta Dream,ATL,66,86,0
+401856945,2026-05-29,2026,False,New York Liberty,NY,Phoenix Mercury,PHX,75,68,1
+401856946,2026-05-29,2026,False,Washington Mystics,WSH,Los Angeles Sparks,LA,87,92,0
+401856947,2026-05-29,2026,False,Chicago Sky,CHI,Minnesota Lynx,MIN,58,79,0
 401856950,2026-05-30,2026,False,Connecticut Sun,CON,Los Angeles Sparks,LA,84,81,1
+401856948,2026-05-30,2026,False,Portland Fire,POR,Atlanta Dream,ATL,66,86,0
 401856949,2026-05-30,2026,False,Toronto Tempo,TOR,Seattle Storm,SEA,93,72,1
 401856951,2026-05-31,2026,False,Portland Fire,POR,Indiana Fever,IND,100,84,1
 401856952,2026-05-31,2026,False,Golden State Valkyries,GS,Las Vegas Aces,LV,81,91,0
+401856954,2026-06-02,2026,False,Phoenix Mercury,PHX,Minnesota Lynx,MIN,77,111,0
 401856955,2026-06-02,2026,False,Atlanta Dream,ATL,Connecticut Sun,CON,91,75,1
 401856956,2026-06-02,2026,False,Washington Mystics,WSH,Chicago Sky,CHI,90,72,1
 401856953,2026-06-02,2026,False,Dallas Wings,DAL,Seattle Storm,SEA,79,56,1
-401856954,2026-06-02,2026,False,Phoenix Mercury,PHX,Minnesota Lynx,MIN,77,111,0
-401856959,2026-06-03,2026,False,New York Liberty,NY,Toronto Tempo,TOR,97,82,1
 401856958,2026-06-03,2026,False,Los Angeles Sparks,LA,Las Vegas Aces,LV,69,79,0
+401856959,2026-06-03,2026,False,New York Liberty,NY,Toronto Tempo,TOR,97,82,1
 401856957,2026-06-03,2026,False,Golden State Valkyries,GS,Portland Fire,POR,95,77,1
-401856961,2026-06-04,2026,False,Indiana Fever,IND,Atlanta Dream,ATL,83,71,1
 401856960,2026-06-04,2026,False,Seattle Storm,SEA,Phoenix Mercury,PHX,68,72,0
-401856963,2026-06-05,2026,False,Chicago Sky,CHI,Connecticut Sun,CON,85,80,1
+401856961,2026-06-04,2026,False,Indiana Fever,IND,Atlanta Dream,ATL,83,71,1
 401856962,2026-06-05,2026,False,Minnesota Lynx,MIN,Golden State Valkyries,GS,87,84,1
+401856963,2026-06-05,2026,False,Chicago Sky,CHI,Connecticut Sun,CON,85,80,1
+401856968,2026-06-06,2026,False,Atlanta Dream,ATL,Washington Mystics,WSH,109,77,1
+401856967,2026-06-06,2026,False,Las Vegas Aces,LV,Golden State Valkyries,GS,84,79,1
+401856966,2026-06-06,2026,False,Minnesota Lynx,MIN,Seattle Storm,SEA,88,68,1
 401856965,2026-06-06,2026,False,Portland Fire,POR,Phoenix Mercury,PHX,72,78,0
 401856964,2026-06-06,2026,False,Los Angeles Sparks,LA,Dallas Wings,DAL,96,104,0
-401856966,2026-06-06,2026,False,Minnesota Lynx,MIN,Seattle Storm,SEA,88,68,1
-401856967,2026-06-06,2026,False,Las Vegas Aces,LV,Golden State Valkyries,GS,84,79,1
-401856968,2026-06-06,2026,False,Atlanta Dream,ATL,Washington Mystics,WSH,109,77,1
-401856971,2026-06-07,2026,False,Los Angeles Sparks,LA,Portland Fire,POR,89,72,1
 401856969,2026-06-07,2026,False,New York Liberty,NY,Indiana Fever,IND,83,75,1
 401856970,2026-06-07,2026,False,Toronto Tempo,TOR,Chicago Sky,CHI,85,68,1
+401856971,2026-06-07,2026,False,Los Angeles Sparks,LA,Portland Fire,POR,89,72,1
 401856973,2026-06-08,2026,False,Washington Mystics,WSH,Indiana Fever,IND,76,78,0
 401856972,2026-06-08,2026,False,Connecticut Sun,CON,New York Liberty,NY,80,89,0
 401856975,2026-06-09,2026,False,Chicago Sky,CHI,Atlanta Dream,ATL,75,82,0
@@ -2395,102 +2395,102 @@ game_id,date,season,is_playoff,home_team,home_abbr,away_team,away_abbr,home_scor
 401856976,2026-06-10,2026,False,Minnesota Lynx,MIN,Dallas Wings,DAL,100,76,1
 401856977,2026-06-10,2026,False,Golden State Valkyries,GS,Phoenix Mercury,PHX,87,81,1
 401856978,2026-06-10,2026,False,Toronto Tempo,TOR,Connecticut Sun,CON,106,102,1
-401856981,2026-06-11,2026,False,Atlanta Dream,ATL,New York Liberty,NY,90,104,0
 401856980,2026-06-11,2026,False,Indiana Fever,IND,Chicago Sky,CHI,114,106,1
+401856981,2026-06-11,2026,False,Atlanta Dream,ATL,New York Liberty,NY,90,104,0
 401856979,2026-06-11,2026,False,Seattle Storm,SEA,Los Angeles Sparks,LA,83,88,0
-401856984,2026-06-12,2026,False,Washington Mystics,WSH,Toronto Tempo,TOR,86,85,1
 401856983,2026-06-12,2026,False,Portland Fire,POR,Las Vegas Aces,LV,89,105,0
 401856982,2026-06-12,2026,False,Dallas Wings,DAL,Phoenix Mercury,PHX,85,70,1
+401856984,2026-06-12,2026,False,Washington Mystics,WSH,Toronto Tempo,TOR,86,85,1
 401856985,2026-06-13,2026,False,Seattle Storm,SEA,Golden State Valkyries,GS,72,76,0
 401856986,2026-06-13,2026,False,Connecticut Sun,CON,Indiana Fever,IND,75,85,0
-401856989,2026-06-14,2026,False,Phoenix Mercury,PHX,Los Angeles Sparks,LA,102,111,0
-401856987,2026-06-14,2026,False,Las Vegas Aces,LV,Minnesota Lynx,MIN,100,97,1
 401856990,2026-06-14,2026,False,New York Liberty,NY,Washington Mystics,WSH,86,64,1
-401856991,2026-06-14,2026,False,Toronto Tempo,TOR,Atlanta Dream,ATL,77,102,0
+401856989,2026-06-14,2026,False,Phoenix Mercury,PHX,Los Angeles Sparks,LA,102,111,0
 401856988,2026-06-14,2026,False,Portland Fire,POR,Dallas Wings,DAL,84,83,1
+401856987,2026-06-14,2026,False,Las Vegas Aces,LV,Minnesota Lynx,MIN,100,97,1
+401856991,2026-06-14,2026,False,Toronto Tempo,TOR,Atlanta Dream,ATL,77,102,0
 401856995,2026-06-16,2026,False,Indiana Fever,IND,Toronto Tempo,TOR,113,91,1
 401856994,2026-06-16,2026,False,Golden State Valkyries,GS,Los Angeles Sparks,LA,78,58,1
 401856993,2026-06-16,2026,False,Minnesota Lynx,MIN,Portland Fire,POR,107,74,1
 401856992,2026-06-16,2026,False,Dallas Wings,DAL,Las Vegas Aces,LV,96,66,1
 401856996,2026-06-17,2026,False,Connecticut Sun,CON,Washington Mystics,WSH,81,88,0
 401857002,2026-06-18,2026,False,Indiana Fever,IND,Atlanta Dream,ATL,101,108,0
-401857000,2026-06-18,2026,False,Phoenix Mercury,PHX,Las Vegas Aces,LV,76,86,0
 401857001,2026-06-18,2026,False,Portland Fire,POR,Seattle Storm,SEA,94,89,1
+401857000,2026-06-18,2026,False,Phoenix Mercury,PHX,Las Vegas Aces,LV,76,86,0
 401856998,2026-06-18,2026,False,Golden State Valkyries,GS,Dallas Wings,DAL,91,80,1
 401856997,2026-06-18,2026,False,Chicago Sky,CHI,New York Liberty,NY,95,96,0
 401856999,2026-06-18,2026,False,Los Angeles Sparks,LA,Minnesota Lynx,MIN,83,99,0
-401857003,2026-06-19,2026,False,Connecticut Sun,CON,Toronto Tempo,TOR,97,101,0
 401857004,2026-06-19,2026,False,New York Liberty,NY,Washington Mystics,WSH,83,86,0
-401857006,2026-06-20,2026,False,Atlanta Dream,ATL,Indiana Fever,IND,113,96,1
-401857007,2026-06-20,2026,False,Phoenix Mercury,PHX,Seattle Storm,SEA,93,73,1
+401857003,2026-06-19,2026,False,Connecticut Sun,CON,Toronto Tempo,TOR,97,101,0
 401857005,2026-06-20,2026,False,Golden State Valkyries,GS,Minnesota Lynx,MIN,75,81,0
+401857007,2026-06-20,2026,False,Phoenix Mercury,PHX,Seattle Storm,SEA,93,73,1
+401857006,2026-06-20,2026,False,Atlanta Dream,ATL,Indiana Fever,IND,113,96,1
+401857009,2026-06-21,2026,False,Las Vegas Aces,LV,Golden State Valkyries,GS,92,73,1
 401857008,2026-06-21,2026,False,Dallas Wings,DAL,Chicago Sky,CHI,93,92,1
 401857010,2026-06-21,2026,False,Minnesota Lynx,MIN,Washington Mystics,WSH,79,84,0
-401857009,2026-06-21,2026,False,Las Vegas Aces,LV,Golden State Valkyries,GS,92,73,1
 401857011,2026-06-22,2026,False,Los Angeles Sparks,LA,New York Liberty,NY,98,97,1
 401857012,2026-06-22,2026,False,Connecticut Sun,CON,Chicago Sky,CHI,92,63,1
 401857013,2026-06-22,2026,False,Atlanta Dream,ATL,Toronto Tempo,TOR,94,87,1
 401857015,2026-06-23,2026,False,Seattle Storm,SEA,Dallas Wings,DAL,110,112,0
 401857014,2026-06-23,2026,False,Indiana Fever,IND,Phoenix Mercury,PHX,86,77,1
 401857016,2026-06-24,2026,False,Las Vegas Aces,LV,New York Liberty,NY,76,87,0
-401857018,2026-06-24,2026,False,Washington Mystics,WSH,Minnesota Lynx,MIN,76,78,0
 401857017,2026-06-24,2026,False,Indiana Fever,IND,Phoenix Mercury,PHX,109,111,0
+401857018,2026-06-24,2026,False,Washington Mystics,WSH,Minnesota Lynx,MIN,76,78,0
+401857020,2026-06-25,2026,False,Golden State Valkyries,GS,Atlanta Dream,ATL,77,66,1
 401857019,2026-06-25,2026,False,Chicago Sky,CHI,Portland Fire,POR,101,78,1
 401857021,2026-06-25,2026,False,Toronto Tempo,TOR,Los Angeles Sparks,LA,125,97,1
-401857020,2026-06-25,2026,False,Golden State Valkyries,GS,Atlanta Dream,ATL,77,66,1
-401857022,2026-06-26,2026,False,Las Vegas Aces,LV,Dallas Wings,DAL,99,84,1
 401857023,2026-06-26,2026,False,Seattle Storm,SEA,New York Liberty,NY,99,88,1
+401857022,2026-06-26,2026,False,Las Vegas Aces,LV,Dallas Wings,DAL,99,84,1
 401857024,2026-06-26,2026,False,Connecticut Sun,CON,Washington Mystics,WSH,68,57,1
 401857025,2026-06-26,2026,False,Chicago Sky,CHI,Portland Fire,POR,124,94,1
-401857026,2026-06-27,2026,False,Golden State Valkyries,GS,Atlanta Dream,ATL,78,75,1
 401857027,2026-06-27,2026,False,Toronto Tempo,TOR,Phoenix Mercury,PHX,80,89,0
-401857031,2026-06-28,2026,False,Washington Mystics,WSH,Portland Fire,POR,124,123,1
-401857030,2026-06-28,2026,False,Dallas Wings,DAL,Minnesota Lynx,MIN,77,85,0
-401857029,2026-06-28,2026,False,Seattle Storm,SEA,Atlanta Dream,ATL,105,90,1
-401857033,2026-06-28,2026,False,Golden State Valkyries,GS,New York Liberty,NY,76,67,1
-401857032,2026-06-28,2026,False,Chicago Sky,CHI,Las Vegas Aces,LV,99,107,0
+401857026,2026-06-27,2026,False,Golden State Valkyries,GS,Atlanta Dream,ATL,78,75,1
 401857028,2026-06-28,2026,False,Indiana Fever,IND,Los Angeles Sparks,LA,111,87,1
+401857029,2026-06-28,2026,False,Seattle Storm,SEA,Atlanta Dream,ATL,105,90,1
+401857030,2026-06-28,2026,False,Dallas Wings,DAL,Minnesota Lynx,MIN,77,85,0
+401857031,2026-06-28,2026,False,Washington Mystics,WSH,Portland Fire,POR,124,123,1
+401857032,2026-06-28,2026,False,Chicago Sky,CHI,Las Vegas Aces,LV,99,107,0
+401857033,2026-06-28,2026,False,Golden State Valkyries,GS,New York Liberty,NY,76,67,1
 401857034,2026-07-02,2026,False,Washington Mystics,WSH,Atlanta Dream,ATL,81,76,1
-401857035,2026-07-03,2026,False,Connecticut Sun,CON,Dallas Wings,DAL,83,86,0
 401857037,2026-07-03,2026,False,New York Liberty,NY,Minnesota Lynx,MIN,99,86,1
 401857036,2026-07-03,2026,False,Phoenix Mercury,PHX,Seattle Storm,SEA,90,67,1
-401857039,2026-07-04,2026,False,Atlanta Dream,ATL,Golden State Valkyries,GS,83,88,0
+401857035,2026-07-03,2026,False,Connecticut Sun,CON,Dallas Wings,DAL,83,86,0
 401857038,2026-07-04,2026,False,Las Vegas Aces,LV,Chicago Sky,CHI,98,90,1
+401857039,2026-07-04,2026,False,Atlanta Dream,ATL,Golden State Valkyries,GS,83,88,0
 401857041,2026-07-05,2026,False,Toronto Tempo,TOR,Dallas Wings,DAL,76,89,0
 401857042,2026-07-05,2026,False,Las Vegas Aces,LV,Indiana Fever,IND,68,84,0
 401857040,2026-07-05,2026,False,Seattle Storm,SEA,Portland Fire,POR,72,77,0
 401857043,2026-07-06,2026,False,Washington Mystics,WSH,Golden State Valkyries,GS,49,62,0
 401857045,2026-07-07,2026,False,Los Angeles Sparks,LA,Seattle Storm,SEA,64,82,0
 401857044,2026-07-07,2026,False,Minnesota Lynx,MIN,Connecticut Sun,CON,89,90,0
-401857047,2026-07-08,2026,False,Phoenix Mercury,PHX,Chicago Sky,CHI,66,77,0
-401857046,2026-07-08,2026,False,New York Liberty,NY,Dallas Wings,DAL,77,88,0
-401857048,2026-07-08,2026,False,Toronto Tempo,TOR,Golden State Valkyries,GS,75,83,0
 401857049,2026-07-08,2026,False,Connecticut Sun,CON,Minnesota Lynx,MIN,80,86,0
+401857048,2026-07-08,2026,False,Toronto Tempo,TOR,Golden State Valkyries,GS,75,83,0
+401857046,2026-07-08,2026,False,New York Liberty,NY,Dallas Wings,DAL,77,88,0
+401857047,2026-07-08,2026,False,Phoenix Mercury,PHX,Chicago Sky,CHI,66,77,0
 401857050,2026-07-09,2026,False,Los Angeles Sparks,LA,Indiana Fever,IND,106,92,1
-401857055,2026-07-10,2026,False,Toronto Tempo,TOR,Dallas Wings,DAL,95,108,0
-401857052,2026-07-10,2026,False,Phoenix Mercury,PHX,Indiana Fever,IND,89,92,0
-401857053,2026-07-10,2026,False,Portland Fire,POR,Las Vegas Aces,LV,80,88,0
 401857054,2026-07-10,2026,False,Connecticut Sun,CON,Golden State Valkyries,GS,64,79,0
+401857052,2026-07-10,2026,False,Phoenix Mercury,PHX,Indiana Fever,IND,89,92,0
 401857051,2026-07-10,2026,False,Atlanta Dream,ATL,Seattle Storm,SEA,89,78,1
+401857055,2026-07-10,2026,False,Toronto Tempo,TOR,Dallas Wings,DAL,95,108,0
+401857053,2026-07-10,2026,False,Portland Fire,POR,Las Vegas Aces,LV,80,88,0
 401857056,2026-07-11,2026,False,Los Angeles Sparks,LA,Chicago Sky,CHI,102,87,1
-401857057,2026-07-11,2026,False,Minnesota Lynx,MIN,New York Liberty,NY,90,85,1
-401857059,2026-07-11,2026,False,Atlanta Dream,ATL,Portland Fire,POR,92,102,0
 401857058,2026-07-11,2026,False,Las Vegas Aces,LV,Phoenix Mercury,PHX,106,58,1
-401857061,2026-07-12,2026,False,Washington Mystics,WSH,Seattle Storm,SEA,84,79,1
-401857060,2026-07-12,2026,False,Toronto Tempo,TOR,New York Liberty,NY,93,91,1
+401857059,2026-07-11,2026,False,Atlanta Dream,ATL,Portland Fire,POR,92,102,0
+401857057,2026-07-11,2026,False,Minnesota Lynx,MIN,New York Liberty,NY,90,85,1
 401857062,2026-07-12,2026,False,Dallas Wings,DAL,Chicago Sky,CHI,96,91,1
-401857064,2026-07-13,2026,False,Atlanta Dream,ATL,Los Angeles Sparks,LA,101,92,1
+401857060,2026-07-12,2026,False,Toronto Tempo,TOR,New York Liberty,NY,93,91,1
+401857061,2026-07-12,2026,False,Washington Mystics,WSH,Seattle Storm,SEA,84,79,1
 401857063,2026-07-13,2026,False,Las Vegas Aces,LV,Indiana Fever,IND,75,109,0
-401857067,2026-07-14,2026,False,Toronto Tempo,TOR,Washington Mystics,WSH,62,79,0
-401857066,2026-07-14,2026,False,Connecticut Sun,CON,Portland Fire,POR,90,87,1
+401857064,2026-07-13,2026,False,Atlanta Dream,ATL,Los Angeles Sparks,LA,101,92,1
 401857065,2026-07-14,2026,False,Minnesota Lynx,MIN,Phoenix Mercury,PHX,104,100,1
-401857069,2026-07-15,2026,False,Minnesota Lynx,MIN,Los Angeles Sparks,LA,96,87,1
+401857066,2026-07-14,2026,False,Connecticut Sun,CON,Portland Fire,POR,90,87,1
+401857067,2026-07-14,2026,False,Toronto Tempo,TOR,Washington Mystics,WSH,62,79,0
 401857068,2026-07-15,2026,False,Chicago Sky,CHI,Seattle Storm,SEA,95,90,1
+401857069,2026-07-15,2026,False,Minnesota Lynx,MIN,Los Angeles Sparks,LA,96,87,1
 401857071,2026-07-16,2026,False,Washington Mystics,WSH,Portland Fire,POR,56,75,0
 401857070,2026-07-16,2026,False,Indiana Fever,IND,Golden State Valkyries,GS,75,88,0
+401857073,2026-07-17,2026,False,Indiana Fever,IND,Seattle Storm,SEA,110,107,1
 401857074,2026-07-17,2026,False,Toronto Tempo,TOR,Atlanta Dream,ATL,92,111,0
 401857075,2026-07-17,2026,False,Chicago Sky,CHI,Los Angeles Sparks,LA,96,82,1
-401857073,2026-07-17,2026,False,Indiana Fever,IND,Seattle Storm,SEA,110,107,1
 401857076,2026-07-18,2026,False,Phoenix Mercury,PHX,Connecticut Sun,CON,83,96,0
 401857078,2026-07-19,2026,False,Minnesota Lynx,MIN,Portland Fire,POR,101,93,1
 401857079,2026-07-19,2026,False,Golden State Valkyries,GS,Washington Mystics,WSH,74,69,1
@@ -2498,147 +2498,147 @@ game_id,date,season,is_playoff,home_team,home_abbr,away_team,away_abbr,home_scor
 401857080,2026-07-19,2026,False,Dallas Wings,DAL,Los Angeles Sparks,LA,90,82,1
 401857081,2026-07-19,2026,False,Atlanta Dream,ATL,Chicago Sky,CHI,93,91,1
 401857082,2026-07-19,2026,False,Phoenix Mercury,PHX,Connecticut Sun,CON,72,63,1
-401857085,2026-07-21,2026,False,Seattle Storm,SEA,Minnesota Lynx,MIN,102,105,0
-401857084,2026-07-21,2026,False,Golden State Valkyries,GS,Washington Mystics,WSH,82,90,0
-401892393,2026-07-21,2026,False,Dallas Wings,DAL,New York Liberty,NY,98,99,0
 401857083,2026-07-21,2026,False,Toronto Tempo,TOR,Las Vegas Aces,LV,83,109,0
-401857089,2026-07-22,2026,False,Washington Mystics,WSH,Las Vegas Aces,LV,100,99,1
-401857088,2026-07-22,2026,False,New York Liberty,NY,Chicago Sky,CHI,95,94,1
+401892393,2026-07-21,2026,False,Dallas Wings,DAL,New York Liberty,NY,98,99,0
+401857084,2026-07-21,2026,False,Golden State Valkyries,GS,Washington Mystics,WSH,82,90,0
+401857085,2026-07-21,2026,False,Seattle Storm,SEA,Minnesota Lynx,MIN,102,105,0
 401857087,2026-07-22,2026,False,Seattle Storm,SEA,Minnesota Lynx,MIN,76,86,0
+401857089,2026-07-22,2026,False,Washington Mystics,WSH,Las Vegas Aces,LV,100,99,1
 401857086,2026-07-22,2026,False,Los Angeles Sparks,LA,Phoenix Mercury,PHX,82,86,0
+401857088,2026-07-22,2026,False,New York Liberty,NY,Chicago Sky,CHI,95,94,1
 401857090,2026-07-23,2026,False,Indiana Fever,IND,Connecticut Sun,CON,123,88,1
 401857091,2026-07-23,2026,False,Portland Fire,POR,Dallas Wings,DAL,97,101,0
 401857092,2026-07-28,2026,False,Washington Mystics,WSH,Connecticut Sun,CON,92,84,1
 401857096,2026-07-29,2026,False,Los Angeles Sparks,LA,New York Liberty,NY,109,113,0
+401857093,2026-07-29,2026,False,Minnesota Lynx,MIN,Toronto Tempo,TOR,100,93,1
 401857095,2026-07-29,2026,False,Las Vegas Aces,LV,Portland Fire,POR,98,83,1
 401857094,2026-07-29,2026,False,Seattle Storm,SEA,Indiana Fever,IND,95,105,0
-401857093,2026-07-29,2026,False,Minnesota Lynx,MIN,Toronto Tempo,TOR,100,93,1
 401857097,2026-07-30,2026,False,Dallas Wings,DAL,Atlanta Dream,ATL,81,82,0
 401857098,2026-07-30,2026,False,Phoenix Mercury,PHX,Golden State Valkyries,GS,91,89,1
-401857099,2026-07-31,2026,False,Toronto Tempo,TOR,Minnesota Lynx,MIN,72,104,0
-401857100,2026-07-31,2026,False,Chicago Sky,CHI,Connecticut Sun,CON,94,88,1
-401857102,2026-07-31,2026,False,Atlanta Dream,ATL,Seattle Storm,SEA,98,89,1
 401857103,2026-07-31,2026,False,Washington Mystics,WSH,Dallas Wings,DAL,81,75,1
+401857099,2026-07-31,2026,False,Toronto Tempo,TOR,Minnesota Lynx,MIN,72,104,0
+401857102,2026-07-31,2026,False,Atlanta Dream,ATL,Seattle Storm,SEA,98,89,1
 401857101,2026-07-31,2026,False,Las Vegas Aces,LV,New York Liberty,NY,104,99,1
+401857100,2026-07-31,2026,False,Chicago Sky,CHI,Connecticut Sun,CON,94,88,1
 401857105,2026-08-01,2026,False,Chicago Sky,CHI,Las Vegas Aces,LV,84,83,1
-401857106,2026-08-01,2026,False,Phoenix Mercury,PHX,New York Liberty,NY,92,94,0
 401857104,2026-08-01,2026,False,Portland Fire,POR,Indiana Fever,IND,98,112,0
+401857106,2026-08-01,2026,False,Phoenix Mercury,PHX,New York Liberty,NY,92,94,0
+401857109,2026-08-02,2026,False,Dallas Wings,DAL,Connecticut Sun,CON,83,63,1
 401857108,2026-08-02,2026,False,Portland Fire,POR,Los Angeles Sparks,LA,101,106,0
 401857107,2026-08-02,2026,False,Minnesota Lynx,MIN,Indiana Fever,IND,108,100,1
-401857109,2026-08-02,2026,False,Dallas Wings,DAL,Connecticut Sun,CON,83,63,1
 401857112,2026-08-03,2026,False,New York Liberty,NY,Seattle Storm,SEA,95,83,1
 401857111,2026-08-03,2026,False,Atlanta Dream,ATL,Las Vegas Aces,LV,87,109,0
 401857110,2026-08-03,2026,False,Golden State Valkyries,GS,Toronto Tempo,TOR,96,79,1
 401857113,2026-08-04,2026,False,Chicago Sky,CHI,Phoenix Mercury,PHX,101,106,0
-401857115,2026-08-05,2026,False,Atlanta Dream,ATL,Phoenix Mercury,PHX,96,82,1
 401857117,2026-08-05,2026,False,Washington Mystics,WSH,Dallas Wings,DAL,96,92,1
+401857115,2026-08-05,2026,False,Atlanta Dream,ATL,Phoenix Mercury,PHX,96,82,1
 401857116,2026-08-05,2026,False,New York Liberty,NY,Seattle Storm,SEA,92,86,1
 401857114,2026-08-05,2026,False,Golden State Valkyries,GS,Toronto Tempo,TOR,92,81,1
 401857119,2026-08-06,2026,False,Indiana Fever,IND,Las Vegas Aces,LV,84,86,0
 401857118,2026-08-06,2026,False,Chicago Sky,CHI,Los Angeles Sparks,LA,95,88,1
-401857120,2026-08-07,2026,False,Minnesota Lynx,MIN,Los Angeles Sparks,LA,82,89,0
-401857123,2026-08-07,2026,False,Washington Mystics,WSH,Atlanta Dream,ATL,79,74,1
 401857121,2026-08-07,2026,False,Portland Fire,POR,Toronto Tempo,TOR,97,83,1
+401857123,2026-08-07,2026,False,Washington Mystics,WSH,Atlanta Dream,ATL,79,74,1
+401857120,2026-08-07,2026,False,Minnesota Lynx,MIN,Los Angeles Sparks,LA,82,89,0
 401857122,2026-08-07,2026,False,Connecticut Sun,CON,Phoenix Mercury,PHX,75,72,1
 401857126,2026-08-08,2026,False,Chicago Sky,CHI,Indiana Fever,IND,86,90,0
 401857125,2026-08-08,2026,False,Minnesota Lynx,MIN,Las Vegas Aces,LV,98,87,1
 401857124,2026-08-08,2026,False,Dallas Wings,DAL,Golden State Valkyries,GS,76,94,0
 401857131,2026-08-09,2026,False,Los Angeles Sparks,LA,Golden State Valkyries,GS,78,84,0
-401857128,2026-08-09,2026,False,New York Liberty,NY,Las Vegas Aces,LV,111,71,1
-401857127,2026-08-09,2026,False,Portland Fire,POR,Seattle Storm,SEA,100,93,1
 401857130,2026-08-09,2026,False,Minnesota Lynx,MIN,Dallas Wings,DAL,103,90,1
+401857128,2026-08-09,2026,False,New York Liberty,NY,Las Vegas Aces,LV,111,71,1
 401857129,2026-08-09,2026,False,Washington Mystics,WSH,Phoenix Mercury,PHX,95,75,1
+401857127,2026-08-09,2026,False,Portland Fire,POR,Seattle Storm,SEA,100,93,1
+401857132,2026-08-11,2026,False,Atlanta Dream,ATL,Toronto Tempo,TOR,107,95,1
 401857133,2026-08-11,2026,False,Seattle Storm,SEA,Chicago Sky,CHI,97,88,1
 401857134,2026-08-11,2026,False,Indiana Fever,IND,New York Liberty,NY,106,92,1
-401857132,2026-08-11,2026,False,Atlanta Dream,ATL,Toronto Tempo,TOR,107,95,1
 401857135,2026-08-12,2026,False,Las Vegas Aces,LV,Washington Mystics,WSH,86,76,1
 401857136,2026-08-12,2026,False,Los Angeles Sparks,LA,Phoenix Mercury,PHX,87,94,0
 401857139,2026-08-13,2026,False,Portland Fire,POR,Minnesota Lynx,MIN,81,85,0
-401857137,2026-08-13,2026,False,Dallas Wings,DAL,Toronto Tempo,TOR,94,88,1
 401857138,2026-08-13,2026,False,Golden State Valkyries,GS,Chicago Sky,CHI,91,71,1
 401857140,2026-08-13,2026,False,Connecticut Sun,CON,Atlanta Dream,ATL,69,104,0
-401857143,2026-08-14,2026,False,Indiana Fever,IND,Dallas Wings,DAL,98,87,1
+401857137,2026-08-13,2026,False,Dallas Wings,DAL,Toronto Tempo,TOR,94,88,1
 401857141,2026-08-14,2026,False,New York Liberty,NY,Los Angeles Sparks,LA,85,81,1
 401857142,2026-08-14,2026,False,Las Vegas Aces,LV,Washington Mystics,WSH,83,76,1
-401857146,2026-08-15,2026,False,Washington Mystics,WSH,Los Angeles Sparks,LA,80,70,1
+401857143,2026-08-14,2026,False,Indiana Fever,IND,Dallas Wings,DAL,98,87,1
 401857144,2026-08-15,2026,False,Seattle Storm,SEA,Portland Fire,POR,82,84,0
 401857145,2026-08-15,2026,False,Connecticut Sun,CON,New York Liberty,NY,75,82,0
+401857146,2026-08-15,2026,False,Washington Mystics,WSH,Los Angeles Sparks,LA,80,70,1
+401857147,2026-08-16,2026,False,Las Vegas Aces,LV,Minnesota Lynx,MIN,87,92,0
 401857149,2026-08-16,2026,False,Phoenix Mercury,PHX,Portland Fire,POR,85,88,0
 401857150,2026-08-16,2026,False,Atlanta Dream,ATL,Indiana Fever,IND,91,95,0
-401857147,2026-08-16,2026,False,Las Vegas Aces,LV,Minnesota Lynx,MIN,87,92,0
 401857148,2026-08-16,2026,False,Seattle Storm,SEA,Chicago Sky,CHI,80,82,0
 401857151,2026-08-18,2026,False,Golden State Valkyries,GS,Dallas Wings,DAL,78,70,1
 401857152,2026-08-18,2026,False,Connecticut Sun,CON,Los Angeles Sparks,LA,85,77,1
 401857153,2026-08-18,2026,False,Toronto Tempo,TOR,Indiana Fever,IND,95,101,0
-401857156,2026-08-19,2026,False,Washington Mystics,WSH,Toronto Tempo,TOR,93,82,1
-401857155,2026-08-19,2026,False,Las Vegas Aces,LV,Atlanta Dream,ATL,82,97,0
 401857154,2026-08-19,2026,False,Chicago Sky,CHI,New York Liberty,NY,93,86,1
+401857155,2026-08-19,2026,False,Las Vegas Aces,LV,Atlanta Dream,ATL,82,97,0
+401857156,2026-08-19,2026,False,Washington Mystics,WSH,Toronto Tempo,TOR,93,82,1
 401857157,2026-08-20,2026,False,Golden State Valkyries,GS,Minnesota Lynx,MIN,66,77,0
-401857158,2026-08-21,2026,False,Dallas Wings,DAL,Indiana Fever,IND,91,85,1
 401857160,2026-08-21,2026,False,Los Angeles Sparks,LA,Atlanta Dream,ATL,88,124,0
-401857162,2026-08-21,2026,False,Chicago Sky,CHI,Golden State Valkyries,GS,73,70,1
+401857158,2026-08-21,2026,False,Dallas Wings,DAL,Indiana Fever,IND,91,85,1
 401857159,2026-08-21,2026,False,Las Vegas Aces,LV,Connecticut Sun,CON,101,78,1
 401857161,2026-08-21,2026,False,Washington Mystics,WSH,Minnesota Lynx,MIN,84,94,0
+401857162,2026-08-21,2026,False,Chicago Sky,CHI,Golden State Valkyries,GS,73,70,1
 401857164,2026-08-22,2026,False,New York Liberty,NY,Indiana Fever,IND,109,102,1
 401857163,2026-08-22,2026,False,Toronto Tempo,TOR,Portland Fire,POR,82,79,1
-401857165,2026-08-23,2026,False,Los Angeles Sparks,LA,Connecticut Sun,CON,77,68,1
-401857166,2026-08-23,2026,False,Phoenix Mercury,PHX,Atlanta Dream,ATL,89,99,0
 401857167,2026-08-23,2026,False,Dallas Wings,DAL,Seattle Storm,SEA,92,70,1
 401857168,2026-08-23,2026,False,Chicago Sky,CHI,Indiana Fever,IND,90,113,0
 401857169,2026-08-23,2026,False,Portland Fire,POR,Washington Mystics,WSH,100,105,0
 401857170,2026-08-23,2026,False,Toronto Tempo,TOR,Las Vegas Aces,LV,78,88,0
+401857166,2026-08-23,2026,False,Phoenix Mercury,PHX,Atlanta Dream,ATL,89,99,0
+401857165,2026-08-23,2026,False,Los Angeles Sparks,LA,Connecticut Sun,CON,77,68,1
 401857171,2026-08-25,2026,False,Minnesota Lynx,MIN,Golden State Valkyries,GS,66,80,0
-401857173,2026-08-25,2026,False,Connecticut Sun,CON,Chicago Sky,CHI,87,81,1
 401857172,2026-08-25,2026,False,Los Angeles Sparks,LA,Atlanta Dream,ATL,71,78,0
+401857173,2026-08-25,2026,False,Connecticut Sun,CON,Chicago Sky,CHI,87,81,1
 401857176,2026-08-26,2026,False,Connecticut Sun,CON,Golden State Valkyries,GS,64,89,0
 401857175,2026-08-26,2026,False,Phoenix Mercury,PHX,Washington Mystics,WSH,84,94,0
 401857174,2026-08-26,2026,False,Dallas Wings,DAL,Portland Fire,POR,96,78,1
 401857177,2026-08-27,2026,False,Seattle Storm,SEA,Toronto Tempo,TOR,90,78,1
-401857180,2026-08-28,2026,False,Atlanta Dream,ATL,Portland Fire,POR,83,101,0
-401857181,2026-08-28,2026,False,Indiana Fever,IND,Connecticut Sun,CON,111,91,1
 401857178,2026-08-28,2026,False,New York Liberty,NY,Golden State Valkyries,GS,60,79,0
 401857179,2026-08-28,2026,False,Phoenix Mercury,PHX,Washington Mystics,WSH,73,80,0
+401857181,2026-08-28,2026,False,Indiana Fever,IND,Connecticut Sun,CON,111,91,1
+401857180,2026-08-28,2026,False,Atlanta Dream,ATL,Portland Fire,POR,83,101,0
 401857184,2026-08-29,2026,False,New York Liberty,NY,Chicago Sky,CHI,85,66,1
-401857182,2026-08-29,2026,False,Las Vegas Aces,LV,Toronto Tempo,TOR,93,73,1
 401857183,2026-08-29,2026,False,Los Angeles Sparks,LA,Washington Mystics,WSH,88,82,1
-401857188,2026-08-30,2026,False,Portland Fire,POR,Golden State Valkyries,GS,69,86,0
-401857187,2026-08-30,2026,False,Seattle Storm,SEA,Los Angeles Sparks,LA,74,90,0
-401857185,2026-08-30,2026,False,Phoenix Mercury,PHX,Toronto Tempo,TOR,101,69,1
+401857182,2026-08-29,2026,False,Las Vegas Aces,LV,Toronto Tempo,TOR,93,73,1
 401857186,2026-08-30,2026,False,Atlanta Dream,ATL,Minnesota Lynx,MIN,89,81,1
+401857185,2026-08-30,2026,False,Phoenix Mercury,PHX,Toronto Tempo,TOR,101,69,1
+401857187,2026-08-30,2026,False,Seattle Storm,SEA,Los Angeles Sparks,LA,74,90,0
+401857188,2026-08-30,2026,False,Portland Fire,POR,Golden State Valkyries,GS,69,86,0
 401857189,2026-08-31,2026,False,Dallas Wings,DAL,Connecticut Sun,CON,97,71,1
 401857190,2026-09-17,2026,False,Atlanta Dream,ATL,Connecticut Sun,CON,103,59,1
+401857194,2026-09-18,2026,False,Seattle Storm,SEA,Las Vegas Aces,LV,77,114,0
 401857193,2026-09-18,2026,False,Portland Fire,POR,Phoenix Mercury,PHX,91,94,0
 401857191,2026-09-18,2026,False,Chicago Sky,CHI,Washington Mystics,WSH,80,110,0
-401857192,2026-09-18,2026,False,Dallas Wings,DAL,Los Angeles Sparks,LA,97,77,1
-401857194,2026-09-18,2026,False,Seattle Storm,SEA,Las Vegas Aces,LV,77,114,0
 401857196,2026-09-18,2026,False,Minnesota Lynx,MIN,New York Liberty,NY,81,93,0
+401857192,2026-09-18,2026,False,Dallas Wings,DAL,Los Angeles Sparks,LA,97,77,1
 401857195,2026-09-18,2026,False,Toronto Tempo,TOR,Indiana Fever,IND,85,103,0
-401857198,2026-09-19,2026,False,Dallas Wings,DAL,Phoenix Mercury,PHX,87,82,1
 401857197,2026-09-19,2026,False,Golden State Valkyries,GS,Portland Fire,POR,82,66,1
 401857199,2026-09-19,2026,False,Atlanta Dream,ATL,Chicago Sky,CHI,106,81,1
-401857204,2026-09-20,2026,False,Los Angeles Sparks,LA,Portland Fire,POR,105,84,1
+401857198,2026-09-19,2026,False,Dallas Wings,DAL,Phoenix Mercury,PHX,87,82,1
 401857203,2026-09-20,2026,False,Indiana Fever,IND,Washington Mystics,WSH,77,93,0
+401857204,2026-09-20,2026,False,Los Angeles Sparks,LA,Portland Fire,POR,105,84,1
 401857201,2026-09-20,2026,False,Connecticut Sun,CON,Minnesota Lynx,MIN,89,101,0
 401857200,2026-09-20,2026,False,Golden State Valkyries,GS,Seattle Storm,SEA,70,57,1
 401857202,2026-09-20,2026,False,Toronto Tempo,TOR,New York Liberty,NY,69,106,0
 401857205,2026-09-21,2026,False,Las Vegas Aces,LV,Seattle Storm,SEA,98,77,1
-401857208,2026-09-22,2026,False,Washington Mystics,WSH,Connecticut Sun,CON,79,69,1
-401857206,2026-09-22,2026,False,New York Liberty,NY,Atlanta Dream,ATL,84,95,0
 401857207,2026-09-22,2026,False,Phoenix Mercury,PHX,Dallas Wings,DAL,87,86,1
+401857206,2026-09-22,2026,False,New York Liberty,NY,Atlanta Dream,ATL,84,95,0
+401857208,2026-09-22,2026,False,Washington Mystics,WSH,Connecticut Sun,CON,79,69,1
 401857209,2026-09-23,2026,False,Indiana Fever,IND,Minnesota Lynx,MIN,96,77,1
 401857210,2026-09-23,2026,False,Chicago Sky,CHI,Toronto Tempo,TOR,97,85,1
-401857211,2026-09-23,2026,False,Las Vegas Aces,LV,Los Angeles Sparks,LA,89,79,1
 401857212,2026-09-23,2026,False,Portland Fire,POR,Golden State Valkyries,GS,90,82,1
+401857211,2026-09-23,2026,False,Las Vegas Aces,LV,Los Angeles Sparks,LA,89,79,1
+401857214,2026-09-24,2026,False,Seattle Storm,SEA,Dallas Wings,DAL,91,103,0
 401857215,2026-09-24,2026,False,Connecticut Sun,CON,Toronto Tempo,TOR,95,81,1
 401857216,2026-09-24,2026,False,Washington Mystics,WSH,Chicago Sky,CHI,101,93,1
-401857214,2026-09-24,2026,False,Seattle Storm,SEA,Dallas Wings,DAL,91,103,0
 401857213,2026-09-24,2026,False,New York Liberty,NY,Atlanta Dream,ATL,65,83,0
-401857217,2026-09-25,2026,False,Minnesota Lynx,MIN,Indiana Fever,IND,86,66,1
 401857219,2026-09-25,2026,False,Phoenix Mercury,PHX,Las Vegas Aces,LV,82,100,0
 401857218,2026-09-25,2026,False,Los Angeles Sparks,LA,Golden State Valkyries,GS,75,76,0
-401918013,2026-09-27,2026,True,Atlanta Dream,ATL,Washington Mystics,WSH,92,77,1
-401918014,2026-09-27,2026,True,Minnesota Lynx,MIN,New York Liberty,NY,75,91,0
+401857217,2026-09-25,2026,False,Minnesota Lynx,MIN,Indiana Fever,IND,86,66,1
 401918015,2026-09-27,2026,True,Las Vegas Aces,LV,Indiana Fever,IND,102,85,1
+401918014,2026-09-27,2026,True,Minnesota Lynx,MIN,New York Liberty,NY,75,91,0
+401918013,2026-09-27,2026,True,Atlanta Dream,ATL,Washington Mystics,WSH,92,77,1
 401918016,2026-09-28,2026,True,Golden State Valkyries,GS,Dallas Wings,DAL,104,80,1
 401918018,2026-09-29,2026,True,Indiana Fever,IND,Las Vegas Aces,LV,99,89,1
 401918017,2026-09-30,2026,True,New York Liberty,NY,Minnesota Lynx,MIN,87,71,1
