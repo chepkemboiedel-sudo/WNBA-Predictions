@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-10-31T05:52:12.473Z",
+  "checked_at": "2026-10-31T12:41:32.370Z",
   "status": "ok",
   "error": null,
   "reports": [
@@ -309,7 +309,7 @@
           "id": "4281929",
           "name": "Satou Sabally",
           "status": "Out",
-          "date": "2026-10-31T05:00Z",
+          "date": "2026-10-31T12:01Z",
           "detail": "Concussion",
           "comment": "out",
           "url": "https://www.espn.com/wnba/player/_/id/4281929/satou-sabally"
@@ -544,10 +544,5 @@
   "delivered": [
     "injury-6842e24e2193b4edd602c16a"
   ],
-  "last_alerts": [
-    {
-      "title": "Availability update: Te-Hina Paopao — Day-To-Day",
-      "url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/issues/12"
-    }
-  ]
+  "last_alerts": []
 }
