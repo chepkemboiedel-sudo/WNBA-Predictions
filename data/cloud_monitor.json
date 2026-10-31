@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-10-30T23:52:15.306Z",
+  "checked_at": "2026-10-31T05:52:12.473Z",
   "status": "ok",
   "error": null,
   "reports": [
@@ -11,10 +11,10 @@
         {
           "id": "4433431",
           "name": "Te-Hina Paopao",
-          "status": "Out",
-          "date": "2026-10-29T15:49Z",
+          "status": "Day-To-Day",
+          "date": "2026-10-31T00:02Z",
           "detail": "Leg",
-          "comment": "Paopao (leg) is out for Thursday's Game 6 against the Valkyries.",
+          "comment": "Paopao (leg) is listed as questionable for Saturday's Game 7 of the Finals against Golden State.",
           "url": "https://www.espn.com/wnba/player/_/id/4433431/te-hina-paopao"
         },
         {
@@ -309,7 +309,7 @@
           "id": "4281929",
           "name": "Satou Sabally",
           "status": "Out",
-          "date": "2026-10-30T23:00Z",
+          "date": "2026-10-31T05:00Z",
           "detail": "Concussion",
           "comment": "out",
           "url": "https://www.espn.com/wnba/player/_/id/4281929/satou-sabally"
@@ -541,6 +541,13 @@
   ],
   "consecutive_failures": 0,
   "failure_started_at": null,
-  "delivered": [],
-  "last_alerts": []
+  "delivered": [
+    "injury-6842e24e2193b4edd602c16a"
+  ],
+  "last_alerts": [
+    {
+      "title": "Availability update: Te-Hina Paopao — Day-To-Day",
+      "url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/issues/12"
+    }
+  ]
 }
