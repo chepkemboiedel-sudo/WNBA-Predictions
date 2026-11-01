@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-10-31T21:41:28.479Z",
+  "checked_at": "2026-11-01T01:16:04.835Z",
   "status": "ok",
   "error": null,
   "reports": [
@@ -8,15 +8,6 @@
       "team": "Atlanta Dream",
       "id": "20",
       "players": [
-        {
-          "id": "4433431",
-          "name": "Te-Hina Paopao",
-          "status": "Day-To-Day",
-          "date": "2026-10-31T00:02Z",
-          "detail": "Leg",
-          "comment": "Paopao (leg) is listed as questionable for Saturday's Game 7 of the Finals against Golden State.",
-          "url": "https://www.espn.com/wnba/player/_/id/4433431/te-hina-paopao"
-        },
         {
           "id": "5209602",
           "name": "Matilde Villa",
@@ -309,7 +300,7 @@
           "id": "4281929",
           "name": "Satou Sabally",
           "status": "Out",
-          "date": "2026-10-31T19:00Z",
+          "date": "2026-11-01T01:00Z",
           "detail": "Concussion",
           "comment": "out",
           "url": "https://www.espn.com/wnba/player/_/id/4281929/satou-sabally"
