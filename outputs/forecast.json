@@ -1,13 +1,9 @@
 {
   "n_sims": 20000,
-  "data_through": "2026-10-29",
-  "game_count": 2659,
-  "completed_playoff_games": 22,
+  "data_through": "2026-11-01",
+  "game_count": 2660,
+  "completed_playoff_games": 23,
   "observed_series": {
-    "Las Vegas Aces|Indiana Fever": {
-      "hw": 2,
-      "lw": 1
-    },
     "Atlanta Dream|Washington Mystics": {
       "hw": 2,
       "lw": 0
@@ -15,6 +11,10 @@
     "Minnesota Lynx|New York Liberty": {
       "hw": 0,
       "lw": 2
+    },
+    "Las Vegas Aces|Indiana Fever": {
+      "hw": 2,
+      "lw": 1
     },
     "Golden State Valkyries|Dallas Wings": {
       "hw": 2,
@@ -29,7 +29,7 @@
       "lw": 0
     },
     "Golden State Valkyries|Atlanta Dream": {
-      "hw": 3,
+      "hw": 4,
       "lw": 3
     }
   },
@@ -46,20 +46,20 @@
     "policy": "prospective-gate-v1",
     "model_version": "score-logistic-v1+participation-ridge-minutes-v2",
     "season": 2026,
-    "eligible_games": 1,
+    "eligible_games": 2,
     "registered_games": 2,
     "block_size": 100,
     "promoted": false,
     "checks": [],
     "reason": "Waiting for 100 independently recorded, completed games of the current model version.",
-    "checked_at": "2026-10-31T18:19:40.592081+00:00",
+    "checked_at": "2026-11-01T19:25:08.248705+00:00",
     "usable": false
   },
   "probability_model": "score-only",
   "injury_adjustment_default": false,
   "availability": {
     "status": "live",
-    "fetched_at": "2026-10-31T18:19:36.428770Z",
+    "fetched_at": "2026-11-01T19:25:01.158437Z",
     "apply_adjustments": true,
     "message": "Player feeds retrieved successfully.",
     "model": {
@@ -77,8 +77,8 @@
       "players_with_comparison": 225
     },
     "boxscore_coverage": {
-      "expected_games": 638,
-      "covered_games": 638,
+      "expected_games": 639,
+      "covered_games": 639,
       "missing_games": []
     }
   },

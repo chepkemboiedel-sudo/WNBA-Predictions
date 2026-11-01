@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "created_at": "2026-10-29T19:27:14.816811+00:00",
+  "created_at": "2026-11-01T19:25:07.830013+00:00",
   "primary_comparison": "verified_report_games",
   "test_season": 2026,
   "baseline_train_seasons": [
@@ -97,11 +97,26 @@
       "max_team_points": 6.0,
       "margin_logit_coefficient": 0.09804504385349429,
       "players_with_comparison": 225
+    },
+    {
+      "before": "2026-11-01",
+      "version": "participation-ridge-minutes-v2",
+      "experimental": true,
+      "training_games": 567,
+      "training_seasons": [
+        2025,
+        2026
+      ],
+      "ridge_alpha": 30,
+      "max_player_points": 4.0,
+      "max_team_points": 6.0,
+      "margin_logit_coefficient": 0.09804504385349429,
+      "players_with_comparison": 225
     }
   ],
   "report_policy": "09:00 ET for tips before 16:00 ET; 15:00 ET for later tips; at least one hour before tip. No outcome-dependent report selection.",
-  "report_files_requested": 154,
-  "report_files_verified": 152,
+  "report_files_requested": 155,
+  "report_files_verified": 153,
   "report_failures": [
     {
       "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-28_03_00PM.pdf",
@@ -115,7 +130,7 @@
     }
   ],
   "fallback_counts": {
-    "Both teams not explicitly submitted in the selected report": 107,
+    "Both teams not explicitly submitted in the selected report": 108,
     "Game start time unavailable": 1,
     "No verified fixed-time report": 15
   },
@@ -124,35 +139,35 @@
   "incomplete_team_history_games": 56,
   "groups": {
     "all_eligible_games": {
-      "n": 325,
-      "days": 119,
+      "n": 326,
+      "days": 120,
       "changed_games": 120,
       "metrics": {
         "log_loss": {
-          "baseline": 0.5821308414169342,
-          "adjusted": 0.5816255903369043,
-          "delta": -0.0005052510800298497,
+          "baseline": 0.582280700340055,
+          "adjusted": 0.5817769991099638,
+          "delta": -0.0005037012300911078,
           "delta_ci95": [
-            -0.0024446459825435323,
-            0.001513700584233746
+            -0.0024121951490411204,
+            0.0014881672592814647
           ]
         },
         "brier": {
-          "baseline": 0.1978496724528153,
-          "adjusted": 0.19777947060812512,
-          "delta": -7.020184469015474e-05,
+          "baseline": 0.19791443048479312,
+          "adjusted": 0.19784444398318485,
+          "delta": -6.99865016082831e-05,
           "delta_ci95": [
-            -0.0009314383146947872,
-            0.0008136970649016899
+            -0.0009178316576785759,
+            0.0008129264664386876
           ]
         },
         "accuracy": {
-          "baseline": 0.6923076923076923,
-          "adjusted": 0.6923076923076923,
+          "baseline": 0.6932515337423313,
+          "adjusted": 0.6932515337423313,
           "delta": 0.0,
           "delta_ci95": [
-            -0.009174311926605505,
-            0.009146341463414634
+            -0.00909090909090909,
+            0.00909090909090909
           ]
         }
       },
@@ -400,26 +415,26 @@
       "n": 0
     },
     "prospective": {
-      "n": 1,
-      "days": 1,
+      "n": 2,
+      "days": 2,
       "changed_games": 0,
       "metrics": {
         "log_loss": {
-          "baseline": 0.5319018383024722,
-          "adjusted": 0.531901838302472,
-          "delta": -2.220446049250313e-16,
+          "baseline": 0.5654907170578496,
+          "adjusted": 0.5654907170578496,
+          "delta": -1.1102230246251565e-16,
           "delta_ci95": [
             -2.220446049250313e-16,
-            -2.220446049250313e-16
+            0.0
           ]
         },
         "brier": {
-          "baseline": 0.17016730351604448,
-          "adjusted": 0.17016730351604437,
-          "delta": -1.1102230246251565e-16,
+          "baseline": 0.18664123628508553,
+          "adjusted": 0.18664123628508547,
+          "delta": -5.551115123125783e-17,
           "delta_ci95": [
             -1.1102230246251565e-16,
-            -1.1102230246251565e-16
+            0.0
           ]
         },
         "accuracy": {

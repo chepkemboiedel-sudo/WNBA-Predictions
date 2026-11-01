@@ -1,23 +1,23 @@
 {
   "version": 1,
   "status": "ok",
-  "last_attempt_at": "2026-10-31T18:19:45.140641Z",
-  "last_success_at": "2026-10-31T18:19:45.140641Z",
-  "next_refresh_at": "2026-11-01T15:00:00Z",
-  "data_through": "2026-10-29",
+  "last_attempt_at": "2026-11-01T19:25:14.989829Z",
+  "last_success_at": "2026-11-01T19:25:14.989829Z",
+  "next_refresh_at": "2026-11-02T15:00:00Z",
+  "data_through": "2026-11-01",
   "season": 2026,
   "coverage": {
-    "season_games": 352,
+    "season_games": 353,
     "regular_games": 330,
-    "playoff_games": 22,
-    "historical_games": 2659
+    "playoff_games": 23,
+    "historical_games": 2660
   },
   "source": "ESPN completed game results",
   "verified": true,
-  "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/41228783349",
+  "run_url": "https://github.com/chepkemboiedel-sudo/WNBA-Predictions/actions/runs/41341546471",
   "availability": {
     "status": "live",
-    "fetched_at": "2026-10-31T18:19:36.428770Z",
+    "fetched_at": "2026-11-01T19:25:01.158437Z",
     "apply_adjustments": true,
     "message": "Player feeds retrieved successfully.",
     "model": {
@@ -35,8 +35,8 @@
       "players_with_comparison": 225
     },
     "boxscore_coverage": {
-      "expected_games": 638,
-      "covered_games": 638,
+      "expected_games": 639,
+      "covered_games": 639,
       "missing_games": []
     }
   },
