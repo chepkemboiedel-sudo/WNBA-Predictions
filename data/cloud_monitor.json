@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "checked_at": "2026-11-03T06:55:07.333Z",
-  "status": "ok",
-  "error": null,
+  "checked_at": "2026-11-03T15:15:33.796Z",
+  "status": "failed",
+  "error": "Backtest evaluation is failed, stale, or unverified; no improvement alert is permitted.",
   "reports": [
     {
       "team": "Atlanta Dream",
@@ -300,7 +300,7 @@
           "id": "4281929",
           "name": "Satou Sabally",
           "status": "Out",
-          "date": "2026-11-03T06:01Z",
+          "date": "2026-11-03T15:01Z",
           "detail": "Concussion",
           "comment": "out",
           "url": "https://www.espn.com/wnba/player/_/id/4281929/satou-sabally"
@@ -530,8 +530,8 @@
       ]
     }
   ],
-  "consecutive_failures": 0,
-  "failure_started_at": null,
+  "consecutive_failures": 1,
+  "failure_started_at": "2026-11-03T15:15:33.796Z",
   "delivered": [
     "injury-6842e24e2193b4edd602c16a"
   ],

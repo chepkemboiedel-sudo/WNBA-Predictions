@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "checked_at": "2026-11-03T06:55:07.333Z",
-  "status": "ok",
-  "error": null,
-  "consecutive_failures": 0,
+  "checked_at": "2026-11-03T15:15:33.796Z",
+  "status": "failed",
+  "error": "Backtest evaluation is failed, stale, or unverified; no improvement alert is permitted.",
+  "consecutive_failures": 1,
   "cadence": "hourly",
   "channel": "GitHub issues assigned to chepkemboiedel-sudo"
 }
