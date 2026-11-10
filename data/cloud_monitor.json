@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-11-10T09:57:30.833Z",
+  "checked_at": "2026-11-10T17:54:42.252Z",
   "status": "failed",
   "error": "Backtest evaluation is failed, stale, or unverified; no improvement alert is permitted.",
   "reports": [
@@ -85,57 +85,6 @@
           "detail": "Knee",
           "comment": "The Sky announced Tuesday that Jackson will miss the remainder of the season after suffering a torn ACL in her left knee during Sunday's 86-79 win over the Lynx.",
           "url": "https://www.espn.com/wnba/player/_/id/4433630/rickea-jackson"
-        }
-      ]
-    },
-    {
-      "team": "Connecticut Sun",
-      "id": "18",
-      "players": [
-        {
-          "id": "4433792",
-          "name": "Rayah Marshall",
-          "status": "Out",
-          "date": "2026-09-25T00:21Z",
-          "detail": "Knee",
-          "comment": "Marshall has been ruled out for the remainder of Thursday's game against the Tempo due to a right knee injury.",
-          "url": "https://www.espn.com/wnba/player/_/id/4433792/rayah-marshall"
-        },
-        {
-          "id": "4398966",
-          "name": "Olivia Nelson-Ododa",
-          "status": "Out",
-          "date": "2026-09-23T20:54Z",
-          "detail": "Knee",
-          "comment": "Nelson-Ododa (knee) is out for Thursday's game against the Tempo.",
-          "url": "https://www.espn.com/wnba/player/_/id/4398966/olivia-nelson-ododa"
-        },
-        {
-          "id": "4433514",
-          "name": "Saniya Rivers",
-          "status": "Out",
-          "date": "2026-09-23T20:51Z",
-          "detail": "Ankle",
-          "comment": "Rivers (ankle) is out for Thursday's game against the Tempo.",
-          "url": "https://www.espn.com/wnba/player/_/id/4433514/saniya-rivers"
-        },
-        {
-          "id": "2490553",
-          "name": "Brittney Griner",
-          "status": "Out",
-          "date": "2026-09-23T20:49Z",
-          "detail": "Knee",
-          "comment": "Griner (knee) is out for Thursday's game against the Tempo.",
-          "url": "https://www.espn.com/wnba/player/_/id/2490553/brittney-griner"
-        },
-        {
-          "id": "3922628",
-          "name": "Kennedy Burke",
-          "status": "Out",
-          "date": "2026-09-14T19:53Z",
-          "detail": "Shoulder",
-          "comment": "The Sun announced Monday that Burke suffered a sprained AC joint in the FIBA World Cup and will miss the rest of the season.",
-          "url": "https://www.espn.com/wnba/player/_/id/3922628/kennedy-burke"
         }
       ]
     },
@@ -300,7 +249,7 @@
           "id": "4281929",
           "name": "Satou Sabally",
           "status": "Out",
-          "date": "2026-11-10T09:01Z",
+          "date": "2026-11-10T17:01Z",
           "detail": "Concussion",
           "comment": "out",
           "url": "https://www.espn.com/wnba/player/_/id/4281929/satou-sabally"
@@ -530,7 +479,7 @@
       ]
     }
   ],
-  "consecutive_failures": 26,
+  "consecutive_failures": 27,
   "failure_started_at": "2026-11-03T15:15:33.796Z",
   "delivered": [
     "injury-6842e24e2193b4edd602c16a",
