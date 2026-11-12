@@ -1,0 +1,88 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-29_03_00PM.pdf",
+  "status": 200,
+  "sha256": "03afbe8699f4333b932268c5df30898abe3dcfae047c08d53792eb0ce1091278",
+  "parser_version": 2,
+  "published_at": "2026-09-29T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-09-29",
+      "matchup": "LVA@IND",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-29",
+      "matchup": "LVA@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-29",
+      "matchup": "MIN@NYL",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-30",
+      "matchup": "ATL@WAS",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-30",
+      "matchup": "ATL@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-30",
+      "matchup": "GSV@DAL",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-30",
+      "matchup": "GSV@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-09-29",
+      "matchup": "LVA@IND",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-29",
+      "matchup": "LVA@IND",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-09-29",
+      "matchup": "LVA@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-09-29",
+      "matchup": "LVA@IND",
+      "team": "IndianaFever",
+      "player": "Harris,Tyasha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-29",
+      "matchup": "MIN@NYL",
+      "team": "MinnesotaLynx",
+      "player": "Kosu,AnastasiiaOlairi",
+      "status": "Out"
+    }
+  ]
+}

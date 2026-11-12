@@ -1,0 +1,140 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-18_03_00PM.pdf",
+  "status": 200,
+  "sha256": "fa7c6adc5eb38a26505979c83600ac1256c0894cd6ca99163ebcf4cc03ab54a8",
+  "parser_version": 2,
+  "published_at": "2026-09-18T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-09-18",
+      "matchup": "IND@TOR",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-18",
+      "matchup": "IND@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-18",
+      "matchup": "NYL@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-18",
+      "matchup": "PDX@GSV",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-18",
+      "matchup": "PDX@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-19",
+      "matchup": "PHX@DAL",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-19",
+      "matchup": "PHX@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-19",
+      "matchup": "CHI@ATL",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-19",
+      "matchup": "CHI@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-19",
+      "matchup": "SEA@GSV",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-19",
+      "matchup": "SEA@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-09-18",
+      "matchup": "IND@TOR",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-09-18",
+      "matchup": "IND@TOR",
+      "team": "TorontoTempo",
+      "player": "Conde,Maria",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-09-18",
+      "matchup": "IND@TOR",
+      "team": "TorontoTempo",
+      "player": "Mabrey,Marina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-18",
+      "matchup": "IND@TOR",
+      "team": "TorontoTempo",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-18",
+      "matchup": "IND@TOR",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-18",
+      "matchup": "NYL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Kosu,AnastasiiaOlairi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-18",
+      "matchup": "PDX@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Salaun,Janelle",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-18",
+      "matchup": "PDX@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Williams,Gabby",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-18",
+      "matchup": "PDX@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Zandalasini,Cecilia",
+      "status": "Questionable"
+    }
+  ]
+}

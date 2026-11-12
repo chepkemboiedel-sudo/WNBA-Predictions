@@ -1,0 +1,93 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-07_03_00PM.pdf",
+  "status": 200,
+  "sha256": "140ab5b8eb1ed87fc46853878e6d7f6f7c516433ff0d0cd60c58ce3221c1676b",
+  "parser_version": 2,
+  "published_at": "2026-08-07T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-07",
+      "matchup": "ATL@WAS",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-07",
+      "matchup": "PHX@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-07",
+      "matchup": "GSV@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "LVA@MIN",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "LVA@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "IND@CHI",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "IND@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "SEA@PDX",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "SEA@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-07",
+      "matchup": "ATL@WAS",
+      "team": "AtlantaDream",
+      "player": "Paopao,Te-Hina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-07",
+      "matchup": "PHX@CON",
+      "team": "ConnecticutSun",
+      "player": "Beers,Raegan",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-07",
+      "matchup": "PHX@CON",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-07",
+      "matchup": "GSV@DAL",
+      "team": "DallasWings",
+      "player": "Clark,Alysha",
+      "status": "Questionable"
+    }
+  ]
+}

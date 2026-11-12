@@ -1,0 +1,201 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-24_03_00PM.pdf",
+  "status": 200,
+  "sha256": "454730ddf4cd0034f03541b7c7997f36a900cba8a38358407590a22e3f2db4a2",
+  "parser_version": 2,
+  "published_at": "2026-06-24T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-24",
+      "matchup": "MIN@WAS",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "MIN@WAS",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PHX@IND",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PHX@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PDX@CHI",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PDX@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "ATL@GSV",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-25",
+      "matchup": "LAS@TOR",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-25",
+      "matchup": "LAS@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-25",
+      "matchup": "DAL@LVA",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-25",
+      "matchup": "DAL@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-25",
+      "matchup": "NYL@SEA",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-25",
+      "matchup": "NYL@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-24",
+      "matchup": "MIN@WAS",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "MIN@WAS",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "MIN@WAS",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "MIN@WAS",
+      "team": "WashingtonMystics",
+      "player": "Littlepage-Buggs,Darianna",
+      "status": "Available"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PHX@IND",
+      "team": "PhoenixMercury",
+      "player": "AkoaMakani,Monique",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PHX@IND",
+      "team": "PhoenixMercury",
+      "player": "Mack,Natasha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PHX@IND",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PHX@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PDX@CHI",
+      "team": "PortlandFire",
+      "player": "Leite,Carla",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PDX@CHI",
+      "team": "PortlandFire",
+      "player": "Samuelson,Karlie",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PDX@CHI",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PDX@CHI",
+      "team": "ChicagoSky",
+      "player": "Cloud,Natasha",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PDX@CHI",
+      "team": "ChicagoSky",
+      "player": "Jackson,Rickea",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PDX@CHI",
+      "team": "ChicagoSky",
+      "player": "Vandersloot,Courtney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "ATL@GSV",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "ATL@GSV",
+      "team": "AtlantaDream",
+      "player": "Nye,Aaliyah",
+      "status": "Out"
+    }
+  ]
+}

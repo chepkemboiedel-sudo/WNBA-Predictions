@@ -1,0 +1,161 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-13_03_00PM.pdf",
+  "status": 200,
+  "sha256": "c9dd1d44567e284d2f5b9f61c4422d9b082d93cccea9340fa69ea46f879d66e3",
+  "parser_version": 2,
+  "published_at": "2026-06-13T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-13",
+      "matchup": "IND@CON",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "IND@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "MIN@LVA",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "MIN@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "DAL@PDX",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "DAL@PDX",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "LAS@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-14",
+      "matchup": "ATL@TOR",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-14",
+      "matchup": "ATL@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-14",
+      "matchup": "WAS@NYL",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-14",
+      "matchup": "WAS@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-13",
+      "matchup": "IND@CON",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "IND@CON",
+      "team": "IndianaFever",
+      "player": "Cunningham,Sophie",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "IND@CON",
+      "team": "ConnecticutSun",
+      "player": "VanLith,Hailey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "MIN@LVA",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "MIN@LVA",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "MIN@LVA",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "MIN@LVA",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "DAL@PDX",
+      "team": "DallasWings",
+      "player": "Bueckers,Paige",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "DAL@PDX",
+      "team": "DallasWings",
+      "player": "Sims,Odyssey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "DAL@PDX",
+      "team": "PortlandFire",
+      "player": "Leite,Carla",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "DAL@PDX",
+      "team": "PortlandFire",
+      "player": "Puoch,Nyadiew",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-13",
+      "matchup": "LAS@PHX",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    }
+  ]
+}

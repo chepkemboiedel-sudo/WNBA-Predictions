@@ -1,0 +1,154 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-08_03_00PM.pdf",
+  "status": 200,
+  "sha256": "a9bdd015be7af18ce82f1275b2af37a3dd20b705fc4772ad2abad7f61caf19f5",
+  "parser_version": 2,
+  "published_at": "2026-07-08T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-08",
+      "matchup": "GSV@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "MIN@CON",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "MIN@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "IND@LAS",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "IND@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-09",
+      "matchup": "SEA@ATL",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-09",
+      "matchup": "SEA@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-09",
+      "matchup": "IND@PHX",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-09",
+      "matchup": "IND@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-09",
+      "matchup": "LVA@PDX",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-09",
+      "matchup": "LVA@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-08",
+      "matchup": "GSV@TOR",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "GSV@TOR",
+      "team": "TorontoTempo",
+      "player": "Rice,Kiki",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "GSV@TOR",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "MIN@CON",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "MIN@CON",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "MIN@CON",
+      "team": "MinnesotaLynx",
+      "player": "Miles,Olivia",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "MIN@CON",
+      "team": "ConnecticutSun",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "IND@LAS",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "IND@LAS",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "IND@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Brink,Cameron",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "IND@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    }
+  ]
+}

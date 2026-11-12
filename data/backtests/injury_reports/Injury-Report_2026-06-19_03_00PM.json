@@ -1,0 +1,140 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-19_03_00PM.pdf",
+  "status": 200,
+  "sha256": "66b85ab80f74fb531a725117181d09fc1002307ac701fc3eebca05a4f5e4db64",
+  "parser_version": 2,
+  "published_at": "2026-06-19T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-19",
+      "matchup": "TOR@CON",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "TOR@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "WAS@NYL",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "WAS@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "MIN@GSV",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-20",
+      "matchup": "IND@ATL",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-20",
+      "matchup": "IND@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-20",
+      "matchup": "SEA@PHX",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-20",
+      "matchup": "SEA@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-20",
+      "matchup": "CHI@DAL",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-20",
+      "matchup": "CHI@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-19",
+      "matchup": "TOR@CON",
+      "team": "TorontoTempo",
+      "player": "Rice,Kiki",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "TOR@CON",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "TOR@CON",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "TOR@CON",
+      "team": "ConnecticutSun",
+      "player": "VanLith,Hailey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "WAS@NYL",
+      "team": "WashingtonMystics",
+      "player": "Austin,Shakira",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "WAS@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Laney-Hamilton,Betnijah",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "MIN@GSV",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "MIN@GSV",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "MIN@GSV",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Out"
+    }
+  ]
+}

@@ -36,7 +36,7 @@ def finals_bar(csv_path: str, out_path: str):
                     fontsize=8, color="white", fontweight="bold")
 
     ax.set_xlabel("Probability (%)")
-    ax.set_title("2026 WNBA — simulated Finals & championship probability\n"
+    ax.set_title("WNBA — simulated Finals & championship probability\n"
                  "(outer bar = reach Finals, inner = win title; "
                  "blue = West, red = East)")
     ax.grid(axis="x", alpha=0.25)

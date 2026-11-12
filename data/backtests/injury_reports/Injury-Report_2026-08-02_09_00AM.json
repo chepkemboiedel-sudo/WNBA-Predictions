@@ -1,0 +1,187 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-02_09_00AM.pdf",
+  "status": 200,
+  "sha256": "8f1d6d5d1ef3158794daeff4b89c1e6c40ad37684c19dde7444aa86a3716ee65",
+  "parser_version": 2,
+  "published_at": "2026-08-02T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-02",
+      "matchup": "IND@MIN",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "IND@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "LAS@PDX",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "LAS@PDX",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "CON@DAL",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "TOR@GSV",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "TOR@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "LVA@ATL",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "LVA@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "SEA@NYL",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "SEA@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "PHX@CHI",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "PHX@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-02",
+      "matchup": "IND@MIN",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "IND@MIN",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "IND@MIN",
+      "team": "IndianaFever",
+      "player": "Dantas,Damiris",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "IND@MIN",
+      "team": "IndianaFever",
+      "player": "Onyiah,Ugonne",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "IND@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "LAS@PDX",
+      "team": "LosAngelesSparks",
+      "player": "Plum,Kelsey",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "LAS@PDX",
+      "team": "PortlandFire",
+      "player": "Barker,SarahAshlee",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "LAS@PDX",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "CON@DAL",
+      "team": "ConnecticutSun",
+      "player": "Edwards,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "CON@DAL",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "TOR@GSV",
+      "team": "TorontoTempo",
+      "player": "Mabrey,Marina",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "TOR@GSV",
+      "team": "TorontoTempo",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "TOR@GSV",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "TOR@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Williams,Gabby",
+      "status": "Questionable"
+    }
+  ]
+}

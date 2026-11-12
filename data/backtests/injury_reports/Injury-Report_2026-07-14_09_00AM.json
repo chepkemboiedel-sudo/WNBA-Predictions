@@ -1,0 +1,114 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-14_09_00AM.pdf",
+  "status": 200,
+  "sha256": "d9de7a8155f5175adf5ce5bb0b5c0c4bab9bf342c7dfa48d3237348aeb0e71ca",
+  "parser_version": 2,
+  "published_at": "2026-07-14T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-14",
+      "matchup": "WAS@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-14",
+      "matchup": "PDX@CON",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-14",
+      "matchup": "PDX@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "LAS@MIN",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "LAS@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "GSV@IND",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "GSV@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "SEA@CHI",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "SEA@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-14",
+      "matchup": "WAS@TOR",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-14",
+      "matchup": "WAS@TOR",
+      "team": "TorontoTempo",
+      "player": "Rice,Kiki",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-14",
+      "matchup": "WAS@TOR",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-14",
+      "matchup": "PDX@CON",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-14",
+      "matchup": "PDX@CON",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-14",
+      "matchup": "PDX@CON",
+      "team": "ConnecticutSun",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-14",
+      "matchup": "PDX@CON",
+      "team": "ConnecticutSun",
+      "player": "Rivers,Saniya",
+      "status": "Out"
+    }
+  ]
+}

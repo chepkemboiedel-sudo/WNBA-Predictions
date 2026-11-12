@@ -1,0 +1,168 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-02_03_00PM.pdf",
+  "status": 200,
+  "sha256": "d63ee282fdf0223fefad1a4e967d2fc4a1ead53aa04737a69d2f5745e915c287",
+  "parser_version": 2,
+  "published_at": "2026-06-02T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-02",
+      "matchup": "CHI@WAS",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "CHI@WAS",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "CON@ATL",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "CON@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "LVA@LAS",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "LVA@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "PDX@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "TOR@NYL",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "TOR@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "PHX@SEA",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "PHX@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-02",
+      "matchup": "CHI@WAS",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "CHI@WAS",
+      "team": "ChicagoSky",
+      "player": "Jackson,Rickea",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "CHI@WAS",
+      "team": "ChicagoSky",
+      "player": "Jaquez,Gabriela",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "CHI@WAS",
+      "team": "ChicagoSky",
+      "player": "Vandersloot,Courtney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "CHI@WAS",
+      "team": "WashingtonMystics",
+      "player": "Citron,Sonia",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "CHI@WAS",
+      "team": "WashingtonMystics",
+      "player": "Wilson,Alex",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "CON@ATL",
+      "team": "ConnecticutSun",
+      "player": "Edwards,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "CON@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "LVA@LAS",
+      "team": "LasVegasAces",
+      "player": "Carter,Chennedy",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "LVA@LAS",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "LVA@LAS",
+      "team": "LasVegasAces",
+      "player": "Loyd,Jewell",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "LVA@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-02",
+      "matchup": "PDX@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Burton,Veronica",
+      "status": "Questionable"
+    }
+  ]
+}

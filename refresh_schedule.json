@@ -1,0 +1,8 @@
+{
+  "timezone": "America/Los_Angeles",
+  "hour": 7,
+  "minute": 0,
+  "label": "Daily at 7:00 a.m. Pacific",
+  "scheduler": "github_actions",
+  "workflow": ".github/workflows/daily-refresh.yml"
+}

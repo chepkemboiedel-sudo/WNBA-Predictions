@@ -1,0 +1,49 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-30_03_00PM.pdf",
+  "status": 200,
+  "sha256": "cb444ada92bf377265d13e99336a9ddc82150abf7a1585ded002417b2736dd5a",
+  "parser_version": 2,
+  "published_at": "2026-09-30T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-09-30",
+      "matchup": "ATL@WAS",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-30",
+      "matchup": "GSV@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-10-01",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-10-01",
+      "matchup": "IND@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-09-30",
+      "matchup": "ATL@WAS",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-30",
+      "matchup": "GSV@DAL",
+      "team": "DallasWings",
+      "player": "Smith,Alanna",
+      "status": "Out"
+    }
+  ]
+}

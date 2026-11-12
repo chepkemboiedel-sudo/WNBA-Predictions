@@ -1,0 +1,207 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-19_09_00AM.pdf",
+  "status": 200,
+  "sha256": "2b71a00ab609040ee102c69afce2155c63757e1f6abc2f4291e9e2176c730be2",
+  "parser_version": 2,
+  "published_at": "2026-07-19T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-19",
+      "matchup": "LAS@DAL",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "LAS@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CHI@ATL",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CHI@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CON@PHX",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CON@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "LVA@TOR",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "LVA@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "NYL@DAL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "NYL@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "MIN@SEA",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "MIN@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "WAS@GSV",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "WAS@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-19",
+      "matchup": "LAS@DAL",
+      "team": "LosAngelesSparks",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "LAS@DAL",
+      "team": "LosAngelesSparks",
+      "player": "Williams,Kiana",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "LAS@DAL",
+      "team": "DallasWings",
+      "player": "Smith,Alanna",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CHI@ATL",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CHI@ATL",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CHI@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CHI@ATL",
+      "team": "AtlantaDream",
+      "player": "Paopao,Te-Hina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CON@PHX",
+      "team": "ConnecticutSun",
+      "player": "Edwards,Aaliyah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CON@PHX",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CON@PHX",
+      "team": "ConnecticutSun",
+      "player": "Morrow,Aneesah",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CON@PHX",
+      "team": "ConnecticutSun",
+      "player": "Rivers,Saniya",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CON@PHX",
+      "team": "PhoenixMercury",
+      "player": "Mack,Natasha",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CON@PHX",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "NYL@DAL",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "NYL@DAL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "NYL@DAL",
+      "team": "DallasWings",
+      "player": "Smith,Alanna",
+      "status": "Doubtful"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-07_03_00PM.pdf",
+  "status": 200,
+  "sha256": "850504e12603e42750516e4dce0b8e60ce1b0c0913e69f011ddb1f95e75c0e88",
+  "parser_version": 2,
+  "published_at": "2026-07-07T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-07",
+      "matchup": "DAL@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-07",
+      "matchup": "CHI@PHX",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-07",
+      "matchup": "CHI@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "GSV@TOR",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "GSV@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "MIN@CON",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "MIN@CON",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "IND@LAS",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-08",
+      "matchup": "IND@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-07",
+      "matchup": "DAL@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-07",
+      "matchup": "DAL@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-07",
+      "matchup": "CHI@PHX",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-07",
+      "matchup": "CHI@PHX",
+      "team": "PhoenixMercury",
+      "player": "Brochant,Noemie",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-07",
+      "matchup": "CHI@PHX",
+      "team": "PhoenixMercury",
+      "player": "Mack,Natasha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-07",
+      "matchup": "CHI@PHX",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    }
+  ]
+}

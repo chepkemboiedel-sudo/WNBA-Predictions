@@ -1,0 +1,137 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-21_03_00PM.pdf",
+  "status": 200,
+  "sha256": "c106d7a03a3a531afc74f61bbcb2e3b1e00ae8e486ff4d9cae824efdb4f923ea",
+  "parser_version": 2,
+  "published_at": "2026-09-21T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-09-21",
+      "matchup": "ATL@NYL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-21",
+      "matchup": "ATL@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-21",
+      "matchup": "DAL@PHX",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-21",
+      "matchup": "DAL@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-22",
+      "matchup": "CON@WAS",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-22",
+      "matchup": "CON@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-22",
+      "matchup": "MIN@IND",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-22",
+      "matchup": "MIN@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-22",
+      "matchup": "TOR@CHI",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-22",
+      "matchup": "TOR@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-22",
+      "matchup": "GSV@PDX",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-22",
+      "matchup": "GSV@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-22",
+      "matchup": "LAS@LVA",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-22",
+      "matchup": "LAS@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-09-21",
+      "matchup": "ATL@NYL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-21",
+      "matchup": "ATL@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Balogun,Elizabeth",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-21",
+      "matchup": "DAL@PHX",
+      "team": "DallasWings",
+      "player": "Smith,Alanna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-21",
+      "matchup": "DAL@PHX",
+      "team": "PhoenixMercury",
+      "player": "Copper,Kahleah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-09-21",
+      "matchup": "DAL@PHX",
+      "team": "PhoenixMercury",
+      "player": "Dunn,Kara",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-09-21",
+      "matchup": "DAL@PHX",
+      "team": "PhoenixMercury",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    }
+  ]
+}

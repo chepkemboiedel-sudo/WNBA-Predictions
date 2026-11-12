@@ -13,6 +13,8 @@ summed to ~1.29, i.e. a 29% overround -- which we divide out.
 from __future__ import annotations
 
 import os
+import json
+from datetime import datetime, timezone
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -29,8 +31,11 @@ def _american_to_implied(value: str) -> float:
     return 100 / (a + 100) if a > 0 else abs(a) / (abs(a) + 100)
 
 
-def fetch_market_odds(season: int = 2026) -> pd.DataFrame:
+def fetch_market_odds(season: int | None = None) -> pd.DataFrame:
     """Live ESPN BET championship futures, de-vigged. Falls back to cache."""
+    if season is None:
+        from seasons import forecast_season
+        season = forecast_season(pd.read_csv(os.path.join(DATA,"all_games.csv")))
     cache = os.path.join(DATA, "market_odds.csv")
     try:
         teams = requests.get(
@@ -38,7 +43,7 @@ def fetch_market_odds(season: int = 2026) -> pd.DataFrame:
             f"seasons/{season}/teams?limit=50", headers=HDR, timeout=20).json()
         idname = {}
         for it in teams["items"]:
-            t = requests.get(it["$ref"], headers=HDR, timeout=20).json()
+            t = requests.get(it["$ref"].replace("http://", "https://"), headers=HDR, timeout=20).json()
             idname[str(t["id"])] = t.get("displayName")
         fut = requests.get(
             f"https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/"
@@ -52,9 +57,19 @@ def fetch_market_odds(season: int = 2026) -> pd.DataFrame:
         df = pd.DataFrame(rows)
         df["market_novig"] = df.implied_raw / df.implied_raw.sum()
         df.to_csv(cache, index=False)
+        with open(os.path.join(DATA, "market_meta.json"), "w", encoding="utf-8") as f:
+            json.dump({"status": "live", "fetched_at": datetime.now(timezone.utc).isoformat()}, f)
         return df
     except Exception as e:  # network hiccup -> use last saved snapshot
         print(f"  (live odds fetch failed: {e}; using cache)")
+        meta_path = os.path.join(DATA, "market_meta.json")
+        metadata = {"status": "cached", "fetched_at": None}
+        if os.path.exists(meta_path):
+            with open(meta_path, encoding="utf-8") as f:
+                metadata.update(json.load(f))
+        metadata["status"] = "cached"
+        with open(meta_path, "w", encoding="utf-8") as f:
+            json.dump(metadata, f)
         return pd.read_csv(cache)
 
 
@@ -74,7 +89,7 @@ def compare(out_path: str):
     ax.set_yticks(list(y))
     ax.set_yticklabels([f"({s}) {t}" for s, t in zip(df.seed, df.team)])
     ax.set_xlabel("Championship probability (%)")
-    ax.set_title("Model vs. sportsbook — 2026 WNBA title odds")
+    ax.set_title("Model vs. sportsbook — WNBA title odds")
     ax.legend()
     ax.grid(axis="x", alpha=0.25)
     fig.tight_layout()

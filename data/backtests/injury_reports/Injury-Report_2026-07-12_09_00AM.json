@@ -1,0 +1,154 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-12_09_00AM.pdf",
+  "status": 200,
+  "sha256": "cfacad865c5b6956aa5347612b2f021cb70c75ad5f11c3c225415800e5b991dc",
+  "parser_version": 2,
+  "published_at": "2026-07-12T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-12",
+      "matchup": "NYL@TOR",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "NYL@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "SEA@WAS",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "SEA@WAS",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "CHI@DAL",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "IND@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "LAS@ATL",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "LAS@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "PHX@MIN",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "PHX@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-12",
+      "matchup": "NYL@TOR",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "NYL@TOR",
+      "team": "TorontoTempo",
+      "player": "Rice,Kiki",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "NYL@TOR",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "NYL@TOR",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "SEA@WAS",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "SEA@WAS",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "SEA@WAS",
+      "team": "WashingtonMystics",
+      "player": "Citron,Sonia",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "SEA@WAS",
+      "team": "WashingtonMystics",
+      "player": "Florez,Alicia",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "CHI@DAL",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "CHI@DAL",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    }
+  ]
+}

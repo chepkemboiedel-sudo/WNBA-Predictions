@@ -1,0 +1,88 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-19_03_00PM.pdf",
+  "status": 200,
+  "sha256": "06a7d9ebbd71200f8c22b048dc5d106180bfdd1bcfbb88bf5b57d0c20d6a8134",
+  "parser_version": 2,
+  "published_at": "2026-08-19T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-19",
+      "matchup": "TOR@WAS",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "IND@DAL",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "IND@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "ATL@LAS",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "ATL@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "CON@LVA",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "CON@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-19",
+      "matchup": "TOR@WAS",
+      "team": "TorontoTempo",
+      "player": "Allemand,Julie",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-19",
+      "matchup": "TOR@WAS",
+      "team": "TorontoTempo",
+      "player": "Conde,Maria",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-19",
+      "matchup": "TOR@WAS",
+      "team": "TorontoTempo",
+      "player": "Mabrey,Marina",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-08-19",
+      "matchup": "TOR@WAS",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-19",
+      "matchup": "TOR@WAS",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    }
+  ]
+}

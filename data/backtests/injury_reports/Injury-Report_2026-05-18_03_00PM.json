@@ -1,0 +1,83 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-18_03_00PM.pdf",
+  "status": 200,
+  "sha256": "9f2967b63f6a45cc48e645bc67cc79ddc884027ad27b3c9169a8003491ab8601",
+  "parser_version": 2,
+  "published_at": "2026-05-18T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-18",
+      "matchup": "WAS@DAL",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-18",
+      "matchup": "CON@PDX",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-18",
+      "matchup": "CON@PDX",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-19",
+      "matchup": "TOR@PHX",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-19",
+      "matchup": "TOR@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-18",
+      "matchup": "WAS@DAL",
+      "team": "WashingtonMystics",
+      "player": "Onyenwere,Michaela",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-18",
+      "matchup": "CON@PDX",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-05-18",
+      "matchup": "CON@PDX",
+      "team": "ConnecticutSun",
+      "player": "Nelson-Ododa,Olivia",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-18",
+      "matchup": "CON@PDX",
+      "team": "PortlandFire",
+      "player": "Leite,Carla",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-05-18",
+      "matchup": "CON@PDX",
+      "team": "PortlandFire",
+      "player": "Samuelson,Karlie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-18",
+      "matchup": "CON@PDX",
+      "team": "PortlandFire",
+      "player": "Smalls,Kamiah",
+      "status": "Questionable"
+    }
+  ]
+}

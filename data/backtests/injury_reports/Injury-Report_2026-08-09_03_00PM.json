@@ -1,0 +1,216 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-09_03_00PM.pdf",
+  "status": 200,
+  "sha256": "68d8cb706ee4dab95cc95527d22a42067172d152202d7d5042d5742a4aaf1a26",
+  "parser_version": 2,
+  "published_at": "2026-08-09T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-09",
+      "matchup": "PHX@WAS",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "PHX@WAS",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "DAL@MIN",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "DAL@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "GSV@LAS",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "GSV@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "TOR@ATL",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "TOR@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "CHI@SEA",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "CHI@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-09",
+      "matchup": "PHX@WAS",
+      "team": "PhoenixMercury",
+      "player": "Bonner,DeWanna",
+      "status": "Available"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "PHX@WAS",
+      "team": "PhoenixMercury",
+      "player": "Ciezki,Shay",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "PHX@WAS",
+      "team": "PhoenixMercury",
+      "player": "Dunn,Kara",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "PHX@WAS",
+      "team": "WashingtonMystics",
+      "player": "Laney-Hamilton,Betnijah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "PHX@WAS",
+      "team": "WashingtonMystics",
+      "player": "Littlepage-Buggs,Darianna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "DAL@MIN",
+      "team": "DallasWings",
+      "player": "Clark,Alysha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "DAL@MIN",
+      "team": "DallasWings",
+      "player": "Fudd,Azzi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "DAL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Bibby,Chloe",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "DAL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "King,Liatu",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "GSV@LAS",
+      "team": "GoldenStateValkyries",
+      "player": "Zandalasini,Cecilia",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "GSV@LAS",
+      "team": "LosAngelesSparks",
+      "player": "AkoaMakani,Monique",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "GSV@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Burrell,Rae",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "LasVegasAces",
+      "player": "Gray,Chelsea",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "LasVegasAces",
+      "player": "Parker-Tyus,Cheyenne",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "LasVegasAces",
+      "player": "Pissott,Justine",
+      "status": "Available"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "LasVegasAces",
+      "player": "Wilson,A'ja",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "LasVegasAces",
+      "player": "Young,Jackie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    }
+  ]
+}

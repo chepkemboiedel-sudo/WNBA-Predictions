@@ -21,6 +21,7 @@ fast dictionary look-ups.
 from __future__ import annotations
 
 import os
+import json
 from collections import Counter, defaultdict
 
 import joblib
@@ -28,6 +29,10 @@ import numpy as np
 import pandas as pd
 
 from features import FEATURE_COLS, PYTH_EXP
+import availability as availability_mod
+from seasons import forecast_season, context
+import promotion
+from pathlib import Path
 
 HERE = os.path.dirname(__file__)
 DATA = os.path.abspath(os.path.join(HERE, "..", "data"))
@@ -40,6 +45,9 @@ CONFERENCE = {
     "Golden State Valkyries": "West", "Dallas Wings": "West",
     "Indiana Fever": "East", "Atlanta Dream": "East",
     "New York Liberty": "East", "Washington Mystics": "East",
+    "Connecticut Sun": "East", "Chicago Sky": "East", "Toronto Tempo": "East",
+    "Los Angeles Sparks": "West", "Phoenix Mercury": "West",
+    "Seattle Storm": "West", "Portland Fire": "West",
 }
 
 # Home-court host pattern for each series length. "H" = higher seed hosts,
@@ -54,8 +62,9 @@ SERIES_FORMATS = {
 # --------------------------------------------------------------------------- #
 # 1. Standings, seeding, and current team form
 # --------------------------------------------------------------------------- #
-def compute_standings(games: pd.DataFrame, season: int = 2026) -> pd.DataFrame:
+def compute_standings(games: pd.DataFrame, season: int | None = None) -> pd.DataFrame:
     """Regular-season W-L, win%, and season point differential for `season`."""
+    season = season or forecast_season(games)
     reg = games[(games.season == season) & (~games.is_playoff)]
     rec = defaultdict(lambda: {"w": 0, "l": 0, "pf": 0, "pa": 0})
     for _, r in reg.iterrows():
@@ -83,12 +92,13 @@ def compute_standings(games: pd.DataFrame, season: int = 2026) -> pd.DataFrame:
     )
 
 
-def current_team_features(games: pd.DataFrame, teams: list[str], season: int = 2026) -> dict:
+def current_team_features(games: pd.DataFrame, teams: list[str], season: int | None = None) -> dict:
     """
     Snapshot each playoff team's form using ALL its regular-season games this
     year (inclusive -- there is no leakage, because the playoffs happen later).
     Returns a dict: team -> feature values consumed by the matchup builder.
     """
+    season = season or forecast_season(games)
     reg = games[(games.season == season) & (~games.is_playoff)]
     # Final regular-season win% per team, used for strength-of-schedule.
     final_wp = {}
@@ -123,6 +133,39 @@ def current_team_features(games: pd.DataFrame, teams: list[str], season: int = 2
     return feats
 
 
+def playoff_seeds(games: pd.DataFrame, season: int | None = None) -> list[str]:
+    """Use the actual first-round pairings once available to resolve tied seeds."""
+    season = season or forecast_season(games)
+    seeds = compute_standings(games, season)["team"].head(8).tolist()
+    playoffs = games[(games.season == season) & games.is_playoff].sort_values("date")
+    seen = set()
+    for row in playoffs.itertuples():
+        if row.home_team in seen or row.away_team in seen:
+            continue
+        high = seeds.index(row.home_team)
+        if high >= 4:
+            raise ValueError("First playoff host does not match a top-four seed.")
+        low = 7 - high
+        actual_low = seeds.index(row.away_team)
+        seeds[low], seeds[actual_low] = seeds[actual_low], seeds[low]
+        seen.update((row.home_team, row.away_team))
+    return seeds
+
+
+def completed_series(games: pd.DataFrame, seeds: list[str], season: int | None = None) -> dict:
+    """Observed playoff wins, keyed by higher/lower seed, shared with the browser."""
+    season = season or forecast_season(games)
+    result = {}
+    playoffs = games[(games.season == season) & games.is_playoff].sort_values("date")
+    for row in playoffs.itertuples():
+        high, low = sorted((row.home_team, row.away_team), key=seeds.index)
+        key = high + "|" + low
+        score = result.setdefault(key, {"hw": 0, "lw": 0})
+        winner = row.home_team if row.home_win else row.away_team
+        score["hw" if winner == high else "lw"] += 1
+    return result
+
+
 # --------------------------------------------------------------------------- #
 # 2. Per-game probability from the model (antisymmetric)
 # --------------------------------------------------------------------------- #
@@ -155,32 +198,45 @@ def prob_A_beats_B(model, A: dict, B: dict, a_home: bool) -> float:
     return 0.5 * (p_a + (1.0 - p_b))
 
 
-def build_prob_matrix(model, feats: dict, teams: list[str]) -> dict:
+def build_prob_matrix(model, feats: dict, teams: list[str], availability: dict | None = None) -> dict:
     """Pre-compute P(x beats y | x at home) for every ordered pair -- 8x8x(home)."""
     P = {}
+    availability = availability or {}
+    enabled = availability.get("apply_adjustments", False)
+    beta = availability.get("model", {}).get("margin_logit_coefficient", 0)
     for x in teams:
         for y in teams:
             if x == y:
                 continue
-            P[(x, y, True)] = prob_A_beats_B(model, feats[x], feats[y], a_home=True)
-            P[(x, y, False)] = prob_A_beats_B(model, feats[x], feats[y], a_home=False)
+            for home in (True, False):
+                base = prob_A_beats_B(model, feats[x], feats[y], a_home=home)
+                a = availability.get("teams",{}).get(x,{})
+                b = availability.get("teams",{}).get(y,{})
+                P[(x,y,home)] = availability_mod.adjust_probability(base,availability_mod.team_shift(a),availability_mod.team_shift(b),beta) if enabled else base
+                next_game = availability.get("next_games",{}).get(x,{})
+                if enabled and next_game.get("opponent") == y and next_game.get("home") == home:
+                    P[(x,y,home,"next")] = availability_mod.adjust_probability(base,availability_mod.team_shift(a,"next_game"),availability_mod.team_shift(b,"next_game"),beta)
     return P
 
 
 # --------------------------------------------------------------------------- #
 # 3. Series and bracket simulation
 # --------------------------------------------------------------------------- #
-def sim_series(high: str, low: str, fmt: str, P: dict, rng: np.random.Generator) -> str:
+def sim_series(high: str, low: str, fmt: str, P: dict, rng: np.random.Generator,
+               observed: dict | None = None) -> str:
     """
     Simulate one best-of-N series between the higher seed `high` and lower seed
     `low`, game by game, and return the winner. `high` hosts on 'H' games.
     """
     pattern = SERIES_FORMATS[fmt]
     need = len(pattern) // 2 + 1          # wins required (2, 3, or 4)
-    hw = lw = 0
-    for host in pattern:
+    score = (observed or {}).get(high + "|" + low, {})
+    hw, lw = score.get("hw", 0), score.get("lw", 0)
+    if hw >= need or lw >= need:
+        return high if hw >= need else low
+    for index,host in enumerate(pattern[hw + lw:]):
         high_home = host == "H"
-        p_high = P[(high, low, True)] if high_home else P[(high, low, False)]
+        p_high = P.get((high,low,high_home,"next"),P[(high,low,high_home)]) if index == 0 else P[(high,low,high_home)]
         if rng.random() < p_high:
             hw += 1
         else:
@@ -190,7 +246,7 @@ def sim_series(high: str, low: str, fmt: str, P: dict, rng: np.random.Generator)
     return high if hw == need else low
 
 
-def sim_bracket(seeds: list[str], P: dict, rng: np.random.Generator):
+def sim_bracket(seeds: list[str], P: dict, rng: np.random.Generator, observed=None):
     """
     One full bracket. `seeds` is the ordered seed list (index 0 = #1 seed).
     Returns (finalist_1, finalist_2, champion). Higher seed = lower list index.
@@ -200,40 +256,59 @@ def sim_bracket(seeds: list[str], P: dict, rng: np.random.Generator):
 
     s = seeds
     # Round 1 (best-of-3): 1v8, 4v5 feed the top semifinal; 2v7, 3v6 the bottom.
-    w18 = sim_series(*higher(s[0], s[7]), "R1", P, rng)
-    w45 = sim_series(*higher(s[3], s[4]), "R1", P, rng)
-    w27 = sim_series(*higher(s[1], s[6]), "R1", P, rng)
-    w36 = sim_series(*higher(s[2], s[5]), "R1", P, rng)
+    w18 = sim_series(*higher(s[0], s[7]), "R1", P, rng, observed)
+    w45 = sim_series(*higher(s[3], s[4]), "R1", P, rng, observed)
+    w27 = sim_series(*higher(s[1], s[6]), "R1", P, rng, observed)
+    w36 = sim_series(*higher(s[2], s[5]), "R1", P, rng, observed)
 
     # Semifinals (best-of-5), no reseeding.
-    f_top = sim_series(*higher(w18, w45), "SEMI", P, rng)
-    f_bot = sim_series(*higher(w27, w36), "SEMI", P, rng)
+    f_top = sim_series(*higher(w18, w45), "SEMI", P, rng, observed)
+    f_bot = sim_series(*higher(w27, w36), "SEMI", P, rng, observed)
 
     # Finals (best-of-7).
-    champ = sim_series(*higher(f_top, f_bot), "FINALS", P, rng)
+    champ = sim_series(*higher(f_top, f_bot), "FINALS", P, rng, observed)
     return f_top, f_bot, champ
 
 
 def run(n_sims: int = 20000, seed: int = 7):
     games = pd.read_csv(os.path.join(DATA, "all_games.csv"), parse_dates=["date"])
     standings = compute_standings(games)
-    seeds = standings["team"].head(8).tolist()
+    seeds = playoff_seeds(games)
+    observed = completed_series(games, seeds)
 
     bundle = joblib.load(os.path.join(DATA, "models.joblib"))
     model = bundle["logistic"]  # primary predictor: calibrated & antisymmetric
 
     feats = current_team_features(games, seeds)
-    P = build_prob_matrix(model, feats, seeds)
+    availability = availability_mod.load_snapshot()
+    season = forecast_season(games)
+    if availability.get("season") != season:
+        availability = dict(availability, apply_adjustments=False)
+    policy = promotion.current(Path(DATA).parent, availability, season)
+    baseline_P = build_prob_matrix(model, feats, seeds)
+    optional_P = build_prob_matrix(model, feats, seeds, availability)
+    P = optional_P if policy["usable"] else baseline_P
 
     rng = np.random.default_rng(seed)
     reach = Counter()
     champ = Counter()
     matchup = Counter()
     for _ in range(n_sims):
-        f1, f2, c = sim_bracket(seeds, P, rng)
+        f1, f2, c = sim_bracket(seeds, P, rng, observed)
         reach[f1] += 1; reach[f2] += 1
         champ[c] += 1
         matchup[frozenset((f1, f2))] += 1
+
+    baseline_reach, baseline_champ = Counter(), Counter()
+    baseline_rng = np.random.default_rng(seed)
+    for _ in range(n_sims):
+        f1,f2,c = sim_bracket(seeds,baseline_P,baseline_rng,observed)
+        baseline_reach[f1]+=1;baseline_reach[f2]+=1;baseline_champ[c]+=1
+    optional_reach, optional_champ = Counter(), Counter()
+    optional_rng = np.random.default_rng(seed)
+    for _ in range(n_sims):
+        f1,f2,c = sim_bracket(seeds,optional_P,optional_rng,observed)
+        optional_reach[f1]+=1;optional_reach[f2]+=1;optional_champ[c]+=1
 
     res = pd.DataFrame({
         "seed": range(1, 9),
@@ -242,6 +317,10 @@ def run(n_sims: int = 20000, seed: int = 7):
         "win_pct": [round(standings.loc[standings.team == t, "win_pct"].iloc[0], 3) for t in seeds],
         "p_reach_finals": [reach[t] / n_sims for t in seeds],
         "p_champion": [champ[t] / n_sims for t in seeds],
+        "p_reach_finals_baseline": [baseline_reach[t] / n_sims for t in seeds],
+        "p_champion_baseline": [baseline_champ[t] / n_sims for t in seeds],
+        "p_reach_finals_availability": [optional_reach[t] / n_sims for t in seeds],
+        "p_champion_availability": [optional_champ[t] / n_sims for t in seeds],
     }).sort_values("p_reach_finals", ascending=False).reset_index(drop=True)
 
     top_matchups = sorted(matchup.items(), key=lambda kv: -kv[1])[:6]
@@ -249,7 +328,33 @@ def run(n_sims: int = 20000, seed: int = 7):
         (tuple(sorted(pair, key=seeds.index)), cnt / n_sims) for pair, cnt in top_matchups
     ]
 
+    os.makedirs(OUT, exist_ok=True)
     res.to_csv(os.path.join(OUT, "finals_probabilities.csv"), index=False)
+    conference_counts = Counter()
+    for pair, count in matchup.items():
+        conferences = {CONFERENCE.get(t, "?") for t in pair}
+        category = "both_west" if conferences == {"West"} else (
+            "both_east" if conferences == {"East"} else "mixed")
+        conference_counts[category] += count
+    forecast = {
+        "n_sims": n_sims,
+        "data_through": games[games.season == season].date.max().strftime("%Y-%m-%d"),
+        "game_count": len(games),
+        "completed_playoff_games": int(((games.season == season) & games.is_playoff).sum()),
+        "observed_series": observed,
+        "season": season, "season_context": context(games),
+        "promotion": policy,
+        "probability_model": "injury-adjusted" if policy["usable"] else "score-only",
+        "injury_adjustment_default": policy["usable"],
+        "availability": {key:availability.get(key) for key in ("status","fetched_at","apply_adjustments","message","model","boxscore_coverage")},
+        "top_matchups": [{"teams": list(pair), "probability": probability}
+                         for pair, probability in top_matchups],
+        "conferences": {key: conference_counts[key] / n_sims
+                        for key in ("both_west", "mixed", "both_east")},
+    }
+    with open(os.path.join(OUT, "forecast.json"), "w", encoding="utf-8") as f:
+        json.dump(forecast, f, indent=2)
+        f.write("\n")
     return res, top_matchups, seeds, feats
 
 

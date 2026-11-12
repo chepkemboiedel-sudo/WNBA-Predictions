@@ -1,0 +1,140 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-11_03_00PM.pdf",
+  "status": 200,
+  "sha256": "d01164d7768fc65e03bbfb5aeaa2c4567cc23c72b1995b1ffcc77de848401fed",
+  "parser_version": 2,
+  "published_at": "2026-08-11T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-11",
+      "matchup": "NYL@IND",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "NYL@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "PHX@LAS",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "PHX@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "WAS@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "TOR@DAL",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "TOR@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "CHI@GSV",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "CHI@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "MIN@PDX",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "MIN@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-11",
+      "matchup": "NYL@IND",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "NYL@IND",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "NYL@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "NYL@IND",
+      "team": "IndianaFever",
+      "player": "VanSlooten,Grace",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "PHX@LAS",
+      "team": "PhoenixMercury",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "PHX@LAS",
+      "team": "LosAngelesSparks",
+      "player": "AkoaMakani,Monique",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "WAS@LVA",
+      "team": "LasVegasAces",
+      "player": "Bell,Kierstan",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "WAS@LVA",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "WAS@LVA",
+      "team": "LasVegasAces",
+      "player": "Parker-Tyus,Cheyenne",
+      "status": "Out"
+    }
+  ]
+}

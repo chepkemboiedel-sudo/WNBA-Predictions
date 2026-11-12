@@ -1,0 +1,163 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-24_03_00PM.pdf",
+  "status": 200,
+  "sha256": "8b7b9f4c17cd9098e5ce4b917c5d769a0c0ef263b57ed2b818eb8e42fd37b177",
+  "parser_version": 2,
+  "published_at": "2026-05-24T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-24",
+      "matchup": "PHX@ATL",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "PHX@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "DAL@NYL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "DAL@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "WAS@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "PDX@NYL",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "PDX@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "CON@GSV",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "CON@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-24",
+      "matchup": "PHX@ATL",
+      "team": "PhoenixMercury",
+      "player": "AkoaMakani,Monique",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "PHX@ATL",
+      "team": "PhoenixMercury",
+      "player": "Ciezki,Shay",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "PHX@ATL",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "PHX@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "PHX@ATL",
+      "team": "AtlantaDream",
+      "player": "Okonkwo,Amy",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "DAL@NYL",
+      "team": "DallasWings",
+      "player": "FankamMendjiadeu,Dulcy",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "DAL@NYL",
+      "team": "DallasWings",
+      "player": "Verona,Costanza",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "DAL@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Fauthoux,Marine",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "DAL@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Laney-Hamilton,Betnijah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "WAS@SEA",
+      "team": "SeattleStorm",
+      "player": "Fam,Awa",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "WAS@SEA",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "WAS@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "WAS@SEA",
+      "team": "SeattleStorm",
+      "player": "Malonga,Dominique",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-24",
+      "matchup": "WAS@SEA",
+      "team": "SeattleStorm",
+      "player": "Thierry,Taylor",
+      "status": "Out"
+    }
+  ]
+}

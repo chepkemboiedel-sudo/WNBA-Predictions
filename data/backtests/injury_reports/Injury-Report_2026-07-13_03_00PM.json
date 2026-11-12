@@ -1,0 +1,115 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-13_03_00PM.pdf",
+  "status": 200,
+  "sha256": "81a34b61df70656fed16f32aae1b10b2d432435e633c5e168cd872cec28c280f",
+  "parser_version": 2,
+  "published_at": "2026-07-13T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-13",
+      "matchup": "LAS@ATL",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "LAS@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "PHX@MIN",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "PHX@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-14",
+      "matchup": "WAS@TOR",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-14",
+      "matchup": "WAS@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-14",
+      "matchup": "PDX@CON",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-14",
+      "matchup": "PDX@CON",
+      "team": "ConnecticutSun",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-13",
+      "matchup": "LAS@ATL",
+      "team": "LosAngelesSparks",
+      "player": "Brink,Cameron",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "LAS@ATL",
+      "team": "LosAngelesSparks",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "LAS@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "LAS@ATL",
+      "team": "AtlantaDream",
+      "player": "Reese,Angel",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "PHX@MIN",
+      "team": "PhoenixMercury",
+      "player": "Mack,Natasha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "PHX@MIN",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "PHX@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-13",
+      "matchup": "PHX@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    }
+  ]
+}

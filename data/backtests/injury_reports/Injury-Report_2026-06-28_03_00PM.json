@@ -1,0 +1,165 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-28_03_00PM.pdf",
+  "status": 200,
+  "sha256": "cbbd26c71bb505af13a02274f00d8b0b96f8922c360e1a830235eb88e46b3ed8",
+  "parser_version": 2,
+  "published_at": "2026-06-28T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-28",
+      "matchup": "MIN@DAL",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "MIN@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "PDX@WAS",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "LVA@CHI",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "LVA@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "NYL@GSV",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "NYL@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-28",
+      "matchup": "MIN@DAL",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "MIN@DAL",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "MIN@DAL",
+      "team": "MinnesotaLynx",
+      "player": "Hamzova,Eliska",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "MIN@DAL",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "MIN@DAL",
+      "team": "DallasWings",
+      "player": "Sims,Odyssey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "MIN@DAL",
+      "team": "DallasWings",
+      "player": "Smith,Alanna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "MIN@DAL",
+      "team": "DallasWings",
+      "player": "Verona,Costanza",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "PDX@WAS",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "PDX@WAS",
+      "team": "PortlandFire",
+      "player": "Samuelson,Karlie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "LVA@CHI",
+      "team": "LasVegasAces",
+      "player": "Barker,Janiah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "LVA@CHI",
+      "team": "LasVegasAces",
+      "player": "Carter,Chennedy",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "LVA@CHI",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "LVA@CHI",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "LVA@CHI",
+      "team": "ChicagoSky",
+      "player": "Jackson,Rickea",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "NYL@GSV",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "NYL@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Amihere,Laeticia",
+      "status": "Questionable"
+    }
+  ]
+}

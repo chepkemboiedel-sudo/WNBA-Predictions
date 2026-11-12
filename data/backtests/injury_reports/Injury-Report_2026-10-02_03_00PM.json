@@ -1,0 +1,31 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-02_03_00PM.pdf",
+  "status": 200,
+  "sha256": "ba9669e44c3a29a4f191ecd1e9d022d3e82f2e19748542bacacd63df2bc11502",
+  "parser_version": 2,
+  "published_at": "2026-10-02T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-10-02",
+      "matchup": "DAL@GSV",
+      "team": "DallasWings",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-10-02",
+      "matchup": "DAL@GSV",
+      "team": "DallasWings",
+      "player": "Kuier,Awak",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-10-02",
+      "matchup": "DAL@GSV",
+      "team": "DallasWings",
+      "player": "Smith,Alanna",
+      "status": "Out"
+    }
+  ]
+}

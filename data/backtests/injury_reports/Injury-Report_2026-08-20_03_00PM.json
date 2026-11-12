@@ -1,0 +1,160 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-20_03_00PM.pdf",
+  "status": 200,
+  "sha256": "84a86324d9aad7fae183bd2fd8642e3aa90721a33ed320a1e7880658c94da0ca",
+  "parser_version": 2,
+  "published_at": "2026-08-20T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-20",
+      "matchup": "IND@DAL",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "IND@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "ATL@LAS",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "ATL@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "CON@LVA",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "CON@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "GSV@CHI",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "GSV@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "MIN@WAS",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "MIN@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "PDX@TOR",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "PDX@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-20",
+      "matchup": "IND@DAL",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "IND@DAL",
+      "team": "IndianaFever",
+      "player": "Mitchell,Kelsey",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "IND@DAL",
+      "team": "DallasWings",
+      "player": "Fudd,Azzi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "IND@DAL",
+      "team": "DallasWings",
+      "player": "James,Aziaha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "ATL@LAS",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "ATL@LAS",
+      "team": "LosAngelesSparks",
+      "player": "AkoaMakani,Monique",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "ATL@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Brink,Cameron",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "ATL@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Wheeler,Erica",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "CON@LVA",
+      "team": "ConnecticutSun",
+      "player": "Edwards,Aaliyah",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "CON@LVA",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-20",
+      "matchup": "CON@LVA",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    }
+  ]
+}

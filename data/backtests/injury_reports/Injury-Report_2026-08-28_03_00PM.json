@@ -1,0 +1,195 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-28_03_00PM.pdf",
+  "status": 200,
+  "sha256": "49ec86aa2894d7ba4e21a2ee78c21814983021b2a5b444c887397489b2f3981d",
+  "parser_version": 2,
+  "published_at": "2026-08-28T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-28",
+      "matchup": "CON@IND",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "CON@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "PDX@ATL",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "PDX@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "TOR@LVA",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "TOR@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "WAS@LAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "WAS@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "CHI@NYL",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "CHI@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "TOR@PHX",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "TOR@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-28",
+      "matchup": "CON@IND",
+      "team": "ConnecticutSun",
+      "player": "Burke,Kennedy",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "CON@IND",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "CON@IND",
+      "team": "ConnecticutSun",
+      "player": "Nelson-Ododa,Olivia",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "CON@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "PDX@ATL",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "PDX@ATL",
+      "team": "PortlandFire",
+      "player": "Williams,Serah",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "PDX@ATL",
+      "team": "AtlantaDream",
+      "player": "Bonner,DeWanna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "PDX@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "TOR@LVA",
+      "team": "TorontoTempo",
+      "player": "Harrison,Isabelle",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "TOR@LVA",
+      "team": "TorontoTempo",
+      "player": "Mabrey,Marina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "TOR@LVA",
+      "team": "TorontoTempo",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "TOR@LVA",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "TOR@LVA",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "TOR@LVA",
+      "team": "LasVegasAces",
+      "player": "Smith,NaLyssa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "TOR@LVA",
+      "team": "LasVegasAces",
+      "player": "Wilson,A'ja",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "WAS@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Cannon,Emma",
+      "status": "Probable"
+    }
+  ]
+}

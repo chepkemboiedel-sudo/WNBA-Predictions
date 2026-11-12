@@ -1,0 +1,94 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-19_03_00PM.pdf",
+  "status": 200,
+  "sha256": "d8bd6f06b0ac9ffedd04a202d295b2bb4269da1d8951bd4c4775f372fa1a3831",
+  "parser_version": 2,
+  "published_at": "2026-05-19T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-19",
+      "matchup": "TOR@PHX",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-19",
+      "matchup": "TOR@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "PDX@IND",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "PDX@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "DAL@CHI",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "DAL@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "CON@SEA",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "CON@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-19",
+      "matchup": "TOR@PHX",
+      "team": "TorontoTempo",
+      "player": "Allemand,Julie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-19",
+      "matchup": "TOR@PHX",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-19",
+      "matchup": "TOR@PHX",
+      "team": "TorontoTempo",
+      "player": "Harrison,Isabelle",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-19",
+      "matchup": "TOR@PHX",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-05-19",
+      "matchup": "TOR@PHX",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    }
+  ]
+}

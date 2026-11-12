@@ -1,0 +1,123 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-16_03_00PM.pdf",
+  "status": 200,
+  "sha256": "a253b3ca1d4ddadecefcb083758f31c417bb66585b73e53ddec378c9c36865a9",
+  "parser_version": 2,
+  "published_at": "2026-06-16T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-16",
+      "matchup": "TOR@IND",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-16",
+      "matchup": "TOR@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-17",
+      "matchup": "WAS@CON",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-17",
+      "matchup": "WAS@CON",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-17",
+      "matchup": "NYL@CHI",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-17",
+      "matchup": "NYL@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-17",
+      "matchup": "DAL@GSV",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-17",
+      "matchup": "DAL@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-17",
+      "matchup": "LVA@PHX",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-17",
+      "matchup": "LVA@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-17",
+      "matchup": "MIN@LAS",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-17",
+      "matchup": "MIN@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-17",
+      "matchup": "SEA@PDX",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-17",
+      "matchup": "SEA@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-16",
+      "matchup": "TOR@IND",
+      "team": "TorontoTempo",
+      "player": "Rice,Kiki",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-16",
+      "matchup": "TOR@IND",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-16",
+      "matchup": "TOR@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-16",
+      "matchup": "TOR@IND",
+      "team": "IndianaFever",
+      "player": "Johnson,Raven",
+      "status": "Questionable"
+    }
+  ]
+}

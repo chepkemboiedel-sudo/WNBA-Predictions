@@ -1,0 +1,55 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-31_09_00AM.pdf",
+  "status": 200,
+  "sha256": "4bcd9d7a8f171e3a2405094f7c9e7d4ef07569d3943a40dc4e74d2fedd7d96f3",
+  "parser_version": 2,
+  "published_at": "2026-05-31T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-31",
+      "matchup": "LVA@GSV",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-01",
+      "matchup": "SEA@DAL",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-01",
+      "matchup": "SEA@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-01",
+      "matchup": "MIN@PHX",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-01",
+      "matchup": "MIN@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-31",
+      "matchup": "LVA@GSV",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-31",
+      "matchup": "LVA@GSV",
+      "team": "LasVegasAces",
+      "player": "Loyd,Jewell",
+      "status": "Questionable"
+    }
+  ]
+}

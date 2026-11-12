@@ -1,0 +1,103 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-27_03_00PM.pdf",
+  "status": 200,
+  "sha256": "bacb23b7108b18f7740083fe25be4d9fbbea820c3353ee1bb07f721920b06df6",
+  "parser_version": 2,
+  "published_at": "2026-09-27T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-09-27",
+      "matchup": "NYL@MIN",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-27",
+      "matchup": "NYL@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-27",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-27",
+      "matchup": "IND@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-27",
+      "matchup": "WAS@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-27",
+      "matchup": "DAL@GSV",
+      "team": "DallasWings",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-09-27",
+      "matchup": "NYL@MIN",
+      "team": "NewYorkLiberty",
+      "player": "Jones,Jonquel",
+      "status": "Available"
+    },
+    {
+      "date": "2026-09-27",
+      "matchup": "NYL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Kosu,AnastasiiaOlairi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-27",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-09-27",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-09-27",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "player": "Harris,Tyasha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-27",
+      "matchup": "IND@LVA",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-27",
+      "matchup": "WAS@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-27",
+      "matchup": "DAL@GSV",
+      "team": "DallasWings",
+      "player": "Smith,Alanna",
+      "status": "Out"
+    }
+  ]
+}

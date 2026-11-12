@@ -1,0 +1,122 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-31_03_00PM.pdf",
+  "status": 200,
+  "sha256": "79efe75f88ab7f373596fb73b048e84d8a7d096ce1cb7fd95ac80c99dbf008e4",
+  "parser_version": 2,
+  "published_at": "2026-07-31T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-31",
+      "matchup": "SEA@ATL",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "SEA@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "IND@PDX",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "IND@PDX",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-01",
+      "matchup": "LVA@CHI",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-01",
+      "matchup": "LVA@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-01",
+      "matchup": "NYL@PHX",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-01",
+      "matchup": "NYL@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-31",
+      "matchup": "SEA@ATL",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "SEA@ATL",
+      "team": "SeattleStorm",
+      "player": "Malonga,Dominique",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "SEA@ATL",
+      "team": "AtlantaDream",
+      "player": "Paopao,Te-Hina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "IND@PDX",
+      "team": "IndianaFever",
+      "player": "Billings,Monique",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "IND@PDX",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "IND@PDX",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "IND@PDX",
+      "team": "IndianaFever",
+      "player": "Dantas,Damiris",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "IND@PDX",
+      "team": "PortlandFire",
+      "player": "Barker,SarahAshlee",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "IND@PDX",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    }
+  ]
+}

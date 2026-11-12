@@ -1,0 +1,142 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-02_03_00PM.pdf",
+  "status": 200,
+  "sha256": "4c884e59e4efa1a596a889fa8c17e09598e9f21dfd8bb08a1b9421ad3f846d3b",
+  "parser_version": 2,
+  "published_at": "2026-07-02T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-02",
+      "matchup": "ATL@WAS",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "ATL@WAS",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "DAL@CON",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "SEA@PHX",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "SEA@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "MIN@NYL",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "MIN@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "CHI@LVA",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-03",
+      "matchup": "CHI@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-02",
+      "matchup": "ATL@WAS",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "ATL@WAS",
+      "team": "AtlantaDream",
+      "player": "Nye,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "ATL@WAS",
+      "team": "WashingtonMystics",
+      "player": "Amoore,Georgia",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "ATL@WAS",
+      "team": "WashingtonMystics",
+      "player": "Citron,Sonia",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "DAL@CON",
+      "team": "DallasWings",
+      "player": "Sims,Odyssey",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "DAL@CON",
+      "team": "DallasWings",
+      "player": "Smith,Alanna",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "SEA@PHX",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "SEA@PHX",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "SEA@PHX",
+      "team": "PhoenixMercury",
+      "player": "Brochant,Noemie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "SEA@PHX",
+      "team": "PhoenixMercury",
+      "player": "Mack,Natasha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-02",
+      "matchup": "SEA@PHX",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    }
+  ]
+}

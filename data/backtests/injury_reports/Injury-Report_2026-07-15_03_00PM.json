@@ -1,0 +1,169 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-15_03_00PM.pdf",
+  "status": 200,
+  "sha256": "5d32ae2bddbabb2efdfc497d2720ab9a5e23a83c20664482e4627abe1bb12301",
+  "parser_version": 2,
+  "published_at": "2026-07-15T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-15",
+      "matchup": "LAS@MIN",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "LAS@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "GSV@IND",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "GSV@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "SEA@CHI",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "SEA@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-16",
+      "matchup": "PDX@WAS",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-16",
+      "matchup": "PDX@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-16",
+      "matchup": "NYL@DAL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-16",
+      "matchup": "NYL@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-15",
+      "matchup": "LAS@MIN",
+      "team": "LosAngelesSparks",
+      "player": "Brink,Cameron",
+      "status": "Available"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "LAS@MIN",
+      "team": "LosAngelesSparks",
+      "player": "Pili,Alissa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "LAS@MIN",
+      "team": "LosAngelesSparks",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "LAS@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "LAS@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "LAS@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "GSV@IND",
+      "team": "GoldenStateValkyries",
+      "player": "Williams,Gabby",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "GSV@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "SEA@CHI",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "SEA@CHI",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "SEA@CHI",
+      "team": "ChicagoSky",
+      "player": "Cardoso,Kamilla",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "SEA@CHI",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "SEA@CHI",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-15",
+      "matchup": "SEA@CHI",
+      "team": "ChicagoSky",
+      "player": "Westbeld,Maddy",
+      "status": "Out"
+    }
+  ]
+}

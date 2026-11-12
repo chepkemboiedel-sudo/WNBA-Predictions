@@ -1,0 +1,57 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-04_09_00AM.pdf",
+  "status": 200,
+  "sha256": "caef511702b0e4550e4acfd4ba88480cebfe53c69bd3a0268e2306f0139cf48e",
+  "parser_version": 2,
+  "published_at": "2026-10-04T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-10-04",
+      "matchup": "NYL@ATL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-10-04",
+      "matchup": "NYL@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-10-04",
+      "matchup": "LVA@GSV",
+      "team": "LasVegasAces",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-10-04",
+      "matchup": "NYL@ATL",
+      "team": "NewYorkLiberty",
+      "player": "Han,Xu",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-10-04",
+      "matchup": "NYL@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-10-04",
+      "matchup": "LVA@GSV",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-10-04",
+      "matchup": "LVA@GSV",
+      "team": "LasVegasAces",
+      "player": "Talbot,Stephanie",
+      "status": "Questionable"
+    }
+  ]
+}

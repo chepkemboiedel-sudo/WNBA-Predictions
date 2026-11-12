@@ -1,0 +1,92 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-27_03_00PM.pdf",
+  "status": 200,
+  "sha256": "1d1c06d2bba2b781504210af9f5d431b5a83a2a645b90da28ef48f50e33201f2",
+  "parser_version": 2,
+  "published_at": "2026-08-27T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-27",
+      "matchup": "GSV@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-27",
+      "matchup": "WAS@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "CON@IND",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "CON@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "PDX@ATL",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "PDX@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "TOR@LVA",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "TOR@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "WAS@LAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-28",
+      "matchup": "WAS@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-27",
+      "matchup": "GSV@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-27",
+      "matchup": "WAS@PHX",
+      "team": "PhoenixMercury",
+      "player": "Plum,Kelsey",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-27",
+      "matchup": "WAS@PHX",
+      "team": "PhoenixMercury",
+      "player": "Suarez,Marta",
+      "status": "Out"
+    }
+  ]
+}

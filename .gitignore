@@ -1,0 +1,23 @@
+# --- Secrets & local config (Feature 1.2: no secrets in the repo) ----------
+.env
+.env.*
+!.env.example
+
+# --- Runtime request logs (generated at run time, not source) --------------
+logs/
+
+# --- Scratch / downloaded working files (not source) -----------------------
+tmp/
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# --- OS / editor -----------------------------------------------------------
+.DS_Store
+desktop.ini
+Thumbs.db

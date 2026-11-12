@@ -1,0 +1,128 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-07_09_00AM.pdf",
+  "status": 200,
+  "sha256": "f847129346e645b7cc2321c0e706347205a16042f4b13feb5c0245b70961a673",
+  "parser_version": 2,
+  "published_at": "2026-06-07T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-07",
+      "matchup": "CHI@TOR",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "CHI@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "PDX@LAS",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-08",
+      "matchup": "IND@WAS",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-08",
+      "matchup": "IND@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-08",
+      "matchup": "NYL@CON",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-08",
+      "matchup": "NYL@CON",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-08",
+      "matchup": "SEA@LVA",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-08",
+      "matchup": "SEA@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-07",
+      "matchup": "CHI@TOR",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "CHI@TOR",
+      "team": "ChicagoSky",
+      "player": "Jackson,Rickea",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "CHI@TOR",
+      "team": "ChicagoSky",
+      "player": "Jaquez,Gabriela",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "CHI@TOR",
+      "team": "ChicagoSky",
+      "player": "Vandersloot,Courtney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "CHI@TOR",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "CHI@TOR",
+      "team": "TorontoTempo",
+      "player": "Harrison,Isabelle",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "CHI@TOR",
+      "team": "TorontoTempo",
+      "player": "Rice,Kiki",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "PDX@LAS",
+      "team": "PortlandFire",
+      "player": "Barker,SarahAshlee",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "PDX@LAS",
+      "team": "PortlandFire",
+      "player": "Samuelson,Karlie",
+      "status": "Probable"
+    }
+  ]
+}

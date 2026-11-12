@@ -1,0 +1,145 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-20_03_00PM.pdf",
+  "status": 200,
+  "sha256": "a5d2df13220e388ea243e9c432b85db75d2d43d9036f69153392804317a31164",
+  "parser_version": 2,
+  "published_at": "2026-07-20T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-20",
+      "matchup": "LVA@TOR",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "LVA@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "NYL@DAL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "NYL@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "MIN@SEA",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "MIN@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-20",
+      "matchup": "LVA@TOR",
+      "team": "LasVegasAces",
+      "player": "Bell,Kierstan",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "LVA@TOR",
+      "team": "LasVegasAces",
+      "player": "Yamamoto,Mai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "LVA@TOR",
+      "team": "TorontoTempo",
+      "player": "Rice,Kiki",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "LVA@TOR",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "LVA@TOR",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "NYL@DAL",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "NYL@DAL",
+      "team": "NewYorkLiberty",
+      "player": "Johannes,Marine",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "NYL@DAL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "NYL@DAL",
+      "team": "DallasWings",
+      "player": "Bueckers,Paige",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "NYL@DAL",
+      "team": "DallasWings",
+      "player": "Smith,Alanna",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "MIN@SEA",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "MIN@SEA",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "MIN@SEA",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-20",
+      "matchup": "MIN@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    }
+  ]
+}

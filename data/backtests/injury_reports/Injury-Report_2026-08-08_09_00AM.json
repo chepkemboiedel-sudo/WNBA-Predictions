@@ -1,0 +1,193 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-08_09_00AM.pdf",
+  "status": 200,
+  "sha256": "df3d1096479f5719d6146f4e1040819ce3c7dfd9fbfa11b60e67985948160e4f",
+  "parser_version": 2,
+  "published_at": "2026-08-08T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-08",
+      "matchup": "LVA@MIN",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "LVA@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "IND@CHI",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "IND@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "SEA@PDX",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "SEA@PDX",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "PHX@WAS",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "PHX@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "DAL@MIN",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "DAL@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "GSV@LAS",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "GSV@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-08",
+      "matchup": "LVA@MIN",
+      "team": "LasVegasAces",
+      "player": "Parker-Tyus,Cheyenne",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "LVA@MIN",
+      "team": "LasVegasAces",
+      "player": "Pissott,Justine",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "LVA@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Bibby,Chloe",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "IND@CHI",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "IND@CHI",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "IND@CHI",
+      "team": "IndianaFever",
+      "player": "Dantas,Damiris",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "IND@CHI",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "IND@CHI",
+      "team": "ChicagoSky",
+      "player": "Taylor,Sydney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "SEA@PDX",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "SEA@PDX",
+      "team": "SeattleStorm",
+      "player": "Samuelson,KatieLou",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "SEA@PDX",
+      "team": "PortlandFire",
+      "player": "Barker,SarahAshlee",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "SEA@PDX",
+      "team": "PortlandFire",
+      "player": "Carleton,Bridget",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "SEA@PDX",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-08",
+      "matchup": "SEA@PDX",
+      "team": "PortlandFire",
+      "player": "Oblak,Teja",
+      "status": "Probable"
+    }
+  ]
+}

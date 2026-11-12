@@ -1,0 +1,156 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-09_03_00PM.pdf",
+  "status": 200,
+  "sha256": "6eed340921e10192f87a3fa2b3f8b45ee43015c5c44b626246ca9fdaed08887f",
+  "parser_version": 2,
+  "published_at": "2026-06-09T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-09",
+      "matchup": "ATL@CHI",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "ATL@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "DAL@MIN",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "DAL@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "PHX@GSV",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-10",
+      "matchup": "CON@TOR",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-10",
+      "matchup": "CON@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-10",
+      "matchup": "LAS@SEA",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-10",
+      "matchup": "LAS@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-09",
+      "matchup": "ATL@CHI",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "ATL@CHI",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "ATL@CHI",
+      "team": "ChicagoSky",
+      "player": "Jackson,Rickea",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "ATL@CHI",
+      "team": "ChicagoSky",
+      "player": "Vandersloot,Courtney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "DAL@MIN",
+      "team": "DallasWings",
+      "player": "Kuier,Awak",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "DAL@MIN",
+      "team": "DallasWings",
+      "player": "Sims,Odyssey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "DAL@MIN",
+      "team": "DallasWings",
+      "player": "Yueru,Li",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "DAL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "DAL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "DAL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "PHX@GSV",
+      "team": "PhoenixMercury",
+      "player": "Copper,Kahleah",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "PHX@GSV",
+      "team": "PhoenixMercury",
+      "player": "Thomas,Alyssa",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-09",
+      "matchup": "PHX@GSV",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    }
+  ]
+}

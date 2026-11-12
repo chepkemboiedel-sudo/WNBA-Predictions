@@ -1,0 +1,132 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-29_09_00AM.pdf",
+  "status": 200,
+  "sha256": "39196d7e97b801a90d5822ce961db1527b84f010e2c7752483bb1b6b393f2ca1",
+  "parser_version": 2,
+  "published_at": "2026-08-29T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-29",
+      "matchup": "CHI@NYL",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "CHI@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "TOR@PHX",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "TOR@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "MIN@ATL",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "MIN@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "LAS@SEA",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "LAS@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "GSV@PDX",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "GSV@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "CON@DAL",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "CON@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-29",
+      "matchup": "CHI@NYL",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "CHI@NYL",
+      "team": "ChicagoSky",
+      "player": "Cloud,Natasha",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "CHI@NYL",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "CHI@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "TOR@PHX",
+      "team": "PhoenixMercury",
+      "player": "Copper,Kahleah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "TOR@PHX",
+      "team": "PhoenixMercury",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-29",
+      "matchup": "TOR@PHX",
+      "team": "PhoenixMercury",
+      "player": "Suarez,Marta",
+      "status": "Questionable"
+    }
+  ]
+}

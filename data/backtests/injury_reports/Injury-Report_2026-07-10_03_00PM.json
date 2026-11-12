@@ -1,0 +1,161 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-10_03_00PM.pdf",
+  "status": 200,
+  "sha256": "d9f15e40e5c81322be748a75d7081cc946199f9cf9f7a9fe5163d0caa7fa2579",
+  "parser_version": 2,
+  "published_at": "2026-07-10T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-10",
+      "matchup": "DAL@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "GSV@CON",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "GSV@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "CHI@LAS",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "CHI@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "NYL@MIN",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "NYL@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PDX@ATL",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PDX@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PHX@LVA",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PHX@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-10",
+      "matchup": "DAL@TOR",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "DAL@TOR",
+      "team": "TorontoTempo",
+      "player": "Rice,Kiki",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "DAL@TOR",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "DAL@TOR",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "GSV@CON",
+      "team": "GoldenStateValkyries",
+      "player": "Williams,Gabby",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "GSV@CON",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "GSV@CON",
+      "team": "ConnecticutSun",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "GSV@CON",
+      "team": "ConnecticutSun",
+      "player": "Rivers,Saniya",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "CHI@LAS",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "CHI@LAS",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "CHI@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Brink,Cameron",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-10",
+      "matchup": "CHI@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    }
+  ]
+}

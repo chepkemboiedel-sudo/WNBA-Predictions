@@ -1,0 +1,200 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-24_03_00PM.pdf",
+  "status": 200,
+  "sha256": "7320d2020a6401a67119374412565f4fb0d9e04c991a0fde58d20cb7e7c51a4f",
+  "parser_version": 2,
+  "published_at": "2026-09-24T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-09-24",
+      "matchup": "TOR@CON",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "TOR@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "CHI@WAS",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "IND@MIN",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "IND@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "GSV@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "LVA@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-09-24",
+      "matchup": "TOR@CON",
+      "team": "TorontoTempo",
+      "player": "Conde,Maria",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "TOR@CON",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "TOR@CON",
+      "team": "TorontoTempo",
+      "player": "Mabrey,Marina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "TOR@CON",
+      "team": "TorontoTempo",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "TOR@CON",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "TOR@CON",
+      "team": "ConnecticutSun",
+      "player": "Burke,Kennedy",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "TOR@CON",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "TOR@CON",
+      "team": "ConnecticutSun",
+      "player": "Nelson-Ododa,Olivia",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "TOR@CON",
+      "team": "ConnecticutSun",
+      "player": "Rivers,Saniya",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "CHI@WAS",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "CHI@WAS",
+      "team": "ChicagoSky",
+      "player": "Cloud,Natasha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "CHI@WAS",
+      "team": "ChicagoSky",
+      "player": "Coulibaly,Aicha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "CHI@WAS",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "CHI@WAS",
+      "team": "ChicagoSky",
+      "player": "Stevens,Azura",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "IND@MIN",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "IND@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Kosu,AnastasiiaOlairi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "IND@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Miles,Olivia",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "GSV@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Brink,Cameron",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "GSV@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Hamby,Dearica",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "GSV@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Nye,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-24",
+      "matchup": "LVA@PHX",
+      "team": "PhoenixMercury",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-15_03_00PM.pdf",
+  "status": 200,
+  "sha256": "70a7a7112da917c1ffda7116652f7b9bfbbcbeac2cfe8c2662e34fb3f3c56afa",
+  "parser_version": 2,
+  "published_at": "2026-08-15T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-15",
+      "matchup": "NYL@CON",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "NYL@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "LAS@WAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "MIN@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "CHI@SEA",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "CHI@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "IND@ATL",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "IND@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "PDX@PHX",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "PDX@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-15",
+      "matchup": "NYL@CON",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "NYL@CON",
+      "team": "NewYorkLiberty",
+      "player": "Ionescu,Sabrina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "NYL@CON",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "NYL@CON",
+      "team": "ConnecticutSun",
+      "player": "Edwards,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "NYL@CON",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "NYL@CON",
+      "team": "ConnecticutSun",
+      "player": "VanLith,Hailey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "LAS@WAS",
+      "team": "LosAngelesSparks",
+      "player": "AkoaMakani,Monique",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "LAS@WAS",
+      "team": "LosAngelesSparks",
+      "player": "Brink,Cameron",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "MIN@LVA",
+      "team": "LasVegasAces",
+      "player": "Bell,Kierstan",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "MIN@LVA",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "MIN@LVA",
+      "team": "LasVegasAces",
+      "player": "Parker-Tyus,Cheyenne",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "MIN@LVA",
+      "team": "LasVegasAces",
+      "player": "Pissott,Justine",
+      "status": "Questionable"
+    }
+  ]
+}

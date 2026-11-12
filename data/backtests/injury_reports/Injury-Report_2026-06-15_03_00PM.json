@@ -1,0 +1,124 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-15_03_00PM.pdf",
+  "status": 200,
+  "sha256": "29bfe30eadf173d88029b50ee4913835e9bcad0c004cb9b72c22275a0f811fe0",
+  "parser_version": 2,
+  "published_at": "2026-06-15T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-15",
+      "matchup": "LVA@DAL",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "LVA@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "PDX@MIN",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "PDX@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-16",
+      "matchup": "TOR@IND",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-16",
+      "matchup": "TOR@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-15",
+      "matchup": "LVA@DAL",
+      "team": "LasVegasAces",
+      "player": "Barker,Janiah",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "LVA@DAL",
+      "team": "LasVegasAces",
+      "player": "Carter,Chennedy",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "LVA@DAL",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "LVA@DAL",
+      "team": "DallasWings",
+      "player": "Bueckers,Paige",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "LVA@DAL",
+      "team": "DallasWings",
+      "player": "Sims,Odyssey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "PDX@MIN",
+      "team": "PortlandFire",
+      "player": "Puoch,Nyadiew",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "PDX@MIN",
+      "team": "PortlandFire",
+      "player": "Samuelson,Karlie",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "PDX@MIN",
+      "team": "PortlandFire",
+      "player": "Winterburn,Holly",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "PDX@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "PDX@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "PDX@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Out"
+    }
+  ]
+}

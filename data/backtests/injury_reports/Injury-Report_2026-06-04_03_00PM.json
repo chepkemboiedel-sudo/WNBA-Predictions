@@ -1,0 +1,107 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-04_03_00PM.pdf",
+  "status": 200,
+  "sha256": "59ea801ac9362726f75704c48a3b58c87ce1c36cf134cf791ac691145963c15c",
+  "parser_version": 2,
+  "published_at": "2026-06-04T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-04",
+      "matchup": "ATL@IND",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-04",
+      "matchup": "ATL@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-04",
+      "matchup": "GSV@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-05",
+      "matchup": "CON@CHI",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-05",
+      "matchup": "CON@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-05",
+      "matchup": "DAL@LAS",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-05",
+      "matchup": "DAL@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-05",
+      "matchup": "PHX@PDX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-05",
+      "matchup": "PHX@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-04",
+      "matchup": "ATL@IND",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-04",
+      "matchup": "ATL@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-04",
+      "matchup": "ATL@IND",
+      "team": "IndianaFever",
+      "player": "Dantas,Damiris",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-04",
+      "matchup": "GSV@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-04",
+      "matchup": "GSV@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-04",
+      "matchup": "GSV@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Out"
+    }
+  ]
+}

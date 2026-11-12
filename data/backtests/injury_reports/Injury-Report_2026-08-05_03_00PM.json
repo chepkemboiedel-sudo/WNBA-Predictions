@@ -1,0 +1,133 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-05_03_00PM.pdf",
+  "status": 200,
+  "sha256": "61cecef955c9823599478704f2112bac14473464621113791bc948e30ca315d7",
+  "parser_version": 2,
+  "published_at": "2026-08-05T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-05",
+      "matchup": "PHX@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "SEA@NYL",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "SEA@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "DAL@WAS",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "LAS@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LVA@IND",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LVA@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LAS@MIN",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LAS@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "TOR@PDX",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "TOR@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-05",
+      "matchup": "PHX@ATL",
+      "team": "AtlantaDream",
+      "player": "Paopao,Te-Hina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "SEA@NYL",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "SEA@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "SEA@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "DAL@WAS",
+      "team": "DallasWings",
+      "player": "Clark,Alysha",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "LAS@CHI",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "LAS@CHI",
+      "team": "ChicagoSky",
+      "player": "Stevens,Azura",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "LAS@CHI",
+      "team": "ChicagoSky",
+      "player": "Taylor,Sydney",
+      "status": "Questionable"
+    }
+  ]
+}

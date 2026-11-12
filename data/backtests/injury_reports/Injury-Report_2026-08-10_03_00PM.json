@@ -1,0 +1,134 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-10_03_00PM.pdf",
+  "status": 200,
+  "sha256": "1aba87da06bd36801ce3f0151d41a3b4ffb75fe49cae566ddd16647344a31409",
+  "parser_version": 2,
+  "published_at": "2026-08-10T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-10",
+      "matchup": "TOR@ATL",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "TOR@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "CHI@SEA",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "CHI@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "NYL@IND",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "NYL@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "PHX@LAS",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "PHX@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "WAS@LVA",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-11",
+      "matchup": "WAS@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-10",
+      "matchup": "TOR@ATL",
+      "team": "TorontoTempo",
+      "player": "Mabrey,Marina",
+      "status": "Available"
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "TOR@ATL",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "TOR@ATL",
+      "team": "AtlantaDream",
+      "player": "Paopao,Te-Hina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "CHI@SEA",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "CHI@SEA",
+      "team": "ChicagoSky",
+      "player": "Taylor,Sydney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "CHI@SEA",
+      "team": "SeattleStorm",
+      "player": "Johnson,Flau'jae",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "CHI@SEA",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "CHI@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "CHI@SEA",
+      "team": "SeattleStorm",
+      "player": "Samuelson,KatieLou",
+      "status": "Questionable"
+    }
+  ]
+}

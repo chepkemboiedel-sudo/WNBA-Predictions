@@ -1,0 +1,235 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-17_03_00PM.pdf",
+  "status": 200,
+  "sha256": "489d953808d2b8126c368716f60dd10c327e8b5178f0d781c142447d40bdf550",
+  "parser_version": 2,
+  "published_at": "2026-07-17T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-17",
+      "matchup": "ATL@TOR",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "ATL@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "LAS@CHI",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "LAS@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "SEA@IND",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "SEA@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "CON@PHX",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "CON@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "NYL@IND",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "NYL@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "PDX@MIN",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "PDX@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "WAS@GSV",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "WAS@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-17",
+      "matchup": "ATL@TOR",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "ATL@TOR",
+      "team": "AtlantaDream",
+      "player": "Paopao,Te-Hina",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "ATL@TOR",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Available"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "ATL@TOR",
+      "team": "TorontoTempo",
+      "player": "Key,Teonni",
+      "status": "Available"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "ATL@TOR",
+      "team": "TorontoTempo",
+      "player": "Rice,Kiki",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "ATL@TOR",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "LAS@CHI",
+      "team": "LosAngelesSparks",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "LAS@CHI",
+      "team": "LosAngelesSparks",
+      "player": "Williams,Kiana",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "LAS@CHI",
+      "team": "ChicagoSky",
+      "player": "Cardoso,Kamilla",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "LAS@CHI",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "LAS@CHI",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "SEA@IND",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "SEA@IND",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "SEA@IND",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "SEA@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "CON@PHX",
+      "team": "ConnecticutSun",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "CON@PHX",
+      "team": "ConnecticutSun",
+      "player": "Rivers,Saniya",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "CON@PHX",
+      "team": "PhoenixMercury",
+      "player": "Linskens,Kyara",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "CON@PHX",
+      "team": "PhoenixMercury",
+      "player": "Mack,Natasha",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "CON@PHX",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Questionable"
+    }
+  ]
+}

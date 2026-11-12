@@ -1,0 +1,188 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-12_03_00PM.pdf",
+  "status": 200,
+  "sha256": "a34ad356d5534fd468487e6f39c64fa71b93ac8928e3c4635b0211486a3ee784",
+  "parser_version": 2,
+  "published_at": "2026-08-12T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-12",
+      "matchup": "TOR@DAL",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "TOR@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "CHI@GSV",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "CHI@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "MIN@PDX",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "MIN@PDX",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-13",
+      "matchup": "ATL@CON",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-13",
+      "matchup": "ATL@CON",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-13",
+      "matchup": "LAS@NYL",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-13",
+      "matchup": "LAS@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-13",
+      "matchup": "WAS@LVA",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-13",
+      "matchup": "WAS@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-12",
+      "matchup": "TOR@DAL",
+      "team": "TorontoTempo",
+      "player": "Allemand,Julie",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "TOR@DAL",
+      "team": "TorontoTempo",
+      "player": "Conde,Maria",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "TOR@DAL",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "TOR@DAL",
+      "team": "DallasWings",
+      "player": "Clark,Alysha",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "TOR@DAL",
+      "team": "DallasWings",
+      "player": "Fudd,Azzi",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "TOR@DAL",
+      "team": "DallasWings",
+      "player": "Shepard,Jessica",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "CHI@GSV",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "CHI@GSV",
+      "team": "ChicagoSky",
+      "player": "Taylor,Sydney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "CHI@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Salaun,Janelle",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "CHI@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Stokes,Kiah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "MIN@PDX",
+      "team": "MinnesotaLynx",
+      "player": "Bibby,Chloe",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "MIN@PDX",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "MIN@PDX",
+      "team": "PortlandFire",
+      "player": "Leite,Carla",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "MIN@PDX",
+      "team": "PortlandFire",
+      "player": "Oblak,Teja",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-12",
+      "matchup": "MIN@PDX",
+      "team": "PortlandFire",
+      "player": "Okonkwo,Amy",
+      "status": "Out"
+    }
+  ]
+}

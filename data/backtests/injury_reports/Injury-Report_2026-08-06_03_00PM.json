@@ -1,0 +1,174 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-06_03_00PM.pdf",
+  "status": 200,
+  "sha256": "256990a464ef262de93f72ed98fb0bfdbf971179b91bc4934dc5699f3dda13c2",
+  "parser_version": 2,
+  "published_at": "2026-08-06T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-06",
+      "matchup": "LVA@IND",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LVA@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LAS@MIN",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LAS@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "TOR@PDX",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "TOR@PDX",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-07",
+      "matchup": "ATL@WAS",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-07",
+      "matchup": "ATL@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-07",
+      "matchup": "PHX@CON",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-07",
+      "matchup": "PHX@CON",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-07",
+      "matchup": "GSV@DAL",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-07",
+      "matchup": "GSV@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-06",
+      "matchup": "LVA@IND",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LVA@IND",
+      "team": "LasVegasAces",
+      "player": "Parker-Tyus,Cheyenne",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LVA@IND",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LVA@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LVA@IND",
+      "team": "IndianaFever",
+      "player": "Dantas,Damiris",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LAS@MIN",
+      "team": "LosAngelesSparks",
+      "player": "Atkins,Ariel",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "LAS@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Bibby,Chloe",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "TOR@PDX",
+      "team": "TorontoTempo",
+      "player": "Mabrey,Marina",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "TOR@PDX",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "TOR@PDX",
+      "team": "PortlandFire",
+      "player": "Barker,SarahAshlee",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "TOR@PDX",
+      "team": "PortlandFire",
+      "player": "Carleton,Bridget",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "TOR@PDX",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-06",
+      "matchup": "TOR@PDX",
+      "team": "PortlandFire",
+      "player": "Oblak,Teja",
+      "status": "Doubtful"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-14_03_00PM.pdf",
+  "status": 200,
+  "sha256": "3c9f106cc1fc9cba364d111024e914112ff78a88218360f9ad405f247b3932f2",
+  "parser_version": 2,
+  "published_at": "2026-08-14T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-14",
+      "matchup": "DAL@IND",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-14",
+      "matchup": "DAL@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-14",
+      "matchup": "PDX@SEA",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-14",
+      "matchup": "PDX@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "NYL@CON",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "NYL@CON",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "LAS@WAS",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "LAS@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "MIN@LVA",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-15",
+      "matchup": "MIN@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-14",
+      "matchup": "DAL@IND",
+      "team": "DallasWings",
+      "player": "Fudd,Azzi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-14",
+      "matchup": "DAL@IND",
+      "team": "DallasWings",
+      "player": "James,Aziaha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-14",
+      "matchup": "DAL@IND",
+      "team": "DallasWings",
+      "player": "Shepard,Jessica",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-14",
+      "matchup": "DAL@IND",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-14",
+      "matchup": "DAL@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-14",
+      "matchup": "PDX@SEA",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-14",
+      "matchup": "PDX@SEA",
+      "team": "PortlandFire",
+      "player": "Leite,Carla",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-14",
+      "matchup": "PDX@SEA",
+      "team": "SeattleStorm",
+      "player": "Johnson,Flau'jae",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-14",
+      "matchup": "PDX@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    }
+  ]
+}

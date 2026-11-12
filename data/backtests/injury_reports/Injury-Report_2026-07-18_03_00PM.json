@@ -1,0 +1,154 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-18_03_00PM.pdf",
+  "status": 200,
+  "sha256": "2c24eeb9464835f1bad78f6e2dfaaea28244d8ad759dbdd42a31c192cab22e52",
+  "parser_version": 2,
+  "published_at": "2026-07-18T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-18",
+      "matchup": "NYL@IND",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "NYL@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "PDX@MIN",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "PDX@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "WAS@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "LAS@DAL",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "LAS@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CHI@ATL",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CHI@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CON@PHX",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-19",
+      "matchup": "CON@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-18",
+      "matchup": "NYL@IND",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "NYL@IND",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "NYL@IND",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "NYL@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "PDX@MIN",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "PDX@MIN",
+      "team": "PortlandFire",
+      "player": "Gustafson,Megan",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "PDX@MIN",
+      "team": "PortlandFire",
+      "player": "Samuelson,Karlie",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "PDX@MIN",
+      "team": "PortlandFire",
+      "player": "Winterburn,Holly",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "PDX@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "PDX@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-18",
+      "matchup": "WAS@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Jocyte,Juste",
+      "status": "Out"
+    }
+  ]
+}

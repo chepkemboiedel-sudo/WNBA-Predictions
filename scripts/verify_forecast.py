@@ -1,0 +1,96 @@
+"""Reject an inconsistent forecast before publishing any refreshed artifacts."""
+import json
+import re
+import sys
+from pathlib import Path
+
+import pandas as pd
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/"src"))
+import backtest_ui
+
+
+def verify():
+    forecast = json.loads((ROOT / "outputs/forecast.json").read_text(encoding="utf-8"))
+    meta = json.loads((ROOT / "public/refresh_meta.json").read_text(encoding="utf-8"))
+    page = (ROOT / "public/index.html").read_text(encoding="utf-8")
+    match = re.search(r"window\.__WNBA__=(.*?);</script>", page)
+    if match is None:
+        raise ValueError("Website is missing its forecast data.")
+    embedded = json.loads(match[1])
+    if embedded.get("backtest")!=backtest_ui.load_results():
+        raise ValueError("Displayed backtest results differ from the saved evaluation.")
+    if '<section id="backtest">' not in page:
+        raise ValueError("The backtest comparison section is missing.")
+    for folder in ("public","site"):
+        for name in ("results.json","predictions.csv","REPORT.md","auto_status.json","progress.json","prospective.csv"):
+            if (ROOT/folder/"backtest"/name).read_bytes()!=(ROOT/"outputs/availability_backtest"/name).read_bytes():
+                raise ValueError("A downloadable backtest asset differs from the saved source.")
+        for name in ("initial_results.json","initial_predictions.csv"):
+            if (ROOT/folder/"backtest"/name).read_bytes()!=(ROOT/"data/backtests"/name).read_bytes():
+                raise ValueError("A frozen initial-study download differs from its archive.")
+        if (ROOT/folder/"backtest/pregame_predictions.json").read_bytes()!=(ROOT/"data/backtests/prospective_predictions.json").read_bytes():
+            raise ValueError("The pregame journal download differs from recorded evidence.")
+    prospective=json.loads((ROOT/"data/backtests/prospective_predictions.json").read_text(encoding="utf-8"))
+    seen=set()
+    for row in prospective["predictions"]:
+        if row["game_id"] in seen or pd.Timestamp(row["locked_at"])>=pd.Timestamp(row["tip"]):
+            raise ValueError("Prospective evidence is duplicated or recorded after tip.")
+        seen.add(row["game_id"])
+    if embedded["refresh"] != meta:
+        raise ValueError("Page and refresh metadata disagree.")
+    if embedded["observed"] != forecast["observed_series"]:
+        raise ValueError("Interactive bracket is using different completed results.")
+    if forecast["data_through"] not in page:
+        raise ValueError("Page does not show the latest completed game date.")
+    results = pd.read_csv(ROOT / "outputs/finals_probabilities.csv")
+    from promotion import current
+    import availability as A
+    decision=current(ROOT,A.load_snapshot(),forecast.get("season",2026))
+    promoted=decision["usable"]
+    expected_model="injury-adjusted" if promoted else "score-only"
+    if forecast.get("probability_model")!=expected_model or forecast.get("injury_adjustment_default")!=promoted:
+        raise ValueError("Published default disagrees with independently re-evaluated promotion evidence.")
+    if not promoted and (not results.p_champion.equals(results.p_champion_baseline) or not results.p_reach_finals.equals(results.p_reach_finals_baseline)):
+        raise ValueError("Published odds differ from score-only probabilities.")
+    if embedded.get("default_model")!=expected_model or embedded["prob"]!=embedded["prob_availability" if promoted else "prob_base"]:
+        raise ValueError("Interactive page does not default to score-only probabilities.")
+    optional_input=re.search(r'<input id="use-availability"[^>]*>',page)
+    if not optional_input or ("checked" in optional_input[0])!=promoted:
+        raise ValueError("The optional injury toggle must start unchecked.")
+    if promoted and (not results.p_champion.equals(results.p_champion_availability) or not results.p_reach_finals.equals(results.p_reach_finals_availability)):
+        raise ValueError("Promoted published odds differ from the eligible injury-adjusted simulation.")
+    if not ((results.p_champion >= 0) & (results.p_champion <= results.p_reach_finals)
+            & (results.p_reach_finals <= 1)).all():
+        raise ValueError("Invalid championship or Finals probabilities.")
+    if abs(results.p_champion.sum() - 1) > 1e-8 or abs(results.p_reach_finals.sum() - 2) > 1e-8:
+        raise ValueError("Forecast probabilities do not sum correctly.")
+    if results.sort_values("seed").team.tolist() != embedded["seeds"]:
+        raise ValueError("Website and simulation seeds disagree.")
+    if "p_champion_baseline" in results and abs(results.p_champion_baseline.sum()-1)>1e-8:
+        raise ValueError("Score-only comparison probabilities do not sum correctly.")
+    availability_path=ROOT/"data/player_availability.json"
+    if availability_path.exists():
+        availability=json.loads(availability_path.read_text(encoding="utf-8"))
+        if embedded.get("availability",{}).get("fetched_at")!=availability.get("fetched_at"):
+            raise ValueError("Website is using a different player-data snapshot.")
+        for team in availability.get("teams",{}).values():
+            if not team.get("adjustment_ready") and any(p.get("extra_absence_points",0)>0 for p in team.get("players",[])):
+                raise ValueError("An incomplete team player archive received an adjustment.")
+    history = json.loads((ROOT / "data/forecast_history.json").read_text(encoding="utf-8"))
+    health = json.loads((ROOT / "public/refresh_health.json").read_text(encoding="utf-8"))
+    if embedded["history"] != history or embedded["health"] != health:
+        raise ValueError("Page history or refresh health does not match published assets.")
+    latest = history["snapshots"][-1]
+    if latest.get("probability_model")!=expected_model:
+        raise ValueError("New saved forecasts must be labeled score-only.")
+    if latest["generated_at"] != meta["last_updated"] or health["last_success_at"] != meta["last_updated"]:
+        raise ValueError("Forecast history and health do not describe this successful run.")
+    if len(list((ROOT / "public/teams").glob("*/index.html"))) != len(set(pd.read_csv(ROOT / ("data/games_"+str(forecast.get("season",2026))+".csv")).home_team)):
+        raise ValueError("A team detail page is missing.")
+    print(f"Verified forecast through {forecast['data_through']}, {forecast['n_sims']:,} simulations.")
+
+
+if __name__ == "__main__":
+    verify()

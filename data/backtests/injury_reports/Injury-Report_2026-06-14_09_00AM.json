@@ -1,0 +1,93 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-14_09_00AM.pdf",
+  "status": 200,
+  "sha256": "75756280be8320462e37681551471779892ee79503735540ba7441542eba279e",
+  "parser_version": 2,
+  "published_at": "2026-06-14T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-14",
+      "matchup": "ATL@TOR",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-14",
+      "matchup": "ATL@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-14",
+      "matchup": "WAS@NYL",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "LVA@DAL",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "LVA@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "PDX@MIN",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "PDX@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "LAS@GSV",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-15",
+      "matchup": "LAS@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-14",
+      "matchup": "ATL@TOR",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-14",
+      "matchup": "ATL@TOR",
+      "team": "TorontoTempo",
+      "player": "Rice,Kiki",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-14",
+      "matchup": "ATL@TOR",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-14",
+      "matchup": "WAS@NYL",
+      "team": "WashingtonMystics",
+      "player": "Iriafen,Kiki",
+      "status": "Out"
+    }
+  ]
+}

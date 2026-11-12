@@ -1,0 +1,596 @@
+{
+  "version": 1,
+  "created_at": "2026-10-28T06:12:45.668139+00:00",
+  "primary_comparison": "verified_report_games",
+  "test_season": 2026,
+  "baseline_train_seasons": [
+    2016,
+    2025
+  ],
+  "player_fits": [
+    {
+      "before": "2026-05-01",
+      "version": "participation-ridge-v1",
+      "experimental": true,
+      "training_games": 264,
+      "training_seasons": [
+        2025,
+        2026
+      ],
+      "ridge_alpha": 30,
+      "max_player_points": 4.0,
+      "max_team_points": 6.0,
+      "margin_logit_coefficient": 0.09804409836852912,
+      "players_with_comparison": 132
+    },
+    {
+      "before": "2026-06-01",
+      "version": "participation-ridge-v1",
+      "experimental": true,
+      "training_games": 300,
+      "training_seasons": [
+        2025,
+        2026
+      ],
+      "ridge_alpha": 30,
+      "max_player_points": 4.0,
+      "max_team_points": 6.0,
+      "margin_logit_coefficient": 0.09804409836852912,
+      "players_with_comparison": 159
+    },
+    {
+      "before": "2026-07-01",
+      "version": "participation-ridge-v1",
+      "experimental": true,
+      "training_games": 381,
+      "training_seasons": [
+        2025,
+        2026
+      ],
+      "ridge_alpha": 30,
+      "max_player_points": 4.0,
+      "max_team_points": 6.0,
+      "margin_logit_coefficient": 0.09804409836852912,
+      "players_with_comparison": 186
+    },
+    {
+      "before": "2026-08-01",
+      "version": "participation-ridge-v1",
+      "experimental": true,
+      "training_games": 451,
+      "training_seasons": [
+        2025,
+        2026
+      ],
+      "ridge_alpha": 30,
+      "max_player_points": 4.0,
+      "max_team_points": 6.0,
+      "margin_logit_coefficient": 0.09804409836852912,
+      "players_with_comparison": 203
+    },
+    {
+      "before": "2026-09-01",
+      "version": "participation-ridge-v1",
+      "experimental": true,
+      "training_games": 537,
+      "training_seasons": [
+        2025,
+        2026
+      ],
+      "ridge_alpha": 30,
+      "max_player_points": 4.0,
+      "max_team_points": 6.0,
+      "margin_logit_coefficient": 0.09804409836852912,
+      "players_with_comparison": 219
+    },
+    {
+      "before": "2026-10-01",
+      "version": "participation-ridge-v1",
+      "experimental": true,
+      "training_games": 567,
+      "training_seasons": [
+        2025,
+        2026
+      ],
+      "ridge_alpha": 30,
+      "max_player_points": 4.0,
+      "max_team_points": 6.0,
+      "margin_logit_coefficient": 0.09804409836852912,
+      "players_with_comparison": 225
+    }
+  ],
+  "report_policy": "09:00 ET for tips before 16:00 ET; 15:00 ET for later tips; at least one hour before tip. No outcome-dependent report selection.",
+  "report_files_requested": 153,
+  "report_files_verified": 151,
+  "report_failures": [
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-28_03_00PM.pdf",
+      "status": 403,
+      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-23_03_00PM.pdf",
+      "status": 403,
+      "attempted_at": "2026-10-28T01:32:45.994109+00:00"
+    }
+  ],
+  "fallback_counts": {
+    "Both teams not explicitly submitted in the selected report": 108,
+    "No verified fixed-time report": 9
+  },
+  "out_records": 608,
+  "unmatched_out_records": 7,
+  "incomplete_team_history_games": 0,
+  "groups": {
+    "all_eligible_games": {
+      "n": 324,
+      "days": 118,
+      "changed_games": 139,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.5823506497105961,
+          "adjusted": 0.5811365223306998,
+          "delta": -0.001214127379896366,
+          "delta_ci95": [
+            -0.00342438086248832,
+            0.001067796374690617
+          ]
+        },
+        "brier": {
+          "baseline": 0.19796636304817225,
+          "adjusted": 0.19756353034165183,
+          "delta": -0.00040283270652043503,
+          "delta_ci95": [
+            -0.001406663629156825,
+            0.0006284726162093954
+          ]
+        },
+        "accuracy": {
+          "baseline": 0.691358024691358,
+          "adjusted": 0.6882716049382716,
+          "delta": -0.0030864197530864196,
+          "delta_ci95": [
+            -0.01440922190201729,
+            0.006389776357827476
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 1,
+        "harmed": 2,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "verified_report_games": {
+      "n": 207,
+      "days": 100,
+      "changed_games": 139,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.5613895477691965,
+          "adjusted": 0.559489174478924,
+          "delta": -0.001900373290272573,
+          "delta_ci95": [
+            -0.005338078875047769,
+            0.0016978924767482814
+          ]
+        },
+        "brier": {
+          "baseline": 0.18853266538947036,
+          "adjusted": 0.18790214463143834,
+          "delta": -0.0006305207580319852,
+          "delta_ci95": [
+            -0.002177253313423468,
+            0.0010129771272143068
+          ]
+        },
+        "accuracy": {
+          "baseline": 0.714975845410628,
+          "adjusted": 0.7101449275362319,
+          "delta": -0.004830917874396135,
+          "delta_ci95": [
+            -0.021052631578947368,
+            0.01020408163265306
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 1,
+        "harmed": 2,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "verified_reports_with_out": {
+      "n": 202,
+      "days": 99,
+      "changed_games": 139,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.5588218024328803,
+          "adjusted": 0.5568743901997791,
+          "delta": -0.0019474122331011022,
+          "delta_ci95": [
+            -0.005383329354949876,
+            0.0017012262805554787
+          ]
+        },
+        "brier": {
+          "baseline": 0.18731314806353483,
+          "adjusted": 0.18666702035604663,
+          "delta": -0.0006461277074882224,
+          "delta_ci95": [
+            -0.002182824421390159,
+            0.0009881168473352391
+          ]
+        },
+        "accuracy": {
+          "baseline": 0.7178217821782178,
+          "adjusted": 0.7128712871287128,
+          "delta": -0.0049504950495049506,
+          "delta_ci95": [
+            -0.023044141491722136,
+            0.010362694300518135
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 1,
+        "harmed": 2,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "changed_games": {
+      "n": 139,
+      "days": 84,
+      "changed_games": 139,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.5585013087909444,
+          "adjusted": 0.55567125648097,
+          "delta": -0.002830052309974263,
+          "delta_ci95": [
+            -0.007919262778356573,
+            0.002483666089971821
+          ]
+        },
+        "brier": {
+          "baseline": 0.18802676266366827,
+          "adjusted": 0.1870877857074624,
+          "delta": -0.0009389769562059059,
+          "delta_ci95": [
+            -0.0032578520696215224,
+            0.0014492825945974952
+          ]
+        },
+        "accuracy": {
+          "baseline": 0.7122302158273381,
+          "adjusted": 0.7050359712230215,
+          "delta": -0.007194244604316547,
+          "delta_ci95": [
+            -0.031746031746031744,
+            0.015267175572519083
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 1,
+        "harmed": 2,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "regular_season": {
+      "n": 202,
+      "days": 96,
+      "changed_games": 135,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.5599282041240393,
+          "adjusted": 0.5584633311240372,
+          "delta": -0.0014648730000021183,
+          "delta_ci95": [
+            -0.004832200425743566,
+            0.002118483647371281
+          ]
+        },
+        "brier": {
+          "baseline": 0.1878925688521448,
+          "adjusted": 0.1874711384654444,
+          "delta": -0.0004214303867003821,
+          "delta_ci95": [
+            -0.0019423745294223152,
+            0.0011858910223107198
+          ]
+        },
+        "accuracy": {
+          "baseline": 0.7178217821782178,
+          "adjusted": 0.7128712871287128,
+          "delta": -0.0049504950495049506,
+          "delta_ci95": [
+            -0.022222222222222223,
+            0.010418030104712022
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 1,
+        "harmed": 2,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "playoffs": {
+      "n": 5,
+      "days": 4,
+      "changed_games": 4,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.6204278310335488,
+          "adjusted": 0.60093324601635,
+          "delta": -0.01949458501719894,
+          "delta_ci95": [
+            -0.04278612097447854,
+            0.001924883033642591
+          ]
+        },
+        "brier": {
+          "baseline": 0.214392565497422,
+          "adjusted": 0.20531479373759326,
+          "delta": -0.00907777175982875,
+          "delta_ci95": [
+            -0.01996256212862547,
+            0.0009647889588443453
+          ]
+        },
+        "accuracy": {
+          "baseline": 0.6,
+          "adjusted": 0.6,
+          "delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 0,
+        "harmed": 0,
+        "mcnemar_exact_p": 1.0
+      }
+    }
+  },
+  "by_month": {
+    "2026-05": {
+      "n": 26,
+      "days": 14,
+      "changed_games": 15,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.6694728745788396,
+          "adjusted": 0.6696060038297911,
+          "delta": 0.00013312925095145084,
+          "delta_ci95": [
+            -0.0076973728012788645,
+            0.011815407319384835
+          ]
+        },
+        "brier": {
+          "baseline": 0.24053558394451652,
+          "adjusted": 0.24086263708596928,
+          "delta": 0.0003270531414527525,
+          "delta_ci95": [
+            -0.0034042872126271,
+            0.005634932277655972
+          ]
+        },
+        "accuracy": {
+          "baseline": 0.6153846153846154,
+          "adjusted": 0.6153846153846154,
+          "delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 0,
+        "harmed": 0,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "2026-06": {
+      "n": 59,
+      "days": 27,
+      "changed_games": 36,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.5140824280255282,
+          "adjusted": 0.5132807134255775,
+          "delta": -0.0008017145999507075,
+          "delta_ci95": [
+            -0.006107526206008468,
+            0.006049612338885178
+          ]
+        },
+        "brier": {
+          "baseline": 0.16740925091055725,
+          "adjusted": 0.16745118470059,
+          "delta": 4.1933790032790245e-05,
+          "delta_ci95": [
+            -0.0021877449516894635,
+            0.0028545451407376906
+          ]
+        },
+        "accuracy": {
+          "baseline": 0.7966101694915254,
+          "adjusted": 0.7966101694915254,
+          "delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 0,
+        "harmed": 0,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "2026-07": {
+      "n": 46,
+      "days": 22,
+      "changed_games": 24,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.5790780428004502,
+          "adjusted": 0.5746686325324907,
+          "delta": -0.004409410267959342,
+          "delta_ci95": [
+            -0.011400559302845682,
+            0.0034061567429986275
+          ]
+        },
+        "brier": {
+          "baseline": 0.1938809714124626,
+          "adjusted": 0.19202770782600465,
+          "delta": -0.0018532635864579293,
+          "delta_ci95": [
+            -0.005092884358642269,
+            0.0016044955344325326
+          ]
+        },
+        "accuracy": {
+          "baseline": 0.6956521739130435,
+          "adjusted": 0.717391304347826,
+          "delta": 0.021739130434782608,
+          "delta_ci95": [
+            0.0,
+            0.06818181818181818
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 1,
+        "harmed": 0,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "2026-08": {
+      "n": 55,
+      "days": 26,
+      "changed_games": 45,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.5584416405712782,
+          "adjusted": 0.5595052198713152,
+          "delta": 0.0010635793000369936,
+          "delta_ci95": [
+            -0.0048761079983899395,
+            0.0073605108127322225
+          ]
+        },
+        "brier": {
+          "baseline": 0.18722867515906214,
+          "adjusted": 0.18786349373435807,
+          "delta": 0.0006348185752959708,
+          "delta_ci95": [
+            -0.00206342888770394,
+            0.0035819061836159616
+          ]
+        },
+        "accuracy": {
+          "baseline": 0.6545454545454545,
+          "adjusted": 0.6181818181818182,
+          "delta": -0.03636363636363636,
+          "delta_ci95": [
+            -0.09305616498464238,
+            0.0
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 0,
+        "harmed": 2,
+        "mcnemar_exact_p": 0.5
+      }
+    },
+    "2026-09": {
+      "n": 19,
+      "days": 10,
+      "changed_games": 18,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.5396357503054114,
+          "adjusted": 0.528851869826234,
+          "delta": -0.010783880479177433,
+          "delta_ci95": [
+            -0.027990908500744788,
+            0.007490592957883945
+          ]
+        },
+        "brier": {
+          "baseline": 0.1806235436823986,
+          "adjusted": 0.17583321367185517,
+          "delta": -0.004790330010543453,
+          "delta_ci95": [
+            -0.013003334037621604,
+            0.0039830430435046195
+          ]
+        },
+        "accuracy": {
+          "baseline": 0.7894736842105263,
+          "adjusted": 0.7894736842105263,
+          "delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 0,
+        "harmed": 0,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "2026-10": {
+      "n": 2,
+      "days": 2,
+      "changed_games": 1,
+      "metrics": {
+        "log_loss": {
+          "baseline": 0.43275946981193925,
+          "adjusted": 0.4326056046691381,
+          "delta": -0.0001538651428011628,
+          "delta_ci95": [
+            -0.0003077302856023256,
+            0.0
+          ]
+        },
+        "brier": {
+          "baseline": 0.12362080032639244,
+          "adjusted": 0.12354885099328486,
+          "delta": -7.194933310758489e-05,
+          "delta_ci95": [
+            -0.00014389866621516978,
+            0.0
+          ]
+        },
+        "accuracy": {
+          "baseline": 1.0,
+          "adjusted": 1.0,
+          "delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "winner_changes": {
+        "corrected": 0,
+        "harmed": 0,
+        "mcnemar_exact_p": 1.0
+      }
+    }
+  }
+}

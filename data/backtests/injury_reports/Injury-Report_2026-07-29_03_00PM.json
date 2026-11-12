@@ -1,0 +1,86 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-29_03_00PM.pdf",
+  "status": 200,
+  "sha256": "d5a52116f910393cefcd05a24962bf11e928e1f0e7e1b58d9db5029eaff00cb4",
+  "parser_version": 2,
+  "published_at": "2026-07-29T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-29",
+      "matchup": "ATL@DAL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-29",
+      "matchup": "ATL@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-29",
+      "matchup": "GSV@PHX",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "CON@CHI",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "CON@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "MIN@TOR",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "MIN@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "NYL@LVA",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "NYL@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-29",
+      "matchup": "ATL@DAL",
+      "team": "AtlantaDream",
+      "player": "Paopao,Te-Hina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-29",
+      "matchup": "ATL@DAL",
+      "team": "DallasWings",
+      "player": "Smith,Alanna",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-29",
+      "matchup": "GSV@PHX",
+      "team": "GoldenStateValkyries",
+      "player": "Williams,Gabby",
+      "status": "Questionable"
+    }
+  ]
+}

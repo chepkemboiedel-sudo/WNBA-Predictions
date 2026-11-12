@@ -1,0 +1,218 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-22_09_00AM.pdf",
+  "status": 200,
+  "sha256": "78b9e591b5fcebba282b9a3c2a00096ea91c7d922b9c54733de55bda99d8f909",
+  "parser_version": 2,
+  "published_at": "2026-07-22T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-22",
+      "matchup": "MIN@SEA",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "MIN@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "PHX@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CHI@NYL",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CHI@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "LVA@WAS",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CON@IND",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CON@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "DAL@PDX",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "DAL@PDX",
+      "team": "PortlandFire",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-22",
+      "matchup": "MIN@SEA",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "MIN@SEA",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "MIN@SEA",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "MIN@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "PHX@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "PHX@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Williams,Kiana",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CHI@NYL",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CHI@NYL",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CHI@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CHI@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Johannes,Marine",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CHI@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "LVA@WAS",
+      "team": "LasVegasAces",
+      "player": "Bell,Kierstan",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "LVA@WAS",
+      "team": "LasVegasAces",
+      "player": "Yamamoto,Mai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CON@IND",
+      "team": "ConnecticutSun",
+      "player": "Edwards,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CON@IND",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CON@IND",
+      "team": "ConnecticutSun",
+      "player": "Rivers,Saniya",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CON@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "CON@IND",
+      "team": "IndianaFever",
+      "player": "Dantas,Damiris",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "DAL@PDX",
+      "team": "DallasWings",
+      "player": "Bueckers,Paige",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "DAL@PDX",
+      "team": "DallasWings",
+      "player": "Smith,Alanna",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-22",
+      "matchup": "DAL@PDX",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-17_03_00PM.pdf",
+  "status": 200,
+  "sha256": "bbbb38040eb62dd3d4c571d71bdd4c7bfd6d73f9075b735d223888835e9f8309",
+  "parser_version": 2,
+  "published_at": "2026-08-17T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-17",
+      "matchup": "DAL@GSV",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-17",
+      "matchup": "DAL@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "IND@TOR",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "IND@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "LAS@CON",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "LAS@CON",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "ATL@LVA",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "ATL@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "NYL@CHI",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "NYL@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-17",
+      "matchup": "DAL@GSV",
+      "team": "DallasWings",
+      "player": "Fudd,Azzi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-17",
+      "matchup": "DAL@GSV",
+      "team": "DallasWings",
+      "player": "James,Aziaha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-17",
+      "matchup": "DAL@GSV",
+      "team": "DallasWings",
+      "player": "Shepard,Jessica",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-17",
+      "matchup": "DAL@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Salaun,Janelle",
+      "status": "Questionable"
+    }
+  ]
+}

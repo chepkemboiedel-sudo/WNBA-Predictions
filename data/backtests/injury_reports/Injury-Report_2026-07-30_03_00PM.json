@@ -1,0 +1,195 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-30_03_00PM.pdf",
+  "status": 200,
+  "sha256": "c8acbab16167b646181ab87686b9a209bc8c04e261c3ed51f2460be3e87eb441",
+  "parser_version": 2,
+  "published_at": "2026-07-30T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-30",
+      "matchup": "CON@CHI",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "CON@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "MIN@TOR",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "MIN@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "NYL@LVA",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "NYL@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "DAL@WAS",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "DAL@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "SEA@ATL",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "SEA@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "IND@PDX",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-31",
+      "matchup": "IND@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-30",
+      "matchup": "CON@CHI",
+      "team": "ConnecticutSun",
+      "player": "Edwards,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "CON@CHI",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "CON@CHI",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "CON@CHI",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "CON@CHI",
+      "team": "ChicagoSky",
+      "player": "Stevens,Azura",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "MIN@TOR",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "MIN@TOR",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "MIN@TOR",
+      "team": "TorontoTempo",
+      "player": "Harrison,Isabelle",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "MIN@TOR",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "MIN@TOR",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "NYL@LVA",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "NYL@LVA",
+      "team": "NewYorkLiberty",
+      "player": "Johannes,Marine",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "NYL@LVA",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "NYL@LVA",
+      "team": "LasVegasAces",
+      "player": "Bell,Kierstan",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "NYL@LVA",
+      "team": "LasVegasAces",
+      "player": "Parker-Tyus,Cheyenne",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-30",
+      "matchup": "NYL@LVA",
+      "team": "LasVegasAces",
+      "player": "Smith,NaLyssa",
+      "status": "Questionable"
+    }
+  ]
+}

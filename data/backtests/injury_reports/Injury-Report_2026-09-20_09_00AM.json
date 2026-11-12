@@ -1,0 +1,189 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-20_09_00AM.pdf",
+  "status": 200,
+  "sha256": "60637eb4cd6728814616f5d6d3e7c1b33b26fb8c5fbe5f3322d1619ded87b265",
+  "parser_version": 2,
+  "published_at": "2026-09-20T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-09-20",
+      "matchup": "MIN@CON",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "MIN@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "NYL@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "WAS@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "PDX@LAS",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "PDX@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "SEA@LVA",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-21",
+      "matchup": "ATL@NYL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-21",
+      "matchup": "ATL@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-21",
+      "matchup": "DAL@PHX",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-09-21",
+      "matchup": "DAL@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-09-20",
+      "matchup": "MIN@CON",
+      "team": "MinnesotaLynx",
+      "player": "Kosu,AnastasiiaOlairi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "MIN@CON",
+      "team": "ConnecticutSun",
+      "player": "Burke,Kennedy",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "MIN@CON",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "MIN@CON",
+      "team": "ConnecticutSun",
+      "player": "Nelson-Ododa,Olivia",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "NYL@TOR",
+      "team": "TorontoTempo",
+      "player": "Conde,Maria",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "NYL@TOR",
+      "team": "TorontoTempo",
+      "player": "Mabrey,Marina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "NYL@TOR",
+      "team": "TorontoTempo",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "NYL@TOR",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "WAS@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "PDX@LAS",
+      "team": "PortlandFire",
+      "player": "Carleton,Bridget",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "PDX@LAS",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "PDX@LAS",
+      "team": "PortlandFire",
+      "player": "Harrison,Jordan",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "PDX@LAS",
+      "team": "PortlandFire",
+      "player": "Oblak,Teja",
+      "status": "Out"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "PDX@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Brink,Cameron",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "PDX@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Hamby,Dearica",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-09-20",
+      "matchup": "PDX@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Nye,Aaliyah",
+      "status": "Doubtful"
+    }
+  ]
+}

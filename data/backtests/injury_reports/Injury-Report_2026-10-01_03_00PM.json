@@ -1,0 +1,70 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-01_03_00PM.pdf",
+  "status": 200,
+  "sha256": "2ebae76d910ce7b5c977c1d7fefae9a1ef4c960254680022ce7cd07349c73783",
+  "parser_version": 2,
+  "published_at": "2026-10-01T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-10-01",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-10-01",
+      "matchup": "IND@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-10-02",
+      "matchup": "DAL@GSV",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-10-02",
+      "matchup": "DAL@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-10-01",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-10-01",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-10-01",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "player": "Harris,Tyasha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-10-01",
+      "matchup": "IND@LVA",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-10-01",
+      "matchup": "IND@LVA",
+      "team": "LasVegasAces",
+      "player": "Talbot,Stephanie",
+      "status": "Questionable"
+    }
+  ]
+}

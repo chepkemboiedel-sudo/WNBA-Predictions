@@ -1,0 +1,134 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-26_03_00PM.pdf",
+  "status": 200,
+  "sha256": "6423f16299a9ad65126e760fbe39b72118a1ef6b7c53d705a6a1c33188fd82a6",
+  "parser_version": 2,
+  "published_at": "2026-06-26T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-26",
+      "matchup": "PDX@CHI",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-26",
+      "matchup": "PDX@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-26",
+      "matchup": "WAS@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-26",
+      "matchup": "ATL@GSV",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "PHX@TOR",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "PHX@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "LAS@IND",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "LAS@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "ATL@SEA",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "ATL@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-26",
+      "matchup": "PDX@CHI",
+      "team": "PortlandFire",
+      "player": "Samuelson,Karlie",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-26",
+      "matchup": "PDX@CHI",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-26",
+      "matchup": "PDX@CHI",
+      "team": "ChicagoSky",
+      "player": "Jackson,Rickea",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-26",
+      "matchup": "PDX@CHI",
+      "team": "ChicagoSky",
+      "player": "Vandersloot,Courtney",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-26",
+      "matchup": "WAS@CON",
+      "team": "ConnecticutSun",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-26",
+      "matchup": "WAS@CON",
+      "team": "ConnecticutSun",
+      "player": "Rivers,Saniya",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-26",
+      "matchup": "WAS@CON",
+      "team": "ConnecticutSun",
+      "player": "VanLith,Hailey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-26",
+      "matchup": "ATL@GSV",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-26",
+      "matchup": "ATL@GSV",
+      "team": "AtlantaDream",
+      "player": "Nye,Aaliyah",
+      "status": "Out"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-16_03_00PM.pdf",
+  "status": 200,
+  "sha256": "8d5864d67a00b6ab9f0bb57386d9b8cc781c2b024890c5a771b1d56c941ddae4",
+  "parser_version": 2,
+  "published_at": "2026-07-16T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-16",
+      "matchup": "PDX@WAS",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "ATL@TOR",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "ATL@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "LAS@CHI",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "LAS@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "SEA@IND",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "SEA@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "CON@PHX",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-17",
+      "matchup": "CON@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-16",
+      "matchup": "PDX@WAS",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-16",
+      "matchup": "PDX@WAS",
+      "team": "PortlandFire",
+      "player": "Gustafson,Megan",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-16",
+      "matchup": "PDX@WAS",
+      "team": "PortlandFire",
+      "player": "Oblak,Teja",
+      "status": "Questionable"
+    }
+  ]
+}

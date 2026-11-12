@@ -1,0 +1,134 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-21_03_00PM.pdf",
+  "status": 200,
+  "sha256": "48ed713c5a79c9718b29117ea9562c11b03f8542cc9541fe2052415daacfd08e",
+  "parser_version": 2,
+  "published_at": "2026-08-21T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-21",
+      "matchup": "GSV@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "MIN@WAS",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "PDX@TOR",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "PDX@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-22",
+      "matchup": "IND@NYL",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-22",
+      "matchup": "IND@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-22",
+      "matchup": "CON@LAS",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-22",
+      "matchup": "CON@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-22",
+      "matchup": "ATL@PHX",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-22",
+      "matchup": "ATL@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-21",
+      "matchup": "GSV@CHI",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "GSV@CHI",
+      "team": "ChicagoSky",
+      "player": "Coulibaly,Aicha",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "GSV@CHI",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "MIN@WAS",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "MIN@WAS",
+      "team": "MinnesotaLynx",
+      "player": "Miles,Olivia",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "PDX@TOR",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "PDX@TOR",
+      "team": "TorontoTempo",
+      "player": "Conde,Maria",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "PDX@TOR",
+      "team": "TorontoTempo",
+      "player": "Mabrey,Marina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-21",
+      "matchup": "PDX@TOR",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Out"
+    }
+  ]
+}

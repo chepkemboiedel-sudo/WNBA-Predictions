@@ -1,0 +1,31 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-17_09_00AM.pdf",
+  "status": 200,
+  "sha256": "5efc93847d5b5287e93b6d15f11b016916bd6a558dbe52b8286245b6a14505f0",
+  "parser_version": 2,
+  "published_at": "2026-10-17T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-10-17",
+      "matchup": "ATL@GSV",
+      "team": "AtlantaDream",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-10-17",
+      "matchup": "ATL@GSV",
+      "team": "AtlantaDream",
+      "player": "Gray,Allisha",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-10-17",
+      "matchup": "ATL@GSV",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    }
+  ]
+}

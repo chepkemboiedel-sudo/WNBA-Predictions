@@ -1,0 +1,86 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-04_03_00PM.pdf",
+  "status": 200,
+  "sha256": "57e5e2670e01ea248977b77180a787c36ef277dd748210c1949420d0df662571",
+  "parser_version": 2,
+  "published_at": "2026-08-04T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-04",
+      "matchup": "TOR@GSV",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "PHX@ATL",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "PHX@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "SEA@NYL",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "SEA@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "DAL@WAS",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "DAL@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "LAS@CHI",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-05",
+      "matchup": "LAS@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-04",
+      "matchup": "TOR@GSV",
+      "team": "TorontoTempo",
+      "player": "Mabrey,Marina",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-04",
+      "matchup": "TOR@GSV",
+      "team": "TorontoTempo",
+      "player": "Morrow,Aneesah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-04",
+      "matchup": "TOR@GSV",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    }
+  ]
+}

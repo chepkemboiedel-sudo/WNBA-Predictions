@@ -1,0 +1,572 @@
+{
+  "version": 1,
+  "kind": "retrospective recovered-data sensitivity analysis",
+  "created_at": "2026-10-28T06:12:46.545295+00:00",
+  "protocol_ref": "dbab1765e8ec4dcc426a25830dc332791f49524e",
+  "protocol_file_sha256": "cf8b36a0f496e0848646d2e7f28176181aa3de2921a81776c3fb88bffe9e2564",
+  "input_coverage": {
+    "original": {
+      "boxscores": 636,
+      "verified_report_files": 146
+    },
+    "recovered": {
+      "boxscores": 637,
+      "verified_report_files": 151
+    }
+  },
+  "original_probability_reproduction_max_error": {
+    "p_baseline": 0.0,
+    "p_adjusted": 0.0
+  },
+  "baseline_probability_max_error": 0.0,
+  "newly_covered_games": [
+    {
+      "game_id": "401856947",
+      "date_recovered": "2026-05-29",
+      "home_recovered": "Chicago Sky",
+      "away_recovered": "Minnesota Lynx",
+      "local_date_recovered": "2026-05-29"
+    },
+    {
+      "game_id": "401857037",
+      "date_recovered": "2026-07-03",
+      "home_recovered": "New York Liberty",
+      "away_recovered": "Minnesota Lynx",
+      "local_date_recovered": "2026-07-03"
+    },
+    {
+      "game_id": "401857038",
+      "date_recovered": "2026-07-04",
+      "home_recovered": "Las Vegas Aces",
+      "away_recovered": "Chicago Sky",
+      "local_date_recovered": "2026-07-03"
+    },
+    {
+      "game_id": "401857040",
+      "date_recovered": "2026-07-05",
+      "home_recovered": "Seattle Storm",
+      "away_recovered": "Portland Fire",
+      "local_date_recovered": "2026-07-04"
+    },
+    {
+      "game_id": "401857042",
+      "date_recovered": "2026-07-05",
+      "home_recovered": "Las Vegas Aces",
+      "away_recovered": "Indiana Fever",
+      "local_date_recovered": "2026-07-05"
+    }
+  ],
+  "changed_probability_pairs": 125,
+  "winner_pick_changes": 1,
+  "cohorts": {
+    "same_original_covered_games": {
+      "original": {
+        "n": 202,
+        "days": 97,
+        "changed_games": 120,
+        "metrics": {
+          "log_loss": {
+            "baseline": 0.5567341622655784,
+            "adjusted": 0.5559212583001837,
+            "delta": -0.0008129039653945598,
+            "delta_ci95": [
+              -0.0038121203486394134,
+              0.0024501207946720093
+            ]
+          },
+          "brier": {
+            "baseline": 0.186296757043223,
+            "adjusted": 0.1861838085307265,
+            "delta": -0.00011294851249653599,
+            "delta_ci95": [
+              -0.001442453492021767,
+              0.0013366173737468635
+            ]
+          },
+          "accuracy": {
+            "baseline": 0.7227722772277227,
+            "adjusted": 0.7227722772277227,
+            "delta": 0.0,
+            "delta_ci95": [
+              -0.014778325123152709,
+              0.014563106796116505
+            ]
+          }
+        },
+        "winner_changes": {
+          "corrected": 1,
+          "harmed": 1,
+          "mcnemar_exact_p": 1.0
+        }
+      },
+      "recovered": {
+        "n": 202,
+        "days": 97,
+        "changed_games": 137,
+        "metrics": {
+          "log_loss": {
+            "baseline": 0.5567341622655784,
+            "adjusted": 0.5548905926875332,
+            "delta": -0.0018435695780451946,
+            "delta_ci95": [
+              -0.0052694949159079185,
+              0.001883997293231222
+            ]
+          },
+          "brier": {
+            "baseline": 0.186296757043223,
+            "adjusted": 0.1856959335056516,
+            "delta": -0.0006008235375714043,
+            "delta_ci95": [
+              -0.002154002994579876,
+              0.001073668050107228
+            ]
+          },
+          "accuracy": {
+            "baseline": 0.7227722772277227,
+            "adjusted": 0.7178217821782178,
+            "delta": -0.0049504950495049506,
+            "delta_ci95": [
+              -0.022222222222222223,
+              0.010309278350515464
+            ]
+          }
+        },
+        "winner_changes": {
+          "corrected": 1,
+          "harmed": 2,
+          "mcnemar_exact_p": 1.0
+        }
+      },
+      "recovery_effect": {
+        "n": 202,
+        "days": 97,
+        "changed_games": 123,
+        "metrics": {
+          "log_loss": {
+            "baseline": 0.5559212583001837,
+            "adjusted": 0.5548905926875332,
+            "delta": -0.0010306656126506347,
+            "delta_ci95": [
+              -0.0026586811477728495,
+              0.00044455312411628494
+            ]
+          },
+          "brier": {
+            "baseline": 0.1861838085307265,
+            "adjusted": 0.1856959335056516,
+            "delta": -0.00048787502507486815,
+            "delta_ci95": [
+              -0.0012675690456691259,
+              0.00021890643720269028
+            ]
+          },
+          "accuracy": {
+            "baseline": 0.7227722772277227,
+            "adjusted": 0.7178217821782178,
+            "delta": -0.0049504950495049506,
+            "delta_ci95": [
+              -0.015789473684210527,
+              0.0
+            ]
+          }
+        },
+        "winner_changes": {
+          "corrected": 0,
+          "harmed": 1,
+          "mcnemar_exact_p": 1.0
+        }
+      }
+    },
+    "all_same_games": {
+      "original": {
+        "n": 324,
+        "days": 118,
+        "changed_games": 120,
+        "metrics": {
+          "log_loss": {
+            "baseline": 0.5823506497105961,
+            "adjusted": 0.5818438392136526,
+            "delta": -0.0005068104969435218,
+            "delta_ci95": [
+              -0.002447362826999809,
+              0.0015357943312256205
+            ]
+          },
+          "brier": {
+            "baseline": 0.19796636304817225,
+            "adjusted": 0.19789594453112191,
+            "delta": -7.041851705030954e-05,
+            "delta_ci95": [
+              -0.0009252645789469245,
+              0.0008243307198951466
+            ]
+          },
+          "accuracy": {
+            "baseline": 0.691358024691358,
+            "adjusted": 0.691358024691358,
+            "delta": 0.0,
+            "delta_ci95": [
+              -0.009259259259259259,
+              0.009230769230769232
+            ]
+          }
+        },
+        "winner_changes": {
+          "corrected": 1,
+          "harmed": 1,
+          "mcnemar_exact_p": 1.0
+        }
+      },
+      "recovered": {
+        "n": 324,
+        "days": 118,
+        "changed_games": 139,
+        "metrics": {
+          "log_loss": {
+            "baseline": 0.5823506497105961,
+            "adjusted": 0.5811365223306998,
+            "delta": -0.001214127379896366,
+            "delta_ci95": [
+              -0.00342438086248832,
+              0.001067796374690617
+            ]
+          },
+          "brier": {
+            "baseline": 0.19796636304817225,
+            "adjusted": 0.19756353034165183,
+            "delta": -0.00040283270652043503,
+            "delta_ci95": [
+              -0.001406663629156825,
+              0.0006284726162093954
+            ]
+          },
+          "accuracy": {
+            "baseline": 0.691358024691358,
+            "adjusted": 0.6882716049382716,
+            "delta": -0.0030864197530864196,
+            "delta_ci95": [
+              -0.01440922190201729,
+              0.006389776357827476
+            ]
+          }
+        },
+        "winner_changes": {
+          "corrected": 1,
+          "harmed": 2,
+          "mcnemar_exact_p": 1.0
+        }
+      },
+      "recovery_effect": {
+        "n": 324,
+        "days": 118,
+        "changed_games": 125,
+        "metrics": {
+          "log_loss": {
+            "baseline": 0.5818438392136526,
+            "adjusted": 0.5811365223306998,
+            "delta": -0.0007073168829528445,
+            "delta_ci95": [
+              -0.0017135710430691592,
+              0.00023035016144821234
+            ]
+          },
+          "brier": {
+            "baseline": 0.19789594453112191,
+            "adjusted": 0.19756353034165183,
+            "delta": -0.0003324141894701254,
+            "delta_ci95": [
+              -0.0008026004625707788,
+              0.00010604545445931331
+            ]
+          },
+          "accuracy": {
+            "baseline": 0.691358024691358,
+            "adjusted": 0.6882716049382716,
+            "delta": -0.0030864197530864196,
+            "delta_ci95": [
+              -0.009708737864077669,
+              0.0
+            ]
+          }
+        },
+        "winner_changes": {
+          "corrected": 0,
+          "harmed": 1,
+          "mcnemar_exact_p": 1.0
+        }
+      }
+    },
+    "expanded_recovered_coverage": {
+      "original": {
+        "n": 207,
+        "days": 100,
+        "changed_games": 120,
+        "metrics": {
+          "log_loss": {
+            "baseline": 0.5613895477691965,
+            "adjusted": 0.560596279165285,
+            "delta": -0.0007932686039115994,
+            "delta_ci95": [
+              -0.0038398893869131022,
+              0.0023995597014322273
+            ]
+          },
+          "brier": {
+            "baseline": 0.18853266538947036,
+            "adjusted": 0.18842244510191333,
+            "delta": -0.00011022028755700636,
+            "delta_ci95": [
+              -0.001462411938787343,
+              0.0013060178804366863
+            ]
+          },
+          "accuracy": {
+            "baseline": 0.714975845410628,
+            "adjusted": 0.714975845410628,
+            "delta": 0.0,
+            "delta_ci95": [
+              -0.014494512452511607,
+              0.014423076923076924
+            ]
+          }
+        },
+        "winner_changes": {
+          "corrected": 1,
+          "harmed": 1,
+          "mcnemar_exact_p": 1.0
+        }
+      },
+      "recovered": {
+        "n": 207,
+        "days": 100,
+        "changed_games": 139,
+        "metrics": {
+          "log_loss": {
+            "baseline": 0.5613895477691965,
+            "adjusted": 0.559489174478924,
+            "delta": -0.001900373290272573,
+            "delta_ci95": [
+              -0.005338078875047769,
+              0.0016978924767482814
+            ]
+          },
+          "brier": {
+            "baseline": 0.18853266538947036,
+            "adjusted": 0.18790214463143834,
+            "delta": -0.0006305207580319852,
+            "delta_ci95": [
+              -0.002177253313423468,
+              0.0010129771272143068
+            ]
+          },
+          "accuracy": {
+            "baseline": 0.714975845410628,
+            "adjusted": 0.7101449275362319,
+            "delta": -0.004830917874396135,
+            "delta_ci95": [
+              -0.021052631578947368,
+              0.01020408163265306
+            ]
+          }
+        },
+        "winner_changes": {
+          "corrected": 1,
+          "harmed": 2,
+          "mcnemar_exact_p": 1.0
+        }
+      },
+      "recovery_effect": {
+        "n": 207,
+        "days": 100,
+        "changed_games": 125,
+        "metrics": {
+          "log_loss": {
+            "baseline": 0.560596279165285,
+            "adjusted": 0.559489174478924,
+            "delta": -0.001107104686360974,
+            "delta_ci95": [
+              -0.0026759797077290978,
+              0.0003471845820923634
+            ]
+          },
+          "brier": {
+            "baseline": 0.18842244510191333,
+            "adjusted": 0.18790214463143834,
+            "delta": -0.000520300470474979,
+            "delta_ci95": [
+              -0.0012666272075892448,
+              0.00017214559169465536
+            ]
+          },
+          "accuracy": {
+            "baseline": 0.714975845410628,
+            "adjusted": 0.7101449275362319,
+            "delta": -0.004830917874396135,
+            "delta_ci95": [
+              -0.015306122448979591,
+              0.0
+            ]
+          }
+        },
+        "winner_changes": {
+          "corrected": 0,
+          "harmed": 1,
+          "mcnemar_exact_p": 1.0
+        }
+      }
+    },
+    "newly_covered_only": {
+      "original": {
+        "n": 5,
+        "days": 4,
+        "changed_games": 0,
+        "metrics": {
+          "log_loss": {
+            "baseline": 0.7494671221153747,
+            "adjusted": 0.7494671221153747,
+            "delta": 0.0,
+            "delta_ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "brier": {
+            "baseline": 0.27886336257786215,
+            "adjusted": 0.27886336257786215,
+            "delta": 0.0,
+            "delta_ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "baseline": 0.4,
+            "adjusted": 0.4,
+            "delta": 0.0,
+            "delta_ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "winner_changes": {
+          "corrected": 0,
+          "harmed": 0,
+          "mcnemar_exact_p": 1.0
+        }
+      },
+      "recovered": {
+        "n": 5,
+        "days": 4,
+        "changed_games": 2,
+        "metrics": {
+          "log_loss": {
+            "baseline": 0.7494671221153747,
+            "adjusted": 0.7452718788511161,
+            "delta": -0.004195243264258674,
+            "delta_ci95": [
+              -0.01492021477773571,
+              0.0
+            ]
+          },
+          "brier": {
+            "baseline": 0.27886336257786215,
+            "adjusted": 0.27703307411322264,
+            "delta": -0.001830288464639457,
+            "delta_ci95": [
+              -0.0064918966354593,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "baseline": 0.4,
+            "adjusted": 0.4,
+            "delta": 0.0,
+            "delta_ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "winner_changes": {
+          "corrected": 0,
+          "harmed": 0,
+          "mcnemar_exact_p": 1.0
+        }
+      },
+      "recovery_effect": {
+        "n": 5,
+        "days": 4,
+        "changed_games": 2,
+        "metrics": {
+          "log_loss": {
+            "baseline": 0.7494671221153747,
+            "adjusted": 0.7452718788511161,
+            "delta": -0.004195243264258674,
+            "delta_ci95": [
+              -0.01492021477773571,
+              0.0
+            ]
+          },
+          "brier": {
+            "baseline": 0.27886336257786215,
+            "adjusted": 0.27703307411322264,
+            "delta": -0.001830288464639457,
+            "delta_ci95": [
+              -0.0064918966354593,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "baseline": 0.4,
+            "adjusted": 0.4,
+            "delta": 0.0,
+            "delta_ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "winner_changes": {
+          "corrected": 0,
+          "harmed": 0,
+          "mcnemar_exact_p": 1.0
+        }
+      }
+    }
+  },
+  "protected_original_files_sha256": {
+    "outputs/availability_backtest/auto_status.json": "9b55eb9caebb3f8e10bbd421e8a2cbeb8a1dbfb25d9bde94c8790015c5510938",
+    "outputs/availability_backtest/comparison.png": "10b8acffbc9aa4fbe79016fed3ad40b336adc897680016705d25a7cc01b91221",
+    "outputs/availability_backtest/predictions.csv": "48f3ff7b484fc67a2796263582b2ac59f3be02ee2a84085d3c9b70b13cb9ea5e",
+    "outputs/availability_backtest/progress.json": "9e18e8325b9e0258bc697a57350ba731569fa61d27b80f4343f603c6684fe39c",
+    "outputs/availability_backtest/prospective.csv": "aa8569d058b918700f49ede9a5efb28c7a80e3c55596199618a16c327cb927a0",
+    "outputs/availability_backtest/REPORT.md": "9cc18cb161e1520a5533a7020f9648e4e2807a8ec902da3ea2c348e75119531e",
+    "outputs/availability_backtest/report_audit.json": "7f6631b2f42fcf0c691f335f642ec0f239e499f14f53c037c563fef1f8c9f5ea",
+    "outputs/availability_backtest/results.json": "2d5ab4f7b48c8e1884ff481f4f7a87fc6a23cf84c68ebcac472d76dfafa95dad",
+    "data/backtests/initial_predictions.csv": "48f3ff7b484fc67a2796263582b2ac59f3be02ee2a84085d3c9b70b13cb9ea5e",
+    "data/backtests/initial_results.json": "fd1e23092aa18caa26253e9c6efdfe18ae8c37b49c4ff835135429b0d3c44fe6",
+    "data/backtests/prospective_predictions.json": "022f00a2cbcb4a974b2b82e52189f4a1908a2a4a2173aefd7600f3017dd36cd7",
+    "outputs/forecast.json": "45fd237e729d08c22f05b034cf9537f6824e2c2c1aba2914a9f632a4cc9b987c",
+    "data/forecast_history.json": "67d0bddb8ff1ab9bf52f0dbdeda3c9389b1134344f1ffce17600356637db6a99",
+    "public/index.html": "a503de760a76df16ad2e9e5968d97fe938f0597619479ac27256f0c9c3d70a50",
+    "site/index.html": "f757945f6387432877c43df3834683b4656bf198f1e769533be27aaaddf7b3f2"
+  },
+  "original_files_unchanged": true,
+  "input_sha256": {
+    "inputs/recovered/data/all_games.csv": "a9c735e6e34067076b86bcf5a2c6b7d3565e1a24af75644d1d53b3dfafdc7d73",
+    "inputs/recovered/data/player_game_stats.csv": "51f0fbcf76e423f05d3b4493717c9b7be78f8b352ffce06503cbcce9019eae15",
+    "inputs/recovered/data/backtests/injury_report_manifest.json": "cd7e08962c11571250433d052b53129af34690685ed8ea06519130d9c72be44f",
+    "inputs/original/data/all_games.csv": "a9c735e6e34067076b86bcf5a2c6b7d3565e1a24af75644d1d53b3dfafdc7d73",
+    "inputs/original/data/player_game_stats.csv": "8c28c17db0f65537a94c4c86ad52d3ffe0d4e627e4ec9989546f0b16293fb086",
+    "inputs/original/data/backtests/injury_report_manifest.json": "52618f4ed1822be87d68842489f5f1b1ceb637bdaf93d1ef07345fe16c0e278f"
+  },
+  "limits": [
+    "Settings and report-time rules fixed to the original historical protocol; no tuning to these outcomes.",
+    "Recovery changed available inputs; same-game cohorts isolate it from changes in sample composition.",
+    "This is retrospective, not new independent prospective evidence, and cannot trigger model promotion.",
+    "Game-day bootstrap intervals are approximate and conditional on the fitted models.",
+    "Minute restrictions, projected lineups, mid-game scenarios, and championship forecasts are not validated by this study."
+  ]
+}

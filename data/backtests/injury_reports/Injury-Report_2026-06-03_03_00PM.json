@@ -1,0 +1,122 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-03_03_00PM.pdf",
+  "status": 200,
+  "sha256": "a2d93523618b65e2f57d16f8156fd576be2c6ccd4baef7025a4f12af2e99811d",
+  "parser_version": 2,
+  "published_at": "2026-06-03T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-03",
+      "matchup": "TOR@NYL",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "TOR@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "PHX@SEA",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "PHX@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-04",
+      "matchup": "ATL@IND",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-04",
+      "matchup": "ATL@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-04",
+      "matchup": "GSV@MIN",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-04",
+      "matchup": "GSV@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-03",
+      "matchup": "TOR@NYL",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "TOR@NYL",
+      "team": "TorontoTempo",
+      "player": "Harrison,Isabelle",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "TOR@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Fauthoux,Marine",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "TOR@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Ionescu,Sabrina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "PHX@SEA",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "PHX@SEA",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "PHX@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "PHX@SEA",
+      "team": "SeattleStorm",
+      "player": "Malonga,Dominique",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-03",
+      "matchup": "PHX@SEA",
+      "team": "SeattleStorm",
+      "player": "Thierry,Taylor",
+      "status": "Out"
+    }
+  ]
+}

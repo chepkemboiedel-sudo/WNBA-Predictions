@@ -1,0 +1,180 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-08_03_00PM.pdf",
+  "status": 200,
+  "sha256": "60cd6be9cc6cd7a0f8e113ade486ac5218cdf296ce82f6334fbecef2b4d8e65d",
+  "parser_version": 2,
+  "published_at": "2026-05-08T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-08",
+      "matchup": "CON@NYL",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "CON@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "WAS@TOR",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "WAS@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "GSV@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-09",
+      "matchup": "DAL@IND",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-09",
+      "matchup": "DAL@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-09",
+      "matchup": "PHX@LVA",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-09",
+      "matchup": "PHX@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-09",
+      "matchup": "ATL@MIN",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-09",
+      "matchup": "ATL@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-09",
+      "matchup": "CHI@PDX",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-09",
+      "matchup": "CHI@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-08",
+      "matchup": "CON@NYL",
+      "team": "ConnecticutSun",
+      "player": "Edwards,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "CON@NYL",
+      "team": "ConnecticutSun",
+      "player": "Peddy,Shey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "CON@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Allen,Rebecca",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "CON@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Ionescu,Sabrina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "CON@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "WAS@TOR",
+      "team": "WashingtonMystics",
+      "player": "FlorezGetino,Alicia",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "WAS@TOR",
+      "team": "WashingtonMystics",
+      "player": "McMahon,Cotie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "WAS@TOR",
+      "team": "WashingtonMystics",
+      "player": "Onyenwere,Michaela",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "WAS@TOR",
+      "team": "TorontoTempo",
+      "player": "Harrison,Isabelle",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "WAS@TOR",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Available"
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "GSV@SEA",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "GSV@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-08",
+      "matchup": "GSV@SEA",
+      "team": "SeattleStorm",
+      "player": "Samuelson,KatieLou",
+      "status": "Out"
+    }
+  ]
+}

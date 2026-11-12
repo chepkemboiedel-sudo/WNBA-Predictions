@@ -1,0 +1,223 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-18_03_00PM.pdf",
+  "status": 200,
+  "sha256": "f8d0f83ddff24a19cf2c4fde1a9c60486dd881ecd48886448219c914539f6028",
+  "parser_version": 2,
+  "published_at": "2026-08-18T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-18",
+      "matchup": "IND@TOR",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "IND@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "LAS@CON",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "LAS@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "ATL@LVA",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "ATL@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "NYL@CHI",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "NYL@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-19",
+      "matchup": "TOR@WAS",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-19",
+      "matchup": "TOR@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-19",
+      "matchup": "MIN@GSV",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-19",
+      "matchup": "MIN@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-18",
+      "matchup": "IND@TOR",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "IND@TOR",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "IND@TOR",
+      "team": "TorontoTempo",
+      "player": "Allemand,Julie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "IND@TOR",
+      "team": "TorontoTempo",
+      "player": "Conde,Maria",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "IND@TOR",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "IND@TOR",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Available"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "LAS@CON",
+      "team": "LosAngelesSparks",
+      "player": "AkoaMakani,Monique",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "LAS@CON",
+      "team": "LosAngelesSparks",
+      "player": "Brink,Cameron",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "LAS@CON",
+      "team": "LosAngelesSparks",
+      "player": "Wheeler,Erica",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "LAS@CON",
+      "team": "ConnecticutSun",
+      "player": "Edwards,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "LAS@CON",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "ATL@LVA",
+      "team": "AtlantaDream",
+      "player": "Canada,Jordin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "ATL@LVA",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "ATL@LVA",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "ATL@LVA",
+      "team": "LasVegasAces",
+      "player": "Parker-Tyus,Cheyenne",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "NYL@CHI",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "NYL@CHI",
+      "team": "NewYorkLiberty",
+      "player": "Ionescu,Sabrina",
+      "status": "Available"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "NYL@CHI",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "NYL@CHI",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-18",
+      "matchup": "NYL@CHI",
+      "team": "ChicagoSky",
+      "player": "Taylor,Sydney",
+      "status": "Questionable"
+    }
+  ]
+}

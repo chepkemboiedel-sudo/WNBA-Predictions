@@ -1,0 +1,135 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-25_03_00PM.pdf",
+  "status": 200,
+  "sha256": "3085e526456c78ac2c8588ce4856a88f1a0f6530e7a0f04fd6d12eadced6143d",
+  "parser_version": 2,
+  "published_at": "2026-08-25T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-25",
+      "matchup": "CHI@CON",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "CHI@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "PDX@DAL",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "PDX@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "WAS@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "GSV@CON",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "GSV@CON",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "TOR@SEA",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "TOR@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-25",
+      "matchup": "CHI@CON",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "CHI@CON",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "CHI@CON",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "CHI@CON",
+      "team": "ConnecticutSun",
+      "player": "Nelson-Ododa,Olivia",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "PDX@DAL",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "PDX@DAL",
+      "team": "PortlandFire",
+      "player": "Williams,Serah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "PDX@DAL",
+      "team": "DallasWings",
+      "player": "Fudd,Azzi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "PDX@DAL",
+      "team": "DallasWings",
+      "player": "James,Aziaha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "WAS@PHX",
+      "team": "PhoenixMercury",
+      "player": "Suarez,Marta",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "WAS@PHX",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Probable"
+    }
+  ]
+}

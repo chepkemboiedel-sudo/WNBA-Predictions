@@ -1,0 +1,24 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-24_09_00AM.pdf",
+  "status": 200,
+  "sha256": "cc817343840789020d64db14cbd13065cddbc88eb5bac57331b711862130ac13",
+  "parser_version": 2,
+  "published_at": "2026-10-24T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-10-24",
+      "matchup": "GSV@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-10-24",
+      "matchup": "GSV@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    }
+  ]
+}

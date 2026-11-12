@@ -1,0 +1,126 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-10_03_00PM.pdf",
+  "status": 200,
+  "sha256": "e982edc7e235bd620ffc826aa23b2c294e54b131e5de3a98049f7e9d4f2ba5c4",
+  "parser_version": 2,
+  "published_at": "2026-06-10T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-10",
+      "matchup": "CON@TOR",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-10",
+      "matchup": "CON@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-10",
+      "matchup": "LAS@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-11",
+      "matchup": "CHI@IND",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-11",
+      "matchup": "CHI@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-11",
+      "matchup": "NYL@ATL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-11",
+      "matchup": "NYL@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-11",
+      "matchup": "PHX@DAL",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-11",
+      "matchup": "PHX@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-11",
+      "matchup": "LVA@PDX",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-11",
+      "matchup": "LVA@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-10",
+      "matchup": "CON@TOR",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-10",
+      "matchup": "CON@TOR",
+      "team": "ConnecticutSun",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-10",
+      "matchup": "CON@TOR",
+      "team": "ConnecticutSun",
+      "player": "VanLith,Hailey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-10",
+      "matchup": "CON@TOR",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-10",
+      "matchup": "CON@TOR",
+      "team": "TorontoTempo",
+      "player": "Rice,Kiki",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-10",
+      "matchup": "LAS@SEA",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-10",
+      "matchup": "LAS@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    }
+  ]
+}

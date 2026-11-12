@@ -1,0 +1,80 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-18_03_00PM.pdf",
+  "status": 200,
+  "sha256": "cdf0fb4c53522b0c2979d07d3ed1d55c0e3b060cad36f4ecb8e0d31693351d0e",
+  "parser_version": 2,
+  "published_at": "2026-06-18T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-18",
+      "matchup": "ATL@IND",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-18",
+      "matchup": "ATL@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "TOR@CON",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "TOR@CON",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "WAS@NYL",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "WAS@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "MIN@GSV",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-19",
+      "matchup": "MIN@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-18",
+      "matchup": "ATL@IND",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-18",
+      "matchup": "ATL@IND",
+      "team": "AtlantaDream",
+      "player": "Nye,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-18",
+      "matchup": "ATL@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    }
+  ]
+}

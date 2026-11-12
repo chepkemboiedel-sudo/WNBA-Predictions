@@ -1,0 +1,128 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-06_03_00PM.pdf",
+  "status": 200,
+  "sha256": "349cda34fa859d5ac4f01e9477e03eaa7db859a90bb0a15c22aeef188abef8bd",
+  "parser_version": 2,
+  "published_at": "2026-07-06T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-06",
+      "matchup": "GSV@WAS",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-06",
+      "matchup": "CON@MIN",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-06",
+      "matchup": "CON@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-06",
+      "matchup": "SEA@LAS",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-06",
+      "matchup": "SEA@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-07",
+      "matchup": "DAL@NYL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-07",
+      "matchup": "DAL@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-07",
+      "matchup": "CHI@PHX",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-07",
+      "matchup": "CHI@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-06",
+      "matchup": "GSV@WAS",
+      "team": "WashingtonMystics",
+      "player": "Citron,Sonia",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-06",
+      "matchup": "CON@MIN",
+      "team": "ConnecticutSun",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-06",
+      "matchup": "CON@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-06",
+      "matchup": "CON@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-06",
+      "matchup": "CON@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-07-06",
+      "matchup": "CON@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Miles,Olivia",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-06",
+      "matchup": "SEA@LAS",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-06",
+      "matchup": "SEA@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Brink,Cameron",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-06",
+      "matchup": "SEA@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    }
+  ]
+}

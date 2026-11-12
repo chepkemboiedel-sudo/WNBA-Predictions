@@ -1,0 +1,137 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-30_03_00PM.pdf",
+  "status": 200,
+  "sha256": "e45936331c627b526c92f687c04798a26e289e88b7ba86edbae602255d34b5ad",
+  "parser_version": 2,
+  "published_at": "2026-08-30T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-30",
+      "matchup": "MIN@ATL",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "MIN@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "LAS@SEA",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "LAS@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "GSV@PDX",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "CON@DAL",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "CON@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-30",
+      "matchup": "MIN@ATL",
+      "team": "MinnesotaLynx",
+      "player": "Buenavida,Elena",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "MIN@ATL",
+      "team": "MinnesotaLynx",
+      "player": "Williams,Courtney",
+      "status": "Available"
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "MIN@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "LAS@SEA",
+      "team": "LosAngelesSparks",
+      "player": "Cannon,Emma",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "LAS@SEA",
+      "team": "LosAngelesSparks",
+      "player": "Mwenentanda,Ndjakalenga",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "LAS@SEA",
+      "team": "LosAngelesSparks",
+      "player": "Nye,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "LAS@SEA",
+      "team": "SeattleStorm",
+      "player": "Hiedeman,Natisha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "GSV@PDX",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "GSV@PDX",
+      "team": "PortlandFire",
+      "player": "Samuelson,Karlie",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "CON@DAL",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "CON@DAL",
+      "team": "ConnecticutSun",
+      "player": "Nelson-Ododa,Olivia",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-30",
+      "matchup": "CON@DAL",
+      "team": "DallasWings",
+      "player": "Laksa,Kitija",
+      "status": "Out"
+    }
+  ]
+}

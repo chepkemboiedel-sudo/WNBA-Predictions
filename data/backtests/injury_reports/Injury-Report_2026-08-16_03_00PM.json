@@ -1,0 +1,136 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-16_03_00PM.pdf",
+  "status": 200,
+  "sha256": "8d970f32226009a664937dc94470289eca9ab07f09b73a1dd3fbb0d2921bf556",
+  "parser_version": 2,
+  "published_at": "2026-08-16T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-16",
+      "matchup": "CHI@SEA",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "CHI@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "IND@ATL",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "IND@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "PDX@PHX",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "PDX@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-17",
+      "matchup": "DAL@GSV",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-17",
+      "matchup": "DAL@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-16",
+      "matchup": "CHI@SEA",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "CHI@SEA",
+      "team": "ChicagoSky",
+      "player": "Taylor,Sydney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "CHI@SEA",
+      "team": "SeattleStorm",
+      "player": "Hiedeman,Natisha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "CHI@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "IND@ATL",
+      "team": "IndianaFever",
+      "player": "Boston,Aliyah",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "IND@ATL",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "IND@ATL",
+      "team": "AtlantaDream",
+      "player": "Canada,Jordin",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "IND@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "IND@ATL",
+      "team": "AtlantaDream",
+      "player": "Paopao,Te-Hina",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "PDX@PHX",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-16",
+      "matchup": "PDX@PHX",
+      "team": "PhoenixMercury",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    }
+  ]
+}

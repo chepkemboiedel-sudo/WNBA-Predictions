@@ -1,0 +1,216 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-06_03_00PM.pdf",
+  "status": 200,
+  "sha256": "a3302ab60e8b08dc3a5c3e7af557a09cea337e46800cadd4324d76662a8fcb4c",
+  "parser_version": 2,
+  "published_at": "2026-06-06T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-06",
+      "matchup": "SEA@MIN",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "SEA@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "GSV@LVA",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "GSV@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "WAS@ATL",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "WAS@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "IND@NYL",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "IND@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "CHI@TOR",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "CHI@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "PDX@LAS",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-07",
+      "matchup": "PDX@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-06",
+      "matchup": "SEA@MIN",
+      "team": "SeattleStorm",
+      "player": "Brown,Lexie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "SEA@MIN",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "SEA@MIN",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Available"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "SEA@MIN",
+      "team": "SeattleStorm",
+      "player": "Thierry,Taylor",
+      "status": "Available"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "SEA@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "SEA@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "SEA@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Hamzova,Eliska",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "SEA@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "SEA@MIN",
+      "team": "MinnesotaLynx",
+      "player": "King,Liatu",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "GSV@LVA",
+      "team": "GoldenStateValkyries",
+      "player": "Prechtel,Ashten",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "GSV@LVA",
+      "team": "GoldenStateValkyries",
+      "player": "Sowah,Miela",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "GSV@LVA",
+      "team": "LasVegasAces",
+      "player": "Carter,Chennedy",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "GSV@LVA",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "GSV@LVA",
+      "team": "LasVegasAces",
+      "player": "Loyd,Jewell",
+      "status": "Available"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "WAS@ATL",
+      "team": "WashingtonMystics",
+      "player": "Betts,Lauren",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "WAS@ATL",
+      "team": "WashingtonMystics",
+      "player": "Citron,Sonia",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "WAS@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "IND@NYL",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-06-06",
+      "matchup": "IND@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Ionescu,Sabrina",
+      "status": "Out"
+    }
+  ]
+}

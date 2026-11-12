@@ -1,0 +1,193 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-27_03_00PM.pdf",
+  "status": 200,
+  "sha256": "988851ad406e0bdda213e79e8973e835286f96a1b7d67aeb76a139045d92f821",
+  "parser_version": 2,
+  "published_at": "2026-06-27T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-27",
+      "matchup": "PHX@TOR",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "PHX@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "LAS@IND",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "LAS@IND",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "ATL@SEA",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "ATL@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "MIN@DAL",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "MIN@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "PDX@WAS",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "PDX@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "LVA@CHI",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "LVA@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "NYL@GSV",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "NYL@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-27",
+      "matchup": "PHX@TOR",
+      "team": "PhoenixMercury",
+      "player": "AkoaMakani,Monique",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "PHX@TOR",
+      "team": "PhoenixMercury",
+      "player": "Mack,Natasha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "PHX@TOR",
+      "team": "PhoenixMercury",
+      "player": "Thomas,Alyssa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "PHX@TOR",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "PHX@TOR",
+      "team": "TorontoTempo",
+      "player": "Mabrey,Marina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "PHX@TOR",
+      "team": "TorontoTempo",
+      "player": "Rice,Kiki",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "PHX@TOR",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "LAS@IND",
+      "team": "LosAngelesSparks",
+      "player": "Brink,Cameron",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "LAS@IND",
+      "team": "LosAngelesSparks",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "LAS@IND",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "ATL@SEA",
+      "team": "SeattleStorm",
+      "player": "Horston,Jordan",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "ATL@SEA",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-27",
+      "matchup": "ATL@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-28",
+      "matchup": "LVA@CHI",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Doubtful"
+    }
+  ]
+}

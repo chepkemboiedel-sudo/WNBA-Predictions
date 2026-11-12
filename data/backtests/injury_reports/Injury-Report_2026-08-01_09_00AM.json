@@ -1,0 +1,119 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-01_09_00AM.pdf",
+  "status": 200,
+  "sha256": "7d337c742503ca7120a324ca59c52220e547b3fda6e6d2965b4394914b60c423",
+  "parser_version": 2,
+  "published_at": "2026-08-01T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-01",
+      "matchup": "LVA@CHI",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-01",
+      "matchup": "LVA@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-01",
+      "matchup": "NYL@PHX",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "IND@MIN",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "IND@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "LAS@PDX",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "LAS@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "CON@DAL",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "CON@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "TOR@GSV",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-02",
+      "matchup": "TOR@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-01",
+      "matchup": "LVA@CHI",
+      "team": "LasVegasAces",
+      "player": "Bell,Kierstan",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-01",
+      "matchup": "LVA@CHI",
+      "team": "LasVegasAces",
+      "player": "Parker-Tyus,Cheyenne",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-01",
+      "matchup": "LVA@CHI",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-01",
+      "matchup": "LVA@CHI",
+      "team": "ChicagoSky",
+      "player": "Stevens,Azura",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-01",
+      "matchup": "NYL@PHX",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-01",
+      "matchup": "NYL@PHX",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    }
+  ]
+}

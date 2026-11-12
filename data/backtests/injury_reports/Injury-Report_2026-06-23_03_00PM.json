@@ -1,0 +1,93 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-06-23_03_00PM.pdf",
+  "status": 200,
+  "sha256": "c6b8808ee8f1194fb1c80428fc53970e7fe4548a8f8e1b4fbfb0c209e98b6563",
+  "parser_version": 2,
+  "published_at": "2026-06-23T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-06-23",
+      "matchup": "NYL@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "MIN@WAS",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "MIN@WAS",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PHX@IND",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PHX@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PDX@CHI",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "PDX@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "ATL@GSV",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "ATL@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-06-23",
+      "matchup": "NYL@LVA",
+      "team": "LasVegasAces",
+      "player": "Barker,Janiah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-23",
+      "matchup": "NYL@LVA",
+      "team": "LasVegasAces",
+      "player": "Carter,Chennedy",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-23",
+      "matchup": "NYL@LVA",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-06-24",
+      "matchup": "MIN@WAS",
+      "team": "WashingtonMystics",
+      "player": "Littlepage-Buggs,Darianna",
+      "status": "Out"
+    }
+  ]
+}

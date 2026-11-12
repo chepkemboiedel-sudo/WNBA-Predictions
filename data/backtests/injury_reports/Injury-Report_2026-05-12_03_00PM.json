@@ -1,0 +1,179 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-12_03_00PM.pdf",
+  "status": 200,
+  "sha256": "8912ca14370c4e17f081cf45f065af0797e564a654339f6bea71315951eade25",
+  "parser_version": 2,
+  "published_at": "2026-05-12T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-12",
+      "matchup": "ATL@DAL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "ATL@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "MIN@PHX",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "MIN@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "NYL@PDX",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "NYL@PDX",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-13",
+      "matchup": "SEA@TOR",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-13",
+      "matchup": "SEA@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-13",
+      "matchup": "LVA@CON",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-13",
+      "matchup": "LVA@CON",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-13",
+      "matchup": "CHI@GSV",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-13",
+      "matchup": "CHI@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-13",
+      "matchup": "IND@LAS",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-13",
+      "matchup": "IND@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-12",
+      "matchup": "ATL@DAL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "ATL@DAL",
+      "team": "DallasWings",
+      "player": "Fudd,Azzi",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "MIN@PHX",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "MIN@PHX",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "MIN@PHX",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "NYL@PDX",
+      "team": "NewYorkLiberty",
+      "player": "Allen,Rebecca",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "NYL@PDX",
+      "team": "NewYorkLiberty",
+      "player": "Fauthoux,Marine",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "NYL@PDX",
+      "team": "NewYorkLiberty",
+      "player": "Ionescu,Sabrina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "NYL@PDX",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "NYL@PDX",
+      "team": "PortlandFire",
+      "player": "Samuelson,Karlie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "NYL@PDX",
+      "team": "PortlandFire",
+      "player": "Smalls,Kamiah",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-05-12",
+      "matchup": "NYL@PDX",
+      "team": "PortlandFire",
+      "player": "Sutton,Sug",
+      "status": "Questionable"
+    }
+  ]
+}

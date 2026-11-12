@@ -1,0 +1,116 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-26_03_00PM.pdf",
+  "status": 200,
+  "sha256": "764eebf34df088731de2f01e5d3ff128a3e53954e7a1cca7501acafd4898901a",
+  "parser_version": 2,
+  "published_at": "2026-08-26T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-26",
+      "matchup": "GSV@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "TOR@SEA",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "TOR@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-27",
+      "matchup": "GSV@NYL",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-27",
+      "matchup": "GSV@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-27",
+      "matchup": "WAS@PHX",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-27",
+      "matchup": "WAS@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-26",
+      "matchup": "GSV@CON",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "GSV@CON",
+      "team": "ConnecticutSun",
+      "player": "Nelson-Ododa,Olivia",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "TOR@SEA",
+      "team": "TorontoTempo",
+      "player": "Conde,Maria",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "TOR@SEA",
+      "team": "TorontoTempo",
+      "player": "Mabrey,Marina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "TOR@SEA",
+      "team": "TorontoTempo",
+      "player": "Morrow,Aneesah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "TOR@SEA",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "TOR@SEA",
+      "team": "TorontoTempo",
+      "player": "Sykes,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "TOR@SEA",
+      "team": "SeattleStorm",
+      "player": "Hiedeman,Natisha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-26",
+      "matchup": "TOR@SEA",
+      "team": "SeattleStorm",
+      "player": "Johnson,Flau'jae",
+      "status": "Probable"
+    }
+  ]
+}

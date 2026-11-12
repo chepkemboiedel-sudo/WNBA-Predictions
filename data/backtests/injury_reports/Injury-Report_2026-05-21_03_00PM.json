@@ -1,0 +1,188 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-21_03_00PM.pdf",
+  "status": 200,
+  "sha256": "b31c1606f2d5eda416da5bdb8730f041a58777b2df1596df0c0de7cc00537b54",
+  "parser_version": 2,
+  "published_at": "2026-05-21T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-21",
+      "matchup": "GSV@NYL",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "GSV@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "TOR@MIN",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "TOR@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "LAS@PHX",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "LAS@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-22",
+      "matchup": "DAL@ATL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-22",
+      "matchup": "DAL@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-22",
+      "matchup": "GSV@IND",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-22",
+      "matchup": "GSV@IND",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-22",
+      "matchup": "CON@SEA",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-22",
+      "matchup": "CON@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-21",
+      "matchup": "GSV@NYL",
+      "team": "GoldenStateValkyries",
+      "player": "Jocyte,Juste",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "GSV@NYL",
+      "team": "GoldenStateValkyries",
+      "player": "Zandalasini,Cecilia",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "GSV@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Fauthoux,Marine",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "GSV@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Ionescu,Sabrina",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "GSV@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Laney-Hamilton,Betnijah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "GSV@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "TOR@MIN",
+      "team": "TorontoTempo",
+      "player": "Allemand,Julie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "TOR@MIN",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "TOR@MIN",
+      "team": "TorontoTempo",
+      "player": "Harrison,Isabelle",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "TOR@MIN",
+      "team": "TorontoTempo",
+      "player": "Sabally,Nyara",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "TOR@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "TOR@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "TOR@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "LAS@PHX",
+      "team": "LosAngelesSparks",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "LAS@PHX",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    }
+  ]
+}

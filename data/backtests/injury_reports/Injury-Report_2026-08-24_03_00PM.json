@@ -1,0 +1,86 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-24_03_00PM.pdf",
+  "status": 200,
+  "sha256": "2ec87b40e7dce64de18afbfb7bc83017424cd173cfd920590915ead589b044e4",
+  "parser_version": 2,
+  "published_at": "2026-08-24T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-24",
+      "matchup": "GSV@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-24",
+      "matchup": "ATL@LAS",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-24",
+      "matchup": "ATL@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "CHI@CON",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "CHI@CON",
+      "team": "ConnecticutSun",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "PDX@DAL",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "PDX@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "WAS@PHX",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-25",
+      "matchup": "WAS@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-24",
+      "matchup": "GSV@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Williams,Courtney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-24",
+      "matchup": "ATL@LAS",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-24",
+      "matchup": "ATL@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Burrell,Rae",
+      "status": "Questionable"
+    }
+  ]
+}

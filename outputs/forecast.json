@@ -1,0 +1,99 @@
+{
+  "n_sims": 20000,
+  "data_through": "2026-10-27",
+  "game_count": 2658,
+  "completed_playoff_games": 21,
+  "observed_series": {
+    "Minnesota Lynx|New York Liberty": {
+      "hw": 0,
+      "lw": 2
+    },
+    "Atlanta Dream|Washington Mystics": {
+      "hw": 2,
+      "lw": 0
+    },
+    "Las Vegas Aces|Indiana Fever": {
+      "hw": 2,
+      "lw": 1
+    },
+    "Golden State Valkyries|Dallas Wings": {
+      "hw": 2,
+      "lw": 1
+    },
+    "Atlanta Dream|New York Liberty": {
+      "hw": 3,
+      "lw": 0
+    },
+    "Golden State Valkyries|Las Vegas Aces": {
+      "hw": 3,
+      "lw": 0
+    },
+    "Golden State Valkyries|Atlanta Dream": {
+      "hw": 3,
+      "lw": 2
+    }
+  },
+  "season": 2026,
+  "season_context": {
+    "season": 2026,
+    "latest_observed_season": 2026,
+    "calendar_season": 2026,
+    "waiting_for_season": false,
+    "format_provisional": false,
+    "message": "Eight-team bracket; observed playoff results are retained."
+  },
+  "promotion": {
+    "policy": "prospective-gate-v1",
+    "model_version": "score-logistic-v1+participation-ridge-minutes-v2",
+    "season": 2026,
+    "eligible_games": 0,
+    "registered_games": 0,
+    "block_size": 100,
+    "promoted": false,
+    "checks": [],
+    "reason": "Waiting for 100 independently recorded, completed games of the current model version.",
+    "checked_at": "2026-10-28T05:59:53.908425+00:00",
+    "usable": false
+  },
+  "probability_model": "score-only",
+  "injury_adjustment_default": false,
+  "availability": {
+    "status": "live",
+    "fetched_at": "2026-10-28T05:59:49.778506Z",
+    "apply_adjustments": true,
+    "message": "Player feeds retrieved successfully.",
+    "model": {
+      "version": "participation-ridge-minutes-v2",
+      "experimental": true,
+      "training_games": 567,
+      "training_seasons": [
+        2025,
+        2026
+      ],
+      "ridge_alpha": 30,
+      "max_player_points": 4.0,
+      "max_team_points": 6.0,
+      "margin_logit_coefficient": 0.09804409836852912,
+      "players_with_comparison": 225
+    },
+    "boxscore_coverage": {
+      "expected_games": 637,
+      "covered_games": 637,
+      "missing_games": []
+    }
+  },
+  "top_matchups": [
+    {
+      "teams": [
+        "Golden State Valkyries",
+        "Atlanta Dream"
+      ],
+      "probability": 1.0
+    }
+  ],
+  "conferences": {
+    "both_west": 0.0,
+    "mixed": 1.0,
+    "both_east": 0.0
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-07-11_09_00AM.pdf",
+  "status": 200,
+  "sha256": "f1ee2e8d2b7eda12eff44a4f00d0707c9d202193df8eb00b8625fe5f9a35420c",
+  "parser_version": 2,
+  "published_at": "2026-07-11T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-07-11",
+      "matchup": "NYL@MIN",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "NYL@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PDX@ATL",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PDX@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PHX@LVA",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PHX@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "NYL@TOR",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "NYL@TOR",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "SEA@WAS",
+      "team": "SeattleStorm",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "SEA@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "CHI@DAL",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "CHI@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "IND@LVA",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-07-12",
+      "matchup": "IND@LVA",
+      "team": "LasVegasAces",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-07-11",
+      "matchup": "NYL@MIN",
+      "team": "NewYorkLiberty",
+      "player": "Allen,Rebecca",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "NYL@MIN",
+      "team": "NewYorkLiberty",
+      "player": "Astier,Pauline",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "NYL@MIN",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "NYL@MIN",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "NYL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "NYL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PDX@ATL",
+      "team": "PortlandFire",
+      "player": "Barker,SarahAshlee",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PDX@ATL",
+      "team": "PortlandFire",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PDX@ATL",
+      "team": "PortlandFire",
+      "player": "Samuelson,Karlie",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PDX@ATL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PDX@ATL",
+      "team": "AtlantaDream",
+      "player": "Reese,Angel",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PHX@LVA",
+      "team": "PhoenixMercury",
+      "player": "Mack,Natasha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PHX@LVA",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PHX@LVA",
+      "team": "LasVegasAces",
+      "player": "Barker,Janiah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-07-11",
+      "matchup": "PHX@LVA",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Questionable"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-09_09_00AM.pdf",
+  "status": 200,
+  "sha256": "2f69d28b52caacbe625b192c8102f11672d1b932aff3393e3eddf39bb68d78c8",
+  "parser_version": 2,
+  "published_at": "2026-08-09T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-09",
+      "matchup": "DAL@MIN",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "DAL@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "GSV@LAS",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "GSV@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "TOR@ATL",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "TOR@ATL",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "CHI@SEA",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-10",
+      "matchup": "CHI@SEA",
+      "team": "SeattleStorm",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-09",
+      "matchup": "DAL@MIN",
+      "team": "DallasWings",
+      "player": "Clark,Alysha",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "DAL@MIN",
+      "team": "DallasWings",
+      "player": "Fudd,Azzi",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "GSV@LAS",
+      "team": "GoldenStateValkyries",
+      "player": "Zandalasini,Cecilia",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "GSV@LAS",
+      "team": "LosAngelesSparks",
+      "player": "AkoaMakani,Monique",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "GSV@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Burrell,Rae",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "LasVegasAces",
+      "player": "Gray,Chelsea",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "LasVegasAces",
+      "player": "Pissott,Justine",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "LasVegasAces",
+      "player": "Wilson,A'ja",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "LasVegasAces",
+      "player": "Young,Jackie",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-09",
+      "matchup": "LVA@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    }
+  ]
+}

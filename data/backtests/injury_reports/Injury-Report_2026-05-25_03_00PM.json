@@ -1,0 +1,85 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-25_03_00PM.pdf",
+  "status": 200,
+  "sha256": "f71392153f87ba25b2c71e80f1f99876819f5baaf7e18fc0cf5edcdf5e802d84",
+  "parser_version": 2,
+  "published_at": "2026-05-25T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-25",
+      "matchup": "PDX@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "CON@GSV",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "CON@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-25",
+      "matchup": "PDX@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Fauthoux,Marine",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "PDX@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "PDX@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Ionescu,Sabrina",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "PDX@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Laney-Hamilton,Betnijah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "CON@GSV",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "CON@GSV",
+      "team": "ConnecticutSun",
+      "player": "Nelson-Ododa,Olivia",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "CON@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Jocyte,Juste",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-05-25",
+      "matchup": "CON@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Zandalasini,Cecilia",
+      "status": "Questionable"
+    }
+  ]
+}

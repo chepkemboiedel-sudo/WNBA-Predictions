@@ -1,0 +1,136 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-30_03_00PM.pdf",
+  "status": 200,
+  "sha256": "0ff691ab555e7d2d70a10eab9ac2f5a42f5939cb5126ec3514753a79151effcc",
+  "parser_version": 2,
+  "published_at": "2026-05-30T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-30",
+      "matchup": "SEA@TOR",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "SEA@TOR",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "LAS@CON",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "LAS@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "IND@PDX",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "IND@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-31",
+      "matchup": "LVA@GSV",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-31",
+      "matchup": "LVA@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-30",
+      "matchup": "SEA@TOR",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "SEA@TOR",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "SEA@TOR",
+      "team": "SeattleStorm",
+      "player": "Malonga,Dominique",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "SEA@TOR",
+      "team": "SeattleStorm",
+      "player": "Thierry,Taylor",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "SEA@TOR",
+      "team": "TorontoTempo",
+      "player": "Allemand,Julie",
+      "status": "Available"
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "SEA@TOR",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "SEA@TOR",
+      "team": "TorontoTempo",
+      "player": "Harrison,Isabelle",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "LAS@CON",
+      "team": "LosAngelesSparks",
+      "player": "Plum,Kelsey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "LAS@CON",
+      "team": "ConnecticutSun",
+      "player": "Edwards,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "LAS@CON",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Available"
+    },
+    {
+      "date": "2026-05-30",
+      "matchup": "IND@PDX",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    }
+  ]
+}

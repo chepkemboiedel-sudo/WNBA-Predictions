@@ -1,0 +1,51 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-09_03_00PM.pdf",
+  "status": 200,
+  "sha256": "473048c69699f18c30050aa53a45c0649d8bce2fc47d4e91afa3fc23add20edb",
+  "parser_version": 2,
+  "published_at": "2026-10-09T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-10-09",
+      "matchup": "ATL@NYL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-10-09",
+      "matchup": "GSV@LVA",
+      "team": "LasVegasAces",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-10-09",
+      "matchup": "ATL@NYL",
+      "team": "AtlantaDream",
+      "player": "Gray,Allisha",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-10-09",
+      "matchup": "ATL@NYL",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-10-09",
+      "matchup": "GSV@LVA",
+      "team": "LasVegasAces",
+      "player": "Loyd,Jewell",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-10-09",
+      "matchup": "GSV@LVA",
+      "team": "LasVegasAces",
+      "player": "Talbot,Stephanie",
+      "status": "Probable"
+    }
+  ]
+}

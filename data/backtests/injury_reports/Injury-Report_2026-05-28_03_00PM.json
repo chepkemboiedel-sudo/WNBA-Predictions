@@ -1,0 +1,119 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-28_03_00PM.pdf",
+  "status": 200,
+  "sha256": "892280fd5840b2abc003ca64398a032ef32df4d3c55bf246d14666db90a6f6a1",
+  "parser_version": 2,
+  "published_at": "2026-05-28T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-28",
+      "matchup": "LVA@DAL",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-28",
+      "matchup": "LVA@DAL",
+      "team": "DallasWings",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-28",
+      "matchup": "IND@GSV",
+      "team": "IndianaFever",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-29",
+      "matchup": "LAS@WAS",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-29",
+      "matchup": "LAS@WAS",
+      "team": "WashingtonMystics",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-29",
+      "matchup": "MIN@CHI",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-29",
+      "matchup": "MIN@CHI",
+      "team": "ChicagoSky",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-29",
+      "matchup": "PHX@NYL",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-29",
+      "matchup": "PHX@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-29",
+      "matchup": "ATL@PDX",
+      "team": "AtlantaDream",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-29",
+      "matchup": "ATL@PDX",
+      "team": "PortlandFire",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-28",
+      "matchup": "LVA@DAL",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-28",
+      "matchup": "LVA@DAL",
+      "team": "DallasWings",
+      "player": "Bueckers,Paige",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-05-28",
+      "matchup": "LVA@DAL",
+      "team": "DallasWings",
+      "player": "Ogunbowale,Arike",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-05-28",
+      "matchup": "LVA@DAL",
+      "team": "DallasWings",
+      "player": "Smith,Alanna",
+      "status": "Doubtful"
+    },
+    {
+      "date": "2026-05-28",
+      "matchup": "IND@GSV",
+      "team": "IndianaFever",
+      "player": "Clark,Caitlin",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-05-28",
+      "matchup": "IND@GSV",
+      "team": "IndianaFever",
+      "player": "Hall,Bree",
+      "status": "Out"
+    }
+  ]
+}

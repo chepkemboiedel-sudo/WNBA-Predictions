@@ -1,0 +1,257 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-27_03_00PM.pdf",
+  "status": 200,
+  "sha256": "f0fb6d57f396e202266b01e997c7ce78e7164ae8a85b72aa573b4d81b4ec350e",
+  "parser_version": 2,
+  "published_at": "2026-05-27T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-27",
+      "matchup": "PHX@NYL",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "PHX@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "TOR@CHI",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "TOR@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "ATL@MIN",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "ATL@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "CON@PDX",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "WAS@SEA",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "WAS@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-28",
+      "matchup": "LVA@DAL",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-28",
+      "matchup": "LVA@DAL",
+      "team": "DallasWings",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-28",
+      "matchup": "IND@GSV",
+      "team": "IndianaFever",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-28",
+      "matchup": "IND@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-27",
+      "matchup": "PHX@NYL",
+      "team": "PhoenixMercury",
+      "player": "AkoaMakani,Monique",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "PHX@NYL",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "PHX@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Fauthoux,Marine",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "PHX@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Ionescu,Sabrina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "PHX@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Laney-Hamilton,Betnijah",
+      "status": "Available"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "PHX@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "TOR@CHI",
+      "team": "TorontoTempo",
+      "player": "Allemand,Julie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "TOR@CHI",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "TOR@CHI",
+      "team": "TorontoTempo",
+      "player": "Harrison,Isabelle",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "TOR@CHI",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "TOR@CHI",
+      "team": "ChicagoSky",
+      "player": "Jackson,Rickea",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "TOR@CHI",
+      "team": "ChicagoSky",
+      "player": "Jaquez,Gabriela",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "TOR@CHI",
+      "team": "ChicagoSky",
+      "player": "Vandersloot,Courtney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "ATL@MIN",
+      "team": "AtlantaDream",
+      "player": "Jones,Brionna",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "ATL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Cechova,Emma",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "ATL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Collier,Napheesa",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "ATL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Juhasz,Dorka",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "ATL@MIN",
+      "team": "MinnesotaLynx",
+      "player": "Kosu,AnastasiiaOlairi",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "CON@PDX",
+      "team": "ConnecticutSun",
+      "player": "Griner,Brittney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "WAS@SEA",
+      "team": "WashingtonMystics",
+      "player": "Littlepage-Buggs,Darianna",
+      "status": "Available"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "WAS@SEA",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "WAS@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "WAS@SEA",
+      "team": "SeattleStorm",
+      "player": "Malonga,Dominique",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-27",
+      "matchup": "WAS@SEA",
+      "team": "SeattleStorm",
+      "player": "Thierry,Taylor",
+      "status": "Out"
+    }
+  ]
+}

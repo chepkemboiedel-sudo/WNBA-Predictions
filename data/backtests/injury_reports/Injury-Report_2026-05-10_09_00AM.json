@@ -1,0 +1,151 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-10_09_00AM.pdf",
+  "status": 200,
+  "sha256": "2aec9be31a3219b2dc4a63c79305c8a3123520bb08dd66c3360634e77e0ef2c7",
+  "parser_version": 2,
+  "published_at": "2026-05-10T09:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-10",
+      "matchup": "SEA@CON",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "SEA@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "NYL@WAS",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "NYL@WAS",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "LVA@LAS",
+      "team": "LasVegasAces",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "PHX@GSV",
+      "team": "PhoenixMercury",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "PHX@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-10",
+      "matchup": "SEA@CON",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "SEA@CON",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "SEA@CON",
+      "team": "SeattleStorm",
+      "player": "Samuelson,KatieLou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "SEA@CON",
+      "team": "ConnecticutSun",
+      "player": "Edwards,Aaliyah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "SEA@CON",
+      "team": "ConnecticutSun",
+      "player": "Peddy,Shey",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "NYL@WAS",
+      "team": "NewYorkLiberty",
+      "player": "Allen,Rebecca",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "NYL@WAS",
+      "team": "NewYorkLiberty",
+      "player": "Fauthoux,Marine",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "NYL@WAS",
+      "team": "NewYorkLiberty",
+      "player": "Ionescu,Sabrina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "NYL@WAS",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "NYL@WAS",
+      "team": "WashingtonMystics",
+      "player": "FlorezGetino,Alicia",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "NYL@WAS",
+      "team": "WashingtonMystics",
+      "player": "McMahon,Cotie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "NYL@WAS",
+      "team": "WashingtonMystics",
+      "player": "Onyenwere,Michaela",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "PHX@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Hayes,Tiffany",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-10",
+      "matchup": "PHX@GSV",
+      "team": "GoldenStateValkyries",
+      "player": "Zandalasini,Cecilia",
+      "status": "Out"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-08-03_03_00PM.pdf",
+  "status": 200,
+  "sha256": "a90613055da8f336262670450078f818b8f9d727adb50e1130e949dd0c929bce",
+  "parser_version": 2,
+  "published_at": "2026-08-03T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-08-03",
+      "matchup": "LVA@ATL",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "LVA@ATL",
+      "team": "AtlantaDream",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "SEA@NYL",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "SEA@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "PHX@CHI",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "PHX@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-08-04",
+      "matchup": "TOR@GSV",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-08-04",
+      "matchup": "TOR@GSV",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-08-03",
+      "matchup": "LVA@ATL",
+      "team": "LasVegasAces",
+      "player": "Parker-Tyus,Cheyenne",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "LVA@ATL",
+      "team": "AtlantaDream",
+      "player": "Paopao,Te-Hina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "SEA@NYL",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "SEA@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Fiebich,Leonie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "SEA@NYL",
+      "team": "NewYorkLiberty",
+      "player": "Sabally,Satou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "PHX@CHI",
+      "team": "PhoenixMercury",
+      "player": "Plum,Kelsey",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "PHX@CHI",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Probable"
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "PHX@CHI",
+      "team": "ChicagoSky",
+      "player": "Diggins,Skylar",
+      "status": "Out"
+    },
+    {
+      "date": "2026-08-03",
+      "matchup": "PHX@CHI",
+      "team": "ChicagoSky",
+      "player": "Stevens,Azura",
+      "status": "Out"
+    }
+  ]
+}

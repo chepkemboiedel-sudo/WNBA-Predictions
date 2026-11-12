@@ -1,0 +1,169 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-20_03_00PM.pdf",
+  "status": 200,
+  "sha256": "a71b0bb5fe766e9ca19a37b574d1670e6bcc7387865e5de4c336dcc53b0bc889",
+  "parser_version": 2,
+  "published_at": "2026-05-20T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-20",
+      "matchup": "PDX@IND",
+      "team": "PortlandFire",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "DAL@CHI",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "CON@SEA",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "CON@SEA",
+      "team": "SeattleStorm",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "GSV@NYL",
+      "team": "GoldenStateValkyries",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "GSV@NYL",
+      "team": "NewYorkLiberty",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "TOR@MIN",
+      "team": "TorontoTempo",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "TOR@MIN",
+      "team": "MinnesotaLynx",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "LAS@PHX",
+      "team": "LosAngelesSparks",
+      "submitted": false
+    },
+    {
+      "date": "2026-05-21",
+      "matchup": "LAS@PHX",
+      "team": "PhoenixMercury",
+      "submitted": false
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-20",
+      "matchup": "PDX@IND",
+      "team": "PortlandFire",
+      "player": "Leite,Carla",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "PDX@IND",
+      "team": "PortlandFire",
+      "player": "Samuelson,Karlie",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "PDX@IND",
+      "team": "PortlandFire",
+      "player": "Smalls,Kamiah",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "DAL@CHI",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "DAL@CHI",
+      "team": "ChicagoSky",
+      "player": "Jackson,Rickea",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "DAL@CHI",
+      "team": "ChicagoSky",
+      "player": "Stevens,Azura",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "DAL@CHI",
+      "team": "ChicagoSky",
+      "player": "Vandersloot,Courtney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "DAL@CHI",
+      "team": "ChicagoSky",
+      "player": "Williams,Elizabeth",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "CON@SEA",
+      "team": "ConnecticutSun",
+      "player": "Nelson-Ododa,Olivia",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "CON@SEA",
+      "team": "SeattleStorm",
+      "player": "Magbegor,Ezi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "CON@SEA",
+      "team": "SeattleStorm",
+      "player": "Mair,Taina",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "CON@SEA",
+      "team": "SeattleStorm",
+      "player": "Malonga,Dominique",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "CON@SEA",
+      "team": "SeattleStorm",
+      "player": "Samuelson,KatieLou",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-20",
+      "matchup": "CON@SEA",
+      "team": "SeattleStorm",
+      "player": "Thierry,Taylor",
+      "status": "Out"
+    }
+  ]
+}

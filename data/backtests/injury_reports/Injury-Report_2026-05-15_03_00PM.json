@@ -1,0 +1,137 @@
+{
+  "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-05-15_03_00PM.pdf",
+  "status": 200,
+  "sha256": "5bfd0c416e705c6654fcfdbe51e375772d2979e01c91c76c57ae3cb0f7d426a8",
+  "parser_version": 2,
+  "published_at": "2026-05-15T15:00:00-04:00",
+  "teams": [
+    {
+      "date": "2026-05-15",
+      "matchup": "LVA@CON",
+      "team": "LasVegasAces",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "LVA@CON",
+      "team": "ConnecticutSun",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "WAS@IND",
+      "team": "WashingtonMystics",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "CHI@PHX",
+      "team": "ChicagoSky",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "CHI@PHX",
+      "team": "PhoenixMercury",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "TOR@LAS",
+      "team": "TorontoTempo",
+      "submitted": true
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "TOR@LAS",
+      "team": "LosAngelesSparks",
+      "submitted": true
+    }
+  ],
+  "players": [
+    {
+      "date": "2026-05-15",
+      "matchup": "LVA@CON",
+      "team": "LasVegasAces",
+      "player": "Barker,Janiah",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "LVA@CON",
+      "team": "LasVegasAces",
+      "player": "Evans,Dana",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "LVA@CON",
+      "team": "ConnecticutSun",
+      "player": "Nelson-Ododa,Olivia",
+      "status": "Questionable"
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "WAS@IND",
+      "team": "WashingtonMystics",
+      "player": "Onyenwere,Michaela",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "CHI@PHX",
+      "team": "ChicagoSky",
+      "player": "Carrington,DiJonai",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "CHI@PHX",
+      "team": "ChicagoSky",
+      "player": "Stevens,Azura",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "CHI@PHX",
+      "team": "ChicagoSky",
+      "player": "Vandersloot,Courtney",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "CHI@PHX",
+      "team": "PhoenixMercury",
+      "player": "Whitcomb,Sami",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "TOR@LAS",
+      "team": "TorontoTempo",
+      "player": "Fagbenle,Temi",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "TOR@LAS",
+      "team": "TorontoTempo",
+      "player": "Harrison,Isabelle",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "TOR@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Atkins,Ariel",
+      "status": "Out"
+    },
+    {
+      "date": "2026-05-15",
+      "matchup": "TOR@LAS",
+      "team": "LosAngelesSparks",
+      "player": "Feagin,Sania",
+      "status": "Out"
+    }
+  ]
+}
