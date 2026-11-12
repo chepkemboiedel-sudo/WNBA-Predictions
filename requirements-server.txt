@@ -1,0 +1,12 @@
+# Runtime dependencies for server.py ONLY (the deployed lab service).
+# Deliberately slim: the live service loads the saved logistic model and serves
+# predictions, so it does NOT need the training/visualisation stack
+# (xgboost, shap, matplotlib, seaborn, pdfplumber) from requirements.txt.
+# Keeping this minimal makes the deploy build fast and fit a 512 MB free tier.
+#
+# Versions pinned to the set this app was tested against.
+pandas==3.0.5
+numpy==2.4.6
+scikit-learn==1.9.0
+joblib==1.5.3
+requests==2.34.2

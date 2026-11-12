@@ -1,0 +1,24 @@
+# Render Blueprint for the WNBA prediction lab service.
+# In the Render dashboard: New + -> Blueprint -> connect this repo -> Apply.
+# Render reads this file, builds with the slim server requirements, and runs
+# server.py. $PORT is injected automatically and server.py honours it.
+services:
+  - type: web
+    name: wnba-prediction-service
+    runtime: python
+    plan: free
+    branch: deploy-vercel-static-site
+    buildCommand: pip install -r requirements-server.txt
+    startCommand: python server.py
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.13.7"
+      - key: RATE_LIMIT_MAX
+        value: "30"
+      - key: RATE_LIMIT_WINDOW_SEC
+        value: "60"
+      - key: PRICE_PER_1K_TOKENS_USD
+        value: "0.002"
+      # FORCE_FAIL is intentionally left unset (defaults to off). Set it to "1"
+      # temporarily in the Render dashboard to demo graceful degradation.
