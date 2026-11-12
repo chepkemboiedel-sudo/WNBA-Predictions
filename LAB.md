@@ -98,8 +98,11 @@ outcome**, plus client, path, status, and model version:
 {"ts":"2026-11-12T18:03:11Z","request_id":"a1b2c3d4e5f6","client":"viewer-0","method":"GET","path":"/api/predict","query":{"home":"Minnesota Lynx","away":"New York Liberty"},"status":200,"outcome":"ok","latency_ms":41.7,"prompt_tokens":18,"completion_tokens":44,"total_tokens":62,"est_cost_usd":0.000124,"model_version":"score-logistic-v1"}
 ```
 
-**Show in video:** run `generate_traffic.py` (produces 50+ entries), then
-`tail -n 25 logs/requests.jsonl` to show ≥20 real entries from actual use.
+**Show in video:** run `generate_traffic.py` (produces 50+ entries), then show
+the raw entries one of two ways:
+- locally: `tail -n 25 logs/requests.jsonl`
+- on the deployed URL: open `<url>/logs` (returns the recent structured entries
+  as one JSON object per line) — `<url>/logs?limit=25` to bound it.
 
 ---
 

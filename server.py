@@ -353,10 +353,36 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/usage.json":
             self._send_json(200, usage_summary())
             return
+        if path in ("/logs", "/logs.jsonl"):
+            self._serve_logs(query)
+            return
         if path == "/healthz":
             self._send_json(200, {"status": "ok", "model_ready": INFER.ready})
             return
         self._serve_static(path)
+
+    # ---- Raw structured log viewer (Feature 1.3 evidence) ----------------- #
+    def _serve_logs(self, query: dict) -> None:
+        """Return the most recent structured log lines as JSON-per-line text, so
+        the >=20 real entries can be shown directly from the public URL."""
+        try:
+            limit = max(1, min(int(query.get("limit", 50)), 1000))
+        except (TypeError, ValueError):
+            limit = 50
+        lines: list[str] = []
+        if os.path.exists(LOG_PATH):
+            with open(LOG_PATH, "r", encoding="utf-8") as f:
+                lines = [ln.rstrip("\n") for ln in f if ln.strip()]
+        tail = lines[-limit:]
+        header = (f"# {len(tail)} of {len(lines)} structured request log entries "
+                  f"(one JSON object per line), newest last\n")
+        body = (header + "\n".join(tail) + ("\n" if tail else "")).encode("utf-8")
+        self.send_response(200)
+        self.send_header("Content-Type", "text/plain; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.end_headers()
+        self.wfile.write(body)
 
     # ---- API endpoints: logged, rate-limited, degrade gracefully ---------- #
     def _handle_api(self, path: str, query: dict) -> None:
