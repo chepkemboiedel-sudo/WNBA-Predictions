@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-11-12T03:51:40.607Z",
+  "checked_at": "2026-11-12T12:50:31.141Z",
   "status": "failed",
   "error": "Backtest evaluation is failed, stale, or unverified; no improvement alert is permitted.",
   "reports": [
@@ -249,7 +249,7 @@
           "id": "4281929",
           "name": "Satou Sabally",
           "status": "Out",
-          "date": "2026-11-12T03:01Z",
+          "date": "2026-11-12T12:01Z",
           "detail": "Concussion",
           "comment": "out",
           "url": "https://www.espn.com/wnba/player/_/id/4281929/satou-sabally"
@@ -479,7 +479,7 @@
       ]
     }
   ],
-  "consecutive_failures": 32,
+  "consecutive_failures": 33,
   "failure_started_at": "2026-11-03T15:15:33.796Z",
   "delivered": [
     "injury-6842e24e2193b4edd602c16a",
