@@ -20,5 +20,16 @@ services:
         value: "60"
       - key: PRICE_PER_1K_TOKENS_USD
         value: "0.002"
+      - key: LLM_MODEL
+        value: "claude-opus-5-5"
+      - key: LLM_PRICE_INPUT_PER_1K
+        value: "0.004"
+      - key: LLM_PRICE_OUTPUT_PER_1K
+        value: "0.020"
+      # ANTHROPIC_API_KEY is a SECRET -- do NOT put it here. Add it in the Render
+      # dashboard (service -> Environment -> Add, sync: false). Without it,
+      # /api/explain degrades gracefully and the rest of the app is unaffected.
+      - key: ANTHROPIC_API_KEY
+        sync: false
       # FORCE_FAIL is intentionally left unset (defaults to off). Set it to "1"
       # temporarily in the Render dashboard to demo graceful degradation.

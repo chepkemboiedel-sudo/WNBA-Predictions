@@ -5,14 +5,18 @@ copy-paste commands for the demo video. The lab is applied to my final
 project (the WNBA 2026 Finals prediction model), which is **encouraged** per
 the brief.
 
-> **One honest caveat, stated up front (also in the video):** this project is a
-> *statistics / machine-learning* app, not an LLM app. It calls a logistic
-> win-probability model, not a language model, so it has **no real LLM tokens or
-> per-token cost**. To satisfy the lab's logging schema honestly, each request
-> logs an *estimated* token count derived from request/response **payload size**
-> (~chars ÷ 4) and an estimated cost at a configurable price. These fields are a
-> clearly-labelled payload-size proxy — not fabricated LLM usage. Everything else
-> (latency, outcome, rate limiting, degradation) is fully real.
+> **On tokens and cost — two kinds of request:**
+> - The core app is a *statistics/ML* service (a logistic win-probability model),
+>   so `/api/predict` and `/api/forecast` have no real LLM tokens. Their log
+>   entries carry `"token_source":"proxy"` — an estimated token count from
+>   request/response **payload size** (~chars ÷ 4). Clearly labelled, not faked.
+> - **`/api/explain` is a real LLM endpoint** (Claude via the official Anthropic
+>   SDK). Its log entries carry `"token_source":"llm"` with the **real**
+>   `input_tokens` / `output_tokens` from the API and **real** cost. This is also
+>   where the "revoke the API key" degradation demo lives (Feature 2.2).
+>
+> So you can demo genuine token counts and cost, and still be upfront that the
+> model's own predictions use a documented proxy.
 
 ---
 
@@ -27,6 +31,7 @@ features. It serves:
 | `GET /` and the rest of `public/` | the real static prediction site |
 | `GET /api/predict?home=<team>&away=<team>` | live model inference → win probability |
 | `GET /api/forecast` | the current Monte-Carlo Finals forecast |
+| `GET /api/explain?home=<team>&away=<team>` | **LLM** plain-English explanation (Claude) — real token usage |
 | `GET /api/teams` | valid team names |
 | `GET /usage` | human-readable usage summary (Feature 2.3) |
 | `GET /usage.json` | same summary as JSON |
@@ -146,6 +151,12 @@ A bad request (unknown team) is handled just as cleanly with a 400 and a hint.
 The upstream ESPN proxy in [`api/live.js`](api/live.js) already does the same for
 the static site: it returns an explicit "unavailable" message on any source
 failure.
+
+**Revoke-the-API-key demo (the lab's exact example):** the real LLM endpoint
+`/api/explain` calls Claude with `ANTHROPIC_API_KEY`. Unset or rotate that key
+(Render dashboard → Environment, or your local `.env`) and hit `/api/explain` —
+it returns a clean "LLM is not available right now" 503, never a stack trace,
+while `/api/predict`, `/api/forecast` and the site keep working.
 
 ### Feature 2.3 — Usage summary from my own logs
 

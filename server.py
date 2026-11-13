@@ -85,6 +85,56 @@ LOG_PATH = os.environ.get("LOG_PATH", os.path.join(ROOT, "logs", "requests.jsonl
 PRICE_PER_1K_TOKENS_USD = _float("PRICE_PER_1K_TOKENS_USD", 0.002)
 FORCE_FAIL = os.environ.get("FORCE_FAIL", "0") == "1"
 
+# LLM endpoint (/api/explain) -- optional, enabled only when an API key is set.
+# This is what makes token counts and cost REAL rather than a payload proxy.
+LLM_MODEL = os.environ.get("LLM_MODEL", "claude-opus-5-5")
+# Per-1K-token prices for the chosen model (default: Claude Opus 5.5).
+# Set LLM_MODEL=claude-haiku-5-5 with 0.0001 / 0.0005 for a cheaper demo.
+LLM_PRICE_INPUT_PER_1K = _float("LLM_PRICE_INPUT_PER_1K", 0.004)
+LLM_PRICE_OUTPUT_PER_1K = _float("LLM_PRICE_OUTPUT_PER_1K", 0.020)
+LLM_MAX_TOKENS = _int("LLM_MAX_TOKENS", 2048)  # ceiling only; billed on actual tokens
+
+
+def llm_available() -> bool:
+    return bool(os.environ.get("ANTHROPIC_API_KEY"))
+
+
+def llm_explain(home: str, away: str, p_home: float) -> dict:
+    """Ask Claude to explain a matchup probability in plain English, using the
+    official Anthropic SDK. Returns the text plus REAL token usage and cost.
+    Raises on any failure so the caller can degrade gracefully (Feature 2.2 --
+    e.g. a missing or revoked ANTHROPIC_API_KEY)."""
+    if not llm_available():
+        raise RuntimeError("ANTHROPIC_API_KEY is not configured")
+    import anthropic  # lazy: server still runs if the package/key is absent
+
+    client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from the environment
+    prompt = (
+        f"A validated statistical model gives the {home} a {p_home:.0%} chance to "
+        f"beat the {away} at home in a single WNBA game. In 2-3 sentences, for a "
+        f"general sports audience, explain what that probability means and how "
+        f"confident it implies the model is. Do not invent specific player or team "
+        f"statistics; reason only from the probability itself."
+    )
+    resp = client.messages.create(
+        model=LLM_MODEL,
+        max_tokens=LLM_MAX_TOKENS,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    text = "".join(b.text for b in resp.content if b.type == "text").strip()
+    in_tok = int(resp.usage.input_tokens)
+    out_tok = int(resp.usage.output_tokens)
+    cost = round(in_tok / 1000.0 * LLM_PRICE_INPUT_PER_1K
+                 + out_tok / 1000.0 * LLM_PRICE_OUTPUT_PER_1K, 6)
+    return {
+        "home_team": home, "away_team": away,
+        "p_home_wins": round(p_home, 4),
+        "explanation": text,
+        "model": LLM_MODEL,
+        "usage": {"input_tokens": in_tok, "output_tokens": out_tok,
+                  "total_tokens": in_tok + out_tok, "cost_usd": cost},
+    }
+
 _log_lock = threading.Lock()
 _rate_lock = threading.Lock()
 _rate_state: dict[str, deque] = defaultdict(deque)
@@ -344,7 +394,7 @@ class Handler(BaseHTTPRequestHandler):
         path = parsed.path
         query = {k: v[0] for k, v in parse_qs(parsed.query).items()}
 
-        if path in ("/api/predict", "/api/forecast", "/api/teams"):
+        if path in ("/api/predict", "/api/forecast", "/api/teams", "/api/explain"):
             self._handle_api(path, query)
             return
         if path == "/usage":
@@ -357,7 +407,9 @@ class Handler(BaseHTTPRequestHandler):
             self._serve_logs(query)
             return
         if path == "/healthz":
-            self._send_json(200, {"status": "ok", "model_ready": INFER.ready})
+            self._send_json(200, {"status": "ok", "model_ready": INFER.ready,
+                                  "llm_configured": llm_available(),
+                                  "llm_model": LLM_MODEL})
             return
         self._serve_static(path)
 
@@ -392,6 +444,7 @@ class Handler(BaseHTTPRequestHandler):
         status = 200
         outcome = "ok"
         body = b""
+        llm_usage = None  # (input_tokens, output_tokens, cost) when a real LLM call ran
 
         # Rate limit first -- a blocked request is still logged.
         allowed, retry_after = rate_check(client)
@@ -413,6 +466,12 @@ class Handler(BaseHTTPRequestHandler):
                     payload = {"teams": INFER.teams(), "count": len(INFER.teams())}
                 elif path == "/api/forecast":
                     payload = self._read_forecast()
+                elif path == "/api/explain":
+                    pred = INFER.predict(query.get("home", ""), query.get("away", ""))
+                    payload = llm_explain(pred["home_team"], pred["away_team"],
+                                          pred["p_home_wins"])
+                    u = payload["usage"]
+                    llm_usage = (u["input_tokens"], u["output_tokens"], u["cost_usd"])
                 else:  # /api/predict
                     payload = INFER.predict(query.get("home", ""),
                                             query.get("away", ""))
@@ -427,16 +486,29 @@ class Handler(BaseHTTPRequestHandler):
                 })
             except Exception as exc:  # noqa: BLE001 - graceful degradation (2.2)
                 status, outcome = 503, "degraded"
-                body = self._send_json(status, {
-                    "error": "Prediction service is temporarily unavailable. "
-                             "Please try again shortly.",
-                })
+                msg = ("The explanation service (LLM) is not available right now. "
+                       "Predictions still work — please try again shortly."
+                       if path == "/api/explain" else
+                       "Prediction service is temporarily unavailable. "
+                       "Please try again shortly.")
+                body = self._send_json(status, {"error": msg})
                 # The real reason stays server-side, out of the user's response.
                 print(f"[degraded] {path} -> {type(exc).__name__}: {exc}")
 
         latency_ms = (time.perf_counter() - start) * 1000.0
-        prompt_tokens = approx_tokens(req_descriptor)
-        completion_tokens = approx_tokens(body.decode("utf-8", "ignore"))
+        if llm_usage is not None:
+            # Real LLM token usage and cost from the Anthropic API response.
+            prompt_tokens, completion_tokens, est_cost = llm_usage
+            token_source = "llm"
+            model_tag = LLM_MODEL
+        else:
+            # Payload-size proxy for the non-LLM endpoints (documented in LAB.md).
+            prompt_tokens = approx_tokens(req_descriptor)
+            completion_tokens = approx_tokens(body.decode("utf-8", "ignore"))
+            est_cost = round((prompt_tokens + completion_tokens) / 1000.0
+                             * PRICE_PER_1K_TOKENS_USD, 6)
+            token_source = "proxy"
+            model_tag = INFER.model_version
         total_tokens = prompt_tokens + completion_tokens
         write_log({
             "ts": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
@@ -451,8 +523,9 @@ class Handler(BaseHTTPRequestHandler):
             "prompt_tokens": prompt_tokens,
             "completion_tokens": completion_tokens,
             "total_tokens": total_tokens,
-            "est_cost_usd": round(total_tokens / 1000.0 * PRICE_PER_1K_TOKENS_USD, 6),
-            "model_version": INFER.model_version,
+            "token_source": token_source,
+            "est_cost_usd": est_cost,
+            "model_version": model_tag,
         })
 
     def _read_forecast(self) -> dict:

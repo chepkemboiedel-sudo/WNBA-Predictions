@@ -74,6 +74,22 @@ def main() -> None:
         call(args.base, "/api/forecast", user=f"viewer-{i % 3}")
     print(f"   {ok} predictions + 4 forecast calls OK")
 
+    print("\n1b) LLM explanations (/api/explain) -> REAL token counts...")
+    for home, away in MATCHUPS[:3]:
+        status, body = call(args.base,
+                            f"/api/explain?home={urlquote(home)}&away={urlquote(away)}",
+                            user="viewer-0")
+        if status == 200:
+            d = json.loads(body)
+            u = d.get("usage", {})
+            print(f"   {home} vs {away}: {u.get('input_tokens')}in/"
+                  f"{u.get('output_tokens')}out tok, ${u.get('cost_usd')}")
+        elif status == 503:
+            print(f"   {home} vs {away}: HTTP 503 (LLM not configured / unavailable) "
+                  f"-- set ANTHROPIC_API_KEY to enable")
+        else:
+            print(f"   {home} vs {away}: HTTP {status}")
+
     print("\n2) Bad requests (unknown team) -> expect 400 bad_request...")
     for bad in ("Atlantis Dream", "Narnia Lions"):
         status, _ = call(args.base, f"/api/predict?home={urlquote(bad)}&away=Minnesota%20Lynx")
