@@ -85,52 +85,97 @@ LOG_PATH = os.environ.get("LOG_PATH", os.path.join(ROOT, "logs", "requests.jsonl
 PRICE_PER_1K_TOKENS_USD = _float("PRICE_PER_1K_TOKENS_USD", 0.002)
 FORCE_FAIL = os.environ.get("FORCE_FAIL", "0") == "1"
 
-# LLM endpoint (/api/explain) -- optional, enabled only when an API key is set.
-# This is what makes token counts and cost REAL rather than a payload proxy.
-LLM_MODEL = os.environ.get("LLM_MODEL", "claude-opus-5-5")
-# Per-1K-token prices for the chosen model (default: Claude Opus 5.5).
-# Set LLM_MODEL=claude-haiku-5-5 with 0.0001 / 0.0005 for a cheaper demo.
-LLM_PRICE_INPUT_PER_1K = _float("LLM_PRICE_INPUT_PER_1K", 0.004)
-LLM_PRICE_OUTPUT_PER_1K = _float("LLM_PRICE_OUTPUT_PER_1K", 0.020)
+# LLM endpoint (/api/explain) -- optional; makes token counts and cost REAL
+# instead of a payload proxy. Works with Google Gemini OR Anthropic Claude: the
+# provider is auto-detected from whichever API key is present (set LLM_PROVIDER
+# to force one). Enabled only when the matching key is configured.
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "auto").lower()  # auto | gemini | anthropic
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+ANTHROPIC_MODEL = os.environ.get("LLM_MODEL", "claude-opus-5-5")
+# Per-1K-token prices for the chosen model. Defaults are for Gemini 2.5 Flash
+# (~$0.30/$2.50 per 1M). For Claude Opus 5.5 use 0.004 / 0.020; Claude Haiku 5.5
+# 0.0001 / 0.0005. Cost is tiny either way -- the real point is real token counts.
+LLM_PRICE_INPUT_PER_1K = _float("LLM_PRICE_INPUT_PER_1K", 0.0003)
+LLM_PRICE_OUTPUT_PER_1K = _float("LLM_PRICE_OUTPUT_PER_1K", 0.0025)
 LLM_MAX_TOKENS = _int("LLM_MAX_TOKENS", 2048)  # ceiling only; billed on actual tokens
 
 
+def active_provider() -> str | None:
+    """Which LLM provider is usable right now, or None if no key is configured."""
+    have_gemini = bool(os.environ.get("GEMINI_API_KEY"))
+    have_anthropic = bool(os.environ.get("ANTHROPIC_API_KEY"))
+    if LLM_PROVIDER == "gemini":
+        return "gemini" if have_gemini else None
+    if LLM_PROVIDER == "anthropic":
+        return "anthropic" if have_anthropic else None
+    # auto: prefer Gemini, then Anthropic
+    if have_gemini:
+        return "gemini"
+    if have_anthropic:
+        return "anthropic"
+    return None
+
+
 def llm_available() -> bool:
-    return bool(os.environ.get("ANTHROPIC_API_KEY"))
+    return active_provider() is not None
 
 
-def llm_explain(home: str, away: str, p_home: float) -> dict:
-    """Ask Claude to explain a matchup probability in plain English, using the
-    official Anthropic SDK. Returns the text plus REAL token usage and cost.
-    Raises on any failure so the caller can degrade gracefully (Feature 2.2 --
-    e.g. a missing or revoked ANTHROPIC_API_KEY)."""
-    if not llm_available():
-        raise RuntimeError("ANTHROPIC_API_KEY is not configured")
-    import anthropic  # lazy: server still runs if the package/key is absent
-
-    client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from the environment
-    prompt = (
+def _explain_prompt(home: str, away: str, p_home: float) -> str:
+    return (
         f"A validated statistical model gives the {home} a {p_home:.0%} chance to "
         f"beat the {away} at home in a single WNBA game. In 2-3 sentences, for a "
         f"general sports audience, explain what that probability means and how "
         f"confident it implies the model is. Do not invent specific player or team "
         f"statistics; reason only from the probability itself."
     )
+
+
+def _gemini_explain(prompt: str) -> tuple[str, int, int, str]:
+    from google import genai  # lazy import
+    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+    resp = client.models.generate_content(model=GEMINI_MODEL, contents=prompt)
+    text = (resp.text or "").strip()
+    um = resp.usage_metadata
+    in_tok = int(getattr(um, "prompt_token_count", 0) or 0)
+    out_tok = int(getattr(um, "candidates_token_count", 0) or 0)
+    out_tok += int(getattr(um, "thoughts_token_count", 0) or 0)  # count reasoning tokens
+    return text, in_tok, out_tok, GEMINI_MODEL
+
+
+def _anthropic_explain(prompt: str) -> tuple[str, int, int, str]:
+    import anthropic  # lazy import
+    client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from the environment
     resp = client.messages.create(
-        model=LLM_MODEL,
+        model=ANTHROPIC_MODEL,
         max_tokens=LLM_MAX_TOKENS,
         messages=[{"role": "user", "content": prompt}],
     )
     text = "".join(b.text for b in resp.content if b.type == "text").strip()
-    in_tok = int(resp.usage.input_tokens)
-    out_tok = int(resp.usage.output_tokens)
+    return text, int(resp.usage.input_tokens), int(resp.usage.output_tokens), ANTHROPIC_MODEL
+
+
+def llm_explain(home: str, away: str, p_home: float) -> dict:
+    """Explain a matchup probability in plain English via the active LLM provider
+    (Gemini or Claude). Returns the text plus REAL token usage and cost. Raises on
+    any failure so the caller can degrade gracefully (Feature 2.2 -- a missing or
+    revoked API key, an unknown model, a timeout)."""
+    provider = active_provider()
+    if not provider:
+        raise RuntimeError("no LLM API key configured "
+                           "(set GEMINI_API_KEY or ANTHROPIC_API_KEY)")
+    prompt = _explain_prompt(home, away, p_home)
+    if provider == "gemini":
+        text, in_tok, out_tok, model = _gemini_explain(prompt)
+    else:
+        text, in_tok, out_tok, model = _anthropic_explain(prompt)
     cost = round(in_tok / 1000.0 * LLM_PRICE_INPUT_PER_1K
                  + out_tok / 1000.0 * LLM_PRICE_OUTPUT_PER_1K, 6)
     return {
         "home_team": home, "away_team": away,
         "p_home_wins": round(p_home, 4),
         "explanation": text,
-        "model": LLM_MODEL,
+        "provider": provider,
+        "model": model,
         "usage": {"input_tokens": in_tok, "output_tokens": out_tok,
                   "total_tokens": in_tok + out_tok, "cost_usd": cost},
     }
@@ -407,9 +452,14 @@ class Handler(BaseHTTPRequestHandler):
             self._serve_logs(query)
             return
         if path == "/healthz":
-            self._send_json(200, {"status": "ok", "model_ready": INFER.ready,
-                                  "llm_configured": llm_available(),
-                                  "llm_model": LLM_MODEL})
+            provider = active_provider()
+            self._send_json(200, {
+                "status": "ok", "model_ready": INFER.ready,
+                "llm_configured": provider is not None,
+                "llm_provider": provider,
+                "llm_model": (GEMINI_MODEL if provider == "gemini"
+                              else ANTHROPIC_MODEL if provider == "anthropic" else None),
+            })
             return
         self._serve_static(path)
 
@@ -471,7 +521,8 @@ class Handler(BaseHTTPRequestHandler):
                     payload = llm_explain(pred["home_team"], pred["away_team"],
                                           pred["p_home_wins"])
                     u = payload["usage"]
-                    llm_usage = (u["input_tokens"], u["output_tokens"], u["cost_usd"])
+                    llm_usage = (u["input_tokens"], u["output_tokens"],
+                                 u["cost_usd"], f"{payload['provider']}:{payload['model']}")
                 else:  # /api/predict
                     payload = INFER.predict(query.get("home", ""),
                                             query.get("away", ""))
@@ -497,10 +548,9 @@ class Handler(BaseHTTPRequestHandler):
 
         latency_ms = (time.perf_counter() - start) * 1000.0
         if llm_usage is not None:
-            # Real LLM token usage and cost from the Anthropic API response.
-            prompt_tokens, completion_tokens, est_cost = llm_usage
+            # Real LLM token usage and cost from the provider's API response.
+            prompt_tokens, completion_tokens, est_cost, model_tag = llm_usage
             token_source = "llm"
-            model_tag = LLM_MODEL
         else:
             # Payload-size proxy for the non-LLM endpoints (documented in LAB.md).
             prompt_tokens = approx_tokens(req_descriptor)

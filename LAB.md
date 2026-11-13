@@ -10,7 +10,8 @@ the brief.
 >   so `/api/predict` and `/api/forecast` have no real LLM tokens. Their log
 >   entries carry `"token_source":"proxy"` — an estimated token count from
 >   request/response **payload size** (~chars ÷ 4). Clearly labelled, not faked.
-> - **`/api/explain` is a real LLM endpoint** (Claude via the official Anthropic
+> - **`/api/explain` is a real LLM endpoint** (Google **Gemini** or Anthropic
+>   **Claude** — auto-detected from whichever API key is set, via the official
 >   SDK). Its log entries carry `"token_source":"llm"` with the **real**
 >   `input_tokens` / `output_tokens` from the API and **real** cost. This is also
 >   where the "revoke the API key" degradation demo lives (Feature 2.2).
@@ -153,10 +154,11 @@ the static site: it returns an explicit "unavailable" message on any source
 failure.
 
 **Revoke-the-API-key demo (the lab's exact example):** the real LLM endpoint
-`/api/explain` calls Claude with `ANTHROPIC_API_KEY`. Unset or rotate that key
-(Render dashboard → Environment, or your local `.env`) and hit `/api/explain` —
-it returns a clean "LLM is not available right now" 503, never a stack trace,
-while `/api/predict`, `/api/forecast` and the site keep working.
+`/api/explain` calls Gemini (or Claude) with `GEMINI_API_KEY` (or
+`ANTHROPIC_API_KEY`). Unset or rotate that key (Render dashboard → Environment,
+or your local `.env`) and hit `/api/explain` — it returns a clean "LLM is not
+available right now" 503, never a stack trace, while `/api/predict`,
+`/api/forecast` and the site keep working.
 
 ### Feature 2.3 — Usage summary from my own logs
 

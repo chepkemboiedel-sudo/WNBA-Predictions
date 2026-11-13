@@ -10,5 +10,8 @@ numpy==2.4.6
 scikit-learn==1.9.0
 joblib==1.5.3
 requests==2.34.2
-# Official Anthropic SDK for the optional /api/explain LLM endpoint (real tokens).
+# Official SDKs for the optional /api/explain LLM endpoint (real tokens).
+# The endpoint uses whichever provider's key is set; both SDKs are installed so
+# either works out of the box. They are small, pure-Python wheels.
+google-genai>=1.0
 anthropic>=1.0
