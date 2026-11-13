@@ -61,6 +61,27 @@ SRC_DIR = os.path.join(ROOT, "src")
 
 
 # --------------------------------------------------------------------------- #
+# Load a local .env file (no dependency) so running `python server.py` picks up
+# keys from .env. Real env vars already set (e.g. on Render) always win.
+# --------------------------------------------------------------------------- #
+def _load_dotenv(path: str) -> None:
+    if not os.path.isfile(path):
+        return
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, value = line.partition("=")
+            key, value = key.strip(), value.strip().strip('"').strip("'")
+            if key and key not in os.environ:  # never override a real env var
+                os.environ[key] = value
+
+
+_load_dotenv(os.path.join(ROOT, ".env"))
+
+
+# --------------------------------------------------------------------------- #
 # Configuration -- ALL from environment variables, with safe defaults.
 # --------------------------------------------------------------------------- #
 def _int(name: str, default: int) -> int:
